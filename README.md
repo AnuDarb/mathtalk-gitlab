@@ -1,8 +1,15 @@
-# Sample GitLab Project
+# Quizmodus Webanwendung
 
-This sample project shows how a project in GitLab looks for demonstration purposes. It contains issues, merge requests and Markdown files in many branches,
-named and filled with lorem ipsum.
+Dies ist eine einfache Webanwendung, die einen Quizmodus mit HTML, CSS und JavaScript implementiert. Die Anwendung zeigt Fragen an, wertet Antworten aus und gibt am Ende das Ergebnis aus.
 
-You can look around to get an idea how to structure your project and, when done, you can safely delete this project.
+## Start
 
-[Learn more about creating GitLab projects.](https://docs.gitlab.com/ee/gitlab-basics/create-project.html)
+Öffne die `index.html` Datei im Browser, um das Quiz zu starten.
+
+## Struktur
+- `index.html`: Hauptdatei mit dem Grundgerüst der Anwendung
+- `style.css`: Einfache Gestaltung
+- `script.js`: Quiz-Logik
+
+## Anpassung
+Du kannst die Fragen im Array `questions` in der `script.js` Datei anpassen oder erweitern.
