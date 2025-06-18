@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prüfungsmodus</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: #f2f2f2;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1rem;
+    }
+    .header .progress-bar {
+      width: 30%;
+      background-color: #ddd;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .header .progress-bar-fill {
+      height: 20px;
+      width: 40%;
+      background-color: #4caf50;
+      transition: width 0.3s ease;
+    }
+    .header button {
+      padding: 0.5rem 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .options-panel {
+      display: none;
+      position: absolute;
+      top: 70px;
+      right: 2rem;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+    .options-panel.visible {
+      display: block;
+    }
+    .options-panel label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .options-panel button {
+      margin-top: 1rem;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .container {
+      max-width: 1000px;
+      margin:auto;
+      background: DarkCyan;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .input-group .readonly-text {
+      width: 80%;
+      margin-right: 100px;
+      margin-left: 100px;
+      background-color: #ffffff;
+      color: #333;
+      padding: 0.5rem;
+      border: 4px solid #ccc;
+      border-radius: 5px;
+    }
+    .input-group {
+      margin-bottom: 5rem;
+    }
+    .input-group input {
+      width: 80%;
+      margin-right: 100px;
+      margin-left: 100px;
+      padding: 0.5rem;
+      border: 4px solid #ccc;
+      border-radius: 5px;
+    }
+    .buton-weiter button{
+      width: 50%;
+      margin-right: 250px;
+      margin-left: 250px;
+      padding: 0.5rem;
+      border: 4px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="header">
+    <div class="progress-bar">
+      <div class="progress-bar-fill"></div>
+    </div>
+    <button onclick="toggleOptions()">Optionen</button>
+    <div class="options-panel" id="optionsPanel">
+      <label><input type="checkbox" /> Option 1</label>
+      <label><input type="checkbox" /> Option 2</label>
+      <label><input type="checkbox" /> Option 3</label>
+      <button onclick="saveOptions()">Speichern</button>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="input-group"><div class="readonly-text">Dies ist ein feststehender Informationstext.</div></div>
+    <div class="input-group"><input type="text" placeholder="Lösung" /></div>
+    <div class="buton-weiter"><button>Weiter</button></div>
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>
