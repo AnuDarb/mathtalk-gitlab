@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" /> <!-- Zeichencodierung UTF-8 für Umlaute usw. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsives Layout für Mobilgeräte -->
+  <title>Prüfungsmodus</title> <!-- Seitentitel im Browser-Tab -->
+  <style>
+    /* Grundlegende Gestaltung der Webseite */
+    body {
+      font-family: Arial, sans-serif; /* Schriftart */
+      margin: 0; /* Kein Rand außen */
+      padding: 2rem; /* Abstand zum Rand innen */
+      background-color: #f2f2f2; /* Hellgrauer Hintergrund */
+    }
+
+    /* Kopfzeile mit Fortschrittsbalken und Optionen-Button */
+    .header {
+      display: flex; /* Inhalte nebeneinander */
+      justify-content: space-between; /* Abstand zwischen Fortschrittsbalken und Button */
+      align-items: center; /* Vertikale Zentrierung */
+      padding-bottom: 1rem; /* Abstand nach unten */
+    }
+
+    /* Leerer Fortschrittsbalken */
+    .progress-bar {
+      width: 30%; /* Breite 30 % des Containers */
+      background-color: #ddd; /* Hellgrauer Hintergrund */
+      border-radius: 20px; /* Abgerundete Ecken */
+      overflow: hidden; /* Inhalt nicht über den Rand hinaus anzeigen */
+    }
+
+    /* Gefüllter Teil des Fortschrittsbalkens */
+    .progress-bar-fill {
+      height: 20px; /* Höhe des Balkens */
+      width: 0%; /* Startbreite: leer */
+      background-color: #4caf50; /* Grün als Fortschrittsfarbe */
+      animation: fillBar 2s ease-in-out forwards; /* Animierte Füllung */
+    }
+
+    /* Animation für das Füllen des Fortschrittsbalkens */
+    @keyframes fillBar {
+      from { width: 0%; } /* Start bei 0% Breite */
+      to { width: 40%; } /* Ziel: 40% gefüllt */
+    }
+
+    /* Gestaltung des "Optionen"-Buttons */
+    .header button {
+      padding: 0.5rem 1rem; /* Innenabstand */
+      background-color: #007bff; /* Blau */
+      color: white; /* Weiße Schrift */
+      border: none; /* Kein Rahmen */
+      border-radius: 5px; /* Abgerundete Ecken */
+      cursor: pointer; /* Mauszeiger als Hand */
+    }
+
+    /* Unsichtbares Panel für die Optionen (Dropdown-Feld) */
+    .options-panel {
+      display: none; /* Standard: versteckt */
+      position: absolute; /* Unabhängig vom Layoutfluss */
+      top: 70px; /* Position unterhalb der Kopfzeile */
+      right: 2rem; /* Abstand vom rechten Rand */
+      background: white; /* Weißer Hintergrund */
+      border: 1px solid #ccc; /* Grauer Rahmen */
+      border-radius: 10px; /* Abgerundete Ecken */
+      padding: 1rem; /* Innenabstand */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Schattenwurf */
+      z-index: 10; /* Im Vordergrund anzeigen */
+    }
+
+    /* Variante des Panels, wenn es sichtbar ist */
+    .options-panel.visible {
+      display: block; /* Anzeige einschalten */
+    }
+
+    /* Formatierung der Checkbox-Labels */
+    .options-panel label {
+      display: block; /* Jede Checkbox in neuer Zeile */
+      margin-bottom: 0.5rem; /* Abstand zwischen den Checkboxen */
+    }
+
+    /* Speichern-Button im Panel */
+    .options-panel button {
+      margin-top: 1rem; /* Abstand zu den Checkboxen */
+      background-color: #28a745; /* Grün */
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Hauptcontainer für die Inhalte unterhalb der Kopfzeile */
+    .container {
+      max-width: 1000px; /* Max. Breite des Containers */
+      margin:auto; /* Zentriert horizontal */
+      background: DarkCyan; /* Hintergrundfarbe */
+      padding: 2rem; /* Innenabstand */
+      border-radius: 10px; /* Abgerundete Ecken */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+    }
+
+    /* Gruppen für die Eingabefelder */
+    .input-group {
+      margin-bottom: 1rem; /* Abstand zwischen Gruppen */
+    }
+
+    /* Gemeinsame Gestaltung für Input, Textarea und Textanzeige */
+    .input-group input,
+    .input-group textarea,
+    .input-group .readonly-text {
+      width: 80%; /* Breite */
+      margin-right: 100px;
+      margin-left: 100px;
+      padding: 0.5rem;
+      border: 4px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Spezielle Eigenschaften für das mehrzeilige Texteingabefeld */
+    .input-group textarea {
+      resize: vertical; /* Nutzer kann Höhe anpassen */
+      height: 100px; /* Standard-Höhe */
+    }
+
+    /* Statischer Infotext (nicht editierbar) */
+    .readonly-text {
+      background-color: #ffffff; /* Weißer Hintergrund */
+      color: #333; /* Dunkle Schriftfarbe */
+    }
+
+    /* Gestaltung des "Weiter"-Buttons */
+    .buton-weiter button{
+      width: 50%;
+      margin-right: 250px;
+      margin-left: 250px;
+      padding: 0.5rem;
+      border: 4px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Kopfzeile mit Fortschrittsbalken links und Optionen-Button rechts -->
+  <div class="header">
+    <div class="progress-bar">
+      <div class="progress-bar-fill"></div> <!-- Gefüllter Teil des Fortschrittsbalkens -->
+    </div>
+    <button onclick="toggleOptions()">Optionen</button> <!-- Öffnet das Optionsmenü -->
+
+    <!-- Optionenfeld mit Checkboxen und Speichern-Button -->
+    <div class="options-panel" id="optionsPanel">
+      <label><input type="checkbox" /> Option 1</label>
+      <label><input type="checkbox" /> Option 2</label>
+      <label><input type="checkbox" /> Option 3</label>
+      <button onclick="saveOptions()">Speichern</button>
+    </div>
+  </div>
+
+  <!-- Hauptinhalt der Seite -->
+  <div class="container">
+    <div class="input-group">
+      <input type="text" placeholder="Lösung" /> <!-- Textfeld zur Eingabe einer Antwort -->
+    </div>
+    <div class="input-group">
+      <textarea placeholder="Erklärung oder Notizen"></textarea> <!-- Bereich für freie Notizen oder Erklärung -->
+    </div>
+    <div class="input-group">
+      <div class="readonly-text">Dies ist ein feststehender Informationstext.</div> <!-- Nicht editierbares Info-Feld -->
+    </div>
+    <div class="buton-weiter">
+      <button>Weiter</button> <!-- Button zum Weiterklicken -->
+    </div>
+  </div>
+
+  <!-- JavaScript: Interaktive Funktionen -->
+<script src="Prüfungsmodus_Eingabe_Optionen_Progressbar_Jonah_Haase_18.06_Chatgpt-Kommentare.js"></script>
+</body>
+</html>
