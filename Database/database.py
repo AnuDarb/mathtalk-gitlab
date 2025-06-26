@@ -18,7 +18,13 @@ def init_db():
             grade TEXT NOT NULL
         )
     """)
-
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS progress (
+            session_id TEXT PRIMARY KEY,
+            remaining TEXT,
+            wrong TEXT
+        )
+    """)
     conn.commit()
     conn.close()
 

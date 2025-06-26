@@ -2,6 +2,9 @@ from flask import Flask, request, session, jsonify
 import sqlite3
 import uuid
 import os
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Database')))
+from evaluate import get_similarity_score
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Replace with a secure key in production
@@ -14,9 +17,21 @@ def get_db_connection():
     conn.row_factory = sqlite3.Row
     return conn
 
-def get_questions():
+# Mapping von Frontend-Values auf DB-Category-Werte
+CATEGORY_MAP = {
+    'zahlen_terme': 'Zahlen & Terme',
+    'funktionen_algebra': 'Funktionen & Algebra',
+    'geometrie_raum': 'Geometrie & Raum',
+    'stochastik': 'Stochastik'
+}
+
+def get_questions(category=None):
     conn = get_db_connection()
-    questions = conn.execute('SELECT * FROM questions').fetchall()
+    if category:
+        db_category = CATEGORY_MAP.get(category, category)
+        questions = conn.execute('SELECT * FROM questions WHERE category = ?', (db_category,)).fetchall()
+    else:
+        questions = conn.execute('SELECT * FROM questions').fetchall()
     conn.close()
     return [dict(q) for q in questions]
 
@@ -50,7 +65,8 @@ def api_questions():
 @app.route('/api/progress', methods=['GET'])
 def api_progress():
     session_id = session['session_id']
-    questions = get_questions()
+    category = request.args.get('category')
+    questions = get_questions(category)
     total_questions = len(questions)
     remaining_str, wrong_str = get_progress(session_id)
     remaining = [int(x) for x in remaining_str.split(',') if x] if remaining_str else list(range(total_questions))
@@ -65,48 +81,22 @@ def api_progress():
 
 @app.route('/api/question/<int:q_idx>', methods=['GET'])
 def api_question(q_idx):
-    questions = get_questions()
+    category = request.args.get('category')
+    questions = get_questions(category)
     if 0 <= q_idx < len(questions):
         q = questions[q_idx]
         return jsonify({
             "id": q['id'],
-            "question": q['question'],
-            "choices": [q['choice0'], q['choice1'], q['choice2'], q['choice3']],
-            "answer": q['answer']
+            "question": q['question']
         })
     return jsonify({"error": "Not found"}), 404
-
-@app.route('/api/answer', methods=['POST'])
-def api_answer():
-    data = request.json
-    q_idx = int(data['q_idx'])
-    choice = int(data['choice'])
-    questions = get_questions()
-    correct = questions[q_idx]['answer']
-    session_id = session['session_id']
-    remaining_str, wrong_str = get_progress(session_id)
-    remaining = [int(x) for x in remaining_str.split(',') if x] if remaining_str else []
-    wrong = [int(x) for x in wrong_str.split(',') if x] if wrong_str else []
-    feedback = ""
-    if q_idx in remaining:
-        remaining.remove(q_idx)
-    if choice != correct:
-        feedback = f"Falsche Antwort! Die richtige Antwort ist: {questions[q_idx]['choice'+str(correct)]}"
-        if q_idx not in wrong:
-            wrong.append(q_idx)
-    else:
-        feedback = "Richtig!"
-        if q_idx in wrong:
-            wrong.remove(q_idx)
-    save_progress(session_id, remaining, wrong)
-    session['remaining'] = remaining
-    session['wrong'] = wrong
-    return jsonify({"feedback": feedback, "correct": correct})
 
 @app.route('/api/skip', methods=['POST'])
 def api_skip():
     data = request.json
     q_idx = int(data['q_idx'])
+    category = request.args.get('category')
+    questions = get_questions(category)
     session_id = session['session_id']
     remaining_str, wrong_str = get_progress(session_id)
     remaining = [int(x) for x in remaining_str.split(',') if x] if remaining_str else []
@@ -123,6 +113,53 @@ def api_skip():
 def api_reset():
     session.clear()
     return jsonify({"status": "ok"})
+
+def get_correct_answer(question_id):
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
+    cursor.execute("SELECT answer FROM questions WHERE id = ?", (question_id,))
+    result = cursor.fetchone()
+    conn.close()
+    return result[0] if result else None
+
+@app.route('/api/evaluate', methods=['POST'])
+def api_evaluate():
+    data = request.json
+    question_id = data.get('question_id')
+    user_input = data.get('user_input')
+    correct_answer = get_correct_answer(question_id)
+    session_id = session['session_id']
+    # Hole alle Fragen-IDs für die aktuelle Kategorie
+    category = request.args.get('category')
+    questions = get_questions(category)
+    question_ids = [q['id'] for q in questions]
+    try:
+        q_idx = question_ids.index(question_id)
+    except ValueError:
+        return jsonify({'error': 'Frage nicht gefunden.'}), 404
+    remaining_str, wrong_str = get_progress(session_id)
+    remaining = [int(x) for x in remaining_str.split(',') if x] if remaining_str else question_ids.copy()
+    wrong = [int(x) for x in wrong_str.split(',') if x] if wrong_str else []
+    if correct_answer:
+        score = get_similarity_score(user_input, correct_answer)
+        # Fortschritt speichern wie bei /api/answer
+        if q_idx in remaining:
+            remaining.remove(q_idx)
+        if score > 0.65:
+            if q_idx in wrong:
+                wrong.remove(q_idx)
+        else:
+            if q_idx not in wrong:
+                wrong.append(q_idx)
+        save_progress(session_id, remaining, wrong)
+        session['remaining'] = remaining
+        session['wrong'] = wrong
+        return jsonify({
+            'score': score,
+            'is_correct': score > 0.65
+        })
+    else:
+        return jsonify({'error': 'Frage nicht gefunden.'}), 404
 
 if __name__ == '__main__':
     app.run(debug=True)

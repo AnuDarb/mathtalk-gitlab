@@ -3,7 +3,7 @@
 Dieses Projekt besteht aus drei Teilen:
 - **Backend**: Flask-API (Python)
 - **Frontend**: Vue.js Single Page Application
-- **Database**: SQLite-Datenbank und Initialisierungsskripte
+- **Database**: SQLite-Datenbank, Initialisierungsskripte und Evaluierungsfunktionen
 
 ---
 
@@ -23,7 +23,7 @@ Dieses Projekt besteht aus drei Teilen:
    ```
 4. Initialisiere die Datenbank:
    ```powershell
-   py init_db.py
+   py database.py
    ```
    Die Datei `mathtalk.db` wird im Verzeichnis erstellt.
 

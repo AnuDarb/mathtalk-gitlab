@@ -7,11 +7,11 @@ Dieses Verzeichnis enthält die Datenbank und zugehörige Initialisierungsskript
 - **mathtalk.db**  
   Die SQLite-Datenbankdatei mit allen Fragen und Fortschrittsdaten.
 
-- **init_db.py**  
+- **database.py**  
   Python-Skript zum Anlegen der Datenbanktabellen und Hinzufügen von Beispiel-Fragen.  
   Führe dieses Skript aus, um die Datenbank zu initialisieren:
   ```bash
-  python init_db.py
+  python database.py
   ```
 
 - **requirements.txt**  
@@ -31,6 +31,6 @@ Dieses Verzeichnis enthält die Datenbank und zugehörige Initialisierungsskript
    ```
 3. Initialisiere die Datenbank:
    ```bash
-   py init_db.py
+   py database.py
    ```
 4. Die Datei `mathtalk.db` wird im gleichen Verzeichnis erstellt.

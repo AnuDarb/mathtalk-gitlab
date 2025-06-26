@@ -1,1 +1,1 @@
-flask
+sentence_transformers
