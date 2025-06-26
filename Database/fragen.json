@@ -1,0 +1,1054 @@
+[
+  {
+    "question": "Berechne: (3a - 2b)²",
+    "answer": "9a² - 12ab + 4b²",
+    "hint_text": "Nutze die binomische Formel: (a - b)² = a² - 2ab + b²",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Fasse zusammen: 2x + 3x - 5",
+    "answer": "5x - 5",
+    "hint_text": "Gleichartige Terme zusammenfassen",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Berechne: √49",
+    "answer": "7",
+    "hint_text": "Quadratwurzel von 49",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Wandle 0,00056 in wissenschaftliche Schreibweise um.",
+    "answer": "5,6 · 10⁻⁴",
+    "hint_text": "Kommas verschieben, Zehnerpotenz bestimmen",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Löse die Gleichung: 3x - 5 = 10",
+    "answer": "x = 5",
+    "hint_text": "Zuerst +5, dann durch 3 teilen",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Multipliziere: (x + 2)(x - 2)",
+    "answer": "x² - 4",
+    "hint_text": "Differenz zweier Quadrate",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Fasse zusammen: 2a² + 3ab - a² + ab",
+    "answer": "a² + 4ab",
+    "hint_text": "Gleichartige Terme erkennen",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Fasse zusammen: -3(x - 2) + 4x",
+    "answer": "x + 6",
+    "hint_text": "Erst ausmultiplizieren, dann zusammenfassen",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Berechne: (0,4 · 10³) + (2,3 · 10²)",
+    "answer": "630",
+    "hint_text": "Wissenschaftliche Schreibweise umrechnen",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Was ist das Ergebnis von (2a)²?",
+    "answer": "4a²",
+    "hint_text": "Ganze Klammer quadrieren!",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Fasse zusammen: 4x - (2x - 3)",
+    "answer": "2x + 3",
+    "hint_text": "Klammern auflösen, Vorzeichen beachten",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Berechne: 2⁵",
+    "answer": "32",
+    "hint_text": "Zweierpotenzen kennen",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Wandle 3,4 Millionen in wissenschaftliche Schreibweise.",
+    "answer": "3,4 · 10⁶",
+    "hint_text": "Million = 10⁶",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Berechne: (-3)²",
+    "answer": "9",
+    "hint_text": "Vorzeichen beachten – ganze Klammer wird quadriert",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Fasse zusammen: x² + 3x² - 2x",
+    "answer": "4x² - 2x",
+    "hint_text": "x²-Terme addieren",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Löse die Gleichung: 4x + 2 = 18",
+    "answer": "x = 4",
+    "hint_text": "Erst -2, dann durch 4",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Kürze den Term: (3x² - 6x)/3x",
+    "answer": "x - 2",
+    "hint_text": "Zähler vollständig faktorisieren",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Was ergibt: -5 - (-2)?",
+    "answer": "-3",
+    "hint_text": "Minus Minus ergibt Plus",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Berechne den Term: 2(3x + 4) - x",
+    "answer": "5x + 8",
+    "hint_text": "Ausmultiplizieren und zusammenfassen",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Fasse zusammen: -2a + 3b - 4a + b",
+    "answer": "-6a + 4b",
+    "hint_text": "Sortiere nach Variablen",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Multipliziere aus: (x + 5)(x + 2)",
+    "answer": "x² + 7x + 10",
+    "hint_text": "Erste binomische Formel anwenden oder ausmultiplizieren",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Wandle 0,02 in eine Potenz mit Basis 10 um.",
+    "answer": "2 · 10⁻²",
+    "hint_text": "Komma zwei Stellen nach rechts",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Löse die Gleichung: x/3 = 6",
+    "answer": "x = 18",
+    "hint_text": "Beide Seiten mit 3 multiplizieren",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Wandle -0,00034 in wissenschaftliche Schreibweise.",
+    "answer": "-3,4 · 10⁻⁴",
+    "hint_text": "Negative Kommazahl → negative Zehnerpotenz",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Berechne: √81 + √16",
+    "answer": "13",
+    "hint_text": "Wurzel aus 81 und 16 einzeln berechnen",
+    "category": "Zahlen & Terme",
+    "grade": "9"
+  },
+  {
+    "question": "Faktorisieren: x² - 4x + 4",
+    "answer": "(x - 2)²",
+    "hint_text": "Quadrat einer binomischen Formel erkennen",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Löse: (x - 3)(x + 5) = 0",
+    "answer": "x = 3 oder x = -5",
+    "hint_text": "Nullproduktregel anwenden",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Berechne: (2x - 3)²",
+    "answer": "4x² - 12x + 9",
+    "hint_text": "Zweite binomische Formel anwenden",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Vereinfache: (x² - 9)/(x + 3)",
+    "answer": "x - 3",
+    "hint_text": "Zähler faktorisieren (Differenz von Quadraten)",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Berechne den Term: (x - 2)(x + 2)",
+    "answer": "x² - 4",
+    "hint_text": "Differenz zweier Quadrate",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Kürze vollständig: (x² - 16)/(x - 4)",
+    "answer": "x + 4",
+    "hint_text": "Zähler als binomische Formel erkennen",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Berechne: √(25a²)",
+    "answer": "5a",
+    "hint_text": "Wurzel aus Produkt ziehen",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Multipliziere aus: (x + 1)(x² - x + 1)",
+    "answer": "x³ + 1",
+    "hint_text": "Erkenne die dritte binomische Formel rückwärts",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Wandle 3 · 10⁴ in eine Dezimalzahl um.",
+    "answer": "30000",
+    "hint_text": "Vier Stellen nach rechts verschieben",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Berechne: 10⁻² × 10⁴",
+    "answer": "10²",
+    "hint_text": "Potenzgesetze anwenden",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Berechne: (a + b)² - (a - b)²",
+    "answer": "4ab",
+    "hint_text": "Beide binomische Formeln ausrechnen und dann subtrahieren",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Berechne: √(100 · x²)",
+    "answer": "10x",
+    "hint_text": "Produktregel der Wurzel verwenden",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Vereinfache: (x² - y²)/(x - y)",
+    "answer": "x + y",
+    "hint_text": "Faktorisiere den Zähler (Differenz von Quadraten)",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Berechne: (2x + 1)(2x - 1)",
+    "answer": "4x² - 1",
+    "hint_text": "Formel für (a + b)(a - b)",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Multipliziere: (x + 2)²",
+    "answer": "x² + 4x + 4",
+    "hint_text": "1. binomische Formel",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Wandle 0,00012 in wissenschaftliche Schreibweise um.",
+    "answer": "1,2 · 10⁻⁴",
+    "hint_text": "Komma um vier Stellen nach rechts",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Löse: 2x² - 18 = 0",
+    "answer": "x = ±3",
+    "hint_text": "Umstellen und Wurzelziehen",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Berechne: √0,01",
+    "answer": "0,1",
+    "hint_text": "Zehnerpotenz erkennen",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Berechne: 3√(8)",
+    "answer": "2",
+    "hint_text": "Dritte Wurzel von 8 ist die Zahl, deren dritte Potenz 8 ergibt",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Berechne: (x² - 2x + 1) / (x - 1)",
+    "answer": "x - 1",
+    "hint_text": "Zähler ist eine binomische Formel",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Fasse zusammen: x³ + 2x² - x³ + x²",
+    "answer": "3x²",
+    "hint_text": "x³-Terme heben sich auf",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Kürze: (x² - 9x)/(x)",
+    "answer": "x - 9",
+    "hint_text": "x ausklammern",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Faktorisieren: a² - 25",
+    "answer": "(a - 5)(a + 5)",
+    "hint_text": "Differenz von Quadraten",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Löse die Gleichung: (x - 1)² = 0",
+    "answer": "x = 1",
+    "hint_text": "Wurzel aus beiden Seiten",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Berechne: (x² - 4x + 3)/(x - 1)",
+    "answer": "x - 3",
+    "hint_text": "Zähler faktorisieren zu (x - 3)(x - 1)",
+    "category": "Zahlen & Terme",
+    "grade": "10"
+  },
+  {
+    "question": "Wie lautet die allgemeine Funktionsgleichung einer linearen Funktion?",
+    "answer": "f(x) = mx + b",
+    "hint_text": "Denk an Steigung (m) und y-Achsenabschnitt (b).",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Welche Steigung hat die Funktion f(x) = -3x + 5?",
+    "answer": "-3",
+    "hint_text": "Die Steigung steht vor dem x.",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Berechne den y-Achsenabschnitt der Funktion f(x) = 2x - 4.",
+    "answer": "-4",
+    "hint_text": "Der y-Achsenabschnitt ist der konstante Term.",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Gib den Schnittpunkt mit der y-Achse von f(x) = -x + 2 an.",
+    "answer": "(0|2)",
+    "hint_text": "Setze x = 0 in die Funktion ein.",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Finde die Nullstelle von f(x) = 4x - 8.",
+    "answer": "2",
+    "hint_text": "Setze f(x) = 0 und löse nach x.",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Was ist der Scheitelpunkt der Parabel f(x) = (x - 3)² + 1?",
+    "answer": "(3|1)",
+    "hint_text": "Scheitelpunktform zeigt ihn direkt: (x - d)² + e → S(d|e).",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Wie lautet die Scheitelpunktform von f(x) = x² - 6x + 9?",
+    "answer": "f(x) = (x - 3)²",
+    "hint_text": "Nutze die quadratische Ergänzung.",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Bestimme die Nullstellen von f(x) = x² - 4.",
+    "answer": "-2 und 2",
+    "hint_text": "Faktorisiere zu (x - 2)(x + 2).",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Wie verändert sich der Graph von f(x) = x², wenn du f(x) = (x - 2)² zeichnest?",
+    "answer": "Der Graph verschiebt sich 2 Einheiten nach rechts.",
+    "hint_text": "Die Zahl in der Klammer zeigt die horizontale Verschiebung.",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Welchen Einfluss hat das Minuszeichen bei f(x) = -x²?",
+    "answer": "Die Parabel öffnet nach unten.",
+    "hint_text": "Ein negatives Vorzeichen kehrt die Öffnungsrichtung um.",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Wie erkennst du an f(x) = 2x² + 3x - 5, dass es eine Parabel ist?",
+    "answer": "Das x² zeigt, dass es eine Parabel ist.",
+    "hint_text": "Quadratische Terme (x²) gehören zu Parabeln.",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Was beschreibt die Exponentialfunktion f(x) = 2ˣ?",
+    "answer": "Exponentielles Wachstum.",
+    "hint_text": "Wenn x im Exponenten steht, wächst es sehr schnell.",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Was ist der Anfangswert bei f(x) = 3 · 2ˣ?",
+    "answer": "3",
+    "hint_text": "Der Vorfaktor ist der Anfangswert.",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Berechne f(3) für f(x) = 2³.",
+    "answer": "8",
+    "hint_text": "2 hoch 3 = 8",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Was passiert mit dem Graphen von f(x) = 2ˣ, wenn er zu f(x) = 2^(x-1) wird?",
+    "answer": "Er verschiebt sich nach rechts.",
+    "hint_text": "x - 1 verschiebt den Graphen nach rechts.",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Wie sieht der Graph von f(x) = sin(x) grob aus?",
+    "answer": "Wellenförmig, periodisch.",
+    "hint_text": "Sinus ist eine periodische Funktion.",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Was bedeutet Periode bei einer Sinusfunktion?",
+    "answer": "Nach einer bestimmten Länge wiederholt sich der Verlauf.",
+    "hint_text": "Denk an eine Welle, die sich wiederholt.",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Was ist die Amplitude von f(x) = 3 · sin(x)?",
+    "answer": "3",
+    "hint_text": "Amplitude = maximale Auslenkung.",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Zeichne die Punkte (1|2), (2|4), (3|6). Welche Funktion beschreibt diese?",
+    "answer": "f(x) = 2x",
+    "hint_text": "Überlege, wie y sich zu x verhält.",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Wenn ein Graph steiler wird, was passiert mit der Steigung m?",
+    "answer": "Sie wird größer.",
+    "hint_text": "Steile Linien haben größere m-Werte.",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Wie sieht eine konstante Funktion im Koordinatensystem aus?",
+    "answer": "Als waagerechte Linie.",
+    "hint_text": "Sie hat die Form f(x) = c.",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Was passiert, wenn du bei f(x) = x² den Wert verdoppelst: f(x) = 2x²?",
+    "answer": "Die Parabel wird schmaler.",
+    "hint_text": "Ein größerer Vorfaktor macht die Parabel steiler.",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Was beschreibt der Funktionswert f(0)?",
+    "answer": "Den y-Achsenabschnitt.",
+    "hint_text": "Setze x = 0 in die Funktion ein.",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Woran erkennst du an einem Graphen, dass es eine Exponentialfunktion ist?",
+    "answer": "Er wächst erst langsam, dann sehr schnell.",
+    "hint_text": "Typische Kurve: flach → steil.",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Wie liest man Werte aus einem Koordinatensystem ab?",
+    "answer": "x-Wert unten, y-Wert links.",
+    "hint_text": "x-Achse ist horizontal, y-Achse vertikal.",
+    "category": "Funktionen & Algebra",
+    "grade": "9"
+  },
+  {
+    "question": "Gib die allgemeine Form einer quadratischen Funktion an.",
+    "answer": "f(x) = ax² + bx + c",
+    "hint_text": "Das x² kennzeichnet die Parabel.",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Berechne den Scheitelpunkt von f(x) = x² - 4x + 3.",
+    "answer": "(2|–1)",
+    "hint_text": "Scheitelpunktform oder -b/2a anwenden.",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Bestimme die Nullstellen von f(x) = x² - 9.",
+    "answer": "-3 und 3",
+    "hint_text": "Setze f(x) = 0 und löse mit der Mitternachtsformel oder faktorisieren.",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Wie verändert sich f(x) = x² zu f(x) = (x + 2)²?",
+    "answer": "Die Parabel verschiebt sich 2 Einheiten nach links.",
+    "hint_text": "Achte auf das Vorzeichen in der Klammer.",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Was ist die Bedeutung des Faktors a in f(x) = a · x²?",
+    "answer": "Er beeinflusst die Streckung oder Stauchung der Parabel.",
+    "hint_text": "a > 1: schmaler, 0 < a < 1: breiter.",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Wie lautet die Funktionsgleichung einer Parabel mit Scheitelpunkt S(1|2) und a = 3?",
+    "answer": "f(x) = 3(x - 1)² + 2",
+    "hint_text": "Verwende die Scheitelpunktform: f(x) = a(x - d)² + e.",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Was ist die Ableitung von f(x) = 3x²?",
+    "answer": "f '(x) = 6x",
+    "hint_text": "Potenzregel anwenden: n·xⁿ⁻¹.",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Wie lautet die Wachstumsfunktion für einen Anfangswert 100 und Wachstumsrate 5%?",
+    "answer": "f(x) = 100 · 1.05ˣ",
+    "hint_text": "Exponentialform: f(x) = Startwert · (1 + p)^x.",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Nach wie vielen Jahren verdoppelt sich ein Betrag bei 10% Zinsen pro Jahr?",
+    "answer": "Etwa 7 Jahre",
+    "hint_text": "Regel: 70 durch Zinssatz = Verdopplungszeit.",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Was bedeutet eine negative Steigung in einem Funktionsgraphen?",
+    "answer": "Der Graph fällt von links nach rechts.",
+    "hint_text": "Je größer der negative Wert, desto steiler fällt er.",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Welche Bedeutung hat f(0) in einer quadratischen Funktion?",
+    "answer": "Den y-Achsenabschnitt.",
+    "hint_text": "Einsetzen von x = 0 gibt f(0).",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Wie lautet die Formel zur Berechnung der Nullstellen bei f(x) = ax² + bx + c?",
+    "answer": "x = (-b ± √(b² - 4ac)) / (2a)",
+    "hint_text": "Das ist die Mitternachtsformel.",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Wie verändert sich der Graph bei f(x) = x² im Vergleich zu f(x) = -x²?",
+    "answer": "Er spiegelt sich an der x-Achse.",
+    "hint_text": "Negatives Vorzeichen = nach unten geöffnet.",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Wie viele Nullstellen kann eine quadratische Funktion haben?",
+    "answer": "0, 1 oder 2",
+    "hint_text": "Kommt auf die Diskriminante an.",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Was ist die Bedeutung der Diskriminante (b² - 4ac)?",
+    "answer": "Sie bestimmt die Anzahl der Nullstellen.",
+    "hint_text": ">0: 2, =0: 1, <0: keine Nullstelle.",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Was ist eine lineare Gleichung in zwei Variablen?",
+    "answer": "Eine Gleichung der Form ax + by = c.",
+    "hint_text": "Sie beschreibt eine Gerade im Koordinatensystem.",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Welche Funktion beschreibt exponentiellen Zerfall?",
+    "answer": "f(x) = a · bˣ mit 0 < b < 1",
+    "hint_text": "Wenn b kleiner als 1 ist, sinkt der Wert.",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Wie viele Lösungen hat f(x) = (x - 1)²?",
+    "answer": "Eine doppelte Nullstelle: x = 1",
+    "hint_text": "Quadratische Ausdrücke mit (x - a)².",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Was beschreibt die Funktion f(x) = sin(x)?",
+    "answer": "Periodische Schwankungen",
+    "hint_text": "Typisch für Schwingungen und Wellen.",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Was passiert bei f(x) = sin(2x)?",
+    "answer": "Die Periode halbiert sich.",
+    "hint_text": "Faktor vor x beeinflusst Frequenz.",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Welche Transformation liegt vor bei f(x) = sin(x) → f(x) = 2 · sin(x)?",
+    "answer": "Amplitude verdoppelt sich.",
+    "hint_text": "Faktor vor sin(x) = Amplitude.",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Wie lautet die allgemeine Form einer Exponentialfunktion?",
+    "answer": "f(x) = a · bˣ",
+    "hint_text": "a = Anfangswert, b = Wachstumsfaktor.",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Welche Funktion passt zu einer gleichmäßig beschleunigten Bewegung?",
+    "answer": "f(t) = ½ · a · t²",
+    "hint_text": "s = ½ · a · t² ist der klassische Zusammenhang.",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Wann ist eine Funktion achsensymmetrisch zur y-Achse?",
+    "answer": "Wenn f(x) = f(–x)",
+    "hint_text": "Typisch für Parabeln mit x².",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Was beschreibt der y-Wert in einem Funktionsgraphen?",
+    "answer": "Den Funktionswert zu einem bestimmten x.",
+    "hint_text": "f(x) gibt den y-Wert für x an.",
+    "category": "Funktionen & Algebra",
+    "grade": "10"
+  },
+  {
+    "question": "Was bedeutet es, wenn zwei Figuren ähnlich sind?",
+    "answer": "Sie haben gleiche Winkel und ihre Seitenverhältnisse sind gleich.",
+    "hint_text": "Ähnliche Figuren sind vergrößerte oder verkleinerte Versionen.",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Was versteht man unter zentrischer Streckung?",
+    "answer": "Eine Figur wird von einem Mittelpunkt aus vergrößert oder verkleinert.",
+    "hint_text": "Der Mittelpunkt bleibt fix, alle Punkte bewegen sich radial.",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Wie berechnet man die Strecke c im rechtwinkligen Dreieck?",
+    "answer": "Mit dem Satz des Pythagoras: c² = a² + b²",
+    "hint_text": "Der Satz gilt nur bei rechtwinkligen Dreiecken.",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Welche Seite ist die Hypotenuse in einem rechtwinkligen Dreieck?",
+    "answer": "Die dem rechten Winkel gegenüberliegende Seite.",
+    "hint_text": "Die längste Seite im rechtwinkligen Dreieck.",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Wie lautet die Umkehrung des Satzes des Pythagoras?",
+    "answer": "Wenn a² + b² = c², dann ist das Dreieck rechtwinklig.",
+    "hint_text": "Nur so lässt sich ein rechter Winkel beweisen.",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Was bedeutet sin(α) im rechtwinkligen Dreieck?",
+    "answer": "sin(α) = Gegenkathete / Hypotenuse",
+    "hint_text": "Denk an die Definition der trigonometrischen Funktionen.",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Wie lautet der Umfang eines Rechtecks mit a = 5 cm und b = 3 cm?",
+    "answer": "16 cm",
+    "hint_text": "U = 2·(a + b)",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Wie berechnet man die Fläche eines Dreiecks?",
+    "answer": "A = ½ · Grundseite · Höhe",
+    "hint_text": "Die Grundseite steht senkrecht zur Höhe.",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Was ist ein Schrägbild?",
+    "answer": "Eine räumliche Darstellung eines Körpers auf einer Ebene.",
+    "hint_text": "Wird oft in Technischem Zeichnen verwendet.",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Was ist ein Körpernetz?",
+    "answer": "Eine flache Darstellung aller Seitenflächen eines Körpers.",
+    "hint_text": "Stell dir vor, du faltest den Körper auseinander.",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Was beschreibt die Maßstabszahl 1:100?",
+    "answer": "1 cm in der Zeichnung entspricht 100 cm in Wirklichkeit.",
+    "hint_text": "Denke an Karten oder Architekturzeichnungen.",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Berechne das Volumen eines Quaders mit a = 3 cm, b = 4 cm, c = 5 cm.",
+    "answer": "60 cm³",
+    "hint_text": "V = a · b · c",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Wie lautet die Oberfläche eines Würfels mit Kantenlänge 2 cm?",
+    "answer": "24 cm²",
+    "hint_text": "Ein Würfel hat 6 gleich große Quadrate.",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Wie viele Flächen hat ein Zylinder?",
+    "answer": "3",
+    "hint_text": "Zwei Kreise und eine Mantelfläche.",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Was ist ein rechtwinkliges Dreieck?",
+    "answer": "Ein Dreieck mit einem rechten Winkel (90°).",
+    "hint_text": "Nur ein Winkel darf 90° sein.",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Wie erkennt man zentrische Streckung im Koordinatensystem?",
+    "answer": "Alle Punkte sind von einem Mittelpunkt aus gestreckt.",
+    "hint_text": "Verbindungslinien treffen sich im Streckzentrum.",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Wie bestimmt man die Höhe eines gleichschenkligen Dreiecks?",
+    "answer": "Sie verläuft von der Spitze senkrecht zur Basis.",
+    "hint_text": "Sie halbiert die Basis.",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Wie lautet die Flächenformel eines Parallelogramms?",
+    "answer": "A = Grundseite · Höhe",
+    "hint_text": "Ähnlich wie beim Rechteck, aber mit schrägen Seiten.",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Was ist ein regelmäßiges Vieleck?",
+    "answer": "Ein Vieleck mit gleich langen Seiten und gleich großen Winkeln.",
+    "hint_text": "Zum Beispiel ein Quadrat oder regelmäßiges Sechseck.",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Wie groß ist der Innenwinkel in einem gleichseitigen Dreieck?",
+    "answer": "60°",
+    "hint_text": "Alle drei Winkel sind gleich groß.",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Wie wird der Satz des Pythagoras grafisch dargestellt?",
+    "answer": "Die Summe der Flächen der Kathetenquadrate = Fläche des Hypotenusenquadrats.",
+    "hint_text": "Meist mit farbigen Quadraten veranschaulicht.",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Was ist ein Prisma?",
+    "answer": "Ein Körper mit zwei gleich großen, parallelen Grundflächen.",
+    "hint_text": "Die Seitenflächen sind Parallelogramme.",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Wie berechnet man das Volumen eines Zylinders?",
+    "answer": "V = π · r² · h",
+    "hint_text": "Grundfläche mal Höhe.",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Was ist die Diagonale eines Rechtecks mit a = 3 cm, b = 4 cm?",
+    "answer": "5 cm",
+    "hint_text": "Nutze den Satz des Pythagoras: √(3² + 4²) = √25 = 5",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Wie berechnet man den Umfang eines Dreiecks?",
+    "answer": "U = a + b + c",
+    "hint_text": "Alle Seitenlängen werden addiert.",
+    "category": "Geometrie & Raum",
+    "grade": "9"
+  },
+  {
+    "question": "Wann sind zwei Dreiecke ähnlich?",
+    "answer": "Wenn sie die gleichen Winkel und proportionale Seitenlängen haben.",
+    "hint_text": "Ähnliche Dreiecke haben gleiche Winkel und das Seitenverhältnis ist konstant.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Was bewirkt eine zentrische Streckung mit dem Streckungsfaktor k > 1?",
+    "answer": "Die Figur wird vergrößert.",
+    "hint_text": "Ein Faktor größer als 1 bedeutet Vergrößerung.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Formuliere den Satz des Pythagoras.",
+    "answer": "In einem rechtwinkligen Dreieck ist a² + b² = c².",
+    "hint_text": "Er gilt nur bei rechtwinkligen Dreiecken.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Wie berechnest du sin(α) in einem rechtwinkligen Dreieck?",
+    "answer": "sin(α) = Gegenkathete / Hypotenuse",
+    "hint_text": "Merke dir: Soh-Cah-Toa.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Wie konstruiert man ein gleichseitiges Dreieck?",
+    "answer": "Mit Zirkel gleiche Radien abtragen und Verbindungsstrecken zeichnen.",
+    "hint_text": "Alle Seiten gleich lang.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Wie berechnest du das Volumen eines Zylinders?",
+    "answer": "V = π · r² · h",
+    "hint_text": "Grundfläche mal Höhe.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Wie berechnest du die Oberfläche eines Kegels?",
+    "answer": "O = π · r · (r + s)",
+    "hint_text": "s ist die Mantellinie.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Wie lautet die Volumenformel einer Kugel?",
+    "answer": "V = (4/3) · π · r³",
+    "hint_text": "Nur der Radius wird gebraucht.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Was ist ein Körpernetz?",
+    "answer": "Eine zweidimensionale Entfaltung eines Körpers.",
+    "hint_text": "Man kann den Körper aus dem Netz basteln.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Was ist ein Schrägbild?",
+    "answer": "Eine zeichnerische Darstellung eines Körpers mit schräger Tiefenachse.",
+    "hint_text": "Länge und Breite stimmen, Tiefe wird verkürzt dargestellt.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Wie berechnet man cos(α)?",
+    "answer": "cos(α) = Ankathete / Hypotenuse",
+    "hint_text": "Cah im Merksatz.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Was beschreibt tan(α)?",
+    "answer": "tan(α) = Gegenkathete / Ankathete",
+    "hint_text": "Toa im Merksatz.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Wie verändert sich das Volumen bei einer zentrischen Streckung mit k = 2?",
+    "answer": "Das Volumen vervielfacht sich mit k³ = 8.",
+    "hint_text": "Bei Volumen gilt: Streckungsfaktor hoch 3.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Was ist bei einem Maßstab 1:100 gegeben?",
+    "answer": "1 cm in der Zeichnung entspricht 100 cm in Wirklichkeit.",
+    "hint_text": "Der Maßstab zeigt das Verhältnis Zeichnung zu Realität.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Welche Eigenschaften hat ein Rhombus?",
+    "answer": "Alle Seiten gleich lang, gegenüberliegende Winkel gleich.",
+    "hint_text": "Rhombus ist ein Spezialfall des Parallelogramms.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Wie erkennt man eine zentrische Streckung im Koordinatensystem?",
+    "answer": "Alle Punkte liegen auf Strahlen durch das Zentrum.",
+    "hint_text": "Punkte auf einer Linie mit dem Streckungszentrum.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Welche Fläche hat ein Kreis mit r = 5 cm?",
+    "answer": "A = 78,5 cm²",
+    "hint_text": "A = π · r², mit π ≈ 3,14",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Was beschreibt eine Mittelsenkrechte in einem Dreieck?",
+    "answer": "Sie steht senkrecht auf einer Seite und halbiert sie.",
+    "hint_text": "Geometrische Konstruktion zum Finden des Umkreismittelpunkts.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Wie berechnet man die Mantelfläche eines Zylinders?",
+    "answer": "M = 2 · π · r · h",
+    "hint_text": "Kreisumfang mal Höhe.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Wie konstruiert man ein rechtwinkliges Dreieck mit Hypotenuse 6 cm?",
+    "answer": "Mit Halbkreis und Winkel bei 90° an einem Ende.",
+    "hint_text": "Nutze den Thaleskreis.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Wie verändert sich die Oberfläche bei einer zentrischen Streckung mit k = 3?",
+    "answer": "Die Fläche vergrößert sich mit k² = 9.",
+    "hint_text": "Für Flächen gilt der Streckungsfaktor zum Quadrat.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Wie kann man ein Schrägbild zeichnerisch darstellen?",
+    "answer": "Mit 45°-Achse und halber Tiefenlänge.",
+    "hint_text": "Tiefe verkürzen für realistischen Eindruck.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Was ist ein Dodekaeder?",
+    "answer": "Ein Körper mit 12 Fünfecken als Seitenflächen.",
+    "hint_text": "Ein regulärer platonischer Körper.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Wie berechnest du das Volumen eines zusammengesetzten Körpers?",
+    "answer": "Einzelvolumen berechnen und addieren.",
+    "hint_text": "Körper in bekannte Formen zerlegen.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  },
+  {
+    "question": "Was ist die Höhe in einem Dreieck?",
+    "answer": "Die senkrechte Verbindung von Ecke zur gegenüberliegenden Seite.",
+    "hint_text": "Sie steht immer im rechten Winkel zur Grundlinie.",
+    "category": "Geometrie & Raum",
+    "grade": "10"
+  }
+]
+
+
