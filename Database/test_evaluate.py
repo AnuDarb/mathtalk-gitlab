@@ -1,13 +1,15 @@
-from evaluate import is_answer_correct
-print("⚙️ Test gestartet")
+from evaluate import get_similarity_score
 
-# Beispielantworten
-user_answer = "Die Parabel geht nach unten auf"
-correct_answer = "Die Parabel öffnet sich nach unten"
+user_input = "Die Parabel geht nooch unten auf"
+correct = "Die Parabel öffnet sich nach unten"
 
-# Test durchführen
-is_correct, score = is_answer_correct(user_answer, correct_answer)
+score = get_similarity_score(user_input, correct)
+print(f"🔍 Score: {score:.2f}")
 
-# Ausgabe
-print(f"Ähnlichkeit: {score:.2f}")
-print("✅ Antwort ist korrekt" if is_correct else "❌ Antwort ist falsch")
+if score > 0.85:
+    print("✅ Richtig!")
+elif score > 0.65:
+    print("🟡 Fast richtig – achte auf deine Formulierung.")
+else:
+    print("❌ Leider falsch.")
+
