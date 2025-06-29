@@ -87,7 +87,8 @@ def api_question(q_idx):
         q = questions[q_idx]
         return jsonify({
             "id": q['id'],
-            "question": q['question']
+            "question": q['question'],
+            "hint_text": q.get('hint_text', None)  # Hinweis mitliefern
         })
     return jsonify({"error": "Not found"}), 404
 

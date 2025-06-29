@@ -16,9 +16,11 @@
           {{ answered ? 'Weiter' : 'Antworten' }}
         </button>
         <button @click="skip" style="background:#f59e42;color:#fff;">Überspringen</button>
+        <button @click="showHint" style="background:#fbbf24;color:#22223b;">Hinweis</button>
         <button @click="goToMenu" style="background:#64748b;color:#fff;">Zurück zum Menü</button>
       </div>
       <p v-if="feedback" class="message" v-html="feedback"></p>
+      <p v-if="showingHint && question && question.hint_text" class="hint-box">💡 {{ question.hint_text }}</p>
       <div class="info">
         <p>Verbleibende Fragen: {{ progress.remaining }}</p>
         <p>Zu wiederholen: {{ progress.wrong }}</p>
@@ -48,6 +50,7 @@ const progress = ref({remaining: 0, wrong: 0})
 const category = ref<string | null>(null)
 let questionIds: number[] = []
 const transitionName = ref('slide-fade')
+const showingHint = ref(false)
 
 async function loadQuestion() {
   if (!category.value && route.query.category) {
@@ -68,6 +71,7 @@ async function loadQuestion() {
       userInput.value = ''
       answered.value = false
       feedback.value = ''
+      showingHint.value = false
       await loadProgress()
     } else {
       question.value = null
@@ -127,6 +131,10 @@ async function loadProgress() {
 
 function goToMenu() {
   router.push('/')
+}
+
+function showHint() {
+  showingHint.value = !showingHint.value
 }
 
 let touchStartX = 0
@@ -308,6 +316,17 @@ button:hover {
   font-size: 0.98em;
   margin-top: 18px;
   text-align: center;
+}
+.hint-box {
+  background: #fef9c3;
+  color: #b45309;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin: 12px 0 0 0;
+  font-size: 1.08rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(251,191,36,0.08);
 }
 .slide-fade-enter-active, .slide-fade-leave-active {
   transition: all 0.35s cubic-bezier(.4,1.3,.6,1);
