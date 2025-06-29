@@ -1,27 +1,35 @@
 <template>
-  <div class="container" v-if="question">
-    <h2>{{ question.question }}</h2>
-    <div class="text-input-row">
-      <input v-model="userInput" :disabled="answered" class="answer-input" type="text" placeholder="Antwort eingeben..." @keyup.enter="submitAnswer" />
+  <transition :name="transitionName" mode="out-in">
+    <div class="container" v-if="question"
+      :key="q_idx"
+      @touchstart="handleTouchStart"
+      @touchend="handleTouchEnd"
+      @mousedown="handleMouseDown"
+      @mouseup="handleMouseUp"
+    >
+      <h2>{{ question.question }}</h2>
+      <div class="text-input-row">
+        <input v-model="userInput" :disabled="answered" class="answer-input" type="text" placeholder="Antwort eingeben..." @keyup.enter="submitAnswer" />
+      </div>
+      <div class="button-row">
+        <button @click="submitAnswer" style="width:160px;">
+          {{ answered ? 'Weiter' : 'Antworten' }}
+        </button>
+        <button @click="skip" style="background:#f59e42;color:#fff;">Überspringen</button>
+        <button @click="goToMenu" style="background:#64748b;color:#fff;">Zurück zum Menü</button>
+      </div>
+      <p v-if="feedback" class="message" v-html="feedback"></p>
+      <div class="info">
+        <p>Verbleibende Fragen: {{ progress.remaining }}</p>
+        <p>Zu wiederholen: {{ progress.wrong }}</p>
+      </div>
     </div>
-    <div class="button-row">
-      <button @click="submitAnswer" style="width:160px;">
-        {{ answered ? 'Weiter' : 'Antworten' }}
-      </button>
-      <button @click="skip" style="background:#f59e42;color:#fff;">Überspringen</button>
-      <button @click="goToMenu" style="background:#64748b;color:#fff;">Zurück zum Menü</button>
+    <div v-else key="end">
+      <h2>Quiz beendet!</h2>
+      <button @click="reset">Neustarten</button>
+      <button @click="goToMenu" style="background:#64748b;color:#fff; margin-left: 12px;">Zurück zum Menü</button>
     </div>
-    <p v-if="feedback" class="message">{{ feedback }}</p>
-    <div class="info">
-      <p>Verbleibende Fragen: {{ progress.remaining }}</p>
-      <p>Zu wiederholen: {{ progress.wrong }}</p>
-    </div>
-  </div>
-  <div v-else>
-    <h2>Quiz beendet!</h2>
-    <button @click="reset">Neustarten</button>
-    <button @click="goToMenu" style="background:#64748b;color:#fff; margin-left: 12px;">Zurück zum Menü</button>
-  </div>
+  </transition>
 </template>
 
 <script setup lang="ts">
@@ -39,6 +47,7 @@ const q_idx = ref(0)
 const progress = ref({remaining: 0, wrong: 0})
 const category = ref<string | null>(null)
 let questionIds: number[] = []
+const transitionName = ref('slide-fade')
 
 async function loadQuestion() {
   if (!category.value && route.query.category) {
@@ -120,7 +129,71 @@ function goToMenu() {
   router.push('/')
 }
 
-onMounted(loadQuestion)
+let touchStartX = 0
+let touchEndX = 0
+
+function handleTouchStart(e: TouchEvent) {
+  touchStartX = e.changedTouches[0].screenX
+}
+function handleTouchEnd(e: TouchEvent) {
+  touchEndX = e.changedTouches[0].screenX
+  handleSwipe()
+}
+function handleSwipe() {
+  const diff = touchEndX - touchStartX
+  if (Math.abs(diff) > 60) {
+    if (diff < 0) {
+      // Swipe nach links: nächste Frage
+      if (q_idx.value < questionIds.length - 1) {
+        transitionName.value = 'slide-left'
+        q_idx.value++
+        loadQuestion()
+      }
+    } else {
+      // Swipe nach rechts: vorherige Frage (falls möglich)
+      if (q_idx.value > 0) {
+        transitionName.value = 'slide-right'
+        q_idx.value--
+        loadQuestion()
+      }
+    }
+  }
+}
+
+let mouseDownX = 0
+let mouseUpX = 0
+
+function handleMouseDown(e: MouseEvent) {
+  mouseDownX = e.screenX
+}
+function handleMouseUp(e: MouseEvent) {
+  mouseUpX = e.screenX
+  handleMouseSwipe()
+}
+function handleMouseSwipe() {
+  const diff = mouseUpX - mouseDownX
+  if (Math.abs(diff) > 60) {
+    if (diff < 0) {
+      // Maus nach links: nächste Frage
+      if (q_idx.value < questionIds.length - 1) {
+        transitionName.value = 'slide-left'
+        q_idx.value++
+        loadQuestion()
+      }
+    } else {
+      // Maus nach rechts: vorherige Frage
+      if (q_idx.value > 0) {
+        transitionName.value = 'slide-right'
+        q_idx.value--
+        loadQuestion()
+      }
+    }
+  }
+}
+
+onMounted(() => {
+  loadQuestion()
+})
 </script>
 
 <style scoped>
@@ -138,22 +211,49 @@ onMounted(loadQuestion)
   justify-content: flex-start;
   gap: 28px;
 }
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .container {
     max-width: 98vw;
     padding: 24px 8vw 24px 8vw;
   }
 }
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .container {
-    max-width: 100vw;
-    padding: 16px 2vw 16px 2vw;
-    border-radius: 0;
-    min-height: unset;
+    max-width: 100vw !important;
+    padding: 10px !important;
+    min-height: unset !important;
+    gap: 18px !important;
+  }
+  h2 {
+    font-size: 1.15rem !important;
+    margin-bottom: 10px !important;
+    text-align: center !important;
   }
   .answer-input {
-    max-width: 100vw;
-    font-size: 1rem;
+    max-width: 100vw !important;
+    font-size: 1rem !important;
+    padding: 10px 8px !important;
+    border-radius: 6px !important;
+  }
+  .button-row {
+    flex-direction: column !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin-top: 6px !important;
+    align-items: stretch !important;
+  }
+  button {
+    font-size: 0.98rem !important;
+    padding: 9px 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    border-radius: 7px !important;
+    margin: 0 !important;
+    min-height: 36px !important;
+  }
+  .info {
+    font-size: 0.95em !important;
+    margin-top: 10px !important;
   }
 }
 .text-input-row {
@@ -208,5 +308,38 @@ button:hover {
   font-size: 0.98em;
   margin-top: 18px;
   text-align: center;
+}
+.slide-fade-enter-active, .slide-fade-leave-active {
+  transition: all 0.35s cubic-bezier(.4,1.3,.6,1);
+}
+.slide-fade-enter-from {
+  opacity: 0;
+  transform: translateX(60px);
+}
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+.slide-left-enter-active, .slide-left-leave-active {
+  transition: all 0.35s cubic-bezier(.4,1.3,.6,1);
+}
+.slide-left-enter-from {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.slide-left-leave-to {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.slide-right-enter-active, .slide-right-leave-active {
+  transition: all 0.35s cubic-bezier(.4,1.3,.6,1);
+}
+.slide-right-enter-from {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.slide-right-leave-to {
+  opacity: 0;
+  transform: translateX(100%);
 }
 </style>

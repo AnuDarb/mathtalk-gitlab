@@ -146,4 +146,25 @@ button {
 button:hover {
   background: #2563eb;
 }
+@media screen and (max-width: 600px) {
+  .dashboard {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px 0;
+    padding: 10px 4px;
+    font-size: 0.98rem;
+  }
+  .dashboard > div {
+    min-width: 48%;
+    margin-bottom: 8px;
+    margin-top: 0;
+    padding: 0 2px;
+  }
+  .dashboard span {
+    font-size: 0.98rem;
+  }
+  .dashboard-value {
+    font-size: 1.12rem;
+  }
+}
 </style>
