@@ -12,4 +12,3 @@ elif score > 0.65:
     print("🟡 Fast richtig – achte auf deine Formulierung.")
 else:
     print("❌ Leider falsch.")
-
