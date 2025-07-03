@@ -4192,6 +4192,12 @@
   {
     "question": "Was ist ein Boxplot?",
     "answer": "Eine grafische Darstellung von Minimum, Maximum, Median und Quartilen.",
+    "options": [
+      "Eine Art Säulendiagramm.",
+      "Ein Würfel mit Zahlen.",
+      "Eine grafische Darstellung von Minimum, Maximum, Median und Quartilen.",
+      "Ein Kreisdiagramm."
+    ],
     "hint_text": "Er zeigt fünf wichtige Kennwerte.",
     "category": "Stochastik",
     "grade": "10",
@@ -4200,6 +4206,12 @@
   {
     "question": "Was versteht man unter dem Median?",
     "answer": "Den mittleren Wert einer geordneten Datenreihe.",
+    "options": [
+      "Die Summe aller Werte.",
+      "Den häufigsten Wert.",
+      "Den mittleren Wert einer geordneten Datenreihe.",
+      "Den größten Wert."
+    ],
     "hint_text": "Sortiere die Daten zuerst.",
     "category": "Stochastik",
     "grade": "10",
@@ -4208,6 +4220,12 @@
   {
     "question": "Welche Aussage zur relativen Häufigkeit ist korrekt?",
     "answer": "Sie gibt den Anteil eines Ereignisses an der Gesamtzahl der Versuche an.",
+    "options": [
+      "Sie zählt, wie oft ein Wert vorkommt.",
+      "Sie zeigt den Mittelwert.",
+      "Sie gibt den Anteil eines Ereignisses an der Gesamtzahl der Versuche an.",
+      "Sie ist immer 1."
+    ],
     "hint_text": "Sie wird meist in Prozent angegeben.",
     "category": "Stochastik",
     "grade": "10",
@@ -4216,6 +4234,12 @@
   {
     "question": "Welche Maßzahl ist besonders empfindlich gegenüber Ausreißern?",
     "answer": "Der Mittelwert",
+    "options": [
+      "Der Median",
+      "Die Spannweite",
+      "Der Mittelwert",
+      "Das Minimum"
+    ],
     "hint_text": "Ein einzelner großer Wert verändert ihn stark.",
     "category": "Stochastik",
     "grade": "10",
@@ -4224,6 +4248,12 @@
   {
     "question": "Was ist ein Ausreißer?",
     "answer": "Ein Wert, der deutlich außerhalb des Datenbereichs liegt.",
+    "options": [
+      "Ein besonders häufiger Wert.",
+      "Ein Wert, der deutlich außerhalb des Datenbereichs liegt.",
+      "Ein Wert nahe am Median.",
+      "Ein Wert unter dem Mittelwert."
+    ],
     "hint_text": "Er liegt weit entfernt vom Rest der Werte.",
     "category": "Stochastik",
     "grade": "10",
@@ -4232,6 +4262,12 @@
   {
     "question": "Was bedeutet 'P(A ∪ B)' bei disjunkten Ereignissen?",
     "answer": "P(A) + P(B)",
+    "options": [
+      "P(A) · P(B)",
+      "P(A) + P(B)",
+      "P(A) − P(B)",
+      "P(A ∩ B)"
+    ],
     "hint_text": "Nutze die Summenregel.",
     "category": "Stochastik",
     "grade": "10",
@@ -4240,6 +4276,12 @@
   {
     "question": "Was bedeutet 'P(A ∩ B)' bei unabhängigen Ereignissen?",
     "answer": "P(A) · P(B)",
+    "options": [
+      "P(A) + P(B)",
+      "P(A) − P(B)",
+      "P(A) · P(B)",
+      "P(A ∪ B)"
+    ],
     "hint_text": "Nutze die Produktregel.",
     "category": "Stochastik",
     "grade": "10",
@@ -4248,6 +4290,12 @@
   {
     "question": "Was ist ein sicheres Ereignis?",
     "answer": "Ein Ereignis mit der Wahrscheinlichkeit 1.",
+    "options": [
+      "Ein Ereignis mit Wahrscheinlichkeit 0.",
+      "Ein Ereignis, das selten eintritt.",
+      "Ein Ereignis mit der Wahrscheinlichkeit 1.",
+      "Ein Zufallsexperiment."
+    ],
     "hint_text": "Es tritt immer ein.",
     "category": "Stochastik",
     "grade": "10",
@@ -4256,6 +4304,12 @@
   {
     "question": "Wann spricht man von unabhängigen Ereignissen?",
     "answer": "Wenn das Eintreten eines Ereignisses das andere nicht beeinflusst.",
+    "options": [
+      "Wenn beide Ereignisse gleichzeitig eintreten.",
+      "Wenn sie keine gemeinsamen Ergebnisse haben.",
+      "Wenn das Eintreten eines Ereignisses das andere nicht beeinflusst.",
+      "Wenn eines wahrscheinlicher ist als das andere."
+    ],
     "hint_text": "Die Wahrscheinlichkeiten bleiben gleich.",
     "category": "Stochastik",
     "grade": "10",
@@ -4264,6 +4318,12 @@
   {
     "question": "Wie viele mögliche Ergebnisse gibt es beim dreifachen Münzwurf?",
     "answer": "8",
+    "options": [
+      "3",
+      "6",
+      "8",
+      "9"
+    ],
     "hint_text": "2 · 2 · 2 = 8",
     "category": "Stochastik",
     "grade": "10",
@@ -4272,6 +4332,12 @@
   {
     "question": "Was zeigt ein Kreisdiagramm?",
     "answer": "Die prozentuale Verteilung von Daten.",
+    "options": [
+      "Absolute Häufigkeiten.",
+      "Die prozentuale Verteilung von Daten.",
+      "Nur den Median.",
+      "Nur den Mittelwert."
+    ],
     "hint_text": "Jedes Segment stellt einen Anteil dar.",
     "category": "Stochastik",
     "grade": "10",
@@ -4280,6 +4346,12 @@
   {
     "question": "Was versteht man unter Repräsentativität einer Stichprobe?",
     "answer": "Die Stichprobe spiegelt die Grundgesamtheit gut wider.",
+    "options": [
+      "Die Stichprobe enthält nur hohe Werte.",
+      "Die Stichprobe ist zufällig gewählt.",
+      "Die Stichprobe spiegelt die Grundgesamtheit gut wider.",
+      "Die Stichprobe ist besonders groß."
+    ],
     "hint_text": "Alle Gruppen müssen angemessen vertreten sein.",
     "category": "Stochastik",
     "grade": "10",
@@ -4288,6 +4360,12 @@
   {
     "question": "Was ist ein mehrstufiges Zufallsexperiment?",
     "answer": "Ein Experiment mit mehreren aufeinanderfolgenden Zufallsaktionen.",
+    "options": [
+      "Ein Experiment mit nur einem Ausgang.",
+      "Ein Experiment ohne Wahrscheinlichkeiten.",
+      "Ein Experiment mit mehreren aufeinanderfolgenden Zufallsaktionen.",
+      "Ein Experiment mit festen Ergebnissen."
+    ],
     "hint_text": "z. B. zweimaliges Ziehen mit Zurücklegen.",
     "category": "Stochastik",
     "grade": "10",
@@ -4296,6 +4374,12 @@
   {
     "question": "Was zeigt ein Baumdiagramm?",
     "answer": "Alle möglichen Ausgänge eines mehrstufigen Zufallsexperiments.",
+    "options": [
+      "Nur die häufigsten Ergebnisse.",
+      "Alle möglichen Ausgänge eines mehrstufigen Zufallsexperiments.",
+      "Nur die Mittelwerte.",
+      "Den Median."
+    ],
     "hint_text": "Jeder Pfad stellt eine Möglichkeit dar.",
     "category": "Stochastik",
     "grade": "10",
@@ -4304,6 +4388,12 @@
   {
     "question": "Wie berechnet man eine Pfadwahrscheinlichkeit im Baumdiagramm?",
     "answer": "Indem man die Wahrscheinlichkeiten entlang des Pfades multipliziert.",
+    "options": [
+      "Indem man die Wahrscheinlichkeiten addiert.",
+      "Indem man die Wahrscheinlichkeiten multipliziert.",
+      "Indem man nur die größte Wahrscheinlichkeit nimmt.",
+      "Indem man die Summe aller Wahrscheinlichkeiten bildet."
+    ],
     "hint_text": "Produktregel anwenden.",
     "category": "Stochastik",
     "grade": "10",
@@ -4312,6 +4402,12 @@
   {
     "question": "Welche Aussage über den Median ist korrekt?",
     "answer": "Er ist robust gegenüber Ausreißern.",
+    "options": [
+      "Er verändert sich bei Ausreißern stark.",
+      "Er ist immer größer als der Mittelwert.",
+      "Er ist robust gegenüber Ausreißern.",
+      "Er zeigt die Spannweite."
+    ],
     "hint_text": "Er hängt nur von der Mitte ab, nicht von Ausreißern.",
     "category": "Stochastik",
     "grade": "10",
@@ -4320,6 +4416,12 @@
   {
     "question": "Was versteht man unter der Spannweite?",
     "answer": "Differenz zwischen größtem und kleinstem Wert.",
+    "options": [
+      "Summe aller Werte.",
+      "Differenz zwischen größtem und kleinstem Wert.",
+      "Mittelwert der Daten.",
+      "Der Median."
+    ],
     "hint_text": "max – min",
     "category": "Stochastik",
     "grade": "10",
@@ -4328,6 +4430,12 @@
   {
     "question": "Wie kann man einen Ausreißer im Boxplot erkennen?",
     "answer": "Er liegt außerhalb der „Antennen“.",
+    "options": [
+      "Er liegt nahe am Median.",
+      "Er ist immer das Minimum.",
+      "Er liegt außerhalb der „Antennen“.",
+      "Er ist der größte Wert."
+    ],
     "hint_text": "Meist als Punkt markiert.",
     "category": "Stochastik",
     "grade": "10",
@@ -4336,6 +4444,12 @@
   {
     "question": "Welche Aussage zur Wahrscheinlichkeit ist korrekt?",
     "answer": "Sie liegt immer zwischen 0 und 1.",
+    "options": [
+      "Sie kann größer als 1 sein.",
+      "Sie liegt immer zwischen 0 und 1.",
+      "Sie ist immer 0.",
+      "Sie ist immer 50 %."
+    ],
     "hint_text": "0 ≤ P ≤ 1",
     "category": "Stochastik",
     "grade": "10",
@@ -4344,6 +4458,12 @@
   {
     "question": "Was ist eine absolute Häufigkeit?",
     "answer": "Die Anzahl des Auftretens eines Ereignisses.",
+    "options": [
+      "Der Prozentwert eines Ereignisses.",
+      "Die Anzahl des Auftretens eines Ereignisses.",
+      "Die Wahrscheinlichkeit eines Ereignisses.",
+      "Die Summe aller Ergebnisse."
+    ],
     "hint_text": "Zählwert.",
     "category": "Stochastik",
     "grade": "10",
