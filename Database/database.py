@@ -1,9 +1,18 @@
 import sqlite3
 import json
 import bcrypt
+import logging
+import os
+
+# Logging konfigurieren
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# Pfad zur SQLite-Datei (für Render ggf. persistent anpassen)
+DB_PATH = os.environ.get("DB_PATH", "mathtalk.db")
 
 def create_connection():
-    return sqlite3.connect("mathtalk.db")
+    return sqlite3.connect(DB_PATH)
 
 def init_db():
     conn = create_connection()
@@ -32,18 +41,22 @@ def init_db():
         )
     """)
 
-    # Lernstand-Tabelle
+    # Lernstand-Tabelle mit attempts und errors
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS progress (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             user_email TEXT NOT NULL,
             question_id INTEGER NOT NULL,
-            correct INTEGER NOT NULL CHECK (correct IN (0,1))
+            correct INTEGER NOT NULL CHECK (correct IN (0,1)),
+            attempts INTEGER DEFAULT 1,
+            errors INTEGER DEFAULT 0,
+            UNIQUE(user_email, question_id)
         )
     """)
 
     conn.commit()
     conn.close()
+    logger.info("Datenbanktabellen wurden erstellt oder aktualisiert.")
 
 def add_question(question, answer, hint_text, category, grade, question_type="classic", choices=None):
     conn = create_connection()
@@ -77,19 +90,18 @@ def load_questions_from_file(filename):
                 q.get("question_type", "classic"),
                 q.get("choices", None)
             )
-        print(f"📥 {len(questions)} Fragen aus '{filename}' wurden geladen.")
+        logger.info(f"{len(questions)} Fragen aus '{filename}' wurden geladen.")
     except Exception as e:
-        print(f"⚠️ Fehler beim Laden von '{filename}': {e}")
+        logger.error(f"Fehler beim Laden von '{filename}': {e}")
 
 def list_questions():
     conn = create_connection()
     cursor = conn.cursor()
     cursor.execute("SELECT id, question, category, question_type FROM questions")
     for row in cursor.fetchall():
-        print(f"ID {row[0]} | {row[1]} ({row[2]}) – Typ: {row[3]}")
+        logger.info(f"ID {row[0]} | {row[1]} ({row[2]}) – Typ: {row[3]}")
     conn.close()
 
-# Neuen Benutzer registrieren
 def register_user(email, password):
     conn = create_connection()
     cursor = conn.cursor()
@@ -98,13 +110,12 @@ def register_user(email, password):
     try:
         cursor.execute("INSERT INTO users (email, password) VALUES (?, ?)", (email, hashed_pw))
         conn.commit()
-        print("✅ Benutzer erfolgreich registriert.")
+        logger.info("Benutzer erfolgreich registriert.")
     except sqlite3.IntegrityError:
-        print("⚠️ Diese E-Mail ist bereits registriert.")
+        logger.warning("Diese E-Mail ist bereits registriert.")
     finally:
         conn.close()
 
-# Benutzer-Login
 def login_user(email, password):
     conn = create_connection()
     cursor = conn.cursor()
@@ -113,33 +124,36 @@ def login_user(email, password):
     conn.close()
 
     if row and bcrypt.checkpw(password.encode('utf-8'), row[0]):
-        print("✅ Login erfolgreich!")
+        logger.info("Login erfolgreich!")
         return True
     else:
-        print("❌ Login fehlgeschlagen. E-Mail oder Passwort falsch.")
+        logger.warning("Login fehlgeschlagen. E-Mail oder Passwort falsch.")
         return False
 
-# Lernstand speichern
 def save_user_progress(user_email, question_id, is_correct):
     conn = create_connection()
     cursor = conn.cursor()
+
     cursor.execute("""
-        INSERT INTO progress (user_email, question_id, correct)
-        VALUES (?, ?, ?)
-    """, (user_email, question_id, 1 if is_correct else 0))
+        SELECT attempts, errors FROM progress
+        WHERE user_email = ? AND question_id = ?
+    """, (user_email, question_id))
+    row = cursor.fetchone()
+
+    if row:
+        attempts, errors = row
+        new_attempts = attempts + 1
+        new_errors = errors + (0 if is_correct else 1)
+        cursor.execute("""
+            UPDATE progress
+            SET correct = ?, attempts = ?, errors = ?
+            WHERE user_email = ? AND question_id = ?
+        """, (1 if is_correct else 0, new_attempts, new_errors, user_email, question_id))
+    else:
+        cursor.execute("""
+            INSERT INTO progress (user_email, question_id, correct, attempts, errors)
+            VALUES (?, ?, ?, ?, ?)
+        """, (user_email, question_id, 1 if is_correct else 0, 1, 0 if is_correct else 1))
+
     conn.commit()
     conn.close()
-
-# Beispielverwendung
-if __name__ == "__main__":
-    init_db()
-    load_questions_from_file("fragen.json")
-    list_questions()
-
-    # Benutzerregistrierung und Login testen
-    register_user("test@example.com", "meinpasswort123")
-    login_user("test@example.com", "meinpasswort123")
-
-    # Beispielhafter Lernstandeintrag
-    save_user_progress("test@example.com", 1, True)  # Frage 1 richtig beantwortet
-    save_user_progress("test@example.com", 2, False) # Frage 2 falsch beantwortet
