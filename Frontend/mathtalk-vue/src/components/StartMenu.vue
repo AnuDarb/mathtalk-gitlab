@@ -27,6 +27,10 @@
         <input type="radio" v-model="selectedcategory" :value="category.value" />
         {{ category.label }}
       </label>
+      <label style="display:block; margin-top:10px;">
+        <input type="checkbox" v-model="onlyDragDrop" />
+        Nur Drag & Drop-Fragen anzeigen
+      </label>
     </div>
     <button @click="startQuiz" :disabled="!selectedcategory">Übungsmodus starten</button>
     <button @click="reset" style="background:#ef4444; color:#fff; margin-top:10px;">Fortschritt zurücksetzen</button>
@@ -46,6 +50,7 @@ const categories = [
   { label: 'Stochastik', value: 'stochastik' }
 ]
 const selectedcategory = ref(categories[0].value)
+const onlyDragDrop = ref(false)
 const loginOk = ref(false)
 const loginError = ref('')
 
@@ -79,7 +84,7 @@ async function reset() {
 
 function startQuiz() {
   if (selectedcategory.value) {
-    router.push({ path: '/quiz', query: { category: selectedcategory.value } })
+    router.push({ path: '/quiz', query: { category: selectedcategory.value, only_drag_drop: onlyDragDrop.value ? '1' : undefined } })
   }
 }
 

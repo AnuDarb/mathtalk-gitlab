@@ -10,7 +10,38 @@
       >
         <div class="user-info">Angemeldet als: <b>test@example.com</b></div>
         <h2>{{ question.question }}</h2>
-        <div class="text-input-row">
+        <div v-if="question.question_type === 'drag_drop'">
+          <div class="dragdrop-row">
+            <div v-for="(ex, idx) in Object.keys(question.answer)" :key="ex" class="dragdrop-example" @dragover.prevent @drop="onDrop(ex)">
+              <div>
+                <template v-if="isImage(ex)">
+                  <img :src="imageUrl(ex)" alt="Beispiel" class="drag-img" />
+                </template>
+                <template v-else>
+                  {{ ex }}
+                </template>
+              </div>
+              <div class="dropzone" :class="{filled: !!dragDropUserAnswers[ex]}" >
+                <template v-if="dragDropUserAnswers[ex]">
+                  <img v-if="isImage(dragDropUserAnswers[ex])" :src="imageUrl(dragDropUserAnswers[ex])" alt="Antwort" class="drag-img" />
+                  <span v-else>{{ dragDropUserAnswers[ex] }}</span>
+                </template>
+                <span v-else style="color:#aaa;">Antwort hierher ziehen</span>
+              </div>
+            </div>
+          </div>
+          <div class="dragdrop-answers">
+            <div v-for="ans in dragDropOptions" :key="ans" class="dragdrop-answer"
+              draggable="true"
+              @dragstart="onDragStart(ans)"
+              :class="{used: Object.values(dragDropUserAnswers).includes(ans)}"
+            >
+              <img v-if="isImage(ans)" :src="imageUrl(ans)" alt="Antwort" class="drag-img" />
+              <span v-else>{{ ans }}</span>
+            </div>
+          </div>
+        </div>
+        <div v-else class="text-input-row">
           <input v-model="userInput" :disabled="answered" class="answer-input" type="text" placeholder="Antwort eingeben..." @keyup.enter="submitAnswer" />
         </div>
         <div class="button-row">
@@ -57,31 +88,52 @@ const transitionName = ref('slide-fade')
 const showingHint = ref(false)
 const loginOk = ref(false)
 const loginError = ref('')
+const dragDropUserAnswers = ref<Record<string, string>>({})
+const dragDropOptions = ref<string[]>([])
+const questionsList = ref<any[]>([])
+const dragData = ref<string | null>(null)
 
-async function loadQuestion() {
+async function loadQuestionsOnce() {
   if (!category.value && route.query.category) {
     category.value = String(route.query.category)
   }
-  // Hole alle Fragen-IDs für die Kategorie (nur beim ersten Mal)
-  if (questionIds.length === 0) {
+  // Filter für nur Drag&Drop-Fragen
+  const onlyDragDrop = route.query.only_drag_drop === '1'
+  if (!questionsList.value.length) {
     const res = await fetch(`/api/questions${category.value ? `?category=${category.value}` : ''}`)
     if (res.ok) {
-      const questions = await res.json()
+      let questions = await res.json()
+      if (onlyDragDrop) {
+        questions = questions.filter((q: any) => q.question_type === 'drag_drop')
+      }
+      questionsList.value = questions
       questionIds = questions.map((q: any) => q.id)
     }
   }
-  if (q_idx.value < questionIds.length) {
-    const res = await fetch(`/api/question/${q_idx.value}${category.value ? `?category=${category.value}` : ''}`)
-    if (res.ok) {
-      question.value = await res.json()
-      userInput.value = ''
-      answered.value = false
-      feedback.value = ''
-      showingHint.value = false
-      await loadProgress()
-    } else {
-      question.value = null
+}
+
+async function loadQuestion() {
+  if (q_idx.value < questionIds.length && questionsList.value.length) {
+    const q = questionsList.value[q_idx.value]
+    // answer ggf. parsen
+    if (q.question_type === 'drag_drop' && typeof q.answer === 'string') {
+      try {
+        q.answer = JSON.parse(q.answer)
+      } catch (e) {
+        q.answer = {}
+      }
     }
+    question.value = q
+    userInput.value = ''
+    answered.value = false
+    feedback.value = ''
+    showingHint.value = false
+    // Drag&Drop-Init
+    if (question.value.question_type === 'drag_drop') {
+      dragDropUserAnswers.value = {}
+      dragDropOptions.value = Object.values(question.value.answer)
+    }
+    await loadProgress()
   } else {
     question.value = null
   }
@@ -91,6 +143,32 @@ async function submitAnswer() {
   if (answered.value) {
     q_idx.value++
     await loadQuestion()
+    return
+  }
+  if (question.value.question_type === 'drag_drop') {
+    // Prüfe, ob alle Felder ausgefüllt
+    const userAns = dragDropUserAnswers.value
+    if (Object.keys(userAns).length !== Object.keys(question.value.answer).length || Object.values(userAns).some(v => !v)) {
+      feedback.value = 'Bitte ordne allen Beispielen eine Antwort zu.'
+      return
+    }
+    // Sende Zuordnung als user_input
+    const res = await fetch('/api/evaluate', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        question_id: question.value.id,
+        user_input: userAns
+      })
+    })
+    const data = await res.json()
+    if (data.error) {
+      feedback.value = data.error
+    } else {
+      feedback.value = data.is_correct ? 'Richtig!' : 'Leider falsch.'
+    }
+    answered.value = true
+    await loadProgress()
     return
   }
   if (!userInput.value) return
@@ -114,11 +192,6 @@ async function submitAnswer() {
 }
 
 async function skip() {
-  await fetch(`/api/skip${category.value ? `?category=${category.value}` : ''}`, {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({q_idx: q_idx.value})
-  })
   q_idx.value++
   await loadQuestion()
 }
@@ -218,11 +291,32 @@ async function loginAndLoad() {
   if (loginRes.ok) {
     loginOk.value = true
     loginError.value = ''
+    await loadQuestionsOnce()
     await loadQuestion()
   } else {
     loginOk.value = false
     loginError.value = loginData.error || 'Login fehlgeschlagen.'
   }
+}
+
+function onDragStart(ans: string) {
+  dragData.value = ans
+}
+function onDrop(ex: string) {
+  if (!answered.value && dragData.value) {
+    // Nur eine Antwort pro Beispiel, Antwort darf nicht doppelt vergeben werden
+    if (!Object.values(dragDropUserAnswers.value).includes(dragData.value)) {
+      dragDropUserAnswers.value[ex] = dragData.value
+    }
+    dragData.value = null
+  }
+}
+
+function isImage(val: string) {
+  return typeof val === 'string' && val.startsWith('images/') && (val.endsWith('.png') || val.endsWith('.jpg') || val.endsWith('.jpeg') || val.endsWith('.svg'))
+}
+function imageUrl(val: string) {
+  return isImage(val) ? `/static/${val}` : ''
 }
 
 onMounted(loginAndLoad)
@@ -391,5 +485,72 @@ button:hover {
   margin-bottom: 16px;
   text-align: center;
   width: 100%;
+}
+.dragdrop-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+.dragdrop-example {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #f9fafb;
+}
+.dragdrop-example div {
+  flex: 1;
+  font-size: 1rem;
+  color: #374151;
+}
+.dragdrop-answers {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-top: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.dragdrop-answer {
+  background: #e0e7ef;
+  color: #22223b;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 1.08rem;
+  cursor: grab;
+  border: 1px solid #cbd5e1;
+  user-select: none;
+  transition: background 0.2s, color 0.2s;
+}
+.dragdrop-answer.used {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.dropzone {
+  min-width: 80px;
+  min-height: 32px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin-left: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  background: #f8fafc;
+  transition: border 0.2s;
+}
+.dropzone.filled {
+  border-style: solid;
+  border-color: #3b82f6;
+  background: #e0f2fe;
+}
+.drag-img {
+  max-width: 240px;
+  max-height: 240px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 4px;
 }
 </style>

@@ -1,4 +1,4 @@
-from flask import Flask, request, session, jsonify
+from flask import Flask, request, session, jsonify, send_from_directory
 import sqlite3
 import uuid
 import os
@@ -7,8 +7,9 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'D
 from evaluate import get_similarity_score
 from database import register_user, login_user
 import bcrypt
+import json
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="Static")
 app.secret_key = 'your_secret_key'  # Replace with a secure key in production
 
 BASEDIR = os.path.abspath(os.path.dirname(__file__))
@@ -92,7 +93,8 @@ def api_login():
 
 @app.route('/api/questions', methods=['GET'])
 def api_questions():
-    return jsonify(get_questions())
+    category = request.args.get('category')
+    return jsonify(get_questions(category))
 
 @app.route('/api/progress', methods=['GET'])
 def api_progress():
@@ -112,19 +114,6 @@ def api_progress():
         "remaining": len(remaining),
         "wrong": len(wrong)
     })
-
-@app.route('/api/question/<int:q_idx>', methods=['GET'])
-def api_question(q_idx):
-    category = request.args.get('category')
-    questions = get_questions(category)
-    if 0 <= q_idx < len(questions):
-        q = questions[q_idx]
-        return jsonify({
-            "id": q['id'],
-            "question": q['question'],
-            "hint_text": q.get('hint_text', None)
-        })
-    return jsonify({"error": "Not found"}), 404
 
 @app.route('/api/skip', methods=['POST'])
 def api_skip():
@@ -165,8 +154,20 @@ def api_evaluate():
     correct_answer = get_correct_answer(question_id)
     email = session['user_email']
     if correct_answer:
-        score = get_similarity_score(user_input, correct_answer)
-        is_correct = score > 0.65
+        # Prüfe ob Drag&Drop-Frage (answer ist JSON-Objekt)
+        try:
+            correct_obj = correct_answer
+            if isinstance(correct_obj, str):
+                correct_obj = json.loads(correct_obj)
+        except Exception:
+            correct_obj = None
+        if isinstance(user_input, dict) and isinstance(correct_obj, dict):
+            # Drag&Drop-Auswertung: alle Zuordnungen müssen stimmen
+            is_correct = all(str(user_input.get(k, '')) == str(v) for k, v in correct_obj.items())
+            score = 1.0 if is_correct else 0.0
+        else:
+            score = get_similarity_score(user_input, correct_answer)
+            is_correct = score > 0.65
         save_user_progress(email, question_id, is_correct)
         return jsonify({
             'score': score,
@@ -174,6 +175,11 @@ def api_evaluate():
         })
     else:
         return jsonify({'error': 'Frage nicht gefunden.'}), 404
+
+@app.route('/static/images/<path:filename>')
+def serve_image(filename):
+    image_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Database', 'Static', 'images'))
+    return send_from_directory(image_dir, filename)
 
 if __name__ == '__main__':
     app.run(debug=True)
