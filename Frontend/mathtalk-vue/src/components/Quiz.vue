@@ -1,36 +1,40 @@
 <template>
   <transition :name="transitionName" mode="out-in">
-    <div class="container" v-if="question"
-      :key="q_idx"
-      @touchstart="handleTouchStart"
-      @touchend="handleTouchEnd"
-      @mousedown="handleMouseDown"
-      @mouseup="handleMouseUp"
-    >
-      <h2>{{ question.question }}</h2>
-      <div class="text-input-row">
-        <input v-model="userInput" :disabled="answered" class="answer-input" type="text" placeholder="Antwort eingeben..." @keyup.enter="submitAnswer" />
+    <div v-if="loginOk">
+      <div class="container" v-if="question"
+        :key="q_idx"
+        @touchstart="handleTouchStart"
+        @touchend="handleTouchEnd"
+        @mousedown="handleMouseDown"
+        @mouseup="handleMouseUp"
+      >
+        <div class="user-info">Angemeldet als: <b>test@example.com</b></div>
+        <h2>{{ question.question }}</h2>
+        <div class="text-input-row">
+          <input v-model="userInput" :disabled="answered" class="answer-input" type="text" placeholder="Antwort eingeben..." @keyup.enter="submitAnswer" />
+        </div>
+        <div class="button-row">
+          <button @click="submitAnswer" style="width:160px;">
+            {{ answered ? 'Weiter' : 'Antworten' }}
+          </button>
+          <button @click="skip" style="background:#f59e42;color:#fff;">Überspringen</button>
+          <button @click="showHint" style="background:#fbbf24;color:#22223b;">Hinweis</button>
+          <button @click="goToMenu" style="background:#64748b;color:#fff;">Zurück zum Menü</button>
+        </div>
+        <p v-if="feedback" class="message" v-html="feedback"></p>
+        <p v-if="showingHint && question && question.hint_text" class="hint-box">💡 {{ question.hint_text }}</p>
+        <div class="info">
+          <p>Verbleibende Fragen: {{ progress.remaining }}</p>
+          <p>Zu wiederholen: {{ progress.wrong }}</p>
+        </div>
       </div>
-      <div class="button-row">
-        <button @click="submitAnswer" style="width:160px;">
-          {{ answered ? 'Weiter' : 'Antworten' }}
-        </button>
-        <button @click="skip" style="background:#f59e42;color:#fff;">Überspringen</button>
-        <button @click="showHint" style="background:#fbbf24;color:#22223b;">Hinweis</button>
-        <button @click="goToMenu" style="background:#64748b;color:#fff;">Zurück zum Menü</button>
-      </div>
-      <p v-if="feedback" class="message" v-html="feedback"></p>
-      <p v-if="showingHint && question && question.hint_text" class="hint-box">💡 {{ question.hint_text }}</p>
-      <div class="info">
-        <p>Verbleibende Fragen: {{ progress.remaining }}</p>
-        <p>Zu wiederholen: {{ progress.wrong }}</p>
+      <div v-else key="end">
+        <h2>Quiz beendet!</h2>
+        <button @click="reset">Neustarten</button>
+        <button @click="goToMenu" style="background:#64748b;color:#fff; margin-left: 12px;">Zurück zum Menü</button>
       </div>
     </div>
-    <div v-else key="end">
-      <h2>Quiz beendet!</h2>
-      <button @click="reset">Neustarten</button>
-      <button @click="goToMenu" style="background:#64748b;color:#fff; margin-left: 12px;">Zurück zum Menü</button>
-    </div>
+    <div v-else-if="loginError" class="user-info" style="color:#ef4444;">{{ loginError }}</div>
   </transition>
 </template>
 
@@ -51,6 +55,8 @@ const category = ref<string | null>(null)
 let questionIds: number[] = []
 const transitionName = ref('slide-fade')
 const showingHint = ref(false)
+const loginOk = ref(false)
+const loginError = ref('')
 
 async function loadQuestion() {
   if (!category.value && route.query.category) {
@@ -199,9 +205,27 @@ function handleMouseSwipe() {
   }
 }
 
-onMounted(() => {
-  loadQuestion()
-})
+async function loginAndLoad() {
+  const loginRes = await fetch('/api/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      email: 'test@example.com',
+      password: 'meinpasswort123'
+    })
+  })
+  const loginData = await loginRes.json()
+  if (loginRes.ok) {
+    loginOk.value = true
+    loginError.value = ''
+    await loadQuestion()
+  } else {
+    loginOk.value = false
+    loginError.value = loginData.error || 'Login fehlgeschlagen.'
+  }
+}
+
+onMounted(loginAndLoad)
 </script>
 
 <style scoped>
@@ -360,5 +384,12 @@ button:hover {
 .slide-right-leave-to {
   opacity: 0;
   transform: translateX(100%);
+}
+.user-info {
+  color: #374151;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  text-align: center;
+  width: 100%;
 }
 </style>

@@ -1,6 +1,8 @@
 <template>
   <div class="menu-container">
     <h1>Mathtalk</h1>
+    <div v-if="loginOk" class="user-info">Angemeldet als: <b>test@example.com</b></div>
+    <div v-else-if="loginError" class="user-info" style="color:#ef4444;">{{ loginError }}</div>
     <div class="dashboard">
       <div>
         <span>Beantwortet</span>
@@ -44,10 +46,30 @@ const categories = [
   { label: 'Stochastik', value: 'stochastik' }
 ]
 const selectedcategory = ref(categories[0].value)
+const loginOk = ref(false)
+const loginError = ref('')
 
 async function loadProgress() {
-  const res = await fetch('/api/progress')
-  progress.value = await res.json()
+  // Erst Login durchführen
+  const loginRes = await fetch('/api/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      email: 'test@example.com',
+      password: 'meinpasswort123'
+    })
+  })
+  const loginData = await loginRes.json()
+  if (loginRes.ok) {
+    loginOk.value = true
+    loginError.value = ''
+    // Dann Progress laden
+    const res = await fetch('/api/progress')
+    progress.value = await res.json()
+  } else {
+    loginOk.value = false
+    loginError.value = loginData.error || 'Login fehlgeschlagen.'
+  }
 }
 
 async function reset() {
@@ -83,6 +105,11 @@ h1 {
   margin-bottom: 0;
   font-size: 2.2rem;
   letter-spacing: 1px;
+}
+.user-info {
+  font-size: 1rem;
+  color: #475569;
+  margin-bottom: 16px;
 }
 .dashboard {
   margin-bottom: 0;

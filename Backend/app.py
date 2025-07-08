@@ -5,6 +5,8 @@ import os
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Database')))
 from evaluate import get_similarity_score
+from database import register_user, login_user
+import bcrypt
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Replace with a secure key in production
@@ -35,21 +37,25 @@ def get_questions(category=None):
     conn.close()
     return [dict(q) for q in questions]
 
-def get_progress(session_id):
+def get_user_progress(email, category=None):
     conn = get_db_connection()
-    row = conn.execute('SELECT remaining, wrong FROM progress WHERE session_id = ?', (session_id,)).fetchone()
+    if category:
+        db_category = CATEGORY_MAP.get(category, category)
+        question_ids = [row['id'] for row in conn.execute('SELECT id FROM questions WHERE category = ?', (db_category,))]
+        q_marks = ','.join(['?']*len(question_ids))
+        if not question_ids:
+            return [], []
+        rows = conn.execute(f'SELECT question_id, correct FROM progress WHERE user_email = ? AND question_id IN ({q_marks})', (email, *question_ids)).fetchall()
+    else:
+        rows = conn.execute('SELECT question_id, correct FROM progress WHERE user_email = ?', (email,)).fetchall()
+    correct = [row['question_id'] for row in rows if row['correct'] == 1]
+    wrong = [row['question_id'] for row in rows if row['correct'] == 0]
     conn.close()
-    if row:
-        return row['remaining'], row['wrong']
-    return None, None
+    return correct, wrong
 
-def save_progress(session_id, remaining, wrong):
+def save_user_progress(email, question_id, is_correct):
     conn = get_db_connection()
-    conn.execute('REPLACE INTO progress (session_id, remaining, wrong) VALUES (?, ?, ?)', (
-        session_id,
-        ','.join(map(str, remaining)),
-        ','.join(map(str, wrong))
-    ))
+    conn.execute('REPLACE INTO progress (user_email, question_id, correct) VALUES (?, ?, ?)', (email, question_id, int(is_correct)))
     conn.commit()
     conn.close()
 
@@ -58,20 +64,48 @@ def ensure_session_id():
     if 'session_id' not in session:
         session['session_id'] = str(uuid.uuid4())
 
+@app.route('/api/register', methods=['POST'])
+def api_register():
+    data = request.json
+    email = data.get('email')
+    password = data.get('password')
+    if not email or not password:
+        return jsonify({'error': 'Email und Passwort erforderlich.'}), 400
+    try:
+        register_user(email, password)
+        return jsonify({'status': 'ok'})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 400
+
+@app.route('/api/login', methods=['POST'])
+def api_login():
+    data = request.json
+    email = data.get('email')
+    password = data.get('password')
+    if not email or not password:
+        return jsonify({'error': 'Email und Passwort erforderlich.'}), 400
+    if login_user(email, password):
+        session['user_email'] = email
+        return jsonify({'status': 'ok'})
+    else:
+        return jsonify({'error': 'Login fehlgeschlagen.'}), 401
+
 @app.route('/api/questions', methods=['GET'])
 def api_questions():
     return jsonify(get_questions())
 
 @app.route('/api/progress', methods=['GET'])
 def api_progress():
-    session_id = session['session_id']
+    if 'user_email' not in session:
+        return jsonify({'error': 'Nicht eingeloggt.'}), 401
+    email = session['user_email']
     category = request.args.get('category')
     questions = get_questions(category)
     total_questions = len(questions)
-    remaining_str, wrong_str = get_progress(session_id)
-    remaining = [int(x) for x in remaining_str.split(',') if x] if remaining_str else list(range(total_questions))
-    wrong = [int(x) for x in wrong_str.split(',') if x] if wrong_str else []
-    answered = total_questions - len(remaining)
+    question_ids = [q['id'] for q in questions]
+    correct, wrong = get_user_progress(email, category)
+    answered = len(set(correct) | set(wrong))
+    remaining = [qid for qid in question_ids if qid not in correct and qid not in wrong]
     return jsonify({
         "total_questions": total_questions,
         "answered": answered,
@@ -88,35 +122,33 @@ def api_question(q_idx):
         return jsonify({
             "id": q['id'],
             "question": q['question'],
-            "hint_text": q.get('hint_text', None)  # Hinweis mitliefern
+            "hint_text": q.get('hint_text', None)
         })
     return jsonify({"error": "Not found"}), 404
 
 @app.route('/api/skip', methods=['POST'])
 def api_skip():
+    if 'user_email' not in session:
+        return jsonify({'error': 'Nicht eingeloggt.'}), 401
     data = request.json
-    q_idx = int(data['q_idx'])
-    category = request.args.get('category')
-    questions = get_questions(category)
-    session_id = session['session_id']
-    remaining_str, wrong_str = get_progress(session_id)
-    remaining = [int(x) for x in remaining_str.split(',') if x] if remaining_str else []
-    wrong = [int(x) for x in wrong_str.split(',') if x] if wrong_str else []
-    if q_idx in remaining:
-        remaining.remove(q_idx)
-        remaining.append(q_idx)
-    save_progress(session_id, remaining, wrong)
-    session['remaining'] = remaining
-    session['wrong'] = wrong
+    q_id = int(data['question_id'])
+    email = session['user_email']
+    save_user_progress(email, q_id, False)
     return jsonify({"feedback": "Frage übersprungen!"})
 
 @app.route('/api/reset', methods=['POST'])
 def api_reset():
+    if 'user_email' in session:
+        email = session['user_email']
+        conn = get_db_connection()
+        conn.execute('DELETE FROM progress WHERE user_email = ?', (email,))
+        conn.commit()
+        conn.close()
     session.clear()
     return jsonify({"status": "ok"})
 
 def get_correct_answer(question_id):
-    conn = sqlite3.connect(DB_PATH)
+    conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute("SELECT answer FROM questions WHERE id = ?", (question_id,))
     result = cursor.fetchone()
@@ -125,39 +157,20 @@ def get_correct_answer(question_id):
 
 @app.route('/api/evaluate', methods=['POST'])
 def api_evaluate():
+    if 'user_email' not in session:
+        return jsonify({'error': 'Nicht eingeloggt.'}), 401
     data = request.json
     question_id = data.get('question_id')
     user_input = data.get('user_input')
     correct_answer = get_correct_answer(question_id)
-    session_id = session['session_id']
-    # Hole alle Fragen-IDs für die aktuelle Kategorie
-    category = request.args.get('category')
-    questions = get_questions(category)
-    question_ids = [q['id'] for q in questions]
-    try:
-        q_idx = question_ids.index(question_id)
-    except ValueError:
-        return jsonify({'error': 'Frage nicht gefunden.'}), 404
-    remaining_str, wrong_str = get_progress(session_id)
-    remaining = [int(x) for x in remaining_str.split(',') if x] if remaining_str else question_ids.copy()
-    wrong = [int(x) for x in wrong_str.split(',') if x] if wrong_str else []
+    email = session['user_email']
     if correct_answer:
         score = get_similarity_score(user_input, correct_answer)
-        # Fortschritt speichern wie bei /api/answer
-        if q_idx in remaining:
-            remaining.remove(q_idx)
-        if score > 0.65:
-            if q_idx in wrong:
-                wrong.remove(q_idx)
-        else:
-            if q_idx not in wrong:
-                wrong.append(q_idx)
-        save_progress(session_id, remaining, wrong)
-        session['remaining'] = remaining
-        session['wrong'] = wrong
+        is_correct = score > 0.65
+        save_user_progress(email, question_id, is_correct)
         return jsonify({
             'score': score,
-            'is_correct': score > 0.65
+            'is_correct': is_correct
         })
     else:
         return jsonify({'error': 'Frage nicht gefunden.'}), 404
