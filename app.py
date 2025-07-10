@@ -16,7 +16,8 @@ def initialize():
 
     try:
         init_db()
-        load_questions_from_file("fragen.json")
+        json_path = os.path.join(os.path.dirname(__file__), "fragen.json")
+        load_questions_from_file(json_path)
         return "✅ Datenbank erfolgreich initialisiert & Fragen geladen!"
     except Exception as e:
         return f"❌ Fehler bei der Initialisierung: {e}", 500
