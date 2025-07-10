@@ -53,7 +53,13 @@ def init_db():
             UNIQUE(user_email, question_id)
         )
     """)
-
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS progress (
+            session_id TEXT PRIMARY KEY,
+            remaining TEXT,
+            wrong TEXT
+        )
+    """)
     conn.commit()
     conn.close()
     logger.info("Datenbanktabellen wurden erstellt oder aktualisiert.")
