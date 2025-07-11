@@ -6,10 +6,12 @@ import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Database')))
 from evaluate import get_similarity_score
 from database import register_user, login_user, init_db, load_questions_from_file
+from flask_cors import CORS
 import bcrypt
 import json
 
 app = Flask(__name__, static_folder="Static")
+CORS(app, supports_credentials=True)
 app.secret_key = 'your_secret_key'  # ⚠️ In Produktion sicher aufbewahren
 
 BASEDIR = os.path.abspath(os.path.dirname(__file__))
