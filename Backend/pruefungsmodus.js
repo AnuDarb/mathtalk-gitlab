@@ -1,3 +1,6 @@
+const params = new URLSearchParams(window.location.search);
+const selectedCategories = params.get("categories")?.split(",") || [];
+const selectedGrade = params.get("grade") || null;
 const totalQuestions = 10;
 let questionPoint = Number(localStorage.getItem("questionPoint")) || 0;
 let questionId = Number(localStorage.getItem("questionId")) || 1;
