@@ -6,7 +6,7 @@ let questionPoint = Number(localStorage.getItem("questionPoint")) || 0;
 let questionId = Number(localStorage.getItem("questionId")) || 1;
 let totalPoints = Number(localStorage.getItem("totalPoints")) || 0;
 
-
+let filteredQuestions = []; // 🆕 Zwischenspeicher für gefilterte Fragen
 
 function toggleOptions() {
   const panel = document.getElementById('optionsPanel');
@@ -30,20 +30,29 @@ function updateScoreBar() {
   localStorage.setItem("questionPoint", questionPoint);
   localStorage.setItem("questionId", questionId);
   const konto = document.getElementById("totalText");
-if (konto) {
-  konto.innerText = `Konto: ${totalPoints} Punkte`;
-}
+  if (konto) {
+    konto.innerText = `Konto: ${totalPoints} Punkte`;
+  }
 }
 
 
 // Eine Frage aus der Datenbank laden
 async function loadQuestion(id) {
-  const response = await fetch(`/api/question/${id}`);
-  const data = await response.json();
+  if (filteredQuestions.length === 0) {
+    const response = await fetch("/api/questions");
+    const data = await response.json();
+
+    filteredQuestions = data.filter(q =>
+      selectedCategories.includes(q.category) &&
+      q.grade === selectedGrade
+    );
+  }
+
+  const current = filteredQuestions[id - 1];
   const questionText = document.getElementById("questionText");
 
-  if (data.question) {
-    questionText.innerText = data.question;
+  if (current) {
+    questionText.innerText = current.question;
     document.getElementById("answerInput").value = "";
   } else {
     questionText.innerText = "🎉 Alle Aufgaben abgeschlossen!";
@@ -94,23 +103,21 @@ async function submitAnswer() {
     updateScoreBar();
 
     if (questionId > totalQuestions) {
-  totalPoints += questionPoint;
-  localStorage.setItem("totalPoints", totalPoints);
+      totalPoints += questionPoint;
+      localStorage.setItem("totalPoints", totalPoints);
 
-  alert(`🎉 Quiz beendet! Du hast ${questionPoint} Punkte erzielt.
-💰 Gesamtkonto: ${totalPoints} Punkte`);
+      alert(`🎉 Quiz beendet! Du hast ${questionPoint} Punkte erzielt.\n💰 Gesamtkonto: ${totalPoints} Punkte`);
 
-  // Zurücksetzen
-  questionId = 1;
-  questionPoint = 0;
-  localStorage.setItem("questionId", questionId);
-  localStorage.setItem("questionPoint", questionPoint);
+      // Zurücksetzen
+      questionId = 1;
+      questionPoint = 0;
+      localStorage.setItem("questionId", questionId);
+      localStorage.setItem("questionPoint", questionPoint);
 
-  updateScoreBar();
-  loadQuestion();
-  document.getElementById("answerInput").style.display = "block";
-}
-
+      updateScoreBar();
+      loadQuestion();
+      document.getElementById("answerInput").style.display = "block";
+    }
 
     // Button zurücksetzen
     button.disabled = false;
