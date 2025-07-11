@@ -6,20 +6,26 @@ Dieses Projekt besteht aus drei Teilen:
 - **Database**: SQLite-Datenbank, Initialisierungsskripte und Evaluierungsfunktionen
 
 ---
+## 1. Abhängigkeiten installieren
+1. Erstelle ein Virtual Environment:
+   ```powershell
+   py -m venv venv
+   ```
+2. Aktiviere das Virtual Environment:
+   ```powershell
+   .\venv\Scripts\Activate.ps1
+   ```
+3. Installiere die Abhängigkeiten:
+   ```powershell
+   pip install -r requirements.txt
+   ```
 
-## 1. Datenbank initialisieren
+
+## 2. Datenbank initialisieren
 
 1. Wechsle ins `Database`-Verzeichnis:
    ```powershell
    cd .\Database
-   ```
-2. (Optional) Aktiviere das Virtual Environment:
-   ```powershell
-   ..\Scripts\Activate.ps1
-   ```
-3. Installiere die Abhängigkeiten:
-   ```powershell
-   py -m pip install -r requirements.txt
    ```
 4. Initialisiere die Datenbank:
    ```powershell
@@ -29,17 +35,13 @@ Dieses Projekt besteht aus drei Teilen:
 
 ---
 
-## 2. Backend starten (Flask-API)
+## 3. Backend starten (Flask-API)
 
 1. Wechsle ins `Backend`-Verzeichnis:
    ```powershell
    cd ..\Backend
    ```
-2. Installiere die Abhängigkeiten:
-   ```powershell
-   pip install -r requirements.txt
-   ```
-3. Starte das Backend:
+2. Starte das Backend:
    ```powershell
    python app.py
    ```
@@ -68,4 +70,3 @@ Dieses Projekt besteht aus drei Teilen:
 ## Hinweise
 - Die API-URL ist im Frontend als Proxy konfiguriert (`/api` → Flask-Backend).
 - Für den Produktivbetrieb ggf. CORS im Backend aktivieren.
-- Weitere Details siehe die README-Dateien in den jeweiligen Unterordnern.
