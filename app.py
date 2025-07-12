@@ -4,7 +4,7 @@ import os
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'Database')))
 from evaluate.evaluate import get_similarity_score
-from Database.database import register_user, login_user, init_db, load_questions_from_file, save_user_progress, get_questions, get_user_progress, get_correct_answer, reset_user_progress
+from Database.database import register_user, login_user, init_db, load_questions_from_file, save_user_progress, get_questions, get_user_progress, get_correct_answer, reset_user_progress, get_next_question_for_user
 from flask_cors import CORS
 import json
 
@@ -70,6 +70,18 @@ def api_login():
 def api_questions():
     category = request.args.get('category')
     return jsonify(get_questions(category))
+
+@app.route('/api/question', methods=['GET'])
+def api_question():
+    if 'user_email' not in session:
+        return jsonify({'error': 'Nicht eingeloggt.'}), 401
+    email = session['user_email']
+    category = request.args.get('category')
+    question = get_next_question_for_user(email, category)
+    if question:
+        return jsonify(question)
+    else:
+        return jsonify({'error': 'Keine Frage gefunden.'}), 404
 
 # 📊 Fortschritt anzeigen
 @app.route('/api/progress', methods=['GET'])

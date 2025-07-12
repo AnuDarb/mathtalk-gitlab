@@ -3,6 +3,7 @@ import json
 import bcrypt
 import logging
 import os
+import random
 
 # Logging konfigurieren
 logging.basicConfig(level=logging.INFO)
@@ -197,13 +198,53 @@ def get_user_progress(email, category=None):
         q_marks = ','.join(['?']*len(question_ids))
         if not question_ids:
             return [], []
-        rows = conn.execute(f'SELECT question_id, correct FROM progress WHERE user_email = ? AND question_id IN ({q_marks})', (email, *question_ids)).fetchall()
+        rows = conn.execute(f'SELECT question_id, correct, attempts, errors FROM progress WHERE user_email = ? AND question_id IN ({q_marks})', (email, *question_ids)).fetchall()
     else:
-        rows = conn.execute('SELECT question_id, correct FROM progress WHERE user_email = ?', (email,)).fetchall()
+        rows = conn.execute('SELECT question_id, correct, attempts, errors FROM progress WHERE user_email = ?', (email,)).fetchall()
     correct = [row['question_id'] for row in rows if row['correct'] == 1]
-    wrong = [row['question_id'] for row in rows if row['correct'] == 0]
+    # Sortiere falsch beantwortete Fragen nach Fehlern und Versuchen
+    sorted_wrong = sorted(
+        [row for row in rows if row['correct'] == 0],
+        key=lambda r: (-r['errors'], r['attempts'])
+    )
+    wrong_sorted_ids = [row['question_id'] for row in sorted_wrong]
     conn.close()
-    return correct, wrong
+    return correct, wrong_sorted_ids
+
+# Nächste Frage für Übungsmodus anhand der Fehler und Versuche holen
+def get_next_question_for_user(email, category=None):
+    conn = create_connection()
+    if category:
+        db_category = CATEGORY_MAP.get(category, category)
+        query = '''
+            SELECT q.*, p.correct, p.attempts, p.errors
+            FROM questions q
+            LEFT JOIN progress p ON q.id = p.question_id AND p.user_email = ?
+            WHERE q.category = ?
+        '''
+        rows = conn.execute(query, (email, db_category)).fetchall()
+    else:
+        query = '''
+            SELECT q.*, p.correct, p.attempts, p.errors
+            FROM questions q
+            LEFT JOIN progress p ON q.id = p.question_id AND p.user_email = ?
+        '''
+        rows = conn.execute(query, (email,)).fetchall()
+    conn.close()
+    # Filter: Noch nicht korrekt beantwortet oder mit Fehlern
+    wrong_or_unanswered = [row for row in rows if row['correct'] == 0 or row['correct'] is None]
+    # Wenn es noch offene Fragen gibt, wähle zufällig eine aus
+    if wrong_or_unanswered:
+        # 70% Wahrscheinlichkeit für die Frage mit den meisten Fehlern, sonst zufällig
+        sorted_wrong = sorted(wrong_or_unanswered, key=lambda r: (-r['errors'] if r['errors'] is not None else 0, r['attempts'] if r['attempts'] is not None else 0))
+        if random.random() < 0.7:
+            return dict(sorted_wrong[0])
+        else:
+            return dict(random.choice(wrong_or_unanswered))
+    # Sonst: Alle Fragen wurden korrekt beantwortet, wähle zufällig eine
+    if rows:
+        return dict(random.choice(rows))
+    return None
 
 # ✅ Lösung aus DB holen
 def get_correct_answer(question_id):

@@ -100,40 +100,50 @@ async function loadQuestionsOnce() {
   // Filter für nur Drag&Drop-Fragen
   const onlyDragDrop = route.query.only_drag_drop === '1'
   if (!questionsList.value.length) {
-    const res = await fetch(`/api/questions${category.value ? `?category=${category.value}` : ''}`)
+    // Hole die nächste Frage für den Benutzer über /api/question
+    const res = await fetch(`/api/question${category.value ? `?category=${category.value}` : ''}`)
     if (res.ok) {
-      let questions = await res.json()
-      if (onlyDragDrop) {
-        questions = questions.filter((q: any) => q.question_type === 'drag_drop')
+      let q = await res.json()
+      if (q && (!onlyDragDrop || q.question_type === 'drag_drop')) {
+        questionsList.value = [q]
+        questionIds = [q.id]
+      } else {
+        questionsList.value = []
+        questionIds = []
       }
-      questionsList.value = questions
-      questionIds = questions.map((q: any) => q.id)
     }
   }
 }
 
 async function loadQuestion() {
-  if (q_idx.value < questionIds.length && questionsList.value.length) {
-    const q = questionsList.value[q_idx.value]
-    // answer ggf. parsen
-    if (q.question_type === 'drag_drop' && typeof q.answer === 'string') {
-      try {
-        q.answer = JSON.parse(q.answer)
-      } catch (e) {
-        q.answer = {}
+  // Hole die nächste Frage für den Benutzer über /api/question
+  const res = await fetch(`/api/question${category.value ? `?category=${category.value}` : ''}`)
+  if (res.ok) {
+    let q = await res.json()
+    if (q && Object.keys(q).length > 0) {
+      // answer ggf. parsen
+      if (q.question_type === 'drag_drop' && typeof q.answer === 'string') {
+        try {
+          q.answer = JSON.parse(q.answer)
+        } catch (e) {
+          q.answer = {}
+        }
       }
+      question.value = q
+      userInput.value = ''
+      answered.value = false
+      feedback.value = ''
+      showingHint.value = false
+      // Drag&Drop-Init
+      if (question.value.question_type === 'drag_drop') {
+        dragDropUserAnswers.value = {}
+        dragDropOptions.value = Object.values(question.value.answer)
+      }
+      await loadProgress()
+    } else {
+      // Quiz ist beendet, wenn keine Frage mehr kommt
+      question.value = null
     }
-    question.value = q
-    userInput.value = ''
-    answered.value = false
-    feedback.value = ''
-    showingHint.value = false
-    // Drag&Drop-Init
-    if (question.value.question_type === 'drag_drop') {
-      dragDropUserAnswers.value = {}
-      dragDropOptions.value = Object.values(question.value.answer)
-    }
-    await loadProgress()
   } else {
     question.value = null
   }
@@ -141,7 +151,6 @@ async function loadQuestion() {
 
 async function submitAnswer() {
   if (answered.value) {
-    q_idx.value++
     await loadQuestion()
     return
   }
