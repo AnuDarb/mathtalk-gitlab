@@ -11,8 +11,18 @@ logger = logging.getLogger(__name__)
 # Pfad zur SQLite-Datei (für Render ggf. persistent anpassen)
 DB_PATH = os.environ.get("DB_PATH", "mathtalk.db")
 
+# 📚 Mapping der Kategorien
+CATEGORY_MAP = {
+    'zahlen_terme': 'Zahlen & Terme',
+    'funktionen_algebra': 'Funktionen & Algebra',
+    'geometrie_raum': 'Geometrie & Raum',
+    'stochastik': 'Stochastik'
+}
+
 def create_connection():
-    return sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row  # Damit dict-ähnliche Ergebnisse zurückgegeben werden
+    return conn
 
 def init_db():
     conn = create_connection()
@@ -108,6 +118,7 @@ def list_questions():
         logger.info(f"ID {row[0]} | {row[1]} ({row[2]}) – Typ: {row[3]}")
     conn.close()
 
+# Benutzerregistrierung
 def register_user(email, password):
     conn = create_connection()
     cursor = conn.cursor()
@@ -122,6 +133,7 @@ def register_user(email, password):
     finally:
         conn.close()
 
+# Benutzer-Login
 def login_user(email, password):
     conn = create_connection()
     cursor = conn.cursor()
@@ -136,6 +148,7 @@ def login_user(email, password):
         logger.warning("Login fehlgeschlagen. E-Mail oder Passwort falsch.")
         return False
 
+# 🧠 Fortschritt abspeichern
 def save_user_progress(user_email, question_id, is_correct):
     conn = create_connection()
     cursor = conn.cursor()
@@ -163,3 +176,49 @@ def save_user_progress(user_email, question_id, is_correct):
 
     conn.commit()
     conn.close()
+
+# 🔎 Fragen holen
+def get_questions(category=None):
+    conn = create_connection()
+    if category:
+        db_category = CATEGORY_MAP.get(category, category)
+        questions = conn.execute('SELECT * FROM questions WHERE category = ?', (db_category,)).fetchall()
+    else:
+        questions = conn.execute('SELECT * FROM questions').fetchall()
+    conn.close()
+    return [dict(q) for q in questions]
+
+# 🧠 Fortschritt abrufen
+def get_user_progress(email, category=None):
+    conn = create_connection()
+    if category:
+        db_category = CATEGORY_MAP.get(category, category)
+        question_ids = [row['id'] for row in conn.execute('SELECT id FROM questions WHERE category = ?', (db_category,))]
+        q_marks = ','.join(['?']*len(question_ids))
+        if not question_ids:
+            return [], []
+        rows = conn.execute(f'SELECT question_id, correct FROM progress WHERE user_email = ? AND question_id IN ({q_marks})', (email, *question_ids)).fetchall()
+    else:
+        rows = conn.execute('SELECT question_id, correct FROM progress WHERE user_email = ?', (email,)).fetchall()
+    correct = [row['question_id'] for row in rows if row['correct'] == 1]
+    wrong = [row['question_id'] for row in rows if row['correct'] == 0]
+    conn.close()
+    return correct, wrong
+
+# ✅ Lösung aus DB holen
+def get_correct_answer(question_id):
+    conn = create_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT answer FROM questions WHERE id = ?", (question_id,))
+    result = cursor.fetchone()
+    conn.close()
+    return result[0] if result else None
+
+# 🗑️ Fortschritt zurücksetzen
+def reset_user_progress(email):
+    conn = create_connection()
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM progress WHERE user_email = ?", (email,))
+    conn.commit()
+    conn.close()
+    logger.info(f"Fortschritt für {email} wurde zurückgesetzt.")

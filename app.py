@@ -1,35 +1,16 @@
 from flask import Flask, request, session, jsonify, send_from_directory
-import sqlite3
 import uuid
 import os
 import sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Database')))
-from evaluate import get_similarity_score
-from database import register_user, login_user, init_db, load_questions_from_file
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'Database')))
+from evaluate.evaluate import get_similarity_score
+from Database.database import register_user, login_user, init_db, load_questions_from_file, save_user_progress, get_questions, get_user_progress, get_correct_answer, reset_user_progress
 from flask_cors import CORS
-import bcrypt
 import json
 
 app = Flask(__name__, static_folder="Static")
 CORS(app, supports_credentials=True)
 app.secret_key = 'your_secret_key'  # ⚠️ In Produktion sicher aufbewahren
-
-BASEDIR = os.path.abspath(os.path.dirname(__file__))
-DB_PATH = os.path.join(BASEDIR, '..', 'Database', 'mathtalk.db')
-
-# 📦 DB-Verbindung
-def get_db_connection():
-    conn = sqlite3.connect(DB_PATH)
-    conn.row_factory = sqlite3.Row
-    return conn
-
-# 📚 Mapping der Kategorien
-CATEGORY_MAP = {
-    'zahlen_terme': 'Zahlen & Terme',
-    'funktionen_algebra': 'Funktionen & Algebra',
-    'geometrie_raum': 'Geometrie & Raum',
-    'stochastik': 'Stochastik'
-}
 
 # 🆔 Session-ID erzeugen, falls nicht vorhanden
 @app.before_request
@@ -49,7 +30,7 @@ def initialize():
     if secret != "y698ZhPs72904Bncd":
         return "⛔ Nicht autorisiert", 403
     try:
-        json_path = os.path.join(os.path.dirname(__file__), "fragen.json")
+        json_path = os.path.join(os.path.dirname(__file__), 'Database', 'fragen.json')
         init_db()
         load_questions_from_file(json_path)
         return "✅ Datenbank erfolgreich initialisiert & Fragen geladen!"
@@ -126,10 +107,7 @@ def api_skip():
 def api_reset():
     if 'user_email' in session:
         email = session['user_email']
-        conn = get_db_connection()
-        conn.execute('DELETE FROM progress WHERE user_email = ?', (email,))
-        conn.commit()
-        conn.close()
+        reset_user_progress(email)
     session.clear()
     return jsonify({"status": "ok"})
 
@@ -169,50 +147,6 @@ def api_evaluate():
 def serve_image(filename):
     image_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Database', 'Static', 'images'))
     return send_from_directory(image_dir, filename)
-
-# 🔎 Fragen holen
-def get_questions(category=None):
-    conn = get_db_connection()
-    if category:
-        db_category = CATEGORY_MAP.get(category, category)
-        questions = conn.execute('SELECT * FROM questions WHERE category = ?', (db_category,)).fetchall()
-    else:
-        questions = conn.execute('SELECT * FROM questions').fetchall()
-    conn.close()
-    return [dict(q) for q in questions]
-
-# 🧠 Fortschritt abrufen
-def get_user_progress(email, category=None):
-    conn = get_db_connection()
-    if category:
-        db_category = CATEGORY_MAP.get(category, category)
-        question_ids = [row['id'] for row in conn.execute('SELECT id FROM questions WHERE category = ?', (db_category,))]
-        q_marks = ','.join(['?']*len(question_ids))
-        if not question_ids:
-            return [], []
-        rows = conn.execute(f'SELECT question_id, correct FROM progress WHERE user_email = ? AND question_id IN ({q_marks})', (email, *question_ids)).fetchall()
-    else:
-        rows = conn.execute('SELECT question_id, correct FROM progress WHERE user_email = ?', (email,)).fetchall()
-    correct = [row['question_id'] for row in rows if row['correct'] == 1]
-    wrong = [row['question_id'] for row in rows if row['correct'] == 0]
-    conn.close()
-    return correct, wrong
-
-# 💾 Fortschritt speichern
-def save_user_progress(email, question_id, is_correct):
-    conn = get_db_connection()
-    conn.execute('REPLACE INTO progress (user_email, question_id, correct) VALUES (?, ?, ?)', (email, question_id, int(is_correct)))
-    conn.commit()
-    conn.close()
-
-# ✅ Lösung aus DB holen
-def get_correct_answer(question_id):
-    conn = get_db_connection()
-    cursor = conn.cursor()
-    cursor.execute("SELECT answer FROM questions WHERE id = ?", (question_id,))
-    result = cursor.fetchone()
-    conn.close()
-    return result[0] if result else None
 
 # 🚀 Startpunkt
 if __name__ == '__main__':
