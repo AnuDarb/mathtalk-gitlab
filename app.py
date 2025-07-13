@@ -2,11 +2,16 @@ from flask import Flask, request, session, jsonify, send_from_directory, render_
 import uuid
 import os
 import sys
+import json
+from flask_cors import CORS
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'Database')))
 from evaluate.evaluate import get_similarity_score
-from Database.database import register_user, login_user, init_db, load_questions_from_file, save_user_progress, get_questions, get_user_progress, get_correct_answer, reset_user_progress, get_next_question_for_user
-from flask_cors import CORS
-import json
+from Database.database import (
+    register_user, login_user, init_db, load_questions_from_file,
+    save_user_progress, get_questions, get_user_progress,
+    get_correct_answer, reset_user_progress, get_next_question_for_user
+)
 
 app = Flask(__name__, static_folder="static")
 CORS(app, supports_credentials=True)
@@ -21,7 +26,7 @@ def ensure_session_id():
 # 🚀 Status-Seite
 @app.route("/")
 def home():
-    return render_template("dashboard.html") 
+    return render_template("dashboard.html")
 
 # 🔐 Initialisierung mit Fragenimport
 @app.route("/init-db")
@@ -154,14 +159,6 @@ def api_evaluate():
     else:
         return jsonify({'error': 'Frage nicht gefunden.'}), 404
 
-# 🖼 Bilder ausliefern
-@app.route('/static/images/<path:filename>')
-def serve_image(filename):
-    image_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Database', 'Static', 'images'))
-    return send_from_directory(image_dir, filename)
-
 # 🚀 Startpunkt
 if __name__ == '__main__':
     app.run(debug=True)
-
-
