@@ -9,10 +9,11 @@ import random
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Pfad zur SQLite-Datei 
+# Pfad zur SQLite-Datei
 DB_PATH = os.path.join(os.environ.get("DATABASE_DIR", "/persistent"), "mathtalk.db")
-conn = sqlite3.connect(DB_PATH)
 
+# 🔧 Stelle sicher, dass der Ordner existiert
+os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
 
 # 📚 Mapping der Kategorien
 CATEGORY_MAP = {
@@ -66,13 +67,7 @@ def init_db():
             UNIQUE(user_email, question_id)
         )
     """)
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS progress (
-            session_id TEXT PRIMARY KEY,
-            remaining TEXT,
-            wrong TEXT
-        )
-    """)
+
     conn.commit()
     conn.close()
     logger.info("Datenbanktabellen wurden erstellt oder aktualisiert.")
