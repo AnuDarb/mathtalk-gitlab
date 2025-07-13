@@ -21,7 +21,7 @@ document.getElementById("registerForm").addEventListener("submit", async functio
 
     if (response.ok && result.status === "ok") {
       alert("Registrierung erfolgreich! Du kannst dich jetzt einloggen.");
-      window.location.href = "login.html";
+      window.location.href = "/login";  // ← Weiterleitung zur Flask-Route
     } else {
       alert(result.error || "Registrierung fehlgeschlagen.");
     }
