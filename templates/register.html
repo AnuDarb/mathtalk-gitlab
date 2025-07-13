@@ -28,7 +28,8 @@
     </form>
 
     <p class="register-link">
-      Bereits registriert? <a href="login.html">Jetzt einloggen</a>
+      Bereits registriert?
+      <a href="{{ url_for('home') | replace('dashboard', 'login') }}">Jetzt einloggen</a>
     </p>
   </div>
 
