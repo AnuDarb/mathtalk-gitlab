@@ -1,15 +1,20 @@
 import re
 import os
-import torch
-from sentence_transformers import SentenceTransformer, util
 from symspellpy import SymSpell, Verbosity
 
-# Modell für semantische Bewertung laden
-model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+# Modell wird nur bei Bedarf geladen (Lazy Loading)
+model = None
+
+def get_model():
+    global model
+    if model is None:
+        from sentence_transformers import SentenceTransformer
+        model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+    return model
 
 # SymSpell vorbereiten für Rechtschreibkorrektur
 sym_spell = SymSpell(max_dictionary_edit_distance=2, prefix_length=7)
-dict_path = os.path.join(os.path.dirname(__file__), "dictionary.txt")  # relativer Pfad
+dict_path = os.path.join(os.path.dirname(__file__), "dictionary.txt")
 if not sym_spell.load_dictionary(dict_path, term_index=0, count_index=1):
     print("⚠️ Wörterbuch konnte nicht geladen werden.")
 
@@ -52,12 +57,15 @@ def correct_spelling(text):
         corrected.append(suggestions[0].term if suggestions else word)
     return " ".join(corrected)
 
-# Kombinierte Bewertungsfunktion mit Korrektur + semantischem Vergleich
+# Bewertungsfunktion mit Korrektur + semantischem Vergleich (Lazy-Load-Modell)
 def get_similarity_score(user_answer, correct_answer):
-    user_answer = correct_spelling(user_answer)           # Tippfehler korrigieren
-    user_answer = extract_math_expression(user_answer)    # Mathematisch bereinigen
+    from sentence_transformers import util
+
+    user_answer = correct_spelling(user_answer)
+    user_answer = extract_math_expression(user_answer)
     correct_answer = extract_math_expression(correct_answer)
 
+    model = get_model()
     embedding_user = model.encode(user_answer, convert_to_tensor=True)
     embedding_correct = model.encode(correct_answer, convert_to_tensor=True)
 
