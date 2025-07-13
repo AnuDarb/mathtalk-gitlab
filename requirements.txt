@@ -1,4 +1,5 @@
 sentence-transformers
+gunicorn
 torch
 symspellpy
 bcrypt
