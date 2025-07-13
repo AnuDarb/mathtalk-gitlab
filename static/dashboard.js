@@ -98,3 +98,32 @@ profilIcon?.addEventListener("click", () => {
 document.getElementById("logoutBtn")?.addEventListener("click", () => {
   window.location.href = "/login";
 });
+
+// 🔄 Benutzerprofil-Daten abrufen & anzeigen
+async function loadProfileData() {
+  try {
+    const response = await fetch("/api/progress");
+    const result = await response.json();
+
+    if (!response.ok || result.error) {
+      console.error("Fehler beim Abrufen des Fortschritts");
+      return;
+    }
+
+    // Benutzername und E-Mail aus der Session holen
+    const email = sessionStorage.getItem("email") || "Unbekannt";
+
+    // Fortschritt berechnen
+    const progressPercent = result.total_questions > 0
+      ? Math.round((result.answered / result.total_questions) * 100)
+      : 0;
+
+    // In DOM anzeigen (Elemente müssen vorhanden sein)
+    document.getElementById("profilEmail").textContent = email;
+    document.getElementById("profilFortschritt").textContent = `${progressPercent}%`;
+  } catch (err) {
+    console.error("❌ Fehler beim Laden des Profils:", err);
+  }
+}
+
+loadProfileData();
