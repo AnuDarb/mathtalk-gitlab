@@ -23,12 +23,27 @@ def ensure_session_id():
     if 'session_id' not in session:
         session['session_id'] = str(uuid.uuid4())
 
+# 🟢 Automatische Initialisierung bei leerer DB (einmalig beim ersten Request)
+@app.before_first_request
+def init_if_needed():
+    try:
+        questions = get_questions()
+        if not questions:
+            json_path = os.path.join(os.path.dirname(__file__), 'Database', 'fragen.json')
+            init_db()
+            load_questions_from_file(json_path)
+            print("✅ Datenbank automatisch initialisiert.")
+        else:
+            print("📦 Datenbank bereits initialisiert.")
+    except Exception as e:
+        print(f"❌ Fehler bei der Initialisierung: {e}")
+
 # 🚀 Status-Seite
 @app.route("/")
 def home():
     return render_template("login.html")
 
-# 🔐 Initialisierung mit Fragenimport
+# 🔐 Initialisierung mit Fragenimport (manuell)
 @app.route("/init-db")
 def initialize():
     secret = request.args.get("secret")
@@ -173,7 +188,7 @@ def register():
 @app.route("/dashboard")
 def dashboard():
     return render_template("dashboard.html")
-    
+
 # 🚀 Startpunkt
 if __name__ == '__main__':
     app.run(debug=True)
