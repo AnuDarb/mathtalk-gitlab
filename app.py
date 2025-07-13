@@ -8,7 +8,7 @@ from Database.database import register_user, login_user, init_db, load_questions
 from flask_cors import CORS
 import json
 
-app = Flask(__name__, static_folder="Static")
+app = Flask(__name__, static_folder="static")
 CORS(app, supports_credentials=True)
 app.secret_key = 'your_secret_key'  # ⚠️ In Produktion sicher aufbewahren
 
