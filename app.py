@@ -5,7 +5,10 @@ import sys
 import json
 from flask_cors import CORS
 
+# Pfad zur Datenbanklogik hinzufügen
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'Database')))
+
+# Eigene Module importieren
 from evaluate.evaluate import get_similarity_score
 from Database.database import (
     register_user, login_user, init_db, load_questions_from_file,
@@ -13,9 +16,13 @@ from Database.database import (
     get_correct_answer, reset_user_progress, get_next_question_for_user
 )
 
+# Flask-App initialisieren
 app = Flask(__name__, static_folder="static")
 CORS(app, supports_credentials=True)
-app.secret_key = 'your_secret_key'  # ⚠️ In Produktion sicher aufbewahren
+app.secret_key = 'your_secret_key'  # ⚠️ In Produktion sicher absichern
+
+# ✅ Datenbanktabellen beim Start immer erstellen
+init_db()
 
 # 🆔 Session-ID erzeugen, falls nicht vorhanden
 @app.before_request
@@ -23,27 +30,12 @@ def ensure_session_id():
     if 'session_id' not in session:
         session['session_id'] = str(uuid.uuid4())
 
-# 🟢 Automatische Initialisierung bei leerer DB (einmalig beim ersten Request)
-@app.before_first_request
-def init_if_needed():
-    try:
-        questions = get_questions()
-        if not questions:
-            json_path = os.path.join(os.path.dirname(__file__), 'Database', 'fragen.json')
-            init_db()
-            load_questions_from_file(json_path)
-            print("✅ Datenbank automatisch initialisiert.")
-        else:
-            print("📦 Datenbank bereits initialisiert.")
-    except Exception as e:
-        print(f"❌ Fehler bei der Initialisierung: {e}")
-
 # 🚀 Status-Seite
 @app.route("/")
 def home():
     return render_template("login.html")
 
-# 🔐 Initialisierung mit Fragenimport (manuell)
+# 🔐 Manuelle Initialisierung mit Fragenimport
 @app.route("/init-db")
 def initialize():
     secret = request.args.get("secret")
@@ -91,6 +83,7 @@ def api_questions():
     category = request.args.get('category')
     return jsonify(get_questions(category))
 
+# 📋 Nächste Frage (angepasst an Nutzer)
 @app.route('/api/question', methods=['GET'])
 def api_question():
     if 'user_email' not in session:
