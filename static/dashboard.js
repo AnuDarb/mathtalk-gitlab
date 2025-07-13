@@ -1,8 +1,9 @@
 console.log("📊 Dashboard JS geladen");
 
-// Seite neu laden bei Zurück-Button
-if (window.performance && window.performance.getEntriesByType("navigation")[0].type === "back_forward") {
-  window.location.reload();
+// Seite neu laden bei Zurück-Button (mit Fallback)
+const navEntry = performance.getEntriesByType("navigation")[0];
+if (navEntry && navEntry.type === "back_forward") {
+  location.reload();
 }
 
 let selectedCategories = new Set();
@@ -80,7 +81,7 @@ function checkReady() {
     const params = new URLSearchParams();
     params.set("categories", Array.from(selectedCategories).join(","));
     params.set("grade", selectedGrade);
-    const path = selectedMode === "uebung" ? "/uebungsmodus" : "/pruefungsmodus.html";
+    const path = selectedMode === "uebung" ? "/uebungsmodus" : "/pruefungsmodus";
     window.location.href = `${path}?${params.toString()}`;
   }
 }
@@ -95,6 +96,5 @@ profilIcon?.addEventListener("click", () => {
 
 // Abmelden
 document.getElementById("logoutBtn")?.addEventListener("click", () => {
-  // Optional: Hier kannst du vorher noch Session löschen
-  window.location.href = "/login.html";
+  window.location.href = "/login";
 });
