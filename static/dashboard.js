@@ -36,24 +36,40 @@ document.querySelectorAll(".image-card").forEach(card => {
   });
 });
 
-// Modusauswahl
+// Modusauswahl (mit Toggle)
 const modes = document.querySelectorAll(".moduskachel .untertitel");
 modes.forEach(modus => {
   modus.parentElement.addEventListener("click", () => {
-    selectedMode = modus.innerText.includes("Übung") ? "uebung" : "pruefung";
-    modes.forEach(m => m.parentElement.classList.remove("selected"));
-    modus.parentElement.classList.add("selected");
+    const newMode = modus.innerText.includes("Übung") ? "uebung" : "pruefung";
+
+    if (selectedMode === newMode) {
+      selectedMode = null;
+      modus.parentElement.classList.remove("selected");
+    } else {
+      selectedMode = newMode;
+      modes.forEach(m => m.parentElement.classList.remove("selected"));
+      modus.parentElement.classList.add("selected");
+    }
+
     checkReady();
   });
 });
 
-// Klassenwahl
+// Klassenwahl (mit Toggle)
 const gradeImages = document.querySelectorAll(".modul:last-of-type .moduskachel");
 gradeImages.forEach(kachel => {
   kachel.addEventListener("click", () => {
-    selectedGrade = kachel.querySelector("img").alt.includes("9") ? "9" : "10";
-    gradeImages.forEach(k => k.classList.remove("selected"));
-    kachel.classList.add("selected");
+    const grade = kachel.querySelector("img").alt.includes("9") ? "9" : "10";
+
+    if (selectedGrade === grade) {
+      selectedGrade = null;
+      kachel.classList.remove("selected");
+    } else {
+      selectedGrade = grade;
+      gradeImages.forEach(k => k.classList.remove("selected"));
+      kachel.classList.add("selected");
+    }
+
     checkReady();
   });
 });
