@@ -26,7 +26,7 @@ def ensure_session_id():
 # 🚀 Status-Seite
 @app.route("/")
 def home():
-    return render_template("dashboard.html")
+    return render_template("login.html")
 
 # 🔐 Initialisierung mit Fragenimport
 @app.route("/init-db")
