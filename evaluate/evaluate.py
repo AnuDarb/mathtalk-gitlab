@@ -14,7 +14,7 @@ def get_model():
 
 # SymSpell vorbereiten für Rechtschreibkorrektur
 sym_spell = SymSpell(max_dictionary_edit_distance=2, prefix_length=7)
-dict_path = os.path.join(os.path.dirname(__file__), "dictionary.txt")
+dict_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Database', 'dictionary.txt'))
 if not sym_spell.load_dictionary(dict_path, term_index=0, count_index=1):
     print("⚠️ Wörterbuch konnte nicht geladen werden.")
 
