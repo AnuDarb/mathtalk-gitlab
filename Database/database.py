@@ -28,50 +28,6 @@ def create_connection():
     conn.row_factory = sqlite3.Row  # Damit dict-ähnliche Ergebnisse zurückgegeben werden
     return conn
 
-def init_db():
-    conn = create_connection()
-    cursor = conn.cursor()
-
-    # Fragen-Tabelle
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS questions (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            question TEXT NOT NULL,
-            answer TEXT NOT NULL,
-            hint_text TEXT,
-            category TEXT NOT NULL,
-            grade TEXT NOT NULL,
-            question_type TEXT DEFAULT 'classic',
-            choices TEXT
-        )
-    """)
-
-    # Benutzer-Tabelle
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS users (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            email TEXT NOT NULL UNIQUE,
-            password TEXT NOT NULL
-        )
-    """)
-
-    # Lernstand-Tabelle mit attempts und errors
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS progress (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            user_email TEXT NOT NULL,
-            question_id INTEGER NOT NULL,
-            correct INTEGER NOT NULL CHECK (correct IN (0,1)),
-            attempts INTEGER DEFAULT 1,
-            errors INTEGER DEFAULT 0,
-            UNIQUE(user_email, question_id)
-        )
-    """)
-
-    conn.commit()
-    conn.close()
-    logger.info("Datenbanktabellen wurden erstellt oder aktualisiert.")
-
 def add_question(question, answer, hint_text, category, grade, question_type="classic", choices=None):
     conn = create_connection()
     cursor = conn.cursor()
@@ -116,12 +72,10 @@ def list_questions():
         logger.info(f"ID {row[0]} | {row[1]} ({row[2]}) – Typ: {row[3]}")
     conn.close()
 
-# Benutzerregistrierung
 def register_user(email, password):
     conn = create_connection()
     cursor = conn.cursor()
     hashed_pw = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
-
     try:
         cursor.execute("INSERT INTO users (email, password) VALUES (?, ?)", (email, hashed_pw))
         conn.commit()
@@ -131,14 +85,12 @@ def register_user(email, password):
     finally:
         conn.close()
 
-# Benutzer-Login
 def login_user(email, password):
     conn = create_connection()
     cursor = conn.cursor()
     cursor.execute("SELECT password FROM users WHERE email = ?", (email,))
     row = cursor.fetchone()
     conn.close()
-
     if row and bcrypt.checkpw(password.encode('utf-8'), row[0]):
         logger.info("Login erfolgreich!")
         return True
@@ -146,17 +98,14 @@ def login_user(email, password):
         logger.warning("Login fehlgeschlagen. E-Mail oder Passwort falsch.")
         return False
 
-# 🧠 Fortschritt abspeichern
 def save_user_progress(user_email, question_id, is_correct):
     conn = create_connection()
     cursor = conn.cursor()
-
     cursor.execute("""
         SELECT attempts, errors FROM progress
         WHERE user_email = ? AND question_id = ?
     """, (user_email, question_id))
     row = cursor.fetchone()
-
     if row:
         attempts, errors = row
         new_attempts = attempts + 1
@@ -171,11 +120,9 @@ def save_user_progress(user_email, question_id, is_correct):
             INSERT INTO progress (user_email, question_id, correct, attempts, errors)
             VALUES (?, ?, ?, ?, ?)
         """, (user_email, question_id, 1 if is_correct else 0, 1, 0 if is_correct else 1))
-
     conn.commit()
     conn.close()
 
-# 🔎 Fragen holen
 def get_questions(category=None):
     conn = create_connection()
     if category:
@@ -186,7 +133,6 @@ def get_questions(category=None):
     conn.close()
     return [dict(q) for q in questions]
 
-# 🧠 Fortschritt abrufen
 def get_user_progress(email, category=None):
     conn = create_connection()
     if category:
@@ -199,16 +145,11 @@ def get_user_progress(email, category=None):
     else:
         rows = conn.execute('SELECT question_id, correct, attempts, errors FROM progress WHERE user_email = ?', (email,)).fetchall()
     correct = [row['question_id'] for row in rows if row['correct'] == 1]
-    # Sortiere falsch beantwortete Fragen nach Fehlern und Versuchen
-    sorted_wrong = sorted(
-        [row for row in rows if row['correct'] == 0],
-        key=lambda r: (-r['errors'], r['attempts'])
-    )
+    sorted_wrong = sorted([row for row in rows if row['correct'] == 0], key=lambda r: (-r['errors'], r['attempts']))
     wrong_sorted_ids = [row['question_id'] for row in sorted_wrong]
     conn.close()
     return correct, wrong_sorted_ids
 
-# Nächste Frage für Übungsmodus anhand der Fehler und Versuche holen
 def get_next_question_for_user(email, category=None):
     conn = create_connection()
     if category:
@@ -228,22 +169,17 @@ def get_next_question_for_user(email, category=None):
         '''
         rows = conn.execute(query, (email,)).fetchall()
     conn.close()
-    # Filter: Noch nicht korrekt beantwortet oder mit Fehlern
     wrong_or_unanswered = [row for row in rows if row['correct'] == 0 or row['correct'] is None]
-    # Wenn es noch offene Fragen gibt, wähle zufällig eine aus
     if wrong_or_unanswered:
-        # 70% Wahrscheinlichkeit für die Frage mit den meisten Fehlern, sonst zufällig
         sorted_wrong = sorted(wrong_or_unanswered, key=lambda r: (-r['errors'] if r['errors'] is not None else 0, r['attempts'] if r['attempts'] is not None else 0))
         if random.random() < 0.7:
             return dict(sorted_wrong[0])
         else:
             return dict(random.choice(wrong_or_unanswered))
-    # Sonst: Alle Fragen wurden korrekt beantwortet, wähle zufällig eine
     if rows:
         return dict(random.choice(rows))
     return None
 
-# ✅ Lösung aus DB holen
 def get_correct_answer(question_id):
     conn = create_connection()
     cursor = conn.cursor()
@@ -252,7 +188,6 @@ def get_correct_answer(question_id):
     conn.close()
     return result[0] if result else None
 
-# 🗑️ Fortschritt zurücksetzen
 def reset_user_progress(email):
     conn = create_connection()
     cursor = conn.cursor()
@@ -260,3 +195,40 @@ def reset_user_progress(email):
     conn.commit()
     conn.close()
     logger.info(f"Fortschritt für {email} wurde zurückgesetzt.")
+
+# 🔧 Datenbanktabellen beim Start automatisch erzeugen
+conn = create_connection()
+cursor = conn.cursor()
+cursor.execute("""
+    CREATE TABLE IF NOT EXISTS questions (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        question TEXT NOT NULL,
+        answer TEXT NOT NULL,
+        hint_text TEXT,
+        category TEXT NOT NULL,
+        grade TEXT NOT NULL,
+        question_type TEXT DEFAULT 'classic',
+        choices TEXT
+    )
+""")
+cursor.execute("""
+    CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        email TEXT NOT NULL UNIQUE,
+        password TEXT NOT NULL
+    )
+""")
+cursor.execute("""
+    CREATE TABLE IF NOT EXISTS progress (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        user_email TEXT NOT NULL,
+        question_id INTEGER NOT NULL,
+        correct INTEGER NOT NULL CHECK (correct IN (0,1)),
+        attempts INTEGER DEFAULT 1,
+        errors INTEGER DEFAULT 0,
+        UNIQUE(user_email, question_id)
+    )
+""")
+conn.commit()
+conn.close()
+logger.info("Datenbanktabellen wurden automatisch beim Start überprüft und erstellt.")
