@@ -21,7 +21,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
 
     if (response.ok && result.status === "ok") {
       // ✅ Erfolgreich eingeloggt
-      window.location.href = "dashboard.html";
+      window.location.href = "/dashboard";  // ← Weiterleitung zur Flask-Route
     } else {
       // ❌ Login fehlgeschlagen
       alert(result.error || "E-Mail und Passwort stimmen nicht überein.");
@@ -32,4 +32,3 @@ document.getElementById("loginForm").addEventListener("submit", async function (
     console.error(err);
   }
 });
-
