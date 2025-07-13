@@ -159,6 +159,21 @@ def api_evaluate():
     else:
         return jsonify({'error': 'Frage nicht gefunden.'}), 404
 
+# 🌐 Login-Seite
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
+# 🌐 Registrierung-Seite
+@app.route("/register")
+def register():
+    return render_template("register.html")
+
+# 🌐 Dashboard
+@app.route("/dashboard")
+def dashboard():
+    return render_template("dashboard.html")
+    
 # 🚀 Startpunkt
 if __name__ == '__main__':
     app.run(debug=True)
