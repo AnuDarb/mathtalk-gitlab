@@ -21,7 +21,7 @@ def ensure_session_id():
 # 🚀 Status-Seite
 @app.route("/")
 def home():
-    return "🚀 Die Lernplattform läuft!"
+    return render_template("dashboard.html") 
 
 # 🔐 Initialisierung mit Fragenimport
 @app.route("/init-db")
