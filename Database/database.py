@@ -9,8 +9,10 @@ import random
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Pfad zur SQLite-Datei (für Render ggf. persistent anpassen)
-DB_PATH = os.environ.get("DB_PATH", "mathtalk.db")
+# Pfad zur SQLite-Datei 
+DB_PATH = os.path.join(os.environ.get("DATABASE_DIR", "/persistent"), "mathtalk.db")
+conn = sqlite3.connect(DB_PATH)
+
 
 # 📚 Mapping der Kategorien
 CATEGORY_MAP = {
