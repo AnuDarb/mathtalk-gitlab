@@ -1,78 +1,132 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mathtalk Dashboard</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
-  <link href="https://fonts.googleapis.com/css2?family=Andada+Pro&display=swap" rel="stylesheet" />
-</head>
-<body>
-  <header class="header">
-    <img src="{{ url_for('static', filename='images/MathTalk_Logo.png') }}" alt="Logo" class="logo" />
-    <div class="icons">
-      <img src="{{ url_for('static', filename='images/Profil.png') }}" alt="Profil" class="profil-icon" id="profilIcon" />
-      <div class="dropdown" id="profilDropdown">
-        <button id="logoutBtn">Abmelden</button>
-      </div>
-    </div>
-  </header>
+console.log("📊 Dashboard JS geladen");
 
-  <div class="linie"></div>
+// Seite neu laden bei Zurück-Button (mit Fallback)
+const navEntry = performance.getEntriesByType("navigation")[0];
+if (navEntry && navEntry.type === "back_forward") {
+  location.reload();
+}
 
-  <main class="grid-layout">
-    <!-- Linke Spalte: Themenauswahl -->
-    <section class="left-column">
-      <h2 class="andada center-left-column bold">Themenauswahl</h2>
-      <div class="grid-2">
-        <div class="image-card">
-          <img src="{{ url_for('static', filename='images/Zahlen_und_Therme.png') }}" alt="Zahlen & Therme" />
-          <div class="card-text">Zahlen & Therme</div>
-        </div>
-        <div class="image-card">
-          <img src="{{ url_for('static', filename='images/Funktionen_und_Algebra.png') }}" alt="Funktionen & Algebra" />
-          <div class="card-text">Funktionen & Algebra</div>
-        </div>
-        <div class="image-card">
-          <img src="{{ url_for('static', filename='images/Geometrie_und_Raum.png') }}" alt="Geometrie & Raum" />
-          <div class="card-text">Geometrie & Raum</div>
-        </div>
-        <div class="image-card">
-          <img src="{{ url_for('static', filename='images/Stochastik.png') }}" alt="Stochastik" />
-          <div class="card-text">Stochastik</div>
-        </div>
-      </div>
-    </section>
+let selectedCategories = new Set();
+let selectedGrade = null;
+let selectedMode = null;
 
-    <!-- Rechte Spalte: Modus & Klasse -->
-    <section class="right-column">
-      <div class="modul">
-        <h2 class="centered andada bold">Modus</h2>
-        <div class="grid-2 centered">
-          <div class="moduskachel">
-            <img src="{{ url_for('static', filename='images/Uebungsmodus.png') }}" class="kachel" alt="Übungsmodus" />
-            <div class="untertitel">Übungsmodus</div>
-          </div>
-          <div class="moduskachel">
-            <img src="{{ url_for('static', filename='images/Pruefungsmodus.png') }}" class="kachel" alt="Prüfungsmodus" />
-            <div class="untertitel">Prüfungsmodus</div>
-          </div>
-        </div>
-      </div>
+// Kategorie-Zuordnung
+const categoryMap = {
+  "Zahlen & Therme": "zahlen_terme",
+  "Funktionen & Algebra": "funktionen_algebra",
+  "Geometrie & Raum": "geometrie_raum",
+  "Stochastik": "stochastik"
+};
 
-      <div class="modul">
-        <h2 class="centered andada bold">Klasse</h2>
-        <div class="grid-2 centered">
-          <div class="moduskachel">
-            <img src="{{ url_for('static', filename='images/Klasse_9.png') }}" class="kachel" alt="Klasse 9" />
-          </div>
-          <div class="moduskachel">
-            <img src="{{ url_for('static', filename='images/Klasse_10.png') }}" class="kachel" alt="Klasse 10" />
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+// Themenauswahl
+document.querySelectorAll(".image-card").forEach(card => {
+  const text = card.querySelector(".card-text")?.innerText.trim();
+  if (!text) return;
+  card.dataset.category = categoryMap[text] || text;
+
+  card.addEventListener("click", () => {
+    const id = card.dataset.category;
+    if (selectedCategories.has(id)) {
+      selectedCategories.delete(id);
+      card.classList.remove("selected");
+    } else {
+      selectedCategories.add(id);
+      card.classList.add("selected");
+    }
+    checkReady();
+  });
+});
+
+// Modusauswahl (mit Toggle)
+const modes = document.querySelectorAll(".moduskachel .untertitel");
+modes.forEach(modus => {
+  modus.parentElement.addEventListener("click", () => {
+    const newMode = modus.innerText.includes("Übung") ? "uebung" : "pruefung";
+
+    if (selectedMode === newMode) {
+      selectedMode = null;
+      modus.parentElement.classList.remove("selected");
+    } else {
+      selectedMode = newMode;
+      modes.forEach(m => m.parentElement.classList.remove("selected"));
+      modus.parentElement.classList.add("selected");
+    }
+
+    checkReady();
+  });
+});
+
+// Klassenwahl (mit Toggle)
+const gradeImages = document.querySelectorAll(".modul:last-of-type .moduskachel");
+gradeImages.forEach(kachel => {
+  kachel.addEventListener("click", () => {
+    const grade = kachel.querySelector("img").alt.includes("9") ? "9" : "10";
+
+    if (selectedGrade === grade) {
+      selectedGrade = null;
+      kachel.classList.remove("selected");
+    } else {
+      selectedGrade = grade;
+      gradeImages.forEach(k => k.classList.remove("selected"));
+      kachel.classList.add("selected");
+    }
+
+    checkReady();
+  });
+});
+
+// Prüfung ob alles gewählt wurde → Weiterleitung
+function checkReady() {
+  if (selectedCategories.size > 0 && selectedGrade && selectedMode) {
+    const params = new URLSearchParams();
+    params.set("categories", Array.from(selectedCategories).join(","));
+    params.set("grade", selectedGrade);
+    const path = selectedMode === "uebung" ? "/uebungsmodus" : "/pruefungsmodus";
+    window.location.href = `${path}?${params.toString()}`;
+  }
+}
+
+// Dropdown Profil/Abmelden
+const profilIcon = document.getElementById("profilIcon");
+const dropdown = document.getElementById("profilDropdown");
+
+profilIcon?.addEventListener("click", () => {
+  dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+});
+
+// Abmelden
+document.getElementById("logoutBtn")?.addEventListener("click", () => {
+  window.location.href = "/login";
+});
+
+// 🔄 Benutzerprofil-Daten abrufen & anzeigen
+async function loadProfileData() {
+  try {
+    const response = await fetch("/api/progress");
+    const result = await response.json();
+
+    if (!response.ok || result.error) {
+      console.error("Fehler beim Abrufen des Fortschritts");
+      return;
+    }
+
+    // Benutzername und E-Mail aus der Session holen
+    const email = sessionStorage.getItem("email") || "Unbekannt";
+
+    // Fortschritt berechnen
+    const progressPercent = result.total_questions > 0
+      ? Math.round((result.answered / result.total_questions) * 100)
+      : 0;
+
+    // In DOM anzeigen (Elemente müssen vorhanden sein)
+    document.getElementById("profilEmail").textContent = email;
+    document.getElementById("profilFortschritt").textContent = `${progressPercent}%`;
+  } catch (err) {
+    console.error("❌ Fehler beim Laden des Profils:", err);
+  }
+}
+
+loadProfileData()
 
   <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
 </body>
