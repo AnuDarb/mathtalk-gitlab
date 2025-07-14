@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prüfungsmodus</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f6eb;
+      color: #243d3d;
+    }
+
+    .header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem 0.5rem 2rem;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo {
+      height: 80px;
+    }
+
+    #medalImage {
+      height: 60px;
+    }
+
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.5rem;
+    }
+
+    .progress-bar {
+      width: 250px;
+      height: 20px;
+      background-color: #ddd;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .progress-bar-inner {
+      height: 100%;
+      width: 0%;
+      text-align: center;
+      line-height: 20px;
+      color: white;
+      background-color: #4caf50;
+      border-radius: 20px;
+      transition: width 0.3s ease;
+    }
+
+    .divider-bar {
+      height: 6px;
+      background-color: #659d8b;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #94b5a1;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 4px 4px 0 #ccc;
+      text-align: center;
+    }
+
+    .input-group .readonly-text {
+      width: 100%;
+      background-color: transparent;
+      color: #ffffff;
+      font-size: 1.4rem;
+      font-family: Georgia, serif;
+      border: none;
+      margin-bottom: 2rem;
+    }
+
+    .input-group input {
+      width: 80%;
+      padding: 0.6rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+    }
+
+    .buton-weiter button {
+      width: 50%;
+      margin: 0 auto;
+      padding: 0.6rem 1rem;
+      border: none;
+      border-radius: 20px;
+      background-color: #d76a24;
+      color: white;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.2s ease;
+    }
+
+    .buton-weiter button:hover {
+      background-color: #ba591b;
+    }
+
+    .buton-weiter button:active {
+      transform: scale(0.97);
+    }
+
+    #scoreText,
+    #totalText {
+      text-align: center;
+      margin-top: 0.5rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header-row">
+  <div class="header-left">
+    <a href="{{ url_for('dashboard') }}">
+      <img src="{{ url_for('static', filename='images/MathTalk_Logo.png') }}" alt="Logo" class="logo" />
+    </a>
+  </div>
+
+  <div class="header-right">
+    <img id="medalImage" src="{{ url_for('static', filename='images/anfaenger_medaille.png') }}" alt="Rang-Medaille" class="medal" />
+    <div class="progress-bar" id="scoreBar">
+      <div class="progress-bar-inner" id="scoreFill"></div>
+    </div>
+  </div>
+</header>
+
+  <div class="divider-bar"></div>
+
+  <div id="scoreText">Punkte: 0</div>
+  <div id="totalText">Konto: 0 Punkte</div>
+
+  <div class="container">
+    <div class="input-group">
+      <div class="readonly-text" id="questionText">Frage wird geladen...</div>
+    </div>
+    <div class="input-group">
+      <input type="text" id="answerInput" placeholder="Lösung" />
+    </div>
+    <div class="buton-weiter">
+      <button onclick="submitAnswer()">Weiter</button>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='pruefungsmodus.js') }}"></script>
+</body>
+</html>

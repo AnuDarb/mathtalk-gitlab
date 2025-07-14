@@ -1,0 +1,4592 @@
+[
+  {
+    "question": "Berechne: (3a - 2b)²",
+    "answer": "9a² - 12ab + 4b²",
+    "hint_text": "Nutze die binomische Formel: (a - b)² = a² - 2ab + b²",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Fasse zusammen: 2x + 3x - 5",
+    "answer": "5x - 5",
+    "hint_text": "Gleichartige Terme zusammenfassen",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Berechne: √49",
+    "answer": "7",
+    "hint_text": "Quadratwurzel von 49",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wandle 0,00056 in wissenschaftliche Schreibweise um.",
+    "answer": "5,6 · 10⁻⁴",
+    "hint_text": "Kommas verschieben, Zehnerpotenz bestimmen",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Löse die Gleichung: 3x - 5 = 10",
+    "answer": "x = 5",
+    "hint_text": "Zuerst +5, dann durch 3 teilen",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Multipliziere: (x + 2)(x - 2)",
+    "answer": "x² - 4",
+    "hint_text": "Differenz zweier Quadrate",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Fasse zusammen: 2a² + 3ab - a² + ab",
+    "answer": "a² + 4ab",
+    "hint_text": "Gleichartige Terme erkennen",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Fasse zusammen: -3(x - 2) + 4x",
+    "answer": "x + 6",
+    "hint_text": "Erst ausmultiplizieren, dann zusammenfassen",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Berechne: (0,4 · 10³) + (2,3 · 10²)",
+    "answer": "630",
+    "hint_text": "Wissenschaftliche Schreibweise umrechnen",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist das Ergebnis von (2a)²?",
+    "answer": "4a²",
+    "hint_text": "Ganze Klammer quadrieren!",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Fasse zusammen: 4x - (2x - 3)",
+    "answer": "2x + 3",
+    "hint_text": "Klammern auflösen, Vorzeichen beachten",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Berechne: 2⁵",
+    "answer": "32",
+    "hint_text": "Zweierpotenzen kennen",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wandle 3,4 Millionen in wissenschaftliche Schreibweise.",
+    "answer": "3,4 · 10⁶",
+    "hint_text": "Million = 10⁶",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Berechne: (-3)²",
+    "answer": "9",
+    "hint_text": "Vorzeichen beachten – ganze Klammer wird quadriert",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Fasse zusammen: x² + 3x² - 2x",
+    "answer": "4x² - 2x",
+    "hint_text": "x²-Terme addieren",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Löse die Gleichung: 4x + 2 = 18",
+    "answer": "x = 4",
+    "hint_text": "Erst -2, dann durch 4",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Kürze den Term: (3x² - 6x)/3x",
+    "answer": "x - 2",
+    "hint_text": "Zähler vollständig faktorisieren",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ergibt: -5 - (-2)?",
+    "answer": "-3",
+    "hint_text": "Minus Minus ergibt Plus",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Berechne den Term: 2(3x + 4) - x",
+    "answer": "5x + 8",
+    "hint_text": "Ausmultiplizieren und zusammenfassen",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Fasse zusammen: -2a + 3b - 4a + b",
+    "answer": "-6a + 4b",
+    "hint_text": "Sortiere nach Variablen",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Multipliziere aus: (x + 5)(x + 2)",
+    "answer": "x² + 7x + 10",
+    "hint_text": "Erste binomische Formel anwenden oder ausmultiplizieren",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wandle 0,02 in eine Potenz mit Basis 10 um.",
+    "answer": "2 · 10⁻²",
+    "hint_text": "Komma zwei Stellen nach rechts",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Löse die Gleichung: x/3 = 6",
+    "answer": "x = 18",
+    "hint_text": "Beide Seiten mit 3 multiplizieren",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wandle -0,00034 in wissenschaftliche Schreibweise.",
+    "answer": "-3,4 · 10⁻⁴",
+    "hint_text": "Negative Kommazahl → negative Zehnerpotenz",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Berechne: √81 + √16",
+    "answer": "13",
+    "hint_text": "Wurzel aus 81 und 16 einzeln berechnen",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist das Ergebnis von (−3) · 4?",
+    "answer": "-12",
+    "options": ["12", "-12", "-7", "0"],
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Zahl ist irrational?",
+    "answer": "√2",
+    "options": ["0,5", "√2", "1/3", "0,25"],
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ergibt 2³?",
+    "answer": "8",
+    "options": ["6", "8", "9", "12"],
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie lautet 0,00045 in wissenschaftlicher Schreibweise?",
+    "answer": "4,5 · 10⁻⁴",
+    "options": ["4,5 · 10⁻³", "4,5 · 10⁻⁴", "4,5 · 10⁻⁵", "45 · 10⁻³"],
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ergibt √49?",
+    "answer": "7",
+    "options": ["6", "7", "8", "14"],
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was besagt das Kommutativgesetz?",
+    "answer": "a + b = b + a",
+    "options": ["a · (b + c) = ab + ac", "a + b = b + a", "(a + b) + c = a + (b + c)", "a · b = a + b"],
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Fasse zusammen: 3x + 4x – 2x",
+    "answer": "5x",
+    "options": ["9x", "7x", "5x", "1x"],
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie lautet die 3. binomische Formel?",
+    "answer": "(a − b)² = a² − 2ab + b²",
+    "options": [
+      "(a + b)² = a² + 2ab + b²",
+      "(a − b)² = a² − 2ab + b²",
+      "(a − b)² = a² + 2ab + b²",
+      "(a + b)(a − b) = a² − b²"
+    ],
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Löse die Gleichung: x − 5 = 12",
+    "answer": "x = 17",
+    "options": ["x = 7", "x = 17", "x = −7", "x = −17"],
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ergibt (x + 3)(x − 3)?",
+    "answer": "x² − 9",
+    "options": ["x² + 6x + 9", "x² − 6x + 9", "x² − 9", "x² + 9"],
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie viel ist 3/4 + 1/8?",
+    "answer": "7/8",
+    "options": ["4/8", "5/8", "7/8", "1"],
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ergibt 2,5 · 10³?",
+    "answer": "2500",
+    "options": ["25", "250", "2500", "25000"],
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie lautet das Distributivgesetz?",
+    "answer": "a · (b + c) = ab + ac",
+    "options": [
+      "a + b = b + a",
+      "(a + b) + c = a + (b + c)",
+      "a · (b + c) = ab + ac",
+      "a + b = ab"
+    ],
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ergibt 5 − (−3)?",
+    "answer": "8",
+    "options": ["2", "−2", "8", "−8"],
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Zahl ist das Ergebnis von 1,5²?",
+    "answer": "2,25",
+    "options": ["3", "2,25", "2,5", "1,75"],
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie löst man 3(x − 2) = 6?",
+    "answer": "x = 4",
+    "options": ["x = 6", "x = 2", "x = 4", "x = 0"],
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ergibt 1/2 · 3/4?",
+    "answer": "3/8",
+    "options": ["1/6", "3/8", "5/8", "2/6"],
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ist die Lösung der Gleichung 5x = 20?",
+    "answer": "x = 4",
+    "options": ["x = 25", "x = 15", "x = 4", "x = 5"],
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ergibt −4²?",
+    "answer": "−16",
+    "options": ["−8", "16", "−16", "−2"],
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ist das Ergebnis von (a + b)²?",
+    "answer": "a² + 2ab + b²",
+    "options": [
+      "a² − 2ab + b²",
+      "a² + b²",
+      "a² + 2ab + b²",
+      "a + b"
+    ],
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Ordne jedem Term seine vereinfachte Form zu.",
+    "answer": {
+      "2a + 3a": "5a",
+      "4x - 2x": "2x",
+      "5b - b + 2b": "6b"
+    },
+    "hint_text": "Fasse gleichartige Terme zusammen.",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Rechengesetze den Beispielen zu.",
+    "answer": {
+      "a + b = b + a": "Kommutativgesetz",
+      "(a + b) + c = a + (b + c)": "Assoziativgesetz",
+      "a · (b + c) = a·b + a·c": "Distributivgesetz"
+    },
+    "hint_text": "Denk an Kommutativ-, Assoziativ- und Distributivgesetz.",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den binomischen Formeln die passenden Ergebnisse zu.",
+    "answer": {
+      "(a + b)²": "a² + 2ab + b²",
+      "(a - b)²": "a² - 2ab + b²",
+      "(a + b)(a - b)": "a² - b²"
+    },
+    "hint_text": "Nutze die binomischen Formeln.",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Terme ihren Werten bei x = 2 zu.",
+    "answer": {
+      "x + 3": "5",
+      "2x": "4",
+      "x²": "4"
+    },
+    "hint_text": "Setze x = 2 ein und berechne.",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Brüchen ihre gekürzte Form zu.",
+    "answer": {
+      "4/8": "1/2",
+      "10/15": "2/3",
+      "6/9": "2/3"
+    },
+    "hint_text": "Kürze Zähler und Nenner mit dem größten gemeinsamen Teiler.",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Potenzen ihrer ausgeschriebenen Form zu.",
+    "answer": {
+      "10³": "1000",
+      "10⁻²": "0,01",
+      "10⁴": "10000"
+    },
+    "hint_text": "Zehnerpotenzen: positive = große Zahlen, negative = kleine Zahlen.",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne jedem Term seine faktorisierte Form zu.",
+    "answer": {
+      "x² + 5x + 6": "(x + 2)(x + 3)",
+      "x² - 4": "(x - 2)(x + 2)",
+      "x² - 6x + 9": "(x - 3)²"
+    },
+    "hint_text": "Nutze die binomischen Formeln oder das Ausklammern.",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Wurzeln ihren Wert zu.",
+    "answer": {
+      "√16": "4",
+      "√25": "5",
+      "√36": "6"
+    },
+    "hint_text": "Welche Zahl zum Quadrat ergibt den Wert unter der Wurzel?",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Brüche ihren Dezimalwerten zu.",
+    "answer": {
+      "1/2": "0,5",
+      "1/4": "0,25",
+      "3/4": "0,75"
+    },
+    "hint_text": "Dividiere Zähler durch Nenner.",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Terme ihren vereinfachten Ergebnissen zu.",
+    "answer": {
+      "2(x + 3)": "2x + 6",
+      "3(x - 4)": "3x - 12",
+      "-5(y - 2)": "-5y + 10"
+    },
+    "hint_text": "Multipliziere aus mit dem Distributivgesetz.",
+    "category": "Zahlen & Terme",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Faktorisieren: x² - 4x + 4",
+    "answer": "(x - 2)²",
+    "hint_text": "Quadrat einer binomischen Formel erkennen",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Löse: (x - 3)(x + 5) = 0",
+    "answer": "x = 3 oder x = -5",
+    "hint_text": "Nullproduktregel anwenden",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Berechne: (2x - 3)²",
+    "answer": "4x² - 12x + 9",
+    "hint_text": "Zweite binomische Formel anwenden",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Vereinfache: (x² - 9)/(x + 3)",
+    "answer": "x - 3",
+    "hint_text": "Zähler faktorisieren (Differenz von Quadraten)",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Berechne den Term: (x - 2)(x + 2)",
+    "answer": "x² - 4",
+    "hint_text": "Differenz zweier Quadrate",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Kürze vollständig: (x² - 16)/(x - 4)",
+    "answer": "x + 4",
+    "hint_text": "Zähler als binomische Formel erkennen",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Berechne: √(25a²)",
+    "answer": "5a",
+    "hint_text": "Wurzel aus Produkt ziehen",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Multipliziere aus: (x + 1)(x² - x + 1)",
+    "answer": "x³ + 1",
+    "hint_text": "Erkenne die dritte binomische Formel rückwärts",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wandle 3 · 10⁴ in eine Dezimalzahl um.",
+    "answer": "30000",
+    "hint_text": "Vier Stellen nach rechts verschieben",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Berechne: 10⁻² × 10⁴",
+    "answer": "10²",
+    "hint_text": "Potenzgesetze anwenden",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Berechne: (a + b)² - (a - b)²",
+    "answer": "4ab",
+    "hint_text": "Beide binomische Formeln ausrechnen und dann subtrahieren",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Berechne: √(100 · x²)",
+    "answer": "10x",
+    "hint_text": "Produktregel der Wurzel verwenden",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Vereinfache: (x² - y²)/(x - y)",
+    "answer": "x + y",
+    "hint_text": "Faktorisiere den Zähler (Differenz von Quadraten)",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Berechne: (2x + 1)(2x - 1)",
+    "answer": "4x² - 1",
+    "hint_text": "Formel für (a + b)(a - b)",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Multipliziere: (x + 2)²",
+    "answer": "x² + 4x + 4",
+    "hint_text": "1. binomische Formel",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wandle 0,00012 in wissenschaftliche Schreibweise um.",
+    "answer": "1,2 · 10⁻⁴",
+    "hint_text": "Komma um vier Stellen nach rechts",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Löse: 2x² - 18 = 0",
+    "answer": "x = ±3",
+    "hint_text": "Umstellen und Wurzelziehen",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Berechne: √0,01",
+    "answer": "0,1",
+    "hint_text": "Zehnerpotenz erkennen",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Berechne: 3√(8)",
+    "answer": "2",
+    "hint_text": "Dritte Wurzel von 8 ist die Zahl, deren dritte Potenz 8 ergibt",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Berechne: (x² - 2x + 1) / (x - 1)",
+    "answer": "x - 1",
+    "hint_text": "Zähler ist eine binomische Formel",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Fasse zusammen: x³ + 2x² - x³ + x²",
+    "answer": "3x²",
+    "hint_text": "x³-Terme heben sich auf",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Kürze: (x² - 9x)/(x)",
+    "answer": "x - 9",
+    "hint_text": "x ausklammern",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Faktorisieren: a² - 25",
+    "answer": "(a - 5)(a + 5)",
+    "hint_text": "Differenz von Quadraten",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Löse die Gleichung: (x - 1)² = 0",
+    "answer": "x = 1",
+    "hint_text": "Wurzel aus beiden Seiten",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Berechne: (x² - 4x + 3)/(x - 1)",
+    "answer": "x - 3",
+    "hint_text": "Zähler faktorisieren zu (x - 3)(x - 1)",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ergibt (x - 3)²?",
+    "answer": "x² - 6x + 9",
+    "options": ["x² + 9", "x² - 9x + 6", "x² - 6x + 9", "x² - 3x + 9"],
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie lautet die wissenschaftliche Schreibweise von 0,00075?",
+    "answer": "7,5 · 10⁻⁴",
+    "options": ["7,5 · 10⁻⁴", "7,5 · 10⁻³", "75 · 10⁻⁵", "0,75 · 10⁻³"],
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ist das Ergebnis von (2a + b)²?",
+    "answer": "4a² + 4ab + b²",
+    "options": ["2a² + b²", "4a² + 4ab + b²", "4a² + 2ab + b²", "2a² + 2ab + b²"],
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Aussage zu Potenzen stimmt?",
+    "answer": "10⁻³ = 0,001",
+    "options": ["10⁻³ = 0,0001", "10⁻³ = 0,01", "10⁻³ = 0,1", "10⁻³ = 0,001"],
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Fasse zusammen: 3x² - 5x + 2x² + x",
+    "answer": "5x² - 4x",
+    "options": ["5x² - 4x", "6x² - 4x", "5x² + 6x", "3x² - 6x"],
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ergibt die Wurzel aus 0,04?",
+    "answer": "0,2",
+    "options": ["2", "0,4", "0,2", "0,04"],
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ergibt (a + b)(a - b)?",
+    "answer": "a² - b²",
+    "options": ["a² + b²", "a² - b²", "a² - 2ab + b²", "a² + 2ab + b²"],
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie lautet die Nullstellenform von x² - 4?",
+    "answer": "(x - 2)(x + 2)",
+    "options": ["(x - 2)²", "(x - 4)(x + 1)", "(x - 2)(x + 2)", "(x - 1)(x + 4)"],
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wandle 560000 in wissenschaftliche Schreibweise um.",
+    "answer": "5,6 · 10⁵",
+    "options": ["5,6 · 10⁴", "56 · 10⁴", "5,6 · 10⁵", "0,56 · 10⁶"],
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Aussage ist korrekt: (x - 1)² = ?",
+    "answer": "x² - 2x + 1",
+    "options": ["x² + 2x + 1", "x² - 1", "x² - 2x + 1", "x² + 1"],
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie lautet √(49x²)?",
+    "answer": "7x",
+    "options": ["7x", "14x", "x + 7", "x² + 49"],
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie lautet die 3. binomische Formel?",
+    "answer": "(a + b)(a² - ab + b²) = a³ + b³",
+    "options": ["(a + b)² = a² + 2ab + b²", "(a - b)² = a² - 2ab + b²", "(a + b)(a - b) = a² - b²", "(a + b)(a² - ab + b²) = a³ + b³"],
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie kann man x² + 6x + 9 faktorisieren?",
+    "answer": "(x + 3)²",
+    "options": ["(x + 3)(x - 3)", "(x + 3)²", "(x + 2)(x + 4)", "(x + 1)(x + 9)"],
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ergibt 10⁻² · 10⁴?",
+    "answer": "10²",
+    "options": ["10²", "10⁶", "10⁻⁶", "10³"],
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie kürzt man (x² - 9)/(x - 3)?",
+    "answer": "x + 3",
+    "options": ["x + 3", "x - 3", "x² - 3", "x + 9"],
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Berechne: (x + 1)(x - 1)",
+    "answer": "x² - 1",
+    "options": ["x² + 1", "x² - 1", "x² - 2x", "x² + 2x + 1"],
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wandle 1,25 Millionen in wissenschaftliche Schreibweise um.",
+    "answer": "1,25 · 10⁶",
+    "options": ["1,25 · 10⁵", "1,25 · 10⁶", "125 · 10⁴", "0,125 · 10⁷"],
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ist das Ergebnis von 3√27?",
+    "answer": "3",
+    "options": ["9", "27", "3", "1,5"],
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ergibt (2x)²?",
+    "answer": "4x²",
+    "options": ["2x²", "4x", "4x²", "2x"],
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ergibt -5²?",
+    "answer": "-25",
+    "options": ["25", "-25", "-10", "0"],
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Ordne die Terme ihrer vollständig ausmultiplizierten Form zu.",
+    "answer": {
+      "(x + 2)(x + 3)": "x² + 5x + 6",
+      "(x - 4)(x + 1)": "x² - 3x - 4",
+      "(2x - 1)(x + 5)": "2x² + 9x - 5"
+    },
+    "hint_text": "Nutze die erste binomische Formel bzw. Ausmultiplizieren.",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Potenzausdrücken ihre vereinfachte Form zu.",
+    "answer": {
+      "x³ · x²": "x⁵",
+      "(x²)³": "x⁶",
+      "x⁵ : x²": "x³"
+    },
+    "hint_text": "Nutze Potenzgesetze: multiplizieren = Exponenten addieren.",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Gleichungen ihre Lösungen zu.",
+    "answer": {
+      "x² = 25": "x = ±5",
+      "x² = 16": "x = ±4",
+      "x² = 36": "x = ±6"
+    },
+    "hint_text": "Ziehe die Wurzel – beachte ±!",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne jedem Ausdruck seine wissenschaftliche Schreibweise zu.",
+    "answer": {
+      "0,00087": "8,7 · 10⁻⁴",
+      "920000": "9,2 · 10⁵",
+      "0,0031": "3,1 · 10⁻³"
+    },
+    "hint_text": "Beweg das Komma auf die erste Ziffer.",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Gleichungssysteme ihren Lösungen zu.",
+    "answer": {
+      "x + y = 5, x - y = 1": "x = 3, y = 2",
+      "2x + y = 7, x - y = 1": "x = 2, y = 3",
+      "x + 2y = 8, x - y = 2": "x = 4, y = 2"
+    },
+    "hint_text": "Verwende Additions- oder Einsetzungsverfahren.",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Termen ihre vereinfachte Form zu.",
+    "answer": {
+      "3x - 5x + 2": "-2x + 2",
+      "4a + 2a - 3": "6a - 3",
+      "7b - b + 1": "6b + 1"
+    },
+    "hint_text": "Fasse gleichartige Terme zusammen.",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den faktoriellen Ausdrücken ihre vereinfachte Form zu.",
+    "answer": {
+      "x² - 9": "(x - 3)(x + 3)",
+      "x² + 2x + 1": "(x + 1)²",
+      "x² - 6x + 9": "(x - 3)²"
+    },
+    "hint_text": "Nutze binomische Formeln bzw. ‚dritte binomische Formel‘.",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Termen die passende Umformung zu.",
+    "answer": {
+      "2(x + 3) - 4": "2x + 2",
+      "3(x - 1) + 5": "3x + 2",
+      "4 - 2(x - 1)": "6 - 2x"
+    },
+    "hint_text": "Distributivgesetz anwenden und dann zusammenfassen.",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Aussagen die passenden Rechengesetze zu.",
+    "answer": {
+      "a(b + c) = ab + ac": "Distributivgesetz",
+      "(a + b) + c = a + (b + c)": "Assoziativgesetz",
+      "a + b = b + a": "Kommutativgesetz"
+    },
+    "hint_text": "Welches Gesetz ist jeweils angewendet?",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Wurzelausdrücken ihre Werte zu.",
+    "answer": {
+      "√81": "9",
+      "√144": "12",
+      "√121": "11"
+    },
+    "hint_text": "Quadratwurzeln berechnen.",
+    "category": "Zahlen & Terme",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Wie lautet die allgemeine Funktionsgleichung einer linearen Funktion?",
+    "answer": "f(x) = mx + b",
+    "hint_text": "Denk an Steigung (m) und y-Achsenabschnitt (b).",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Welche Steigung hat die Funktion f(x) = -3x + 5?",
+    "answer": "-3",
+    "hint_text": "Die Steigung steht vor dem x.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Berechne den y-Achsenabschnitt der Funktion f(x) = 2x - 4.",
+    "answer": "-4",
+    "hint_text": "Der y-Achsenabschnitt ist der konstante Term.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Gib den Schnittpunkt mit der y-Achse von f(x) = -x + 2 an.",
+    "answer": "(0|2)",
+    "hint_text": "Setze x = 0 in die Funktion ein.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Finde die Nullstelle von f(x) = 4x - 8.",
+    "answer": "2",
+    "hint_text": "Setze f(x) = 0 und löse nach x.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist der Scheitelpunkt der Parabel f(x) = (x - 3)² + 1?",
+    "answer": "(3|1)",
+    "hint_text": "Scheitelpunktform zeigt ihn direkt: (x - d)² + e → S(d|e).",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie lautet die Scheitelpunktform von f(x) = x² - 6x + 9?",
+    "answer": "f(x) = (x - 3)²",
+    "hint_text": "Nutze die quadratische Ergänzung.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Bestimme die Nullstellen von f(x) = x² - 4.",
+    "answer": "-2 und 2",
+    "hint_text": "Faktorisiere zu (x - 2)(x + 2).",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie verändert sich der Graph von f(x) = x², wenn du f(x) = (x - 2)² zeichnest?",
+    "answer": "Der Graph verschiebt sich 2 Einheiten nach rechts.",
+    "hint_text": "Die Zahl in der Klammer zeigt die horizontale Verschiebung.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Welchen Einfluss hat das Minuszeichen bei f(x) = -x²?",
+    "answer": "Die Parabel öffnet nach unten.",
+    "hint_text": "Ein negatives Vorzeichen kehrt die Öffnungsrichtung um.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie erkennst du an f(x) = 2x² + 3x - 5, dass es eine Parabel ist?",
+    "answer": "Das x² zeigt, dass es eine Parabel ist.",
+    "hint_text": "Quadratische Terme (x²) gehören zu Parabeln.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was beschreibt die Exponentialfunktion f(x) = 2ˣ?",
+    "answer": "Exponentielles Wachstum.",
+    "hint_text": "Wenn x im Exponenten steht, wächst es sehr schnell.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist der Anfangswert bei f(x) = 3 · 2ˣ?",
+    "answer": "3",
+    "hint_text": "Der Vorfaktor ist der Anfangswert.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Berechne f(3) für f(x) = 2³.",
+    "answer": "8",
+    "hint_text": "2 hoch 3 = 8",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was passiert mit dem Graphen von f(x) = 2ˣ, wenn er zu f(x) = 2^(x-1) wird?",
+    "answer": "Er verschiebt sich nach rechts.",
+    "hint_text": "x - 1 verschiebt den Graphen nach rechts.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie sieht der Graph von f(x) = sin(x) grob aus?",
+    "answer": "Wellenförmig, periodisch.",
+    "hint_text": "Sinus ist eine periodische Funktion.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was bedeutet Periode bei einer Sinusfunktion?",
+    "answer": "Nach einer bestimmten Länge wiederholt sich der Verlauf.",
+    "hint_text": "Denk an eine Welle, die sich wiederholt.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist die Amplitude von f(x) = 3 · sin(x)?",
+    "answer": "3",
+    "hint_text": "Amplitude = maximale Auslenkung.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Zeichne die Punkte (1|2), (2|4), (3|6). Welche Funktion beschreibt diese?",
+    "answer": "f(x) = 2x",
+    "hint_text": "Überlege, wie y sich zu x verhält.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wenn ein Graph steiler wird, was passiert mit der Steigung m?",
+    "answer": "Sie wird größer.",
+    "hint_text": "Steile Linien haben größere m-Werte.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie sieht eine konstante Funktion im Koordinatensystem aus?",
+    "answer": "Als waagerechte Linie.",
+    "hint_text": "Sie hat die Form f(x) = c.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was passiert, wenn du bei f(x) = x² den Wert verdoppelst: f(x) = 2x²?",
+    "answer": "Die Parabel wird schmaler.",
+    "hint_text": "Ein größerer Vorfaktor macht die Parabel steiler.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was beschreibt der Funktionswert f(0)?",
+    "answer": "Den y-Achsenabschnitt.",
+    "hint_text": "Setze x = 0 in die Funktion ein.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Woran erkennst du an einem Graphen, dass es eine Exponentialfunktion ist?",
+    "answer": "Er wächst erst langsam, dann sehr schnell.",
+    "hint_text": "Typische Kurve: flach → steil.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie liest man Werte aus einem Koordinatensystem ab?",
+    "answer": "x-Wert unten, y-Wert links.",
+    "hint_text": "x-Achse ist horizontal, y-Achse vertikal.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Woran erkennst du an einem Graphen, dass es eine Exponentialfunktion ist?",
+    "answer": "Er wächst erst langsam, dann sehr schnell.",
+    "options": [
+      "Er ist eine gerade Linie.",
+      "Er sinkt gleichmäßig.",
+      "Er wächst erst langsam, dann sehr schnell.",
+      "Er bildet eine Parabel."
+    ],
+    "hint_text": "Typische Kurve: flach → steil.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie lautet die allgemeine Funktionsgleichung einer linearen Funktion?",
+    "answer": "f(x) = mx + b",
+    "options": [
+      "f(x) = a · x² + b",
+      "f(x) = mx + b",
+      "f(x) = a · b^x",
+      "f(x) = sin(x)"
+    ],
+    "hint_text": "Denk an Steigung (m) und y-Achsenabschnitt (b).",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ist der Scheitelpunkt der Parabel f(x) = (x − 2)² + 3?",
+    "answer": "(2|3)",
+    "options": [
+      "(−2|3)",
+      "(2|−3)",
+      "(2|3)",
+      "(0|3)"
+    ],
+    "hint_text": "Scheitelpunktform ablesen: (x − a)² + b → (a|b).",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Steigung hat die Funktion f(x) = -3x + 5?",
+    "answer": "-3",
+    "options": [
+      "5",
+      "-3",
+      "3",
+      "-5"
+    ],
+    "hint_text": "Die Steigung steht vor dem x.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was passiert mit dem Graphen der Funktion f(x) = x², wenn man +4 addiert?",
+    "answer": "Er verschiebt sich um 4 Einheiten nach oben.",
+    "options": [
+      "Er wird gestreckt.",
+      "Er spiegelt sich an der x-Achse.",
+      "Er verschiebt sich um 4 Einheiten nach oben.",
+      "Er wird schmaler."
+    ],
+    "hint_text": "Eine + Zahl außerhalb der Klammer verschiebt in y-Richtung.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie sieht der Graph der Sinusfunktion aus?",
+    "answer": "Er ist eine Wellenlinie.",
+    "options": [
+      "Er ist eine Gerade.",
+      "Er ist eine Wellenlinie.",
+      "Er ist eine Parabel.",
+      "Er ist eine konstante Linie."
+    ],
+    "hint_text": "Sinus: periodisch, geht auf und ab.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Nullstellen hat die Funktion f(x) = x² − 9?",
+    "answer": "x = −3 und x = 3",
+    "options": [
+      "x = −3 und x = 3",
+      "x = 0 und x = 9",
+      "x = −9 und x = 9",
+      "x = 3"
+    ],
+    "hint_text": "Löse x² = 9.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was beschreibt die Funktion f(x) = 2 · 3^x?",
+    "answer": "Ein exponentielles Wachstum",
+    "options": [
+      "Eine konstante Funktion",
+      "Ein lineares Wachstum",
+      "Ein exponentielles Wachstum",
+      "Eine Sinusfunktion"
+    ],
+    "hint_text": "Wenn x im Exponenten steht: exponentiell.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie erkennst du an einer Wertetabelle, dass es sich um eine lineare Funktion handelt?",
+    "answer": "Die y-Werte steigen immer gleichmäßig.",
+    "options": [
+      "Die x-Werte springen zufällig.",
+      "Die y-Werte steigen immer gleichmäßig.",
+      "Die y-Werte sinken plötzlich.",
+      "Die x-Werte verdoppeln sich."
+    ],
+    "hint_text": "Gleiche Differenz = lineare Funktion.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Aussage trifft auf eine quadratische Funktion zu?",
+    "answer": "Ihr Graph ist eine Parabel.",
+    "options": [
+      "Ihr Graph ist eine Gerade.",
+      "Ihr Graph ist eine Wellenlinie.",
+      "Ihr Graph ist eine Parabel.",
+      "Ihr Graph ist eine Hyperbel."
+    ],
+    "hint_text": "x² ergibt eine Parabel.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was passiert mit dem Graphen von f(x) = x², wenn man ihn zu f(x) = 2x² ändert?",
+    "answer": "Die Parabel wird steiler.",
+    "options": [
+      "Die Parabel wird flacher.",
+      "Die Parabel bleibt gleich.",
+      "Die Parabel wird steiler.",
+      "Die Parabel verschiebt sich."
+    ],
+    "hint_text": "Faktor > 1 → steiler.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ist der y-Achsenabschnitt von f(x) = 4x − 2?",
+    "answer": "-2",
+    "options": [
+      "4",
+      "-2",
+      "2",
+      "0"
+    ],
+    "hint_text": "y-Achsenabschnitt = Zahl ohne x.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was beschreibt die Funktion f(x) = 100 · (1.05)^x?",
+    "answer": "Zinseszinswachstum",
+    "options": [
+      "Temperaturkurve",
+      "Zinseszinswachstum",
+      "Sinuswelle",
+      "Lineare Zunahme"
+    ],
+    "hint_text": "Prozentuale Steigerung = exponentielles Wachstum.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wann berührt der Graph einer quadratischen Funktion die x-Achse?",
+    "answer": "Wenn sie eine doppelte Nullstelle hat.",
+    "options": [
+      "Wenn sie zwei Nullstellen hat.",
+      "Wenn sie eine doppelte Nullstelle hat.",
+      "Wenn sie keine Nullstelle hat.",
+      "Wenn sie eine ungerade Nullstelle hat."
+    ],
+    "hint_text": "Nur ein Schnittpunkt = doppelte Nullstelle.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Funktion hat die Gleichung f(x) = sin(x)?",
+    "answer": "Eine periodische Funktion",
+    "options": [
+      "Eine exponentielle Funktion",
+      "Eine lineare Funktion",
+      "Eine periodische Funktion",
+      "Eine quadratische Funktion"
+    ],
+    "hint_text": "Sinus ist regelmäßig wiederholend.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie verändert sich der Graph von f(x) = sin(x), wenn man ihn zu f(x) = sin(2x) macht?",
+    "answer": "Er schwingt doppelt so schnell.",
+    "options": [
+      "Er wird flacher.",
+      "Er wird gestaucht.",
+      "Er schwingt doppelt so schnell.",
+      "Er verschiebt sich nach oben."
+    ],
+    "hint_text": "Häufigkeit der Wellen steigt.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was zeigt ein Graph mit konstanter Steigung?",
+    "answer": "Eine lineare Funktion",
+    "options": [
+      "Eine exponentielle Funktion",
+      "Eine lineare Funktion",
+      "Eine quadratische Funktion",
+      "Eine Sinusfunktion"
+    ],
+    "hint_text": "Gleiche Steigung = Gerade.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie kannst du die Steigung einer Geraden berechnen?",
+    "answer": "Steigung = Δy / Δx",
+    "options": [
+      "Steigung = x / y",
+      "Steigung = Δy / Δx",
+      "Steigung = y · x",
+      "Steigung = x − y"
+    ],
+    "hint_text": "Unterschied der y-Werte durch x-Werte.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Funktion ist keine lineare Funktion?",
+    "answer": "f(x) = x² + 1",
+    "options": [
+      "f(x) = 2x + 1",
+      "f(x) = x² + 1",
+      "f(x) = −x + 3",
+      "f(x) = 0.5x"
+    ],
+    "hint_text": "x² → quadratisch, nicht linear.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was passiert mit dem Graphen von f(x) = x², wenn man ihn zu f(x) = (x − 3)² verschiebt?",
+    "answer": "Er verschiebt sich um 3 Einheiten nach rechts.",
+    "options": [
+      "Er verschiebt sich um 3 Einheiten nach links.",
+      "Er wird schmaler.",
+      "Er verschiebt sich um 3 Einheiten nach rechts.",
+      "Er verschiebt sich um 3 Einheiten nach oben."
+    ],
+    "hint_text": "Achtung: (x − a) → nach rechts.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Ordne den Funktionsgleichungen die richtige Steigung zu.",
+    "answer": {
+      "f(x) = 3x + 1": "3",
+      "f(x) = -2x + 4": "-2",
+      "f(x) = 0.5x - 5": "0.5"
+    },
+    "hint_text": "Die Steigung ist der Koeffizient vor dem x.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den linearen Funktionen die passenden y-Achsenabschnitte zu.",
+    "answer": {
+      "f(x) = 2x + 3": "3",
+      "f(x) = -x - 1": "-1",
+      "f(x) = 4x": "0"
+    },
+    "hint_text": "Der y-Achsenabschnitt ist der konstante Term.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Begriffen die passende Beschreibung zu.",
+    "answer": {
+      "Funktionsgleichung": "Zuordnungsvorschrift wie f(x) = mx + b",
+      "Steigung": "Gibt an, wie stark der Graph steigt oder fällt",
+      "y-Achsenabschnitt": "Schnittpunkt mit der y-Achse"
+    },
+    "hint_text": "Grundbegriffe linearer Funktionen.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Punkten ihre Lage im Koordinatensystem zu.",
+    "answer": {
+      "(2|3)": "Quadrant I",
+      "(-1|4)": "Quadrant II",
+      "(-2|-5)": "Quadrant III"
+    },
+    "hint_text": "Achte auf die Vorzeichen von x und y.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Beschreibungen den passenden Graphentyp zu.",
+    "answer": {
+      "Wächst gleichmäßig": "Lineare Funktion",
+      "Verläuft als Kurve, hat ein Minimum": "Quadratische Funktion",
+      "Wächst erst langsam, dann sehr schnell": "Exponentialfunktion"
+    },
+    "hint_text": "Überlege, wie die jeweiligen Graphen aussehen.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Situationen die richtige Funktionsart zu.",
+    "answer": {
+      "Kosten pro Stück sind konstant": "Lineare Funktion",
+      "Flugbahn eines Balls": "Quadratische Funktion",
+      "Zinseszinsen": "Exponentialfunktion"
+    },
+    "hint_text": "Erkenne typische Anwendungsbeispiele.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Termen die passenden Funktionswerte bei x = 1 zu.",
+    "answer": {
+      "f(x) = 2x + 3": "5",
+      "f(x) = -x + 4": "3",
+      "f(x) = 4x - 2": "2"
+    },
+    "hint_text": "Setze x = 1 in die Terme ein.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Begriffen die richtige Formel zu.",
+    "answer": {
+      "Lineare Funktion": "f(x) = mx + b",
+      "Quadratische Funktion": "f(x) = ax² + bx + c",
+      "Exponentialfunktion": "f(x) = a · b^x"
+    },
+    "hint_text": "Struktur der Funktionsarten merken.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den x-Werten die richtigen Punkte auf dem Graphen f(x) = 2x + 1 zu.",
+    "answer": {
+      "x = 0": "(0|1)",
+      "x = 1": "(1|3)",
+      "x = -1": "(-1|-1)"
+    },
+    "hint_text": "Berechne f(x) für jeden x-Wert.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Aussagen die korrekte Veränderung zu.",
+    "answer": {
+      "f(x) = x² + 2": "nach oben verschoben",
+      "f(x) = x² - 3": "nach unten verschoben",
+      "f(x) = (x - 1)²": "nach rechts verschoben"
+    },
+    "hint_text": "Veränderungen am Funktionsterm erkennen.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Graphen die richtige lineare Funktionsgleichung zu.",
+    "answer": {
+      "images/graph1.png": "f(x) = 2x + 1",
+      "images/graph2.png": "f(x) = -x + 3",
+      "images/graph3.png": "f(x) = 0.5x - 2"
+    },
+    "hint_text": "Achte auf Steigung und y-Achsenabschnitt.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Parabeln die passende Scheitelpunktform zu.",
+    "answer": {
+      "images/graph4.png": "f(x) = (x - 2)² + 1",
+      "images/graph5.png": "f(x) = - (x + 1)² + 3",
+      "images/graph6.png": "f(x) = 2(x - 3)²"
+    },
+    "hint_text": "Nutze den Scheitelpunkt zur Orientierung.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Graphen die passende Funktionsart zu.",
+    "answer": {
+      "images/graph7.png": "Lineare Funktion",
+      "images/graph8.png": "Quadratische Funktion",
+      "images/graph9.png": "Exponentialfunktion"
+    },
+    "hint_text": "Woran erkennst du den Typ?",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Funktionen ihren Nullstellen zu – jeder Graph stellt eine Funktion dar.",
+    "answer": {
+      "images/graph10.png": "f(x) = x - 2",
+      "images/graph11.png": "f(x) = x² - 9",
+      "images/graph12.png": "f(x) = (x + 4)²"
+    },
+    "hint_text": "Setze f(x) = 0 und lies die Nullstellen ab.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Funktionen ihren Steigungen zu – jeder Graph stellt eine lineare Funktion dar.",
+    "answer": {
+      "images/graph13.png": "f(x) = 3x + 1",
+      "images/graph14.png": "f(x) = -2x",
+      "images/graph15.png": "f(x) = 0.5x - 4"
+    },
+    "hint_text": "Die Steigung findest du im Term vor dem x.",
+    "category": "Funktionen & Algebra",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Gib die allgemeine Form einer quadratischen Funktion an.",
+    "answer": "f(x) = ax² + bx + c",
+    "hint_text": "Das x² kennzeichnet die Parabel.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Berechne den Scheitelpunkt von f(x) = x² - 4x + 3.",
+    "answer": "(2|–1)",
+    "hint_text": "Scheitelpunktform oder -b/2a anwenden.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Bestimme die Nullstellen von f(x) = x² - 9.",
+    "answer": "-3 und 3",
+    "hint_text": "Setze f(x) = 0 und löse mit der Mitternachtsformel oder faktorisieren.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie verändert sich f(x) = x² zu f(x) = (x + 2)²?",
+    "answer": "Die Parabel verschiebt sich 2 Einheiten nach links.",
+    "hint_text": "Achte auf das Vorzeichen in der Klammer.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist die Bedeutung des Faktors a in f(x) = a · x²?",
+    "answer": "Er beeinflusst die Streckung oder Stauchung der Parabel.",
+    "hint_text": "a > 1: schmaler, 0 < a < 1: breiter.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie lautet die Funktionsgleichung einer Parabel mit Scheitelpunkt S(1|2) und a = 3?",
+    "answer": "f(x) = 3(x - 1)² + 2",
+    "hint_text": "Verwende die Scheitelpunktform: f(x) = a(x - d)² + e.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist die Ableitung von f(x) = 3x²?",
+    "answer": "f '(x) = 6x",
+    "hint_text": "Potenzregel anwenden: n·xⁿ⁻¹.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie lautet die Wachstumsfunktion für einen Anfangswert 100 und Wachstumsrate 5%?",
+    "answer": "f(x) = 100 · 1.05ˣ",
+    "hint_text": "Exponentialform: f(x) = Startwert · (1 + p)^x.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Nach wie vielen Jahren verdoppelt sich ein Betrag bei 10% Zinsen pro Jahr?",
+    "answer": "Etwa 7 Jahre",
+    "hint_text": "Regel: 70 durch Zinssatz = Verdopplungszeit.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was bedeutet eine negative Steigung in einem Funktionsgraphen?",
+    "answer": "Der Graph fällt von links nach rechts.",
+    "hint_text": "Je größer der negative Wert, desto steiler fällt er.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Welche Bedeutung hat f(0) in einer quadratischen Funktion?",
+    "answer": "Den y-Achsenabschnitt.",
+    "hint_text": "Einsetzen von x = 0 gibt f(0).",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie lautet die Formel zur Berechnung der Nullstellen bei f(x) = ax² + bx + c?",
+    "answer": "x = (-b ± √(b² - 4ac)) / (2a)",
+    "hint_text": "Das ist die Mitternachtsformel.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie verändert sich der Graph bei f(x) = x² im Vergleich zu f(x) = -x²?",
+    "answer": "Er spiegelt sich an der x-Achse.",
+    "hint_text": "Negatives Vorzeichen = nach unten geöffnet.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie viele Nullstellen kann eine quadratische Funktion haben?",
+    "answer": "0, 1 oder 2",
+    "hint_text": "Kommt auf die Diskriminante an.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist die Bedeutung der Diskriminante (b² - 4ac)?",
+    "answer": "Sie bestimmt die Anzahl der Nullstellen.",
+    "hint_text": ">0: 2, =0: 1, <0: keine Nullstelle.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist eine lineare Gleichung in zwei Variablen?",
+    "answer": "Eine Gleichung der Form ax + by = c.",
+    "hint_text": "Sie beschreibt eine Gerade im Koordinatensystem.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Welche Funktion beschreibt exponentiellen Zerfall?",
+    "answer": "f(x) = a · bˣ mit 0 < b < 1",
+    "hint_text": "Wenn b kleiner als 1 ist, sinkt der Wert.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie viele Lösungen hat f(x) = (x - 1)²?",
+    "answer": "Eine doppelte Nullstelle: x = 1",
+    "hint_text": "Quadratische Ausdrücke mit (x - a)².",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was beschreibt die Funktion f(x) = sin(x)?",
+    "answer": "Periodische Schwankungen",
+    "hint_text": "Typisch für Schwingungen und Wellen.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was passiert bei f(x) = sin(2x)?",
+    "answer": "Die Periode halbiert sich.",
+    "hint_text": "Faktor vor x beeinflusst Frequenz.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Welche Transformation liegt vor bei f(x) = sin(x) → f(x) = 2 · sin(x)?",
+    "answer": "Amplitude verdoppelt sich.",
+    "hint_text": "Faktor vor sin(x) = Amplitude.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie lautet die allgemeine Form einer Exponentialfunktion?",
+    "answer": "f(x) = a · bˣ",
+    "hint_text": "a = Anfangswert, b = Wachstumsfaktor.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Welche Funktion passt zu einer gleichmäßig beschleunigten Bewegung?",
+    "answer": "f(t) = ½ · a · t²",
+    "hint_text": "s = ½ · a · t² ist der klassische Zusammenhang.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wann ist eine Funktion achsensymmetrisch zur y-Achse?",
+    "answer": "Wenn f(x) = f(–x)",
+    "hint_text": "Typisch für Parabeln mit x².",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was beschreibt der y-Wert in einem Funktionsgraphen?",
+    "answer": "Den Funktionswert zu einem bestimmten x.",
+    "hint_text": "f(x) gibt den y-Wert für x an.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Welche Aussage beschreibt den Einfluss des Faktors b in f(x) = a·b^x?",
+    "answer": "b bestimmt, ob es sich um Wachstum oder Zerfall handelt.",
+    "options": [
+      "b verändert die Anfangswerte.",
+      "b bestimmt die Nullstellen.",
+      "b beeinflusst die Scheitelpunktlage.",
+      "b bestimmt, ob es sich um Wachstum oder Zerfall handelt."
+    ],
+    "hint_text": "b > 1 = Wachstum, 0 < b < 1 = Zerfall.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ist die erste Ableitung von f(x) = x² + 4x?",
+    "answer": "f '(x) = 2x + 4",
+    "options": [
+      "f '(x) = x² + 4",
+      "f '(x) = 2x + 4",
+      "f '(x) = x + 4",
+      "f '(x) = 2x"
+    ],
+    "hint_text": "Ableitung von x² ist 2x, von 4x ist 4.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie viele Lösungen hat die Gleichung f(x) = x² + 1 = 0?",
+    "answer": "Keine reelle Lösung",
+    "options": [
+      "Eine Lösung",
+      "Zwei Lösungen",
+      "Unendlich viele Lösungen",
+      "Keine reelle Lösung"
+    ],
+    "hint_text": "x² + 1 = 0 hat keine Lösung in ℝ.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was zeigt die Nullstelle einer Funktion?",
+    "answer": "Den Punkt, an dem der Graph die x-Achse schneidet.",
+    "options": [
+      "Den Scheitelpunkt",
+      "Den Punkt mit maximaler Steigung",
+      "Den y-Achsenabschnitt",
+      "Den Punkt, an dem der Graph die x-Achse schneidet."
+    ],
+    "hint_text": "Nullstelle → f(x) = 0.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie lautet die Umkehrfunktion von f(x) = 2x + 5?",
+    "answer": "f⁻¹(x) = (x − 5)/2",
+    "options": [
+      "f⁻¹(x) = 2x − 5",
+      "f⁻¹(x) = (x + 5)/2",
+      "f⁻¹(x) = (x − 5)/2",
+      "f⁻¹(x) = 2(x − 5)"
+    ],
+    "hint_text": "Nach x auflösen und vertauschen.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wann hat eine Parabel keinen Schnittpunkt mit der x-Achse?",
+    "answer": "Wenn die Diskriminante negativ ist.",
+    "options": [
+      "Wenn a = 0 ist.",
+      "Wenn die Diskriminante negativ ist.",
+      "Wenn b = 0 ist.",
+      "Wenn die Scheitelpunktform verwendet wird."
+    ],
+    "hint_text": "Diskriminante < 0 → keine Nullstellen.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche der folgenden Funktionen ist exponentiell?",
+    "answer": "f(x) = 2 · 1.1^x",
+    "options": [
+      "f(x) = x² + 2x",
+      "f(x) = 2x + 1",
+      "f(x) = 2 · 1.1^x",
+      "f(x) = sin(x)"
+    ],
+    "hint_text": "Exponentiell → x im Exponenten.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Eigenschaft hat die Funktion f(x) = x² bezüglich Symmetrie?",
+    "answer": "Achsen- (y-Achsen-)symmetrisch",
+    "options": [
+      "Punktsymmetrisch",
+      "Keine Symmetrie",
+      "Achsen- (y-Achsen-)symmetrisch",
+      "Diagonalsymmetrisch"
+    ],
+    "hint_text": "f(x) = f(–x)",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was passiert bei der Funktion f(x) = x², wenn man den Term zu f(x) = x² − 5 ändert?",
+    "answer": "Die Parabel verschiebt sich 5 Einheiten nach unten.",
+    "options": [
+      "Die Parabel wird gestreckt.",
+      "Die Parabel verschiebt sich 5 Einheiten nach oben.",
+      "Die Parabel verschiebt sich 5 Einheiten nach unten.",
+      "Die Parabel spiegelt sich an der x-Achse."
+    ],
+    "hint_text": "−5 hinter dem x² = y-Verschiebung.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welcher Ausdruck ist identisch mit (x + 3)(x − 3)?",
+    "answer": "x² − 9",
+    "options": [
+      "x² + 9",
+      "x² − 6x + 9",
+      "x² − 9",
+      "x² + 6x + 9"
+    ],
+    "hint_text": "Binomischer Unterschied: a² − b²",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was passiert mit f(x) = sin(x), wenn man zu f(x) = sin(x) + 2 übergeht?",
+    "answer": "Der Graph verschiebt sich um 2 Einheiten nach oben.",
+    "options": [
+      "Die Frequenz verdoppelt sich.",
+      "Die Amplitude verdoppelt sich.",
+      "Der Graph verschiebt sich um 2 Einheiten nach oben.",
+      "Der Graph verschiebt sich um 2 Einheiten nach rechts."
+    ],
+    "hint_text": "+2 bedeutet Verschiebung in y-Richtung.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie lautet die Ableitung von f(x) = e^x?",
+    "answer": "f '(x) = e^x",
+    "options": [
+      "f '(x) = 1/x",
+      "f '(x) = ln(x)",
+      "f '(x) = e^x",
+      "f '(x) = x·e^x"
+    ],
+    "hint_text": "e^x bleibt bei der Ableitung gleich.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Form hat der Graph der Funktion f(x) = 1/x?",
+    "answer": "Hyperbel",
+    "options": [
+      "Parabel",
+      "Gerade",
+      "Sinuskurve",
+      "Hyperbel"
+    ],
+    "hint_text": "f(x) = 1/x bildet eine typische Hyperbel.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie lautet die Lösung der Gleichung x² = 0?",
+    "answer": "x = 0",
+    "options": [
+      "x = 1",
+      "x = 0",
+      "x = ±1",
+      "Keine Lösung"
+    ],
+    "hint_text": "Nur eine Lösung: x = 0",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was beschreibt die Amplitude in einer Sinusfunktion?",
+    "answer": "Die maximale Auslenkung vom Ruhezustand",
+    "options": [
+      "Die Periode der Welle",
+      "Die Anzahl der Nullstellen",
+      "Die maximale Auslenkung vom Ruhezustand",
+      "Die Richtung der Schwingung"
+    ],
+    "hint_text": "Amplitude = Höhe der Wellenberge.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche der folgenden Funktionen ist achsensymmetrisch?",
+    "answer": "f(x) = x² − 4",
+    "options": [
+      "f(x) = x³ − x",
+      "f(x) = √x",
+      "f(x) = x² − 4",
+      "f(x) = 2x − 1"
+    ],
+    "hint_text": "f(x) = f(−x) bei x²-Term.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie viele Nullstellen hat die Funktion f(x) = (x − 4)(x + 1)?",
+    "answer": "Zwei Nullstellen: x = 4 und x = −1",
+    "options": [
+      "Eine Nullstelle: x = 4",
+      "Zwei Nullstellen: x = 4 und x = −1",
+      "Keine Nullstelle",
+      "Unendlich viele Nullstellen"
+    ],
+    "hint_text": "Setze jeden Faktor gleich 0.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was passiert bei einer linearen Funktion f(x) = mx + b, wenn m negativ ist?",
+    "answer": "Der Graph fällt von links nach rechts.",
+    "options": [
+      "Der Graph steigt von links nach rechts.",
+      "Der Graph fällt von links nach rechts.",
+      "Der Graph ist eine waagerechte Linie.",
+      "Der Graph hat keinen Schnittpunkt mit der y-Achse."
+    ],
+    "hint_text": "m < 0 → fallende Gerade.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Einheit hat die Ableitung einer Weg-Zeit-Funktion s(t)?",
+    "answer": "Meter pro Sekunde (m/s)",
+    "options": [
+      "Sekunden",
+      "Meter",
+      "Quadratmeter",
+      "Meter pro Sekunde (m/s)"
+    ],
+    "hint_text": "Ableitung von Weg nach Zeit = Geschwindigkeit.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Ordne den Funktionsgleichungen die passende Art der Funktion zu.",
+    "answer": {
+      "f(x) = 2x + 3": "lineare Funktion",
+      "f(x) = x² - 4": "quadratische Funktion",
+      "f(x) = 3 · 2ˣ": "exponentielle Funktion"
+    },
+    "hint_text": "Achte auf die Potenzen bzw. die Struktur.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Funktionsgleichungen die richtige Steigung zu.",
+    "answer": {
+      "f(x) = 3x + 2": "3",
+      "f(x) = -2x + 5": "-2",
+      "f(x) = 0.5x - 1": "0.5"
+    },
+    "hint_text": "Die Steigung steht vor dem x.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Funktionen die richtige Scheitelpunktform zu.",
+    "answer": {
+      "f(x) = x² + 6x + 9": "f(x) = (x + 3)²",
+      "f(x) = x² - 8x + 16": "f(x) = (x - 4)²",
+      "f(x) = x² + 2x + 1": "f(x) = (x + 1)²"
+    },
+    "hint_text": "Quadratische Ergänzung oder bekannte Binome nutzen.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Funktionsgraphen ihre Schnittpunkte mit der y-Achse zu.",
+    "answer": {
+      "f(x) = 2x + 3": "3",
+      "f(x) = -x + 1": "1",
+      "f(x) = 0.5x - 2": "-2"
+    },
+    "hint_text": "Der y-Achsenabschnitt ist der Wert ohne x.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Parabeln ihren Öffnungsverlauf zu.",
+    "answer": {
+      "f(x) = -x²": "nach unten geöffnet",
+      "f(x) = 2x²": "nach oben geöffnet, gestreckt",
+      "f(x) = 0.5x²": "nach oben geöffnet, gestaucht"
+    },
+    "hint_text": "Der Faktor vor x² beeinflusst Öffnungsrichtung und Form.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Funktionen ihre Anzahl an Nullstellen zu.",
+    "answer": {
+      "f(x) = x² - 1": "2 Nullstellen",
+      "f(x) = (x - 3)²": "1 Nullstelle",
+      "f(x) = x² + 4": "keine Nullstelle"
+    },
+    "hint_text": "Setze f(x) = 0 und prüfe Lösbarkeit.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Funktionen ihre grafische Darstellung zu.",
+    "answer": {
+      "f(x) = sin(x)": "periodische Wellenbewegung",
+      "f(x) = x²": "Parabel",
+      "f(x) = 2x": "gerade Linie durch Ursprung"
+    },
+    "hint_text": "Überlege dir das typische Aussehen des Graphen.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Begriffen die passenden Beschreibungen zu.",
+    "answer": {
+      "Steigung": "Wie stark der Graph steigt oder fällt.",
+      "Scheitelpunkt": "Tiefster oder höchster Punkt der Parabel.",
+      "Nullstelle": "x-Wert, bei dem f(x) = 0 gilt."
+    },
+    "hint_text": "Begriffe aus der Funktionsanalyse.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Funktionsgleichungen die passende Veränderung zu.",
+    "answer": {
+      "f(x) = (x - 2)²": "Parabel verschoben nach rechts",
+      "f(x) = (x + 1)²": "Parabel verschoben nach links",
+      "f(x) = x² + 3": "Parabel verschoben nach oben"
+    },
+    "hint_text": "Achte auf Vorzeichen in Klammern und am Ende.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Exponentialfunktionen ihre Interpretation zu.",
+    "answer": {
+      "f(x) = 2ˣ": "Wachstum",
+      "f(x) = 0.5ˣ": "Zerfall",
+      "f(x) = 1ˣ": "Konstant"
+    },
+    "hint_text": "b > 1: Wachstum, 0 < b < 1: Zerfall.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Graphen die passende quadratische Funktion in Scheitelpunktform zu.",
+    "answer": {
+      "images/graph13.png": "f(x) = (x - 2)² + 3",
+      "images/graph14.png": "f(x) = -2(x + 1)² + 1",
+      "images/graph15.png": "f(x) = 0.5(x - 4)² - 2"
+    },
+    "hint_text": "Achte auf Scheitelpunkt und Öffnungsrichtung.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Graphen die passende Exponentialfunktion zu.",
+    "answer": {
+      "images/graph16.png": "f(x) = 2^x",
+      "images/graph17.png": "f(x) = 0.5^x",
+      "images/graph18.png": "f(x) = 3·2^x"
+    },
+    "hint_text": "Achte auf Wachstumsverhalten und y-Achsenabschnitt.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Graphen die passende Sinusfunktion zu.",
+    "answer": {
+      "images/graph19.png": "f(x) = sin(x)",
+      "images/graph20.png": "f(x) = 2·sin(x)",
+      "images/graph21.png": "f(x) = sin(2x)"
+    },
+    "hint_text": "Schau dir Amplitude und Periodenlänge an.",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Graphen der passenden linearen Funktion mit Parameterveränderung zu.",
+    "answer": {
+      "images/graph22.png": "f(x) = x + 2",
+      "images/graph23.png": "f(x) = x - 1",
+      "images/graph24.png": "f(x) = x"
+    },
+    "hint_text": "Wie verändert sich der y-Achsenabschnitt?",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Graphen der passenden quadratischen Funktion mit Parameterveränderung zu.",
+    "answer": {
+      "images/graph25.png": "f(x) = x²",
+      "images/graph26.png": "f(x) = x² - 3",
+      "images/graph27.png": "f(x) = x² + 1"
+    },
+    "hint_text": "Wie verschiebt sich der Graph nach oben oder unten?",
+    "category": "Funktionen & Algebra",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Was bedeutet es, wenn zwei Figuren ähnlich sind?",
+    "answer": "Sie haben gleiche Winkel und ihre Seitenverhältnisse sind gleich.",
+    "hint_text": "Ähnliche Figuren sind vergrößerte oder verkleinerte Versionen.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was versteht man unter zentrischer Streckung?",
+    "answer": "Eine Figur wird von einem Mittelpunkt aus vergrößert oder verkleinert.",
+    "hint_text": "Der Mittelpunkt bleibt fix, alle Punkte bewegen sich radial.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie berechnet man die Strecke c im rechtwinkligen Dreieck?",
+    "answer": "Mit dem Satz des Pythagoras: c² = a² + b²",
+    "hint_text": "Der Satz gilt nur bei rechtwinkligen Dreiecken.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Welche Seite ist die Hypotenuse in einem rechtwinkligen Dreieck?",
+    "answer": "Die dem rechten Winkel gegenüberliegende Seite.",
+    "hint_text": "Die längste Seite im rechtwinkligen Dreieck.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie lautet die Umkehrung des Satzes des Pythagoras?",
+    "answer": "Wenn a² + b² = c², dann ist das Dreieck rechtwinklig.",
+    "hint_text": "Nur so lässt sich ein rechter Winkel beweisen.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was bedeutet sin(α) im rechtwinkligen Dreieck?",
+    "answer": "sin(α) = Gegenkathete / Hypotenuse",
+    "hint_text": "Denk an die Definition der trigonometrischen Funktionen.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie lautet der Umfang eines Rechtecks mit a = 5 cm und b = 3 cm?",
+    "answer": "16 cm",
+    "hint_text": "U = 2·(a + b)",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie berechnet man die Fläche eines Dreiecks?",
+    "answer": "A = ½ · Grundseite · Höhe",
+    "hint_text": "Die Grundseite steht senkrecht zur Höhe.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist ein Schrägbild?",
+    "answer": "Eine räumliche Darstellung eines Körpers auf einer Ebene.",
+    "hint_text": "Wird oft in Technischem Zeichnen verwendet.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist ein Körpernetz?",
+    "answer": "Eine flache Darstellung aller Seitenflächen eines Körpers.",
+    "hint_text": "Stell dir vor, du faltest den Körper auseinander.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was beschreibt die Maßstabszahl 1:100?",
+    "answer": "1 cm in der Zeichnung entspricht 100 cm in Wirklichkeit.",
+    "hint_text": "Denke an Karten oder Architekturzeichnungen.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Berechne das Volumen eines Quaders mit a = 3 cm, b = 4 cm, c = 5 cm.",
+    "answer": "60 cm³",
+    "hint_text": "V = a · b · c",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie lautet die Oberfläche eines Würfels mit Kantenlänge 2 cm?",
+    "answer": "24 cm²",
+    "hint_text": "Ein Würfel hat 6 gleich große Quadrate.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie viele Flächen hat ein Zylinder?",
+    "answer": "3",
+    "hint_text": "Zwei Kreise und eine Mantelfläche.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist ein rechtwinkliges Dreieck?",
+    "answer": "Ein Dreieck mit einem rechten Winkel (90°).",
+    "hint_text": "Nur ein Winkel darf 90° sein.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie erkennt man zentrische Streckung im Koordinatensystem?",
+    "answer": "Alle Punkte sind von einem Mittelpunkt aus gestreckt.",
+    "hint_text": "Verbindungslinien treffen sich im Streckzentrum.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie bestimmt man die Höhe eines gleichschenkligen Dreiecks?",
+    "answer": "Sie verläuft von der Spitze senkrecht zur Basis.",
+    "hint_text": "Sie halbiert die Basis.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie lautet die Flächenformel eines Parallelogramms?",
+    "answer": "A = Grundseite · Höhe",
+    "hint_text": "Ähnlich wie beim Rechteck, aber mit schrägen Seiten.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist ein regelmäßiges Vieleck?",
+    "answer": "Ein Vieleck mit gleich langen Seiten und gleich großen Winkeln.",
+    "hint_text": "Zum Beispiel ein Quadrat oder regelmäßiges Sechseck.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie groß ist der Innenwinkel in einem gleichseitigen Dreieck?",
+    "answer": "60°",
+    "hint_text": "Alle drei Winkel sind gleich groß.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie wird der Satz des Pythagoras grafisch dargestellt?",
+    "answer": "Die Summe der Flächen der Kathetenquadrate = Fläche des Hypotenusenquadrats.",
+    "hint_text": "Meist mit farbigen Quadraten veranschaulicht.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist ein Prisma?",
+    "answer": "Ein Körper mit zwei gleich großen, parallelen Grundflächen.",
+    "hint_text": "Die Seitenflächen sind Parallelogramme.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie berechnet man das Volumen eines Zylinders?",
+    "answer": "V = π · r² · h",
+    "hint_text": "Grundfläche mal Höhe.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist die Diagonale eines Rechtecks mit a = 3 cm, b = 4 cm?",
+    "answer": "5 cm",
+    "hint_text": "Nutze den Satz des Pythagoras: √(3² + 4²) = √25 = 5",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie berechnet man den Umfang eines Dreiecks?",
+    "answer": "U = a + b + c",
+    "hint_text": "Alle Seitenlängen werden addiert.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wann sind zwei Dreiecke ähnlich?",
+    "answer": "Wenn sie gleiche Winkel und proportionale Seiten haben.",
+    "options": [
+      "Wenn sie gleich groß sind.",
+      "Wenn sie gleiche Seitenlängen haben.",
+      "Wenn sie gleiche Winkel und proportionale Seiten haben.",
+      "Wenn sie denselben Flächeninhalt haben."
+    ],
+    "hint_text": "Winkel gleich, Seiten im gleichen Verhältnis.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie erkennt man eine zentrische Streckung im Koordinatensystem?",
+    "answer": "Alle Bildpunkte liegen auf einer Geraden durch das Zentrum.",
+    "options": [
+      "Die Punkte bilden eine Parabel.",
+      "Alle Bildpunkte liegen auf einer Geraden durch das Zentrum.",
+      "Alle Punkte werden um 90° gedreht.",
+      "Die Figur wird gespiegelt."
+    ],
+    "hint_text": "Verbindungslinien schneiden sich im Zentrum.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Aussage beschreibt den Satz des Pythagoras?",
+    "answer": "In einem rechtwinkligen Dreieck gilt: a² + b² = c².",
+    "options": [
+      "Er gilt für alle Dreiecke.",
+      "Er beschreibt Kreisflächen.",
+      "In einem rechtwinkligen Dreieck gilt: a² + b² = c².",
+      "Er berechnet Volumen von Würfeln."
+    ],
+    "hint_text": "Nur in rechtwinkligen Dreiecken gültig.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie berechnet man sin(α) im rechtwinkligen Dreieck?",
+    "answer": "Gegenkathete geteilt durch Hypotenuse",
+    "options": [
+      "Ankathete geteilt durch Hypotenuse",
+      "Gegenkathete geteilt durch Hypotenuse",
+      "Hypotenuse geteilt durch Gegenkathete",
+      "Ankathete geteilt durch Gegenkathete"
+    ],
+    "hint_text": "SOH – Sinus = Opposite / Hypotenuse.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was benötigt man zur Konstruktion eines Dreiecks?",
+    "answer": "Drei Längen oder Winkel, z. B. SSS, SWS oder WSW.",
+    "options": [
+      "Nur eine Seite",
+      "Zwei Winkel",
+      "Drei Längen oder Winkel, z. B. SSS, SWS oder WSW.",
+      "Eine Fläche"
+    ],
+    "hint_text": "Mindestens 3 Angaben notwendig.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie berechnet man das Volumen eines Zylinders?",
+    "answer": "V = π · r² · h",
+    "options": [
+      "V = 2 · π · r · h",
+      "V = π · r² · h",
+      "V = π · d · h",
+      "V = 2 · r² · h"
+    ],
+    "hint_text": "Grundfläche mal Höhe.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ist ein Maßstab von 1:50?",
+    "answer": "1 cm in der Zeichnung entspricht 50 cm in Wirklichkeit.",
+    "options": [
+      "1 cm entspricht 5 m",
+      "1 cm entspricht 50 cm",
+      "1 cm entspricht 50 mm",
+      "50 cm entspricht 1 cm"
+    ],
+    "hint_text": "Zeichnung : Realität",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie lautet die Oberfläche eines Kegels mit Radius r und Höhe h?",
+    "answer": "A = π · r² + π · r · s",
+    "options": [
+      "A = π · r² + π · r · h",
+      "A = 2 · π · r²",
+      "A = π · r² + π · r · s",
+      "A = π · r · h"
+    ],
+    "hint_text": "Grundfläche + Mantelfläche (s = Seitenlänge).",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie groß ist der Flächeninhalt eines Kreises mit r = 3 cm?",
+    "answer": "A = π · 9 ≈ 28,27 cm²",
+    "options": [
+      "A = 6π cm²",
+      "A = 9π cm²",
+      "A = 28,27 cm²",
+      "A = π · 6 cm²"
+    ],
+    "hint_text": "A = π · r²",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie viele Kanten hat ein Quader?",
+    "answer": "12",
+    "options": [
+      "6",
+      "8",
+      "10",
+      "12"
+    ],
+    "hint_text": "4 pro Fläche × 3 Richtungen.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie konstruiert man ein gleichseitiges Dreieck?",
+    "answer": "Mit Zirkel zwei Kreisbögen mit gleichem Radius schneiden lassen.",
+    "options": [
+      "Drei Winkel abmessen",
+      "Zwei Schenkel verlängern",
+      "Mit Zirkel zwei Kreisbögen mit gleichem Radius schneiden lassen.",
+      "Mit Lineal alle Seiten auf 5 cm zeichnen"
+    ],
+    "hint_text": "Alle Seiten gleich lang – Kreisbogen hilft.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ist ein Körpernetz eines Kegels?",
+    "answer": "Ein Kreis und ein Kreisausschnitt",
+    "options": [
+      "Ein Quadrat und ein Dreieck",
+      "Zwei Halbkreise",
+      "Ein Kreis und ein Kreisausschnitt",
+      "Zwei Rechtecke"
+    ],
+    "hint_text": "Grundfläche + Mantelfläche = Kreisausschnitt.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Trigonometrische Funktion passt zu tan(α)?",
+    "answer": "Gegenkathete / Ankathete",
+    "options": [
+      "Ankathete / Hypotenuse",
+      "Gegenkathete / Ankathete",
+      "Hypotenuse / Gegenkathete",
+      "Ankathete / Gegenkathete"
+    ],
+    "hint_text": "TOA – Tangens = Opposite / Adjacent",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Eigenschaft hat ein Schrägbild?",
+    "answer": "Vorderseite maßstabsgetreu, Tiefe verzerrt dargestellt",
+    "options": [
+      "Alle Maße sind korrekt",
+      "Nur die Tiefe ist exakt",
+      "Vorderseite maßstabsgetreu, Tiefe verzerrt dargestellt",
+      "Schrägbilder zeigen nur Umrisse"
+    ],
+    "hint_text": "Vorderfläche: exakt, Tiefe: verkürzt.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie konstruiert man einen Kreis um ein Dreieck?",
+    "answer": "Man zeichnet die Mittelsenkrechten der Seiten.",
+    "options": [
+      "Man zeichnet die Höhen.",
+      "Man verbindet die Ecken.",
+      "Man zeichnet die Winkelhalbierenden.",
+      "Man zeichnet die Mittelsenkrechten der Seiten."
+    ],
+    "hint_text": "Schnittpunkt = Mittelpunkt des Umkreises.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie lautet die Volumenformel einer Kugel?",
+    "answer": "V = 4/3 · π · r³",
+    "options": [
+      "V = π · r² · h",
+      "V = π · r³",
+      "V = 4/3 · π · r³",
+      "V = 2 · π · r³"
+    ],
+    "hint_text": "Dreidimensionale Ausdehnung – r³.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was passiert bei einer zentrischen Streckung mit Streckungsfaktor k = 0,5?",
+    "answer": "Die Figur wird halb so groß.",
+    "options": [
+      "Die Figur wird doppelt so groß.",
+      "Die Figur bleibt gleich.",
+      "Die Figur wird halb so groß.",
+      "Die Figur wird gespiegelt."
+    ],
+    "hint_text": "k < 1 → Verkleinerung.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie berechnet man die Oberfläche eines zusammengesetzten Körpers?",
+    "answer": "Einzelne Flächen berechnen und addieren",
+    "options": [
+      "Nur die größte Fläche berechnen",
+      "Alle Volumen addieren",
+      "Nur Seitenflächen berechnen",
+      "Einzelne Flächen berechnen und addieren"
+    ],
+    "hint_text": "Jede Fläche zählt – auch Boden und Deckel!",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Woran erkennt man ein Körpernetz eines Quaders?",
+    "answer": "Es besteht aus 6 Rechtecken.",
+    "options": [
+      "Aus 4 Dreiecken",
+      "Aus 6 Rechtecken",
+      "Aus 8 Quadraten",
+      "Aus 2 Kreisen"
+    ],
+    "hint_text": "Ein Quader = 6 Flächen → Rechtecke.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Ordne die Begriffe den Definitionen zu.",
+    "answer": {
+      "Hypotenuse": "Die längste Seite im rechtwinkligen Dreieck",
+      "Kathete": "Seite, die am rechten Winkel anliegt",
+      "Winkel": "Zwischen zwei Geraden gebildete Öffnung"
+    },
+    "hint_text": "Nutze dein Wissen über das rechtwinklige Dreieck.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Formeln den Flächeninhalten zu.",
+    "answer": {
+      "A = a · b": "Rechteck",
+      "A = π · r²": "Kreis",
+      "A = ½ · a · h": "Dreieck"
+    },
+    "hint_text": "Denk an die typische Schreibweise mit Höhe und Radius.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Körper ihren Netzen zu.",
+    "answer": {
+      "Würfel": "6 gleich große Quadrate",
+      "Zylinder": "2 Kreise und ein Rechteck",
+      "Pyramide": "Quadrat + 4 Dreiecke"
+    },
+    "hint_text": "Stell dir vor, du klappst den Körper auseinander.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Volumenformeln den Körpern zu.",
+    "answer": {
+      "V = a · b · c": "Quader",
+      "V = π · r² · h": "Zylinder",
+      "V = (1/3) · G · h": "Pyramide"
+    },
+    "hint_text": "Grundfläche mal Höhe – bei manchen geteilt durch 3.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Eigenschaften den Figuren zu.",
+    "answer": {
+      "Quadrat": "Alle Seiten gleich lang, alle Winkel 90°",
+      "Parallelogramm": "Gegenüberliegende Seiten gleich lang",
+      "Trapez": "Nur ein Paar paralleler Seiten"
+    },
+    "hint_text": "Welche Eigenschaften definieren die Figur eindeutig?",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Konstruktionselemente der passenden Figur zu.",
+    "answer": {
+      "Zirkel und 60°-Winkel": "Gleichseitiges Dreieck",
+      "Zirkel und Mittelsenkrechten": "Kreis",
+      "Parallelen mit Lineal": "Rechteck"
+    },
+    "hint_text": "Denk an typische Konstruktionsschritte.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Maßstabszahlen den richtigen Bedeutungen zu.",
+    "answer": {
+      "1:10": "Verkleinerung – 1 cm = 10 cm",
+      "10:1": "Vergrößerung – 10 cm = 1 cm",
+      "1:1": "Originalgröße"
+    },
+    "hint_text": "Maßstab: Zeichnung : Wirklichkeit",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Dreieckarten ihren Eigenschaften zu.",
+    "answer": {
+      "Gleichseitig": "Alle Seiten und Winkel gleich",
+      "Gleichschenklig": "Zwei Seiten gleich, Basis unterschiedlich",
+      "Rechtwinklig": "Ein Winkel beträgt 90°"
+    },
+    "hint_text": "Geometrische Merkmale helfen beim Zuordnen.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Winkelbezeichnungen ihrer Lage im Dreieck zu.",
+    "answer": {
+      "Innenwinkel": "Liegt innerhalb des Dreiecks",
+      "Außenwinkel": "Ergibt mit Innenwinkel 180°",
+      "Scheitelwinkel": "Gleich groß bei sich schneidenden Linien"
+    },
+    "hint_text": "Stell dir ein gezeichnetes Dreieck vor.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Einheiten den passenden Größen zu.",
+    "answer": {
+      "cm²": "Fläche",
+      "cm³": "Volumen",
+      "cm": "Länge"
+    },
+    "hint_text": "Achte auf das Hochstellen der Zahlen bei den Einheiten.",
+    "category": "Geometrie & Raum",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Wann sind zwei Dreiecke ähnlich?",
+    "answer": "Wenn sie die gleichen Winkel und proportionale Seitenlängen haben.",
+    "hint_text": "Ähnliche Dreiecke haben gleiche Winkel und das Seitenverhältnis ist konstant.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was bewirkt eine zentrische Streckung mit dem Streckungsfaktor k > 1?",
+    "answer": "Die Figur wird vergrößert.",
+    "hint_text": "Ein Faktor größer als 1 bedeutet Vergrößerung.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Formuliere den Satz des Pythagoras.",
+    "answer": "In einem rechtwinkligen Dreieck ist a² + b² = c².",
+    "hint_text": "Er gilt nur bei rechtwinkligen Dreiecken.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie berechnest du sin(α) in einem rechtwinkligen Dreieck?",
+    "answer": "sin(α) = Gegenkathete / Hypotenuse",
+    "hint_text": "Merke dir: Soh-Cah-Toa.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie konstruiert man ein gleichseitiges Dreieck?",
+    "answer": "Mit Zirkel gleiche Radien abtragen und Verbindungsstrecken zeichnen.",
+    "hint_text": "Alle Seiten gleich lang.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie berechnest du das Volumen eines Zylinders?",
+    "answer": "V = π · r² · h",
+    "hint_text": "Grundfläche mal Höhe.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie berechnest du die Oberfläche eines Kegels?",
+    "answer": "O = π · r · (r + s)",
+    "hint_text": "s ist die Mantellinie.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie lautet die Volumenformel einer Kugel?",
+    "answer": "V = (4/3) · π · r³",
+    "hint_text": "Nur der Radius wird gebraucht.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist ein Körpernetz?",
+    "answer": "Eine zweidimensionale Entfaltung eines Körpers.",
+    "hint_text": "Man kann den Körper aus dem Netz basteln.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist ein Schrägbild?",
+    "answer": "Eine zeichnerische Darstellung eines Körpers mit schräger Tiefenachse.",
+    "hint_text": "Länge und Breite stimmen, Tiefe wird verkürzt dargestellt.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie berechnet man cos(α)?",
+    "answer": "cos(α) = Ankathete / Hypotenuse",
+    "hint_text": "Cah im Merksatz.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was beschreibt tan(α)?",
+    "answer": "tan(α) = Gegenkathete / Ankathete",
+    "hint_text": "Toa im Merksatz.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie verändert sich das Volumen bei einer zentrischen Streckung mit k = 2?",
+    "answer": "Das Volumen vervielfacht sich mit k³ = 8.",
+    "hint_text": "Bei Volumen gilt: Streckungsfaktor hoch 3.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist bei einem Maßstab 1:100 gegeben?",
+    "answer": "1 cm in der Zeichnung entspricht 100 cm in Wirklichkeit.",
+    "hint_text": "Der Maßstab zeigt das Verhältnis Zeichnung zu Realität.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Welche Eigenschaften hat ein Rhombus?",
+    "answer": "Alle Seiten gleich lang, gegenüberliegende Winkel gleich.",
+    "hint_text": "Rhombus ist ein Spezialfall des Parallelogramms.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie erkennt man eine zentrische Streckung im Koordinatensystem?",
+    "answer": "Alle Punkte liegen auf Strahlen durch das Zentrum.",
+    "hint_text": "Punkte auf einer Linie mit dem Streckungszentrum.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Welche Fläche hat ein Kreis mit r = 5 cm?",
+    "answer": "A = 78,5 cm²",
+    "hint_text": "A = π · r², mit π ≈ 3,14",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was beschreibt eine Mittelsenkrechte in einem Dreieck?",
+    "answer": "Sie steht senkrecht auf einer Seite und halbiert sie.",
+    "hint_text": "Geometrische Konstruktion zum Finden des Umkreismittelpunkts.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie berechnet man die Mantelfläche eines Zylinders?",
+    "answer": "M = 2 · π · r · h",
+    "hint_text": "Kreisumfang mal Höhe.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie konstruiert man ein rechtwinkliges Dreieck mit Hypotenuse 6 cm?",
+    "answer": "Mit Halbkreis und Winkel bei 90° an einem Ende.",
+    "hint_text": "Nutze den Thaleskreis.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie verändert sich die Oberfläche bei einer zentrischen Streckung mit k = 3?",
+    "answer": "Die Fläche vergrößert sich mit k² = 9.",
+    "hint_text": "Für Flächen gilt der Streckungsfaktor zum Quadrat.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie kann man ein Schrägbild zeichnerisch darstellen?",
+    "answer": "Mit 45°-Achse und halber Tiefenlänge.",
+    "hint_text": "Tiefe verkürzen für realistischen Eindruck.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist ein Dodekaeder?",
+    "answer": "Ein Körper mit 12 Fünfecken als Seitenflächen.",
+    "hint_text": "Ein regulärer platonischer Körper.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie berechnest du das Volumen eines zusammengesetzten Körpers?",
+    "answer": "Einzelvolumen berechnen und addieren.",
+    "hint_text": "Körper in bekannte Formen zerlegen.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist die Höhe in einem Dreieck?",
+    "answer": "Die senkrechte Verbindung von Ecke zur gegenüberliegenden Seite.",
+    "hint_text": "Sie steht immer im rechten Winkel zur Grundlinie.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was passiert bei einer zentrischen Streckung mit k = 0,5?",
+    "answer": "Die Figur wird halb so groß.",
+    "options": [
+      "Die Figur wird doppelt so groß.",
+      "Die Figur wird gespiegelt.",
+      "Die Figur bleibt gleich.",
+      "Die Figur wird halb so groß."
+    ],
+    "hint_text": "k < 1 bedeutet Verkleinerung.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie berechnet man das Volumen einer Kugel mit Radius r?",
+    "answer": "V = (4/3) · π · r³",
+    "options": [
+      "V = π · r² · h",
+      "V = (4/3) · π · r³",
+      "V = 2 · π · r",
+      "V = π · r³"
+    ],
+    "hint_text": "Nur der Radius wird benötigt.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie lautet die Mantelfläche eines Zylinders?",
+    "answer": "M = 2 · π · r · h",
+    "options": [
+      "M = π · r² · h",
+      "M = π · r · h",
+      "M = 2 · π · r · h",
+      "M = 2 · r · h"
+    ],
+    "hint_text": "Kreisumfang mal Höhe.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie verändert sich die Fläche bei einer zentrischen Streckung mit k = 2?",
+    "answer": "Die Fläche vervierfacht sich.",
+    "options": [
+      "Die Fläche bleibt gleich.",
+      "Die Fläche verdoppelt sich.",
+      "Die Fläche vervierfacht sich.",
+      "Die Fläche verachtfacht sich."
+    ],
+    "hint_text": "Fläche verändert sich mit k².",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was beschreibt tan(α) in einem rechtwinkligen Dreieck?",
+    "answer": "Gegenkathete / Ankathete",
+    "options": [
+      "Ankathete / Hypotenuse",
+      "Gegenkathete / Hypotenuse",
+      "Gegenkathete / Ankathete",
+      "Hypotenuse / Ankathete"
+    ],
+    "hint_text": "TOA – Tangens = Gegenkathete durch Ankathete.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ist ein Dodekaeder?",
+    "answer": "Ein Körper mit 12 Fünfecken als Seitenflächen.",
+    "options": [
+      "Ein Körper mit 10 Rechtecken",
+      "Ein Körper mit 6 Quadraten",
+      "Ein Körper mit 12 Fünfecken als Seitenflächen",
+      "Ein Körper mit 20 Dreiecken"
+    ],
+    "hint_text": "Dodeka = 12.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie viele Flächen hat ein Zylinder?",
+    "answer": "3",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "hint_text": "2 Kreise + 1 Mantelfläche.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Funktion hat eine Mittelsenkrechte in einem Dreieck?",
+    "answer": "Sie steht senkrecht auf einer Seite und halbiert sie.",
+    "options": [
+      "Sie halbiert die Winkel.",
+      "Sie verbindet zwei Ecken.",
+      "Sie steht senkrecht auf einer Seite und halbiert sie.",
+      "Sie liegt parallel zur Basis."
+    ],
+    "hint_text": "Wird zur Konstruktion des Umkreises genutzt.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Aussage ist richtig bei ähnlichen Figuren?",
+    "answer": "Alle Winkel sind gleich groß.",
+    "options": [
+      "Alle Seiten sind gleich lang.",
+      "Alle Winkel sind gleich groß.",
+      "Alle Flächen sind gleich groß.",
+      "Die Figuren haben gleiche Diagonalen."
+    ],
+    "hint_text": "Ähnliche Figuren = gleiche Winkel, proportionales Seitenverhältnis.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie berechnet man den Flächeninhalt eines Kreises mit r = 3 cm?",
+    "answer": "A = π · 3² = 28,27 cm²",
+    "options": [
+      "A = 3π",
+      "A = π · 3² = 28,27 cm²",
+      "A = 2π · 3",
+      "A = π · 9²"
+    ],
+    "hint_text": "A = π · r²",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ist ein Schrägbild?",
+    "answer": "Eine perspektivische Darstellung mit verkürzter Tiefe.",
+    "options": [
+      "Ein Netz eines Körpers.",
+      "Eine Darstellung mit echter Tiefe.",
+      "Eine perspektivische Darstellung mit verkürzter Tiefe.",
+      "Eine Draufsicht eines Körpers."
+    ],
+    "hint_text": "Tiefe wird verkürzt dargestellt.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ist ein Maßstab von 1:25?",
+    "answer": "1 cm in der Zeichnung = 25 cm in Wirklichkeit.",
+    "options": [
+      "1 cm in der Zeichnung = 25 cm in Wirklichkeit.",
+      "25 cm in der Zeichnung = 1 cm in Wirklichkeit.",
+      "25 m in der Zeichnung = 1 m real.",
+      "25 cm in Wirklichkeit = 10 cm in der Zeichnung."
+    ],
+    "hint_text": "Zeichnung : Realität",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was passiert mit dem Volumen bei Streckungsfaktor k = 3?",
+    "answer": "Es vergrößert sich um das 27-Fache.",
+    "options": [
+      "Es bleibt gleich.",
+      "Es verdreifacht sich.",
+      "Es vergrößert sich um das 9-Fache.",
+      "Es vergrößert sich um das 27-Fache."
+    ],
+    "hint_text": "Volumen skaliert mit k³.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie viele Ecken hat ein Würfel?",
+    "answer": "8",
+    "options": [
+      "6",
+      "8",
+      "10",
+      "12"
+    ],
+    "hint_text": "Ein Würfel hat 8 Ecken, 12 Kanten, 6 Flächen.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Formel passt zur Oberfläche eines Kegels?",
+    "answer": "O = π · r² + π · r · s",
+    "options": [
+      "O = π · r² + π · r · s",
+      "O = 2 · π · r · h",
+      "O = π · r · s",
+      "O = π · r²"
+    ],
+    "hint_text": "Grundfläche + Mantelfläche",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was beschreibt sin(α) im rechtwinkligen Dreieck?",
+    "answer": "Gegenkathete / Hypotenuse",
+    "options": [
+      "Ankathete / Hypotenuse",
+      "Gegenkathete / Hypotenuse",
+      "Gegenkathete / Ankathete",
+      "Hypotenuse / Ankathete"
+    ],
+    "hint_text": "SOH – Sinus = Opposite / Hypotenuse.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ist ein Körpernetz?",
+    "answer": "Eine flache Darstellung aller Flächen eines Körpers.",
+    "options": [
+      "Ein zusammengesetzter Körper.",
+      "Ein Plan für Würfelnetze.",
+      "Eine 3D-Darstellung eines Körpers.",
+      "Eine flache Darstellung aller Flächen eines Körpers."
+    ],
+    "hint_text": "Vorlage zum Basteln des Körpers.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie erkennt man eine zentrische Streckung im Koordinatensystem?",
+    "answer": "Alle Bildpunkte liegen auf Strahlen durch das Zentrum.",
+    "options": [
+      "Die Punkte bilden einen Kreis.",
+      "Alle Bildpunkte liegen auf Strahlen durch das Zentrum.",
+      "Alle Punkte haben denselben Abstand.",
+      "Die Punkte verschieben sich parallel."
+    ],
+    "hint_text": "Alle Punkte bleiben auf der Linie zum Zentrum.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Ordne die Volumenformeln den Körpern zu.",
+    "answer": {
+      "V = (4/3)·π·r³": "Kugel",
+      "V = (1/3)·π·r²·h": "Kegel",
+      "V = π·r²·h": "Zylinder"
+    },
+    "hint_text": "Alle Körper mit Kreis als Grundfläche – beachte den Unterschied.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Trigonometrieformeln den passenden Definitionen zu.",
+    "answer": {
+      "sin(α) = Gegenkathete / Hypotenuse": "Sinus",
+      "cos(α) = Ankathete / Hypotenuse": "Kosinus",
+      "tan(α) = Gegenkathete / Ankathete": "Tangens"
+    },
+    "hint_text": "Soh-Cah-Toa kann helfen.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Eigenschaften den Vierecken zu.",
+    "answer": {
+      "Rechteck": "Vier rechte Winkel, gegenüberliegende Seiten gleich",
+      "Rhombus": "Alle Seiten gleich, gegenüberliegende Winkel gleich",
+      "Trapez": "Mindestens ein Paar paralleler Seiten"
+    },
+    "hint_text": "Beachte Winkel und Seitenverhältnisse.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Körper der passenden Mantelfläche zu.",
+    "answer": {
+      "Zylinder": "2·π·r·h",
+      "Kegel": "π·r·s",
+      "Quader": "2·(ab + ac + bc)"
+    },
+    "hint_text": "Mantelfläche ≠ Oberfläche!",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Maßzahlen ihrer Bedeutung zu.",
+    "answer": {
+      "Spannweite": "Größter Wert minus kleinster Wert",
+      "Mittelwert": "Summe aller Werte durch Anzahl",
+      "Median": "Wert in der Mitte"
+    },
+    "hint_text": "Stichwort: Lage und Streuung.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Formeln den passenden Flächen zu.",
+    "answer": {
+      "A = π·r²": "Kreisfläche",
+      "A = (a + c)·h / 2": "Trapezfläche",
+      "A = a·h": "Parallelogrammfläche"
+    },
+    "hint_text": "Nutze bekannte Standardformeln.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Begriffe der Beschreibung zu.",
+    "answer": {
+      "Tangente": "Berührt den Kreis in genau einem Punkt",
+      "Sekante": "Schneidet den Kreis in zwei Punkten",
+      "Sehne": "Verbindet zwei Punkte des Kreisbogens"
+    },
+    "hint_text": "Alle Begriffe stammen aus der Kreisgeometrie.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die zentrischen Streckungen dem richtigen k-Faktor zu.",
+    "answer": {
+      "Vergrößerung um Faktor 2": "k = 2",
+      "Verkleinerung um Faktor 0,5": "k = 0,5",
+      "Unveränderte Größe": "k = 1"
+    },
+    "hint_text": "k > 1 = Vergrößerung, k < 1 = Verkleinerung.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Schrägbild-Eigenschaften den Darstellungen zu.",
+    "answer": {
+      "Vorderseite maßstabsgetreu, Tiefenachse schräg": "Schrägbild",
+      "Alle drei Achsen im gleichen Winkel": "Isometrie",
+      "Nur Höhe maßstabsgetreu, Breite und Tiefe verzerrt": "Kavalierperspektive"
+    },
+    "hint_text": "Unterscheide zwischen Ansichtsarten.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Volumenveränderungen den passenden Streckungsfaktoren zu.",
+    "answer": {
+      "k = 2": "Volumen verachtfacht (2³ = 8)",
+      "k = 3": "Volumen wird 27-mal größer (3³ = 27)",
+      "k = 0,5": "Volumen wird 8-mal kleiner (0,5³ = 0,125)"
+    },
+    "hint_text": "Bei Volumen: Streckungsfaktor hoch 3.",
+    "category": "Geometrie & Raum",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Wie berechnest du den Mittelwert aus den Zahlen 4, 6, 8 und 12?",
+    "answer": "Mittelwert = (4 + 6 + 8 + 12) / 4 = 7,5",
+    "hint_text": "Alle Werte addieren und durch die Anzahl der Werte teilen.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was versteht man unter der Spannweite einer Datenreihe?",
+    "answer": "Differenz aus größtem und kleinstem Wert.",
+    "hint_text": "Spannweite = Maximalwert − Minimalwert.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie erkennst du einen Ausreißer in einem Boxplot?",
+    "answer": "Ein Punkt liegt deutlich außerhalb der Box und der Antennen.",
+    "hint_text": "Ausreißer liegen meist weiter als das 1,5-Fache der Boxlänge vom Quartil entfernt.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie liest man den Median aus einem Boxplot ab?",
+    "answer": "Er ist die Linie in der Mitte der Box.",
+    "hint_text": "Der Median teilt die Daten in zwei gleich große Hälften.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was sagt die Höhe eines Sektors im Kreisdiagramm aus?",
+    "answer": "Den Anteil einer Kategorie an der Gesamtheit.",
+    "hint_text": "Je größer der Winkel, desto höher der Anteil.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie berechnet man die Wahrscheinlichkeit bei einem Laplace-Experiment?",
+    "answer": "P = Anzahl günstiger Ergebnisse / Anzahl möglicher Ergebnisse",
+    "hint_text": "Jedes Ergebnis ist gleich wahrscheinlich.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie erstellt man ein Baumdiagramm für zwei Münzwürfe?",
+    "answer": "Zwei Stufen: Erste Stufe H oder Z, zweite Stufe wieder H oder Z.",
+    "hint_text": "Zweige zeigen alle möglichen Ergebnisse (z. B. HH, HZ, ZH, ZZ).",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist die Summenregel bei Wahrscheinlichkeiten?",
+    "answer": "P(A oder B) = P(A) + P(B), wenn A und B sich ausschließen.",
+    "hint_text": "Die Ereignisse dürfen sich nicht überschneiden.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist die Produktregel bei Wahrscheinlichkeiten?",
+    "answer": "P(A und B) = P(A) · P(B), wenn A und B unabhängig sind.",
+    "hint_text": "Verwende sie bei mehrstufigen Experimenten.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Warum ist die Aussage „Rot kommt bald dran“ bei Roulette falsch?",
+    "answer": "Die Kugel hat kein Gedächtnis, jede Runde ist unabhängig.",
+    "hint_text": "Vorherige Ereignisse beeinflussen nicht die Wahrscheinlichkeit.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie kann ein Diagramm durch die Achsenskalierung verzerrt werden?",
+    "answer": "Durch ungewöhnliche Maßstäbe, die Unterschiede größer oder kleiner erscheinen lassen.",
+    "hint_text": "Vergleiche z. B. gestauchte oder gestreckte y-Achsen.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was bedeutet es, wenn eine Stichprobe nicht repräsentativ ist?",
+    "answer": "Sie spiegelt die Grundgesamtheit nicht zuverlässig wider.",
+    "hint_text": "Beispiel: Nur eine bestimmte Gruppe wurde befragt.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie berechnest du die absolute Häufigkeit eines Merkmals?",
+    "answer": "Zähle, wie oft das Merkmal vorkommt.",
+    "hint_text": "Einfaches Auszählen in der Rohdatenliste.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie berechnest du die relative Häufigkeit?",
+    "answer": "Relative Häufigkeit = absolute Häufigkeit / Gesamtzahl",
+    "hint_text": "Ergebnis meist als Dezimalzahl oder Prozent.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist der Unterschied zwischen absoluter und relativer Häufigkeit?",
+    "answer": "Absolut = Anzahl; relativ = Anteil an der Gesamtzahl.",
+    "hint_text": "Beispiel: 5-mal gewählt (absolut) = 25 % von 20 (relativ).",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie berechnest du die Wahrscheinlichkeit, bei zwei Münzwürfen genau einmal Kopf zu erhalten?",
+    "answer": "P = 0,5 (HZ) + 0,5 (ZH) = 0,5",
+    "hint_text": "Betrachte die Pfade im Baumdiagramm.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was sagt eine Häufigkeitstabelle aus?",
+    "answer": "Sie zeigt, wie oft verschiedene Werte auftreten.",
+    "hint_text": "Datenübersicht mit Werten und ihren Häufigkeiten.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was bedeutet ein Median von 6?",
+    "answer": "50 % der Werte liegen unter und 50 % über 6.",
+    "hint_text": "Der Median ist der mittlere Wert bei sortierten Daten.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie viele Möglichkeiten gibt es, zweimal einen Würfel zu werfen?",
+    "answer": "36 Möglichkeiten",
+    "hint_text": "6 Ergebnisse beim ersten × 6 beim zweiten Wurf.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie hoch ist die Wahrscheinlichkeit, beim Würfeln eine 6 zu bekommen?",
+    "answer": "1/6",
+    "hint_text": "Laplace-Experiment mit 6 gleich wahrscheinlichen Ausgängen.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was versteht man unter einem einstufigen Zufallsexperiment?",
+    "answer": "Ein Experiment mit genau einem Zufallsvorgang.",
+    "hint_text": "Beispiel: ein Würfelwurf.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie kann man aus einem Kreisdiagramm Prozentwerte ablesen?",
+    "answer": "Entweder direkt beschriftet oder über den Winkel (360° entsprechen 100 %).",
+    "hint_text": "Proportionale Zuordnung.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Warum reicht ein Beispiel nicht aus, um eine stochastische Aussage zu belegen?",
+    "answer": "Einzelne Fälle beweisen keine Regelmäßigkeit.",
+    "hint_text": "Mehrere Beobachtungen notwendig – Stichprobenumfang beachten.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie nennt man ein Ereignis, das sicher eintritt?",
+    "answer": "Ein sicheres Ereignis (Wahrscheinlichkeit = 1)",
+    "hint_text": "Beispiel: Beim Würfeln kommt eine Zahl von 1 bis 6.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie nennt man ein Ereignis, das nicht eintreten kann?",
+    "answer": "Ein unmögliches Ereignis (Wahrscheinlichkeit = 0)",
+    "hint_text": "Beispiel: Eine 7 beim Würfeln mit einem normalen Würfel.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist der Mittelwert der Zahlen 2, 4, 6, 8?",
+    "answer": "5",
+    "options": ["6", "5", "4", "10"],
+    "hint_text": "(2 + 4 + 6 + 8) / 4 = 5",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was beschreibt die Spannweite einer Datenreihe?",
+    "answer": "Differenz zwischen größtem und kleinstem Wert",
+    "options": [
+      "Summe aller Werte",
+      "Durchschnitt aller Werte",
+      "Differenz zwischen größtem und kleinstem Wert",
+      "Anzahl der Werte"
+    ],
+    "hint_text": "Spannweite = Maximalwert – Minimalwert",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was zeigt der Median in einer Datenreihe an?",
+    "answer": "Den mittleren Wert bei geordneter Liste",
+    "options": [
+      "Den größten Wert",
+      "Den häufigsten Wert",
+      "Den mittleren Wert bei geordneter Liste",
+      "Die Anzahl aller Werte"
+    ],
+    "hint_text": "Sortiere die Daten – nimm den mittleren Wert.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Aussage ist typisch für einen Ausreißer?",
+    "answer": "Er liegt weit außerhalb der übrigen Daten.",
+    "options": [
+      "Er ist immer der größte Wert.",
+      "Er ist der Median.",
+      "Er liegt weit außerhalb der übrigen Daten.",
+      "Er ist der häufigste Wert."
+    ],
+    "hint_text": "Stark abweichende Werte nennt man Ausreißer.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie berechnet man die relative Häufigkeit?",
+    "answer": "Absolute Häufigkeit geteilt durch Gesamtanzahl",
+    "options": [
+      "Summe aller Daten",
+      "Absolute Häufigkeit · 100",
+      "Absolute Häufigkeit geteilt durch Gesamtanzahl",
+      "Gesamtanzahl geteilt durch absolute Häufigkeit"
+    ],
+    "hint_text": "Häufigkeit im Verhältnis zur Gesamtanzahl.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie viele Grad hat ein vollständiges Kreisdiagramm?",
+    "answer": "360°",
+    "options": ["100°", "180°", "360°", "90°"],
+    "hint_text": "Ein Kreis hat 360°.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was zeigt ein Boxplot NICHT an?",
+    "answer": "Den Mittelwert",
+    "options": [
+      "Den Median",
+      "Die Spannweite",
+      "Die Quartile",
+      "Den Mittelwert"
+    ],
+    "hint_text": "Der Mittelwert gehört nicht zum Boxplot.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was bedeutet P(A ∪ B) bei disjunkten Ereignissen?",
+    "answer": "P(A) + P(B)",
+    "options": ["P(A) · P(B)", "P(A) + P(B)", "P(A) – P(B)", "P(A) / P(B)"],
+    "hint_text": "Summenregel bei disjunkten (sich ausschließenden) Ereignissen.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was bedeutet P(A ∩ B) bei unabhängigen Ereignissen?",
+    "answer": "P(A) · P(B)",
+    "options": ["P(A) + P(B)", "P(A) – P(B)", "P(A) · P(B)", "P(A) / P(B)"],
+    "hint_text": "Produktregel bei unabhängigen Ereignissen.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie viele Pfade hat ein Baumdiagramm mit 3 Stufen und 2 Ausgängen pro Stufe?",
+    "answer": "8",
+    "options": ["6", "8", "9", "12"],
+    "hint_text": "2 × 2 × 2 = 8 Pfade.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ist die Wahrscheinlichkeit, beim Würfeln eine gerade Zahl zu würfeln?",
+    "answer": "3/6",
+    "options": ["1/6", "2/6", "3/6", "4/6"],
+    "hint_text": "Gerade Zahlen: 2, 4, 6 → 3 günstige Ergebnisse.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ist ein Laplace-Experiment?",
+    "answer": "Ein Zufallsexperiment mit gleich wahrscheinlichen Ausgängen",
+    "options": [
+      "Ein sehr seltenes Ereignis",
+      "Ein Experiment mit zwei Stufen",
+      "Ein Zufallsexperiment mit gleich wahrscheinlichen Ausgängen",
+      "Ein Experiment mit 100 % Sicherheit"
+    ],
+    "hint_text": "Beispiel: Würfeln mit fairem Würfel.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was passiert bei einer Stichprobe ohne Repräsentativität?",
+    "answer": "Die Ergebnisse sind nicht auf die Grundgesamtheit übertragbar.",
+    "options": [
+      "Die Stichprobe ist besonders genau.",
+      "Die Ergebnisse sind sicher korrekt.",
+      "Die Ergebnisse sind nicht auf die Grundgesamtheit übertragbar.",
+      "Die Stichprobe enthält keine Zahlen."
+    ],
+    "hint_text": "Die Stichprobe sollte die Grundgesamtheit widerspiegeln.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche der folgenden Aussagen zeigt ein sicheres Ereignis?",
+    "answer": "Beim Würfeln kommt eine Zahl zwischen 1 und 6.",
+    "options": [
+      "Beim Würfeln kommt eine 7.",
+      "Eine gezogene Karte ist rot oder schwarz.",
+      "Es regnet morgen.",
+      "Beim Würfeln kommt eine Zahl zwischen 1 und 6."
+    ],
+    "hint_text": "Ein sicheres Ereignis hat Wahrscheinlichkeit 1.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was zeigt ein Kreisdiagramm?",
+    "answer": "Die Anteile einzelner Gruppen an einer Gesamtheit.",
+    "options": [
+      "Die absolute Anzahl jeder Gruppe.",
+      "Die durchschnittliche Größe einer Gruppe.",
+      "Die Anteile einzelner Gruppen an einer Gesamtheit.",
+      "Die Zeitverteilung auf Gruppen."
+    ],
+    "hint_text": "Ein Kreis = 100 %, unterteilt in Anteile.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie berechnet man die Wahrscheinlichkeit von zwei aufeinanderfolgenden Würfen mit je einer 6?",
+    "answer": "1/6 · 1/6 = 1/36",
+    "options": ["1/12", "1/36", "1/6", "1/18"],
+    "hint_text": "Produktregel bei unabhängigen Ereignissen.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was kann an einem Diagramm manipulativ wirken?",
+    "answer": "Verzerrte Skalen oder fehlende Beschriftungen",
+    "options": [
+      "Bunte Farben",
+      "Verzerrte Skalen oder fehlende Beschriftungen",
+      "Glatte Linien",
+      "Angaben in Prozent"
+    ],
+    "hint_text": "Diagramme können durch Gestaltung manipulieren.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was bedeutet eine Wahrscheinlichkeit von 0?",
+    "answer": "Das Ereignis kann nicht eintreten.",
+    "options": [
+      "Das Ereignis tritt immer ein.",
+      "Das Ereignis kann nicht eintreten.",
+      "Das Ereignis tritt manchmal ein.",
+      "Das Ereignis ist wahrscheinlich."
+    ],
+    "hint_text": "Wahrscheinlichkeit 0 = unmögliches Ereignis.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was bedeutet eine Wahrscheinlichkeit von 1?",
+    "answer": "Das Ereignis tritt sicher ein.",
+    "options": [
+      "Das Ereignis kann nicht eintreten.",
+      "Das Ereignis ist unwahrscheinlich.",
+      "Das Ereignis tritt sicher ein.",
+      "Das Ereignis tritt vielleicht ein."
+    ],
+    "hint_text": "Wahrscheinlichkeit 1 = sicheres Ereignis.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Ordne die Begriffe den passenden Erklärungen zu.",
+    "answer": {
+      "Absolute Häufigkeit": "Anzahl, wie oft ein Ereignis auftritt",
+      "Relative Häufigkeit": "Anteil des Ereignisses an der Gesamtanzahl",
+      "Wahrscheinlichkeit": "Erwarteter Anteil bei vielen Wiederholungen"
+    },
+    "hint_text": "Achte auf die Begriffe 'Anzahl', 'Anteil' und 'Erwartung'.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Darstellungsformen den passenden Beispielen zu.",
+    "answer": {
+      "Kreisdiagramm": "Verteilung der Lieblingsobstsorten in einer Klasse",
+      "Balkendiagramm": "Häufigkeit der Noten in einer Klassenarbeit",
+      "Boxplot": "Verteilung von Körpergrößen in cm"
+    },
+    "hint_text": "Welches Diagramm stellt welche Datenart gut dar?",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Begriffe den passenden Symbolen zu.",
+    "answer": {
+      "Summe": "Σ",
+      "Wahrscheinlichkeit": "P(E)",
+      "Mittelwert": "x̄"
+    },
+    "hint_text": "Mathematische Zeichen helfen bei der Kurzschreibweise.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Begriffe den passenden Maßzahlen zu.",
+    "answer": {
+      "Mittelwert": "Summe aller Werte geteilt durch Anzahl",
+      "Median": "Wert in der Mitte nach Sortierung",
+      "Spannweite": "Größter Wert minus kleinster Wert"
+    },
+    "hint_text": "Unterscheide Lage- und Streuungsmaße.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Zufallsexperimente den passenden Baumdiagrammen zu.",
+    "answer": {
+      "2 Münzwürfe": "Zwei Stufen mit jeweils 'Kopf' und 'Zahl'",
+      "1 Würfelwurf, dann 1 Münzwurf": "Erste Stufe: 6 Möglichkeiten, zweite: 2",
+      "2 Kugeln ziehen ohne Zurücklegen": "Zweite Stufe hat eine Möglichkeit weniger"
+    },
+    "hint_text": "Zweifach-Experimente brauchen zwei Stufen.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Wahrscheinlichkeiten den passenden Aussagen zu.",
+    "answer": {
+      "0": "Unmögliches Ereignis",
+      "1": "Sicheres Ereignis",
+      "0,5": "Gleichwahrscheinliches Ereignis"
+    },
+    "hint_text": "Die Wahrscheinlichkeit liegt immer zwischen 0 und 1.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Begriffe den passenden Diagrammmerkmalen zu.",
+    "answer": {
+      "Ausreißer": "Wert, der stark vom Rest abweicht",
+      "Modus": "Am häufigsten auftretender Wert",
+      "Interquartilsabstand": "Abstand zwischen Q3 und Q1"
+    },
+    "hint_text": "Stichwort: Boxplot!",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Anzahlen den passenden Wahrscheinlichkeiten zu (Laplace).",
+    "answer": {
+      "1 günstiger / 6 mögliche": "Wahrscheinlichkeit = 1/6",
+      "2 günstige / 5 mögliche": "Wahrscheinlichkeit = 2/5",
+      "3 günstige / 10 mögliche": "Wahrscheinlichkeit = 3/10"
+    },
+    "hint_text": "Wahrscheinlichkeit = günstige / mögliche Ergebnisse.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Aussagen den passenden Grafikaussagen zu.",
+    "answer": {
+      "Skalierung fehlt": "Grafik wirkt absichtlich verzerrt",
+      "Achsen nicht bei Null": "Unverhältnismäßige Darstellung",
+      "Falsche Kategorisierung": "Gruppen nicht vergleichbar"
+    },
+    "hint_text": "Achte auf typische Manipulationen bei Grafiken.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Begriffe den richtigen Zufallsexperimenten zu.",
+    "answer": {
+      "Ergebnis": "Ein möglicher Ausgang",
+      "Ereignis": "Zusammenfassung mehrerer Ergebnisse",
+      "Ergebnismenge": "Alle möglichen Ausgänge"
+    },
+    "hint_text": "Denk an Münzwurf oder Würfeln.",
+    "category": "Stochastik",
+    "grade": "9",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Erkläre den Unterschied zwischen relativer und absoluter Häufigkeit.",
+    "answer": "Die absolute Häufigkeit ist die Anzahl des Auftretens eines Ereignisses, die relative Häufigkeit ist der Anteil daran bezogen auf die Gesamtzahl.",
+    "hint_text": "Relativ = Anteil in %, absolut = Anzahl.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Berechne den Mittelwert der Zahlen: 8, 9, 5, 7, 11.",
+    "answer": "8",
+    "hint_text": "Summe durch Anzahl der Werte.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was versteht man unter dem Median?",
+    "answer": "Der mittlere Wert einer sortierten Datenreihe.",
+    "hint_text": "Sortieren, dann mittlerer Wert.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Nenne ein Beispiel für einen Ausreißer in einer Datenreihe.",
+    "answer": "z. B. In 1, 2, 2, 3, 50 ist die 50 ein Ausreißer.",
+    "hint_text": "Ein Wert, der stark vom Rest abweicht.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie berechnet man die Spannweite einer Datenreihe?",
+    "answer": "Größter Wert minus kleinster Wert.",
+    "hint_text": "Max – Min.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was zeigt ein Boxplot an?",
+    "answer": "Minimum, 1. Quartil, Median, 3. Quartil, Maximum.",
+    "hint_text": "Fünf Kennwerte auf einen Blick.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was versteht man unter dem 1. Quartil?",
+    "answer": "Den Wert, unter dem 25 % der Daten liegen.",
+    "hint_text": "25 % aller Werte sind kleiner oder gleich.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was versteht man unter einem mehrstufigen Zufallsexperiment?",
+    "answer": "Ein Experiment mit mehreren aufeinanderfolgenden Zufallsschritten.",
+    "hint_text": "z. B. zwei Würfe oder Ziehen mit Zurücklegen.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie zeichnet man ein Baumdiagramm mit zwei Stufen und je drei Ausgängen?",
+    "answer": "Drei Äste in der 1. Stufe, je drei in der 2. Stufe – insgesamt 9 Pfade.",
+    "hint_text": "Stufe 1 × Stufe 2 ergibt die Gesamtpfade.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was besagt die Summenregel in der Wahrscheinlichkeitsrechnung?",
+    "answer": "P(A ∪ B) = P(A) + P(B), wenn A und B disjunkt sind.",
+    "hint_text": "Nur für sich ausschließende Ereignisse.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was besagt die Produktregel?",
+    "answer": "P(A ∩ B) = P(A) · P(B|A)",
+    "hint_text": "Wahrscheinlichkeit des ersten Ereignisses mal bedingte Wahrscheinlichkeit des zweiten.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie groß ist die Wahrscheinlichkeit, beim zweifachen Würfeln zweimal eine 6 zu werfen?",
+    "answer": "1/36",
+    "hint_text": "1/6 · 1/6",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was versteht man unter einem sicheren Ereignis?",
+    "answer": "Ein Ereignis, das immer eintritt, Wahrscheinlichkeit = 1.",
+    "hint_text": "100 % Eintrittswahrscheinlichkeit.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist ein unmögliches Ereignis?",
+    "answer": "Ein Ereignis mit Wahrscheinlichkeit 0.",
+    "hint_text": "z. B. beim Würfeln eine 7.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wann sind zwei Ereignisse unabhängig?",
+    "answer": "Wenn das Eintreten des einen keinen Einfluss auf das andere hat.",
+    "hint_text": "P(A ∩ B) = P(A) · P(B)",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist ein Laplace-Experiment?",
+    "answer": "Ein Zufallsexperiment mit gleichwahrscheinlichen Ausgängen.",
+    "hint_text": "Beispiel: Münzwurf, Würfeln.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist der Unterschied zwischen relativer Häufigkeit und Wahrscheinlichkeit?",
+    "answer": "Relative Häufigkeit ist beobachteter Anteil, Wahrscheinlichkeit ein theoretischer Wert.",
+    "hint_text": "Eine misst Realität, die andere ist Modellannahme.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie kann man die Repräsentativität einer Umfrage prüfen?",
+    "answer": "Stichprobengröße, Auswahlverfahren und Zusammensetzung prüfen.",
+    "hint_text": "Nicht jede Gruppe ist automatisch repräsentativ.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie erkennt man eine grafische Verzerrung in einem Diagramm?",
+    "answer": "z. B. bei abgeschnittenen Achsen, übertriebenen Balken oder fehlender Beschriftung.",
+    "hint_text": "Skalierung und Darstellung hinterfragen!",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Ein Glücksrad ist in drei gleich große Sektoren unterteilt. Wie groß ist die Wahrscheinlichkeit für jeden Sektor?",
+    "answer": "1/3",
+    "hint_text": "Alle gleich wahrscheinlich.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie viele Pfade hat ein Baumdiagramm mit drei Stufen und je 2 Möglichkeiten?",
+    "answer": "8 Pfade",
+    "hint_text": "2 × 2 × 2 = 8",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "In einem Würfelspiel zählt jede 6 doppelt. Wie verändert sich der Erwartungswert?",
+    "answer": "Er steigt, weil der Gewinn für 6 größer ist.",
+    "hint_text": "Wahrscheinlichkeit · Wert summieren.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Nenne ein Beispiel für ein zweistufiges Zufallsexperiment.",
+    "answer": "z. B. zweimaliges Ziehen einer Kugel mit Zurücklegen.",
+    "hint_text": "Zwei Zufallsschritte hintereinander.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Warum sollte man bei Umfragen auf die Größe der Stichprobe achten?",
+    "answer": "Weil kleine Stichproben leicht verzerrt oder nicht repräsentativ sein können.",
+    "hint_text": "Je größer, desto zuverlässiger.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Wie lässt sich mit einem Baumdiagramm eine Wahrscheinlichkeit berechnen?",
+    "answer": "Pfadwahrscheinlichkeiten entlang des Pfades multiplizieren und ggf. summieren.",
+    "hint_text": "Produktregel auf Pfade anwenden, Summenregel für mehrere Pfade.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "classic"
+  },
+  {
+    "question": "Was ist ein Boxplot?",
+    "answer": "Eine grafische Darstellung von Minimum, Maximum, Median und Quartilen.",
+    "options": [
+      "Eine Art Säulendiagramm.",
+      "Ein Würfel mit Zahlen.",
+      "Eine grafische Darstellung von Minimum, Maximum, Median und Quartilen.",
+      "Ein Kreisdiagramm."
+    ],
+    "hint_text": "Er zeigt fünf wichtige Kennwerte.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was versteht man unter dem Median?",
+    "answer": "Den mittleren Wert einer geordneten Datenreihe.",
+    "options": [
+      "Die Summe aller Werte.",
+      "Den häufigsten Wert.",
+      "Den mittleren Wert einer geordneten Datenreihe.",
+      "Den größten Wert."
+    ],
+    "hint_text": "Sortiere die Daten zuerst.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Aussage zur relativen Häufigkeit ist korrekt?",
+    "answer": "Sie gibt den Anteil eines Ereignisses an der Gesamtzahl der Versuche an.",
+    "options": [
+      "Sie zählt, wie oft ein Wert vorkommt.",
+      "Sie zeigt den Mittelwert.",
+      "Sie gibt den Anteil eines Ereignisses an der Gesamtzahl der Versuche an.",
+      "Sie ist immer 1."
+    ],
+    "hint_text": "Sie wird meist in Prozent angegeben.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Maßzahl ist besonders empfindlich gegenüber Ausreißern?",
+    "answer": "Der Mittelwert",
+    "options": [
+      "Der Median",
+      "Die Spannweite",
+      "Der Mittelwert",
+      "Das Minimum"
+    ],
+    "hint_text": "Ein einzelner großer Wert verändert ihn stark.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ist ein Ausreißer?",
+    "answer": "Ein Wert, der deutlich außerhalb des Datenbereichs liegt.",
+    "options": [
+      "Ein besonders häufiger Wert.",
+      "Ein Wert, der deutlich außerhalb des Datenbereichs liegt.",
+      "Ein Wert nahe am Median.",
+      "Ein Wert unter dem Mittelwert."
+    ],
+    "hint_text": "Er liegt weit entfernt vom Rest der Werte.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was bedeutet 'P(A ∪ B)' bei disjunkten Ereignissen?",
+    "answer": "P(A) + P(B)",
+    "options": [
+      "P(A) · P(B)",
+      "P(A) + P(B)",
+      "P(A) − P(B)",
+      "P(A ∩ B)"
+    ],
+    "hint_text": "Nutze die Summenregel.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was bedeutet 'P(A ∩ B)' bei unabhängigen Ereignissen?",
+    "answer": "P(A) · P(B)",
+    "options": [
+      "P(A) + P(B)",
+      "P(A) − P(B)",
+      "P(A) · P(B)",
+      "P(A ∪ B)"
+    ],
+    "hint_text": "Nutze die Produktregel.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ist ein sicheres Ereignis?",
+    "answer": "Ein Ereignis mit der Wahrscheinlichkeit 1.",
+    "options": [
+      "Ein Ereignis mit Wahrscheinlichkeit 0.",
+      "Ein Ereignis, das selten eintritt.",
+      "Ein Ereignis mit der Wahrscheinlichkeit 1.",
+      "Ein Zufallsexperiment."
+    ],
+    "hint_text": "Es tritt immer ein.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wann spricht man von unabhängigen Ereignissen?",
+    "answer": "Wenn das Eintreten eines Ereignisses das andere nicht beeinflusst.",
+    "options": [
+      "Wenn beide Ereignisse gleichzeitig eintreten.",
+      "Wenn sie keine gemeinsamen Ergebnisse haben.",
+      "Wenn das Eintreten eines Ereignisses das andere nicht beeinflusst.",
+      "Wenn eines wahrscheinlicher ist als das andere."
+    ],
+    "hint_text": "Die Wahrscheinlichkeiten bleiben gleich.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie viele mögliche Ergebnisse gibt es beim dreifachen Münzwurf?",
+    "answer": "8",
+    "options": [
+      "3",
+      "6",
+      "8",
+      "9"
+    ],
+    "hint_text": "2 · 2 · 2 = 8",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was zeigt ein Kreisdiagramm?",
+    "answer": "Die prozentuale Verteilung von Daten.",
+    "options": [
+      "Absolute Häufigkeiten.",
+      "Die prozentuale Verteilung von Daten.",
+      "Nur den Median.",
+      "Nur den Mittelwert."
+    ],
+    "hint_text": "Jedes Segment stellt einen Anteil dar.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was versteht man unter Repräsentativität einer Stichprobe?",
+    "answer": "Die Stichprobe spiegelt die Grundgesamtheit gut wider.",
+    "options": [
+      "Die Stichprobe enthält nur hohe Werte.",
+      "Die Stichprobe ist zufällig gewählt.",
+      "Die Stichprobe spiegelt die Grundgesamtheit gut wider.",
+      "Die Stichprobe ist besonders groß."
+    ],
+    "hint_text": "Alle Gruppen müssen angemessen vertreten sein.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ist ein mehrstufiges Zufallsexperiment?",
+    "answer": "Ein Experiment mit mehreren aufeinanderfolgenden Zufallsaktionen.",
+    "options": [
+      "Ein Experiment mit nur einem Ausgang.",
+      "Ein Experiment ohne Wahrscheinlichkeiten.",
+      "Ein Experiment mit mehreren aufeinanderfolgenden Zufallsaktionen.",
+      "Ein Experiment mit festen Ergebnissen."
+    ],
+    "hint_text": "z. B. zweimaliges Ziehen mit Zurücklegen.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was zeigt ein Baumdiagramm?",
+    "answer": "Alle möglichen Ausgänge eines mehrstufigen Zufallsexperiments.",
+    "options": [
+      "Nur die häufigsten Ergebnisse.",
+      "Alle möglichen Ausgänge eines mehrstufigen Zufallsexperiments.",
+      "Nur die Mittelwerte.",
+      "Den Median."
+    ],
+    "hint_text": "Jeder Pfad stellt eine Möglichkeit dar.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie berechnet man eine Pfadwahrscheinlichkeit im Baumdiagramm?",
+    "answer": "Indem man die Wahrscheinlichkeiten entlang des Pfades multipliziert.",
+    "options": [
+      "Indem man die Wahrscheinlichkeiten addiert.",
+      "Indem man die Wahrscheinlichkeiten multipliziert.",
+      "Indem man nur die größte Wahrscheinlichkeit nimmt.",
+      "Indem man die Summe aller Wahrscheinlichkeiten bildet."
+    ],
+    "hint_text": "Produktregel anwenden.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Aussage über den Median ist korrekt?",
+    "answer": "Er ist robust gegenüber Ausreißern.",
+    "options": [
+      "Er verändert sich bei Ausreißern stark.",
+      "Er ist immer größer als der Mittelwert.",
+      "Er ist robust gegenüber Ausreißern.",
+      "Er zeigt die Spannweite."
+    ],
+    "hint_text": "Er hängt nur von der Mitte ab, nicht von Ausreißern.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was versteht man unter der Spannweite?",
+    "answer": "Differenz zwischen größtem und kleinstem Wert.",
+    "options": [
+      "Summe aller Werte.",
+      "Differenz zwischen größtem und kleinstem Wert.",
+      "Mittelwert der Daten.",
+      "Der Median."
+    ],
+    "hint_text": "max – min",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Wie kann man einen Ausreißer im Boxplot erkennen?",
+    "answer": "Er liegt außerhalb der „Antennen“.",
+    "options": [
+      "Er liegt nahe am Median.",
+      "Er ist immer das Minimum.",
+      "Er liegt außerhalb der „Antennen“.",
+      "Er ist der größte Wert."
+    ],
+    "hint_text": "Meist als Punkt markiert.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Welche Aussage zur Wahrscheinlichkeit ist korrekt?",
+    "answer": "Sie liegt immer zwischen 0 und 1.",
+    "options": [
+      "Sie kann größer als 1 sein.",
+      "Sie liegt immer zwischen 0 und 1.",
+      "Sie ist immer 0.",
+      "Sie ist immer 50 %."
+    ],
+    "hint_text": "0 ≤ P ≤ 1",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Was ist eine absolute Häufigkeit?",
+    "answer": "Die Anzahl des Auftretens eines Ereignisses.",
+    "options": [
+      "Der Prozentwert eines Ereignisses.",
+      "Die Anzahl des Auftretens eines Ereignisses.",
+      "Die Wahrscheinlichkeit eines Ereignisses.",
+      "Die Summe aller Ergebnisse."
+    ],
+    "hint_text": "Zählwert.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "Ordne die Wahrscheinlichkeitsregeln den passenden Beschreibungen zu.",
+    "answer": {
+      "Produktregel": "Wahrscheinlichkeit für zwei unabhängige Ereignisse",
+      "Summenregel": "Wahrscheinlichkeit für entweder/oder bei disjunkten Ereignissen",
+      "Gegenwahrscheinlichkeit": "1 minus die Wahrscheinlichkeit des Gegenereignisses"
+    },
+    "hint_text": "Grundregeln für kombinierte Ereignisse.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Aussagen zur Repräsentativität den passenden Fehlern zu.",
+    "answer": {
+      "Nur 10 Leute befragt": "Zu kleine Stichprobe",
+      "Nur eine Altersgruppe befragt": "Nicht repräsentativ",
+      "Nur Online-Umfrage": "Selbstselektion verzerrt Ergebnis"
+    },
+    "hint_text": "Wichtig für Statistik: Wer wurde befragt?",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Diagrammtypen den passenden Zwecken zu.",
+    "answer": {
+      "Boxplot": "Vergleich von Median, Quartilen und Ausreißern",
+      "Histogramm": "Häufigkeitsverteilung bei metrischen Daten",
+      "Kreisdiagramm": "Anteile eines Ganzen visuell darstellen"
+    },
+    "hint_text": "Jede Darstellungsform hat ihren Zweck.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Begriffe den Wahrscheinlichkeitsverteilungen zu.",
+    "answer": {
+      "Binomialverteilung": "Zahl der Erfolge bei festen Versuchen",
+      "Gleichverteilung": "Alle Ergebnisse gleich wahrscheinlich",
+      "Normalverteilung": "Glockenförmige symmetrische Verteilung"
+    },
+    "hint_text": "Beachte Art und Form der Verteilung.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne den Werten die passenden Aussagen zu.",
+    "answer": {
+      "P(E) = 0": "Unmögliches Ereignis",
+      "P(E) = 1": "Sicheres Ereignis",
+      "0 < P(E) < 1": "Mögliches, aber unsicheres Ereignis"
+    },
+    "hint_text": "P(E) liegt immer zwischen 0 und 1.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Begriffe den statistischen Begriffen zu.",
+    "answer": {
+      "Stichprobe": "Ausgewählte Teilmenge aus der Grundgesamtheit",
+      "Merkmal": "Untersuchter Aspekt (z. B. Größe)",
+      "Merkmalsausprägung": "Konkret gemessener Wert (z. B. 1,75 m)"
+    },
+    "hint_text": "Grundlagen der Statistik.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Ereignisbäume den passenden Beschreibungen zu.",
+    "answer": {
+      "Ohne Zurücklegen": "Zweite Stufe hat weniger Pfade",
+      "Mit Zurücklegen": "Zweite Stufe hat gleich viele Pfade",
+      "Unabhängige Ereignisse": "Pfade beeinflussen sich nicht"
+    },
+    "hint_text": "Verzweigungen zeigen Wahrscheinlichkeiten.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Mittelwerte den passenden Aussagen zu.",
+    "answer": {
+      "Arithmetisches Mittel": "Durchschnitt aller Werte",
+      "Median": "Zentralwert in sortierter Liste",
+      "Modus": "Häufigster Wert"
+    },
+    "hint_text": "Drei typische Lageparameter.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Formeln den Begriffen zu.",
+    "answer": {
+      "P(A und B)": "P(A) · P(B) bei unabhängigen Ereignissen",
+      "P(A oder B)": "P(A) + P(B) – P(A und B)",
+      "P(nicht A)": "1 – P(A)"
+    },
+    "hint_text": "Typische Rechenregeln für Wahrscheinlichkeiten.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "drag_drop"
+  },
+  {
+    "question": "Ordne die Fragestellungen den passenden Erhebungsarten zu.",
+    "answer": {
+      "Wie zufrieden sind Sie?": "Subjektiv, qualitativ",
+      "Wie viele Stunden schlafen Sie?": "Objektiv, quantitativ",
+      "Welche Verkehrsmittel nutzen Sie?": "Nominal, kategorial"
+    },
+    "hint_text": "Art der Daten bestimmt den Umgang damit.",
+    "category": "Stochastik",
+    "grade": "10",
+    "question_type": "drag_drop"
+  }
+]

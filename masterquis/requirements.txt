@@ -1,0 +1,14 @@
+sentence-transformers
+gunicorn
+torch
+symspellpy
+bcrypt
+blinker
+click
+colorama
+Flask
+itsdangerous
+Jinja2
+MarkupSafe
+Werkzeug
+flask_cors
