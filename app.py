@@ -182,6 +182,11 @@ def register():
 def dashboard():
     return render_template("dashboard.html")
 
+@app.route("/pruefungsmodus")
+def pruefungsmodus():
+    return render_template("pruefungsmodus.html")
+
+
 # 🚀 Startpunkt
 if __name__ == '__main__':
     app.run(debug=True)
