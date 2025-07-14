@@ -84,7 +84,7 @@ async function reset() {
 
 function startQuiz() {
   if (selectedcategory.value) {
-    router.push({ path: '/quiz', query: { category: selectedcategory.value, only_drag_drop: onlyDragDrop.value ? '1' : undefined } })
+    router.push({ path: '/uebungsmodus', query: { category: selectedcategory.value, only_drag_drop: onlyDragDrop.value ? '1' : undefined } })
   }
 }
 

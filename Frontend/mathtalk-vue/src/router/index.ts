@@ -4,7 +4,7 @@ import Quiz from '../components/Quiz.vue'
 
 const routes = [
   { path: '/', component: StartMenu },
-  { path: '/quiz', component: Quiz },
+  { path: '/uebungsmodus', component: Quiz },
 ]
 
 const router = createRouter({

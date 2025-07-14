@@ -1,72 +1,86 @@
 <template>
-  <transition :name="transitionName" mode="out-in">
-    <div v-if="loginOk">
-      <div class="container" v-if="question"
-        :key="q_idx"
-        @touchstart="handleTouchStart"
-        @touchend="handleTouchEnd"
-        @mousedown="handleMouseDown"
-        @mouseup="handleMouseUp"
-      >
-        <div class="user-info">Angemeldet als: <b>test@example.com</b></div>
-        <h2>{{ question.question }}</h2>
-        <div v-if="question.question_type === 'drag_drop'">
-          <div class="dragdrop-row">
-            <div v-for="(ex, idx) in Object.keys(question.answer)" :key="ex" class="dragdrop-example" @dragover.prevent @drop="onDrop(ex)">
-              <div>
-                <template v-if="isImage(ex)">
-                  <img :src="imageUrl(ex)" alt="Beispiel" class="drag-img" />
-                </template>
-                <template v-else>
-                  {{ ex }}
-                </template>
+  <template v-if="loginOk">
+    <transition :name="transitionName" mode="out-in">
+      <div>
+        <h1 class="quiz-title">Übungsmodus</h1>
+        <div class="container" v-if="question"
+          :key="q_idx"
+          @touchstart="handleTouchStart"
+          @touchend="handleTouchEnd"
+          @mousedown="handleMouseDown"
+          @mouseup="handleMouseUp"
+        >
+          <h2 class="question-title">{{ question.question }}</h2>
+          <div v-if="question.question_type === 'drag_drop'">
+            <div class="dragdrop-row">
+              <div v-for="(ex, idx) in Object.keys(question.answer)" :key="ex" class="dragdrop-example" @dragover.prevent @drop="onDrop(ex)">
+                <div>
+                  <template v-if="isImage(ex)">
+                    <img :src="imageUrl(ex)" alt="Beispiel" class="drag-img" />
+                  </template>
+                  <template v-else>
+                    {{ ex }}
+                  </template>
+                </div>
+                <div class="dropzone" :class="{filled: !!dragDropUserAnswers[ex]}" >
+                  <template v-if="dragDropUserAnswers[ex]">
+                    <img v-if="isImage(dragDropUserAnswers[ex])" :src="imageUrl(dragDropUserAnswers[ex])" alt="Antwort" class="drag-img" />
+                    <span v-else>{{ dragDropUserAnswers[ex] }}</span>
+                  </template>
+                  <span v-else style="color:#aaa;">Antwort hierher ziehen</span>
+                </div>
               </div>
-              <div class="dropzone" :class="{filled: !!dragDropUserAnswers[ex]}" >
-                <template v-if="dragDropUserAnswers[ex]">
-                  <img v-if="isImage(dragDropUserAnswers[ex])" :src="imageUrl(dragDropUserAnswers[ex])" alt="Antwort" class="drag-img" />
-                  <span v-else>{{ dragDropUserAnswers[ex] }}</span>
-                </template>
-                <span v-else style="color:#aaa;">Antwort hierher ziehen</span>
+            </div>
+            <div class="dragdrop-answers">
+              <div v-for="ans in dragDropOptions" :key="ans" class="dragdrop-answer"
+                draggable="true"
+                @dragstart="onDragStart(ans)"
+                :class="{used: Object.values(dragDropUserAnswers).includes(ans)}"
+              >
+                <img v-if="isImage(ans)" :src="imageUrl(ans)" alt="Antwort" class="drag-img" />
+                <span v-else>{{ ans }}</span>
               </div>
             </div>
           </div>
-          <div class="dragdrop-answers">
-            <div v-for="ans in dragDropOptions" :key="ans" class="dragdrop-answer"
-              draggable="true"
-              @dragstart="onDragStart(ans)"
-              :class="{used: Object.values(dragDropUserAnswers).includes(ans)}"
-            >
-              <img v-if="isImage(ans)" :src="imageUrl(ans)" alt="Antwort" class="drag-img" />
-              <span v-else>{{ ans }}</span>
-            </div>
+        <div v-else-if="question.question_type === 'multiple_choice'" class="multiple-choice-row">
+          <div v-for="(option, idx) in question.choices" :key="option" class="multiple-choice-option">
+            <label :class="{selected: userInput === option, disabled: answered}" style="display:flex;align-items:center;gap:10px;cursor:pointer;">
+              <input type="radio" :value="option" v-model="userInput" :disabled="answered" @change="submitAnswer" style="margin-right:8px;" />
+              <span>{{ option }}</span>
+            </label>
           </div>
         </div>
-        <div v-else class="text-input-row">
-          <input v-model="userInput" :disabled="answered" class="answer-input" type="text" placeholder="Antwort eingeben..." @keyup.enter="submitAnswer" />
-        </div>
-        <div class="button-row">
-          <button @click="submitAnswer" style="width:160px;">
-            {{ answered ? 'Weiter' : 'Antworten' }}
-          </button>
-          <button @click="skip" style="background:#f59e42;color:#fff;">Überspringen</button>
-          <button @click="showHint" style="background:#fbbf24;color:#22223b;">Hinweis</button>
-          <button @click="goToMenu" style="background:#64748b;color:#fff;">Zurück zum Menü</button>
+          <div v-else class="text-input-row">
+            <input v-model="userInput" :disabled="answered" class="answer-input" type="text" placeholder="Antwort eingeben..." @keyup.enter="submitAnswer" />
+          </div>
         </div>
         <p v-if="feedback" class="message" v-html="feedback"></p>
+        <div class="button-row">
+          <button class="orange-btn" @click="submitAnswer" style="width:160px;">
+            {{ answered ? 'Weiter' : 'Antworten' }}
+          </button>
+          <button class="orange-btn" @click="skip">Überspringen</button>
+          <button class="orange-btn" @click="showHint">Hinweis</button>
+          <button class="orange-btn" @click="goToMenu">Zurück zum Menü</button>
+        </div>
         <p v-if="showingHint && question && question.hint_text" class="hint-box">💡 {{ question.hint_text }}</p>
         <div class="info">
           <p>Verbleibende Fragen: {{ progress.remaining }}</p>
           <p>Zu wiederholen: {{ progress.wrong }}</p>
         </div>
       </div>
-      <div v-else key="end">
-        <h2>Quiz beendet!</h2>
-        <button @click="reset">Neustarten</button>
-        <button @click="goToMenu" style="background:#64748b;color:#fff; margin-left: 12px;">Zurück zum Menü</button>
-      </div>
+    </transition>
+  </template>
+  <template v-else-if="loginError">
+    <div class="user-info" style="color:#ef4444;">{{ loginError }}</div>
+  </template>
+  <template v-else>
+    <div key="end">
+      <h2>Quiz beendet!</h2>
+      <button @click="reset">Neustarten</button>
+      <button @click="goToMenu" style="background:#64748b;color:#fff; margin-left: 12px;">Zurück zum Menü</button>
     </div>
-    <div v-else-if="loginError" class="user-info" style="color:#ef4444;">{{ loginError }}</div>
-  </transition>
+  </template>
 </template>
 
 <script setup lang="ts">
@@ -129,6 +143,14 @@ async function loadQuestion() {
           q.answer = {}
         }
       }
+      // multiple_choice: options ggf. parsen
+      if (q.question_type === 'multiple_choice' && typeof q.choices === 'string') {
+        try {
+          q.choices = JSON.parse(q.choices)
+        } catch (e) {
+          q.choices = []
+        }
+      }
       question.value = q
       userInput.value = ''
       answered.value = false
@@ -138,6 +160,10 @@ async function loadQuestion() {
       if (question.value.question_type === 'drag_drop') {
         dragDropUserAnswers.value = {}
         dragDropOptions.value = Object.values(question.value.answer)
+      }
+      // Multiple Choice Init
+      if (question.value.question_type === 'multiple_choice') {
+        userInput.value = ''
       }
       await loadProgress()
     } else {
@@ -168,6 +194,27 @@ async function submitAnswer() {
       body: JSON.stringify({
         question_id: question.value.id,
         user_input: userAns
+      })
+    })
+    const data = await res.json()
+    if (data.error) {
+      feedback.value = data.error
+    } else {
+      feedback.value = data.is_correct ? 'Richtig!' : 'Leider falsch.'
+    }
+    answered.value = true
+    await loadProgress()
+    return
+  }
+  if (question.value.question_type === 'multiple_choice') {
+    if (!userInput.value) return
+    // Sende Nutzereingabe an neuen Endpunkt
+    const res = await fetch('/api/evaluate', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        question_id: question.value.id,
+        user_input: userInput.value
       })
     })
     const data = await res.json()
@@ -332,18 +379,35 @@ onMounted(loginAndLoad)
 </script>
 
 <style scoped>
+/* Quiz Title above container */
+.quiz-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-top: 48px;
+  margin-bottom: 0;
+  color: #2a4f47;
+}
+
+.question-title {
+  font-size: 2rem;
+  font-weight: 200;
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: white;
+}
 .container {
   max-width: 720px;
   min-height: 520px;
-  margin: 60px auto;
-  background: #fff;
+  margin: 24px auto 0 auto;
+  background: #7fb89b;
   border-radius: 20px;
   box-shadow: 0 6px 32px rgba(0,0,0,0.10);
   padding: 48px 48px 36px 48px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center; /* <-- center vertically */
   gap: 28px;
 }
 @media screen and (max-width: 900px) {
@@ -407,17 +471,19 @@ onMounted(loginAndLoad)
   outline: none;
   margin-bottom: 0;
 }
+/* Buttons below container, all orange */
 .button-row {
   display: flex;
   flex-direction: row;
   gap: 12px;
   justify-content: center;
   width: 100%;
-  margin-top: 8px;
+  margin-top: 24px;
+  margin-bottom: 0;
 }
-button {
-  background: #3b82f6;
-  color: #fff;
+.orange-btn {
+  background: #dc862a !important;
+  color: #fff !important;
   border: none;
   border-radius: 6px;
   padding: 14px 28px;
@@ -425,15 +491,16 @@ button {
   cursor: pointer;
   margin-top: 0;
   margin-bottom: 0;
-  width: 100%;
-  max-width: 320px;
+  max-width: 200px;
   transition: background 0.2s;
+  border-radius: 20px;
 }
-button:hover {
-  background: #2563eb;
+.orange-btn:hover {
+  background: #fbbf24 !important;
+  color: #22223b !important;
 }
 .message {
-  color: #16a34a;
+  font-size: 2em;
   font-weight: 500;
   margin-bottom: 18px;
   text-align: center;
@@ -562,4 +629,32 @@ button:hover {
   vertical-align: middle;
   margin: 0 4px;
 }
+/* Multiple Choice Styles */
+.multiple-choice-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 18px;
+}
+.multiple-choice-option {
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 1.08rem;
+  color: #374151;
+  margin-bottom: 6px;
+  transition: background 0.2s;
+}
+.multiple-choice-option label.selected {
+  background: #e0f2fe;
+  color: #2563eb;
+  border-radius: 8px;
+}
+.multiple-choice-option label.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 </style>
