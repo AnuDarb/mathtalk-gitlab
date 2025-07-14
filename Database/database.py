@@ -196,39 +196,40 @@ def reset_user_progress(email):
     conn.close()
     logger.info(f"Fortschritt für {email} wurde zurückgesetzt.")
 
-# 🔧 Datenbanktabellen beim Start automatisch erzeugen
-conn = create_connection()
-cursor = conn.cursor()
-cursor.execute("""
-    CREATE TABLE IF NOT EXISTS questions (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        question TEXT NOT NULL,
-        answer TEXT NOT NULL,
-        hint_text TEXT,
-        category TEXT NOT NULL,
-        grade TEXT NOT NULL,
-        question_type TEXT DEFAULT 'classic',
-        choices TEXT
-    )
-""")
-cursor.execute("""
-    CREATE TABLE IF NOT EXISTS users (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        email TEXT NOT NULL UNIQUE,
-        password TEXT NOT NULL
-    )
-""")
-cursor.execute("""
-    CREATE TABLE IF NOT EXISTS progress (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        user_email TEXT NOT NULL,
-        question_id INTEGER NOT NULL,
-        correct INTEGER NOT NULL CHECK (correct IN (0,1)),
-        attempts INTEGER DEFAULT 1,
-        errors INTEGER DEFAULT 0,
-        UNIQUE(user_email, question_id)
-    )
-""")
-conn.commit()
-conn.close()
-logger.info("Datenbanktabellen wurden automatisch beim Start überprüft und erstellt.")
+def init_db():
+  # 🔧 Datenbanktabellen beim Start automatisch erzeugen
+  conn = create_connection()
+  cursor = conn.cursor()
+  cursor.execute("""
+      CREATE TABLE IF NOT EXISTS questions (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          question TEXT NOT NULL,
+          answer TEXT NOT NULL,
+          hint_text TEXT,
+          category TEXT NOT NULL,
+          grade TEXT NOT NULL,
+          question_type TEXT DEFAULT 'classic',
+          choices TEXT
+      )
+  """)
+  cursor.execute("""
+      CREATE TABLE IF NOT EXISTS users (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          email TEXT NOT NULL UNIQUE,
+          password TEXT NOT NULL
+      )
+  """)
+  cursor.execute("""
+      CREATE TABLE IF NOT EXISTS progress (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          user_email TEXT NOT NULL,
+          question_id INTEGER NOT NULL,
+          correct INTEGER NOT NULL CHECK (correct IN (0,1)),
+          attempts INTEGER DEFAULT 1,
+          errors INTEGER DEFAULT 0,
+          UNIQUE(user_email, question_id)
+      )
+  """)
+  conn.commit()
+  conn.close()
+  logger.info("Datenbanktabellen wurden automatisch beim Start überprüft und erstellt.")
