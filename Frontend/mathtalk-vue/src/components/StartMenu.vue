@@ -32,8 +32,8 @@
         Nur Drag & Drop-Fragen anzeigen
       </label>
     </div>
-    <button @click="startQuiz" :disabled="!selectedcategory">Übungsmodus starten</button>
-    <button @click="reset" style="background:#ef4444; color:#fff; margin-top:10px;">Fortschritt zurücksetzen</button>
+    <button @click="startQuiz" style="background:#7fb89b" :disabled="!selectedcategory">Übungsmodus starten</button>
+    <button @click="reset" style="background:#7fb89b; margin-top:10px;">Fortschritt zurücksetzen</button>
   </div>
 </template>
 
