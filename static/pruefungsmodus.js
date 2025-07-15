@@ -72,15 +72,16 @@ async function submitAnswer() {
   button.innerText = "Wird gesendet...";
 
   try {
-    const response = await fetch("/api/save", {
+    const response = await fetch("/api/evaluate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
+      credentials: "include",  // für Sessions auf Render!
       body: JSON.stringify({ user_input: answer, question_id: questionId })
     });
 
     const result = await response.json();
 
-    if (result.success) {
+    if (typeof result.score === "number") {
       const score = result.score;
 
       if (score > 0.85) {
