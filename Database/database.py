@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Pfad zur SQLite-Datei
-DB_PATH = os.path.join(os.environ.get("DATABASE_DIR", "database_storage"), "mathtalk.db")
+DB_PATH = os.path.join(os.environ.get("DATABASE_DIR", "/persistent"), "mathtalk.db")
 
 # 🔧 Stelle sicher, dass der Ordner existiert
 os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
@@ -58,7 +58,7 @@ def load_questions_from_file(filename):
                 q["category"],
                 q["grade"],
                 q.get("question_type", "classic"),
-                q.get("options", None)
+                q.get("choices", None)
             )
         logger.info(f"{len(questions)} Fragen aus '{filename}' wurden geladen.")
     except Exception as e:
@@ -172,7 +172,7 @@ def get_next_question_for_user(email, category=None):
     wrong_or_unanswered = [row for row in rows if row['correct'] == 0 or row['correct'] is None]
     if wrong_or_unanswered:
         sorted_wrong = sorted(wrong_or_unanswered, key=lambda r: (-r['errors'] if r['errors'] is not None else 0, r['attempts'] if r['attempts'] is not None else 0))
-        if random.random() < 0.1:
+        if random.random() < 0.7:
             return dict(sorted_wrong[0])
         else:
             return dict(random.choice(wrong_or_unanswered))
@@ -197,39 +197,39 @@ def reset_user_progress(email):
     logger.info(f"Fortschritt für {email} wurde zurückgesetzt.")
 
 def init_db():
-  # 🔧 Datenbanktabellen beim Start automatisch erzeugen
-  conn = create_connection()
-  cursor = conn.cursor()
-  cursor.execute("""
-      CREATE TABLE IF NOT EXISTS questions (
-          id INTEGER PRIMARY KEY AUTOINCREMENT,
-          question TEXT NOT NULL,
-          answer TEXT NOT NULL,
-          hint_text TEXT,
-          category TEXT NOT NULL,
-          grade TEXT NOT NULL,
-          question_type TEXT DEFAULT 'classic',
-          choices TEXT
-      )
-  """)
-  cursor.execute("""
-      CREATE TABLE IF NOT EXISTS users (
-          id INTEGER PRIMARY KEY AUTOINCREMENT,
-          email TEXT NOT NULL UNIQUE,
-          password TEXT NOT NULL
-      )
-  """)
-  cursor.execute("""
-      CREATE TABLE IF NOT EXISTS progress (
-          id INTEGER PRIMARY KEY AUTOINCREMENT,
-          user_email TEXT NOT NULL,
-          question_id INTEGER NOT NULL,
-          correct INTEGER NOT NULL CHECK (correct IN (0,1)),
-          attempts INTEGER DEFAULT 1,
-          errors INTEGER DEFAULT 0,
-          UNIQUE(user_email, question_id)
-      )
-  """)
-  conn.commit()
-  conn.close()
-  logger.info("Datenbanktabellen wurden automatisch beim Start überprüft und erstellt.")
+    """Stellt sicher, dass alle Datenbanktabellen vorhanden sind."""
+    conn = create_connection()
+    cursor = conn.cursor()
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS questions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            question TEXT NOT NULL,
+            answer TEXT NOT NULL,
+            hint_text TEXT,
+            category TEXT NOT NULL,
+            grade TEXT NOT NULL,
+            question_type TEXT DEFAULT 'classic',
+            choices TEXT
+        )
+    """)
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            email TEXT NOT NULL UNIQUE,
+            password TEXT NOT NULL
+        )
+    """)
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS progress (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_email TEXT NOT NULL,
+            question_id INTEGER NOT NULL,
+            correct INTEGER NOT NULL CHECK (correct IN (0,1)),
+            attempts INTEGER DEFAULT 1,
+            errors INTEGER DEFAULT 0,
+            UNIQUE(user_email, question_id)
+        )
+    """)
+    conn.commit()
+    conn.close()
+    logger.info("✅ init_db(): Tabellen erfolgreich überprüft.")
