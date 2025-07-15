@@ -230,6 +230,21 @@ def init_db():
             UNIQUE(user_email, question_id)
         )
     """)
+
+    # NEU: Zusätzliche Spalten für Punktestand und Rang (falls nicht vorhanden)
+    try:
+        cursor.execute("ALTER TABLE users ADD COLUMN total_points INTEGER DEFAULT 0;")
+    except sqlite3.OperationalError:
+        pass
+    try:
+        cursor.execute("ALTER TABLE users ADD COLUMN current_rank INTEGER DEFAULT 0;")
+    except sqlite3.OperationalError:
+        pass
+    try:
+        cursor.execute("ALTER TABLE users ADD COLUMN progress_in_rank INTEGER DEFAULT 0;")
+    except sqlite3.OperationalError:
+        pass
+
     conn.commit()
     conn.close()
     logger.info("✅ init_db(): Tabellen erfolgreich überprüft.")
