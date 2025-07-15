@@ -1,147 +1,131 @@
-const params = new URLSearchParams(window.location.search);
-const selectedCategories = params.get("categories")?.split(",") || [];
-const selectedGrade = params.get("grade") || null;
-const totalQuestions = 10;
-let questionPoint = Number(localStorage.getItem("questionPoint")) || 0;
-let questionId = Number(localStorage.getItem("questionId")) || 1;
-let totalPoints = Number(localStorage.getItem("totalPoints")) || 0;
+const categoryMap = {
+  "Zahlen & Terme": "zahlen_terme",
+  "Funktionen & Algebra": "funktionen_algebra",
+  "Geometrie & Raum": "geometrie_raum",
+  "Stochastik": "stochastik"
+};
 
-let filteredQuestions = []; // 🆕 Zwischenspeicher für gefilterte Fragen
+let totalQuestions = 10;
+let questionPoint = 0;
+let questionId = 0;
+let currentRank = 0;
+let progressInRank = 0;
+const rankMax = 100;
 
-function toggleOptions() {
-  const panel = document.getElementById('optionsPanel');
-  panel.classList.toggle('visible');
-}
+const ranks = [
+  { name: "Anfänger", icon: "/static/images/anfaenger_medaille.png" },
+  { name: "Schüler", icon: "/static/images/schueler_medaille.png" },
+  { name: "Mathelehrer", icon: "/static/images/mathelehrer_medaille.png" },
+  { name: "Professor", icon: "/static/images/professor_medaille.png" }
+];
 
-function saveOptions() {
-  alert("Optionen gespeichert!");
-}
-
-// Fortschrittsbalken aktualisieren
+// Fortschrittsbalken und Medaille aktualisieren
 function updateScoreBar() {
   const fill = document.getElementById("scoreFill");
   const text = document.getElementById("scoreText");
+  const konto = document.getElementById("totalText");
+  const medal = document.getElementById("medalImage");
 
-  const progress = Math.max(0, questionPoint) * 10; // z. B. 10 Punkte = 100%
-  fill.style.width = progress + "%";
-  fill.style.backgroundColor = questionPoint < 0 ? "#dc3545" : "#4caf50";
+  const progressPercent = Math.max(0, Math.min(100, (progressInRank / rankMax) * 100));
+  fill.style.width = progressPercent + "%";
+  fill.style.backgroundColor = progressInRank < 0 ? "#dc3545" : "#4caf50";
 
   text.innerText = `Punkte: ${questionPoint}`;
-  localStorage.setItem("questionPoint", questionPoint);
-  localStorage.setItem("questionId", questionId);
-  const konto = document.getElementById("totalText");
-  if (konto) {
-    konto.innerText = `Konto: ${totalPoints} Punkte`;
-  }
+  if (konto) konto.innerText = `Konto: ${progressInRank} / ${rankMax} (${ranks[currentRank].name})`;
+  if (medal) medal.src = ranks[currentRank]?.icon || "";
 }
 
+// Neue Frage laden
+async function loadQuestion() {
+  const params = new URLSearchParams(window.location.search);
+  const categories = params.get("categories");
+  const selectedLabel = categories?.split(",")[0] || "Zahlen & Terme";
+  const selectedCategory = categoryMap[selectedLabel] || "zahlen_terme";
 
-// Eine Frage aus der Datenbank laden
-async function loadQuestion(id) {
-  if (filteredQuestions.length === 0) {
-    const response = await fetch("/api/questions");
+  try {
+    const response = await fetch(`/api/question?category=${encodeURIComponent(selectedCategory)}`);
     const data = await response.json();
+    const questionText = document.getElementById("questionText");
 
-    filteredQuestions = data.filter(q =>
-      selectedCategories.includes(q.category) &&
-      q.grade === selectedGrade
-    );
-  }
-
-  const current = filteredQuestions[id - 1];
-  const questionText = document.getElementById("questionText");
-
-  if (current) {
-    questionText.innerText = current.question;
-    document.getElementById("answerInput").value = "";
-  } else {
-    questionText.innerText = "🎉 Alle Aufgaben abgeschlossen!";
-    const button = document.querySelector(".buton-weiter button");
-    button.disabled = true;
-    button.innerText = "Fertig!";
+    if (data.question) {
+      questionText.innerText = data.question;
+      document.getElementById("answerInput").value = "";
+      document.getElementById("answerInput").style.display = "block";
+      questionId = data.id;
+    } else {
+      questionText.innerText = `🎉 Quiz beendet! Gesamtpunktzahl: ${questionPoint}`;
+      document.querySelector(".buton-weiter button").disabled = true;
+      document.getElementById("answerInput").style.display = "none";
+    }
+  } catch (err) {
+    console.error("❌ Fehler beim Laden der Frage:", err);
+    alert("Fehler beim Laden der Frage.");
   }
 }
 
-// Antwort absenden, Score prüfen, nächste Frage laden
+// Antwort senden und bewerten
 async function submitAnswer() {
   const button = document.querySelector(".buton-weiter button");
   const answer = document.getElementById("answerInput").value;
-
-  // UI sperren
   button.disabled = true;
   button.style.backgroundColor = "#888";
   button.innerText = "Wird gesendet...";
 
-  // Antwort absenden
-  const response = await fetch("/api/save", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ user_input: answer, question_id: questionId })
-  });
+  try {
+    const response = await fetch("/api/save", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ user_input: answer, question_id: questionId })
+    });
 
-  const result = await response.json();
+    const result = await response.json();
 
-  if (result.success) {
-    const score = result.score;
+    if (result.success) {
+      const score = result.score;
 
-    // Bewertung
-    if (score > 0.85) {
-      alert("✅ Richtig!");
-      questionPoint++;
-    } else if (score > 0.65) {
-      alert("🔁 Fast richtig – Tippfehler?");
-      questionPoint++;
-    } else {
-      alert("❌ Leider falsch.");
-      questionPoint--;
-    }
+      if (score > 0.85) {
+        alert("✅ Richtig!");
+        questionPoint++;
+      } else if (score > 0.65) {
+        alert("🔁 Fast richtig – Tippfehler?");
+        questionPoint++;
+      } else {
+        alert("❌ Leider falsch.");
+        questionPoint--;
+      }
 
-    // Fortschritt + Punkte speichern
-    questionId++;
-    localStorage.setItem("questionPoint", questionPoint);
-    localStorage.setItem("questionId", questionId);
-    updateScoreBar();
+      // Fortschritt aktualisieren
+      progressInRank += (score > 0.65) ? 1 : -1;
 
-    if (questionId > totalQuestions) {
-      totalPoints += questionPoint;
-      localStorage.setItem("totalPoints", totalPoints);
+      // Aufstieg im Rang
+      while (progressInRank >= rankMax && currentRank < ranks.length - 1) {
+        progressInRank -= rankMax;
+        currentRank++;
+        alert(`🎉 Neuer Rang: ${ranks[currentRank].name}`);
+      }
 
-      alert(`🎉 Quiz beendet! Du hast ${questionPoint} Punkte erzielt.\n💰 Gesamtkonto: ${totalPoints} Punkte`);
-
-      // Zurücksetzen
-      questionId = 1;
-      questionPoint = 0;
-      localStorage.setItem("questionId", questionId);
-      localStorage.setItem("questionPoint", questionPoint);
+      // Abstieg im Rang
+      while (progressInRank < 0 && currentRank > 0) {
+        currentRank--;
+        progressInRank += rankMax;
+        alert(`⬇️ Abgestiegen auf: ${ranks[currentRank].name}`);
+      }
 
       updateScoreBar();
       loadQuestion();
-      document.getElementById("answerInput").style.display = "block";
+    } else {
+      alert("❌ Antwort konnte nicht bewertet werden.");
     }
-
-    // Button zurücksetzen
-    button.disabled = false;
-    button.innerText = "Weiter";
-    button.style.backgroundColor = "#0c702e";
-
-  } else {
-    alert("Ein Fehler ist aufgetreten.");
-    button.disabled = false;
-    button.innerText = "Weiter";
-    button.style.backgroundColor = "#0c702e";
+  } catch (err) {
+    alert("Verbindungsfehler. Bitte erneut versuchen.");
+    console.error(err);
   }
+
+  button.disabled = false;
+  button.innerText = "Weiter";
+  button.style.backgroundColor = "#0c702e";
 }
 
-function resetAll() {
-  if (confirm("Willst du wirklich ALLES zurücksetzen (inkl. Punktekonto)?")) {
-    localStorage.removeItem("questionPoint");
-    localStorage.removeItem("questionId");
-    localStorage.removeItem("totalPoints");
-    location.reload(); // Seite neu laden
-  }
-}
-
-
-// Quiz starten
-loadQuestion(questionId);
+// Start
+loadQuestion();
 updateScoreBar();
