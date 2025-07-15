@@ -18,11 +18,7 @@ from Database.database import (
 )
 
 # Flask-App initialisieren
-app = Flask(
-    __name__,
-    static_folder="Frontend/mathtalk-vue/dist/assets",       # für CSS/JS/PNG etc.
-    template_folder="Frontend/mathtalk-vue/dist"              # für index.html
-)
+app = Flask(__name__, static_folder="static", template_folder="templates")
 
 CORS(app, supports_credentials=True)
 app.secret_key = 'your_secret_key'  # ⚠️ In Produktion sicher absichern
