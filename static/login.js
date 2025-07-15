@@ -21,7 +21,8 @@ document.getElementById("loginForm").addEventListener("submit", async function (
 
     if (response.ok && result.status === "ok") {
       // ✅ Erfolgreich eingeloggt
-      window.location.href = "/dashboard";  // ← Weiterleitung zur Flask-Route
+      sessionStorage.setItem("email", email);  // 📨 E-Mail speichern
+      window.location.href = "/dashboard";     // Weiterleitung zur Dashboard-Seite
     } else {
       // ❌ Login fehlgeschlagen
       alert(result.error || "E-Mail und Passwort stimmen nicht überein.");
