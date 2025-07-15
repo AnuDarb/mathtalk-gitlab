@@ -5,42 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prüfungsmodus</title>
   <style>
+    /* Allgemeines Layout */
     body {
-      font-family: Georgia, serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Andada Pro', serif;
       background-color: #f8f6eb;
       color: #243d3d;
     }
-
+    
+    /* Header */
     .header-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem 0.5rem 2rem;
     }
-
+    
     .header-left {
       display: flex;
       align-items: center;
       gap: 1rem;
     }
-
+    
     .logo {
       height: 80px;
     }
-
+    
     #medalImage {
       height: 60px;
     }
-
+    
     .header-right {
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 0.5rem;
+      align-items: center;
+      flex-direction: row;
+      gap: 1rem;
     }
-
+    
+    .profil-icon {
+      height: 50px;
+      cursor: pointer;
+    }
+    
+    /* Fortschrittsanzeige */
     .progress-bar {
       width: 250px;
       height: 20px;
@@ -48,7 +55,7 @@
       border-radius: 20px;
       overflow: hidden;
     }
-
+    
     .progress-bar-inner {
       height: 100%;
       width: 0%;
@@ -59,69 +66,102 @@
       border-radius: 20px;
       transition: width 0.3s ease;
     }
-
+    
+    #scoreText,
+    #totalText {
+      text-align: center;
+      margin-top: 0.5rem;
+      font-weight: bold;
+    }
+    
+    /* Trennlinie */
     .divider-bar {
       height: 6px;
       background-color: #659d8b;
       width: 100%;
       margin-bottom: 1.5rem;
     }
-
+    
+    /* Inhalt */
     .container {
-      max-width: 600px;
+      max-width: 700px;
       margin: 2rem auto;
-      background: #94b5a1;
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: 4px 4px 0 #ccc;
+      background-color: #8db8a0;
+      padding: 2.5rem;
+      border-radius: 30px;
+      box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
       text-align: center;
+      color: white;
     }
-
-    .input-group .readonly-text {
-      width: 100%;
+    
+    /* Frage-Text */
+    .input-group .readonly-text,
+    .frage-text {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
       background-color: transparent;
       color: #ffffff;
-      font-size: 1.4rem;
-      font-family: Georgia, serif;
+      font-family: 'Andada Pro', serif;
       border: none;
-      margin-bottom: 2rem;
+      width: 100%;
     }
-
-    .input-group input {
-      width: 80%;
-      padding: 0.6rem;
+    
+    /* Antwortfeld */
+    .input-group input,
+    .antwort-input {
+      width: 100%;
+      padding: 12px;
       font-size: 1rem;
       border-radius: 6px;
       border: none;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
       outline: none;
     }
-
-    .buton-weiter button {
+    
+    /* Button */
+    .buton-weiter button,
+    .button-antwort {
       width: 50%;
       margin: 0 auto;
       padding: 0.6rem 1rem;
       border: none;
-      border-radius: 20px;
-      background-color: #d76a24;
+      border-radius: 22px;
+      background-color: #d65f17;
       color: white;
       cursor: pointer;
       font-size: 1rem;
+      font-family: 'Andada Pro', serif;
       transition: background-color 0.2s ease;
     }
-
-    .buton-weiter button:hover {
+    
+    .buton-weiter button:hover,
+    .button-antwort:hover {
       background-color: #ba591b;
     }
-
-    .buton-weiter button:active {
+    
+    .buton-weiter button:active,
+    .button-antwort:active {
       transform: scale(0.97);
     }
-
-    #scoreText,
-    #totalText {
-      text-align: center;
-      margin-top: 0.5rem;
-      font-weight: bold;
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px 20px;
+      }
+    
+      .frage-text {
+        font-size: 1.3rem;
+      }
+    
+      .antwort-input {
+        font-size: 1rem;
+      }
+    
+      .button-antwort {
+        font-size: 1rem;
+        padding: 12px 24px;
+      }
     }
   </style>
 </head>
