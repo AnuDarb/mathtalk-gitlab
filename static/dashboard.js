@@ -107,11 +107,20 @@ document.getElementById("logoutBtn")?.addEventListener("click", async () => {
 // 🔄 Benutzerprofil-Daten abrufen & anzeigen
 async function loadProfileData() {
   try {
+    // #NEU: Fortschrittsfeld vorbereiten (optional)
+    const fortschrittElement = document.getElementById("profilFortschritt");
+    if (fortschrittElement) {
+      fortschrittElement.textContent = "⏳ Lädt...";
+    }
+
     const response = await fetch("/api/progress");
     const result = await response.json();
 
     if (!response.ok || result.error) {
       console.error("Fehler beim Abrufen des Fortschritts");
+      if (fortschrittElement) {
+        fortschrittElement.textContent = "0%";
+      }
       return;
     }
 
@@ -125,12 +134,16 @@ async function loadProfileData() {
       ? Math.round((result.answered / result.total_questions) * 100)
       : 0;
 
-    // In DOM anzeigen (Elemente müssen vorhanden sein)
+    // In DOM anzeigen
     document.getElementById("profilEmail").textContent = email;
-    document.getElementById("profilFortschritt").textContent = `${progressPercent}%`;
+    if (fortschrittElement) {
+      fortschrittElement.textContent = `${progressPercent}%`; // #NEU
+    }
   } catch (err) {
     console.error("❌ Fehler beim Laden des Profils:", err);
+    const fortschrittElement = document.getElementById("profilFortschritt");
+    if (fortschrittElement) {
+      fortschrittElement.textContent = "0%";
+    }
   }
 }
-
-loadProfileData();
