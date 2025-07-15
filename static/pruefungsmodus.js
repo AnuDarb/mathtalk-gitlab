@@ -35,6 +35,21 @@ function updateScoreBar() {
   if (medal) medal.src = ranks[currentRank]?.icon || "";
 }
 
+// #NEU: Lade Fortschritt aus der Datenbank
+async function loadUserStatus() {
+  try {
+    const res = await fetch("/api/user_status", { credentials: "include" });
+    const data = await res.json();
+    if (data && !data.error) {
+      questionPoint = data.total_points || 0;
+      currentRank = data.current_rank || 0;
+      progressInRank = data.progress_in_rank || 0;
+    }
+  } catch (err) {
+    console.error("❌ Fehler beim Laden des Nutzerstatus:", err);
+  }
+}
+
 // Neue Frage laden
 async function loadQuestion() {
   const params = new URLSearchParams(window.location.search);
@@ -113,6 +128,19 @@ async function submitAnswer() {
       }
 
       updateScoreBar();
+
+      // #NEU: Fortschritt an DB senden
+      await fetch("/api/save_status", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({
+          total_points: questionPoint,
+          current_rank: currentRank,
+          progress_in_rank: progressInRank
+        })
+      });
+
       loadQuestion();
     } else {
       alert("❌ Antwort konnte nicht bewertet werden.");
@@ -127,6 +155,9 @@ async function submitAnswer() {
   button.style.backgroundColor = "#0c702e";
 }
 
-// Start
-loadQuestion();
-updateScoreBar();
+// #NEU: Startablauf – zuerst gespeicherten Fortschritt laden
+(async () => {
+  await loadUserStatus(); // aus DB holen
+  updateScoreBar();       // anzeigen
+  loadQuestion();         // Frage laden
+})();
