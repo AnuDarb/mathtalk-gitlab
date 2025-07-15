@@ -95,7 +95,12 @@ profilIcon?.addEventListener("click", () => {
 });
 
 // Abmelden
-document.getElementById("logoutBtn")?.addEventListener("click", () => {
+document.getElementById("logoutBtn")?.addEventListener("click", async () => {
+  try {
+    await fetch("/api/logout", { method: "POST" });
+  } catch (err) {
+    console.error("Logout-Fehler:", err);
+  }
   window.location.href = "/login";
 });
 
