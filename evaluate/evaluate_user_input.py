@@ -27,25 +27,25 @@ if data:
         score = get_similarity_score(user_input, correct_answer)
         print(f"Ähnlichkeit: {score:.2f}")
 
-        if score > 0.85:
-            print("Richtig!")
+        if score >= 0.85:
+            print("✅ Richtig!")
             save_user_progress(current_user_email, question_id, True)
-        elif score > 0.65:
-            print("Fast richtig – überprüfe deine Schreibweise.")
+        elif score >= 0.65:
+            print("🔁 Fast richtig – überprüfe deine Schreibweise.")
             save_user_progress(current_user_email, question_id, False)
         else:
-            print("Falsch.")
+            print("❌ Falsch.")
             save_user_progress(current_user_email, question_id, False)
 
     elif question_type == "multiple_choice":
-        print("Bitte wähle die richtige Antwortmöglichkeit im Interface aus.")
-        save_user_progress(current_user_email, question_id, False)  # Optional
+        print("➡️ Bitte wähle die richtige Antwortmöglichkeit im Interface aus.")
+        save_user_progress(current_user_email, question_id, False)
 
     elif question_type == "drag_drop":
-        print("Diese Aufgabe wird per Drag & Drop im Interface gelöst.")
-        save_user_progress(current_user_email, question_id, False)  # Optional
+        print("➡️ Diese Aufgabe wird per Drag & Drop im Interface gelöst.")
+        save_user_progress(current_user_email, question_id, False)
 
     else:
-        print("Unbekannter Fragetyp in der Datenbank.")
+        print("❌ Unbekannter Fragetyp in der Datenbank.")
 else:
-    print("Frage nicht gefunden.")
+    print("❌ Frage nicht gefunden.")
