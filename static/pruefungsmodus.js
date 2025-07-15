@@ -160,4 +160,5 @@ async function submitAnswer() {
   await loadUserStatus(); // aus DB holen
   updateScoreBar();       // anzeigen
   loadQuestion();         // Frage laden
+  window.submitAnswer = submitAnswer;
 })();
