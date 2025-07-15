@@ -21,8 +21,11 @@ app = Flask(__name__, static_folder="static")
 CORS(app, supports_credentials=True)
 app.secret_key = 'your_secret_key'  # ⚠️ In Produktion sicher absichern
 
-# ✅ Datenbanktabellen beim Start immer erstellen
+
+# ✅ Datenbanktabellen erstellen & Fragen einmalig laden
 init_db()
+load_questions_from_file("Database/fragen.json")
+
 
 # 🆔 Session-ID erzeugen, falls nicht vorhanden
 @app.before_request
