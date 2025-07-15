@@ -243,5 +243,5 @@ a {
 }
 
 a:hover {
-  text-decoration: underline; /* Optional: beim Hover wieder anzeigen */
+  text-decoration: none; /* Optional: beim Hover wieder anzeigen */
 }
