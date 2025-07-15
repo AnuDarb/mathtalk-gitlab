@@ -10,10 +10,10 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Pfad zur SQLite-Datei
-DB_PATH = os.path.join(os.environ.get("DATABASE_DIR", "/persistent"), "mathtalk.db")
+DB_PATH = os.path.join("data", "mathtalk.db")
 
 # 🔧 Stelle sicher, dass der Ordner existiert
-os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
+os.makedirs("data", exist_ok=True)
 
 # 📚 Mapping der Kategorien
 CATEGORY_MAP = {
