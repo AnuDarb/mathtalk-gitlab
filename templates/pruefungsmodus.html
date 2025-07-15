@@ -162,25 +162,65 @@
         font-size: 1rem;
         padding: 12px 24px;
       }
+
+      .profil-icon {
+        height: 60px;
+        cursor: pointer;
+      }
+      
+      .dropdown {
+        position: absolute;
+        right: 30px;
+        top: 100px;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        display: none;
+        z-index: 1000;
+      }
+      
+      .dropdown button {
+        background-color: transparent;
+        border: none;
+        font-family: 'Andada Pro', serif;
+        font-size: 16px;
+        cursor: pointer;
+        color: #2a4f47;
+      }
+      
+      .dropdown button:hover {
+        text-decoration: underline;
+      }
     }
   </style>
 </head>
 <body>
 
   <header class="header-row">
-  <div class="header-left">
-    <a href="{{ url_for('dashboard') }}">
-      <img src="{{ url_for('static', filename='images/MathTalk_Logo.png') }}" alt="Logo" class="logo" />
-    </a>
-  </div>
-
-  <div class="header-right">
-    <img id="medalImage" src="{{ url_for('static', filename='images/anfaenger_medaille.png') }}" alt="Rang-Medaille" class="medal" />
-    <div class="progress-bar" id="scoreBar">
-      <div class="progress-bar-inner" id="scoreFill"></div>
+    <div class="header-left">
+      <a href="{{ url_for('dashboard') }}">
+        <img src="{{ url_for('static', filename='images/MathTalk_Logo.png') }}" alt="Logo" class="logo" />
+      </a>
     </div>
-  </div>
-</header>
+  
+    <div class="header-right">
+      <img id="medalImage" src="{{ url_for('static', filename='images/anfaenger_medaille.png') }}" alt="Rang-Medaille" class="medal" />
+      <div class="progress-bar" id="scoreBar">
+        <div class="progress-bar-inner" id="scoreFill"></div>
+      </div>
+  
+      <!-- 👤 Profil-Dropdown -->
+      <img src="{{ url_for('static', filename='images/Profil.png') }}" alt="Profil" class="profil-icon" id="profilIcon" />
+      <div class="dropdown" id="profilDropdown">
+        <p><strong>E-Mail:</strong> <span id="profilEmail">...</span></p>
+        <p><strong>Fortschritt:</strong> <span id="profilFortschritt">...</span></p>
+        <button id="logoutBtn">Abmelden</button>
+      </div>
+    </div>
+  </header>
+
 
   <div class="divider-bar"></div>
 
