@@ -77,12 +77,18 @@ gradeImages.forEach(kachel => {
 
 // Prüfung ob alles gewählt wurde → Weiterleitung
 function checkReady() {
-  if (selectedCategories.size > 0 && selectedGrade && selectedMode) {
+  // ⬅️ Übungsmodus: direkt zur Vue-Komponente (sie hat eigenes Menü)
+  if (selectedMode === "uebung") {
+    window.location.href = "/uebungsmodus";
+    return;
+  }
+
+  // ⬅️ Prüfungsmodus: mit Kategorien & Klasse
+  if (selectedCategories.size > 0 && selectedGrade && selectedMode === "pruefung") {
     const params = new URLSearchParams();
     params.set("categories", Array.from(selectedCategories).join(","));
     params.set("grade", selectedGrade);
-    const path = selectedMode === "uebung" ? "/uebungsmodus" : "/pruefungsmodus";
-    window.location.href = `${path}?${params.toString()}`;
+    window.location.href = `/pruefungsmodus?${params.toString()}`;
   }
 }
 
