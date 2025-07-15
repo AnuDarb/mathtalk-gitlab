@@ -167,6 +167,20 @@ def api_evaluate():
     else:
         return jsonify({'error': 'Frage nicht gefunden.'}), 404
 
+# 🔓 Login-Route
+@app.route('/api/userinfo')
+def user_info():
+    if 'user_email' in session:
+        return jsonify({"email": session["user_email"]})
+    else:
+        return jsonify({"error": "Nicht eingeloggt"}), 401
+
+# 🔓 Logout-Route
+@app.route('/api/logout', methods=['POST'])
+def logout():
+    session.clear()
+    return jsonify({"status": "logged_out"})
+
 # 🌐 Login-Seite
 @app.route("/login")
 def login():
