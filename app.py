@@ -187,6 +187,32 @@ def api_evaluate():
         })
     else:
         return jsonify({'error': 'Frage nicht gefunden.'}), 404
+        
+# ✅ Nutzerstatus abrufen (Punkte, Rang etc.)
+@app.route("/api/user_status")
+def user_status():
+    if 'user_email' not in session:
+        return jsonify({'error': 'Nicht eingeloggt'}), 401
+    email = session['user_email']
+
+    from Database.database import create_connection  # falls nicht schon importiert
+    conn = create_connection()
+    cursor = conn.cursor()
+    row = cursor.execute("""
+        SELECT total_points, current_rank, progress_in_rank
+        FROM users
+        WHERE email = ?
+    """, (email,)).fetchone()
+    conn.close()
+
+    if row:
+        return jsonify({
+            "total_points": row["total_points"],
+            "current_rank": row["current_rank"],
+            "progress_in_rank": row["progress_in_rank"]
+        })
+    else:
+        return jsonify({'error': 'Nutzer nicht gefunden'}), 404
 
 # 🔓 Login-Route
 @app.route('/api/userinfo')
