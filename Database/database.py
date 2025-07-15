@@ -10,10 +10,11 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Pfad zur SQLite-Datei
-DB_PATH = os.path.join("data", "mathtalk.db")
+DB_DIR = "data"
+DB_PATH = os.path.join(DB_DIR, "mathtalk.db")
 
 # 🔧 Stelle sicher, dass der Ordner existiert
-os.makedirs("data", exist_ok=True)
+os.makedirs(DB_DIR, exist_ok=True)
 
 # 📚 Mapping der Kategorien
 CATEGORY_MAP = {
@@ -197,7 +198,6 @@ def reset_user_progress(email):
     logger.info(f"Fortschritt für {email} wurde zurückgesetzt.")
 
 def init_db():
-    """Stellt sicher, dass alle Datenbanktabellen vorhanden sind."""
     conn = create_connection()
     cursor = conn.cursor()
     cursor.execute("""
@@ -216,7 +216,10 @@ def init_db():
         CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             email TEXT NOT NULL UNIQUE,
-            password TEXT NOT NULL
+            password TEXT NOT NULL,
+            total_points INTEGER DEFAULT 0,
+            current_rank INTEGER DEFAULT 0,
+            progress_in_rank INTEGER DEFAULT 0
         )
     """)
     cursor.execute("""
@@ -230,21 +233,6 @@ def init_db():
             UNIQUE(user_email, question_id)
         )
     """)
-
-    # NEU: Zusätzliche Spalten für Punktestand und Rang (falls nicht vorhanden)
-    try:
-        cursor.execute("ALTER TABLE users ADD COLUMN total_points INTEGER DEFAULT 0;")
-    except sqlite3.OperationalError:
-        pass
-    try:
-        cursor.execute("ALTER TABLE users ADD COLUMN current_rank INTEGER DEFAULT 0;")
-    except sqlite3.OperationalError:
-        pass
-    try:
-        cursor.execute("ALTER TABLE users ADD COLUMN progress_in_rank INTEGER DEFAULT 0;")
-    except sqlite3.OperationalError:
-        pass
-
     conn.commit()
     conn.close()
     logger.info("✅ init_db(): Tabellen erfolgreich überprüft.")
