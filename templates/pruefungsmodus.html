@@ -6,23 +6,44 @@
   <title>Prüfungsmodus</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: Georgia, serif;
       margin: 0;
-      padding: 2rem;
-      background-color: #f2f2f2;
+      padding: 0;
+      background-color: #f8f6eb;
+      color: #243d3d;
     }
 
-    .header {
+    .header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem 0.5rem 2rem;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo {
+      height: 80px;
+    }
+
+    #medalImage {
+      height: 60px;
+    }
+
+    .header-right {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      margin-bottom: 1rem;
+      align-items: flex-end;
+      gap: 0.5rem;
     }
 
     .progress-bar {
-      width: 100%;
-      max-width: 400px;
-      height: 30px;
+      width: 250px;
+      height: 20px;
       background-color: #ddd;
       border-radius: 20px;
       overflow: hidden;
@@ -32,135 +53,99 @@
       height: 100%;
       width: 0%;
       text-align: center;
-      line-height: 30px;
+      line-height: 20px;
       color: white;
       background-color: #4caf50;
       border-radius: 20px;
       transition: width 0.3s ease;
     }
 
-    #scoreText {
-      margin-top: 0.5rem;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    .header button {
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .options-panel {
-      display: none;
-      position: absolute;
-      top: 70px;
-      right: 2rem;
-      background: white;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      padding: 1rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      z-index: 10;
-    }
-
-    .options-panel.visible {
-      display: block;
-    }
-
-    .options-panel label {
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-
-    .options-panel button {
-      margin-top: 1rem;
-      background-color: #28a745;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      cursor: pointer;
+    .divider-bar {
+      height: 6px;
+      background-color: #659d8b;
+      width: 100%;
+      margin-bottom: 1.5rem;
     }
 
     .container {
-      max-width: 1000px;
-      margin:auto;
-      background: DarkCyan;
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #94b5a1;
       padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      box-shadow: 4px 4px 0 #ccc;
+      text-align: center;
     }
 
     .input-group .readonly-text {
-      width: 80%;
-      margin: 0 auto 2rem auto;
-      background-color: #ffffff;
-      color: #333;
-      padding: 0.5rem;
-      border: 4px solid #ccc;
-      border-radius: 5px;
-      text-align: center;
+      width: 100%;
+      background-color: transparent;
+      color: #ffffff;
+      font-size: 1.4rem;
+      font-family: Georgia, serif;
+      border: none;
+      margin-bottom: 2rem;
     }
 
     .input-group input {
       width: 80%;
-      margin: 0 auto 2rem auto;
-      display: block;
-      padding: 0.5rem;
-      border: 4px solid #ccc;
-      border-radius: 5px;
+      padding: 0.6rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: none;
+      outline: none;
     }
 
     .buton-weiter button {
       width: 50%;
       margin: 0 auto;
-      display: block;
-      padding: 0.5rem;
-      border: 4px solid #000000;
-      border-radius: 5px;
-      background-color: #0c702e;
+      padding: 0.6rem 1rem;
+      border: none;
+      border-radius: 20px;
+      background-color: #d76a24;
       color: white;
       cursor: pointer;
       font-size: 1rem;
       transition: background-color 0.2s ease;
     }
 
-    .buton-weiter button:active {
-      transform: scale(0.96);
-      background-color: #00ff4c;
+    .buton-weiter button:hover {
+      background-color: #ba591b;
     }
 
-    .buton-weiter button:hover {
-      background-color: #113600;
+    .buton-weiter button:active {
+      transform: scale(0.97);
+    }
+
+    #scoreText,
+    #totalText {
+      text-align: center;
+      margin-top: 0.5rem;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
-  <div class="header">
+  <header class="header-row">
+  <div class="header-left">
+    <a href="{{ url_for('dashboard') }}">
+      <img src="{{ url_for('static', filename='images/MathTalk_Logo.png') }}" alt="Logo" class="logo" />
+    </a>
+  </div>
+
+  <div class="header-right">
+    <img id="medalImage" src="{{ url_for('static', filename='images/anfaenger_medaille.png') }}" alt="Rang-Medaille" class="medal" />
     <div class="progress-bar" id="scoreBar">
       <div class="progress-bar-inner" id="scoreFill"></div>
     </div>
-    <div id="scoreText">Punkte: 0</div>
-    <div id="totalText" style="text-align: center;">Konto: 0 Punkte</div>
-    <div id="scoreText">Punkte: 0</div>
-    <button onclick="resetAll()" style="margin-top: 0.5rem; background-color: #dc3545; color: white; padding: 0.5rem 1rem; border: none; border-radius: 5px; cursor: pointer;">
-      🔁 Alles zurücksetzen
-    </button>
-
-    <button onclick="toggleOptions()">Optionen</button>
-    <div class="options-panel" id="optionsPanel">
-      <label><input type="checkbox" /> Option 1</label>
-      <label><input type="checkbox" /> Option 2</label>
-      <label><input type="checkbox" /> Option 3</label>
-      <button onclick="saveOptions()">Speichern</button>
-    </div>
   </div>
+</header>
+
+  <div class="divider-bar"></div>
+
+  <div id="scoreText">Punkte: 0</div>
+  <div id="totalText">Konto: 0 Punkte</div>
 
   <div class="container">
     <div class="input-group">
@@ -174,116 +159,6 @@
     </div>
   </div>
 
-  <script>
-  const totalQuestions = 10;
-  let questionPoint = Number(localStorage.getItem("questionPoint")) || 0;
-  let questionId = Number(localStorage.getItem("questionId")) || 1;
-
-  function toggleOptions() {
-    const panel = document.getElementById('optionsPanel');
-    panel.classList.toggle('visible');
-  }
-
-  function saveOptions() {
-    alert("Optionen gespeichert!");
-  }
-
-  function resetQuiz() {
-    if (confirm("Willst du das Quiz wirklich zurücksetzen?")) {
-      localStorage.removeItem("questionPoint");
-      localStorage.removeItem("questionId");
-      location.reload();
-    }
-  }
-
-  function updateScoreBar() {
-    const fill = document.getElementById("scoreFill");
-    const text = document.getElementById("scoreText");
-
-    const progress = Math.min(100, (questionId - 1) / totalQuestions * 100);
-    fill.style.width = progress + "%";
-    fill.style.backgroundColor = questionPoint < 0 ? "#dc3545" : "#4caf50";
-
-    text.innerText = `Punkte: ${questionPoint}`;
-
-    // Speichern in localStorage
-    localStorage.setItem("questionPoint", questionPoint);
-    localStorage.setItem("questionId", questionId);
-  }
-
-  async function loadQuestion() {
-    const response = await fetch(`/api/question/${questionId}`);
-    const data = await response.json();
-    const questionText = document.getElementById("questionText");
-
-    if (data.question && questionId <= totalQuestions) {
-      questionText.innerText = data.question;
-      document.getElementById("answerInput").value = "";
-    } else {
-      questionText.innerText = `🎉 Quiz beendet! Gesamtpunktzahl: ${questionPoint} von ${totalQuestions}`;
-      document.querySelector(".buton-weiter button").disabled = true;
-      document.getElementById("answerInput").style.display = "none";
-    }
-  }
-
-  async function submitAnswer() {
-    const button = document.querySelector(".buton-weiter button");
-    const answer = document.getElementById("answerInput").value;
-
-    // UI sperren
-    button.disabled = true;
-    button.style.backgroundColor = "#888";
-    button.innerText = "Wird gesendet...";
-
-    const response = await fetch("/api/save", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ user_input: answer, question_id: questionId })
-    });
-
-    const result = await response.json();
-
-    if (result.success) {
-      const score = result.score;
-
-      if (score > 0.85) {
-        alert("✅ Richtig!");
-        questionPoint++;
-      } else if (score > 0.65) {
-        alert("🔁 Fast richtig – Tippfehler?");
-        questionPoint++;
-      } else {
-        alert("❌ Leider falsch.");
-        questionPoint--;
-      }
-
-      questionId++;
-      updateScoreBar();
-
-      document.getElementById("totalText").innerText = `Konto: ${totalPoints} Punkte`;
-      if (questionId > totalQuestions) {
-        document.getElementById("questionText").innerText =
-          `🎉 Quiz beendet! Gesamtpunktzahl: ${questionPoint} von ${totalQuestions}`;
-        document.querySelector(".buton-weiter button").disabled = true;
-        document.getElementById("answerInput").style.display = "none";
-      } else {
-        loadQuestion();
-        document.getElementById("answerInput").value = "";
-      }
-
-      button.disabled = false;
-      button.innerText = "Weiter";
-      button.style.backgroundColor = "#0c702e";
-    } else {
-      alert("Ein Fehler ist aufgetreten.");
-      button.disabled = false;
-      button.innerText = "Weiter";
-      button.style.backgroundColor = "#0c702e";
-    }
-  }
-  // Start
-  loadQuestion();
-  updateScoreBar();
-</script>
+  <script src="{{ url_for('static', filename='pruefungsmodus.js') }}"></script>
 </body>
 </html>
