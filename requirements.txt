@@ -12,3 +12,4 @@ Jinja2
 MarkupSafe
 Werkzeug
 flask_cors
+Flask-Mail
