@@ -139,6 +139,24 @@ def api_reset():
     session.clear()
     return jsonify({"status": "ok"})
 
+# ✅ Punktestand & Rang speichern
+@app.route("/api/save_status", methods=["POST"])
+def save_status():
+    if 'user_email' not in session:
+        return jsonify({'error': 'Nicht eingeloggt.'}), 401
+
+    data = request.get_json()
+    email = session['user_email']
+
+    total_points = data.get("total_points", 0)
+    current_rank = data.get("current_rank", 0)
+    progress_in_rank = data.get("progress_in_rank", 0)
+
+    from Database.database import update_user_status  # ⬅️ WICHTIG: Funktion muss existieren
+    update_user_status(email, total_points, current_rank, progress_in_rank)
+
+    return jsonify({"success": True})
+
 # ✅ Antwort prüfen
 @app.route('/api/evaluate', methods=['POST'])
 def api_evaluate():
