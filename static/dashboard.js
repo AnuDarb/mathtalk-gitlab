@@ -116,7 +116,9 @@ async function loadProfileData() {
     }
 
     // Benutzername und E-Mail aus der Session holen
-    const email = sessionStorage.getItem("email") || "Unbekannt";
+    const responseUser = await fetch("/api/userinfo");
+    const userData = await responseUser.json();
+    const email = userData.email || "Unbekannt";
 
     // Fortschritt berechnen
     const progressPercent = result.total_questions > 0
