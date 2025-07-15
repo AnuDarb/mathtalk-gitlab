@@ -4,6 +4,7 @@ import os
 import sys
 import json
 from flask_cors import CORS
+from flask import send_from_directory
 
 # Pfad zur Datenbanklogik hinzufügen
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'Database')))
@@ -17,7 +18,12 @@ from Database.database import (
 )
 
 # Flask-App initialisieren
-app = Flask(__name__, static_folder="static")
+app = Flask(
+    __name__,
+    static_folder="Frontend/mathtalk-vue/dist/assets",       # für CSS/JS/PNG etc.
+    template_folder="Frontend/mathtalk-vue/dist"              # für index.html
+)
+
 CORS(app, supports_credentials=True)
 app.secret_key = 'your_secret_key'  # ⚠️ In Produktion sicher absichern
 
@@ -227,6 +233,14 @@ def user_info():
 def logout():
     session.clear()
     return jsonify({"status": "logged_out"})
+
+@app.route('/uebungsmodus')
+@app.route('/<path:path>')
+def vue_app(path=""):
+    if path.startswith("api/"):
+        return "Not Found", 404
+    return send_from_directory(app.template_folder, "index.html")
+
 
 # 🌐 Login-Seite
 @app.route("/login")
