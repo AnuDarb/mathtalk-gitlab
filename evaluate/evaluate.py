@@ -9,7 +9,7 @@ def get_model():
     global model
     if model is None:
         from sentence_transformers import SentenceTransformer
-        model = SentenceTransformer('paraphrase-albert-small-v2')
+        model = SentenceTransformer('all-MiniLM-L12-v2')
     return model
 
 # SymSpell vorbereiten für Rechtschreibkorrektur
