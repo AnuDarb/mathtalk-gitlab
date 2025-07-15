@@ -236,3 +236,12 @@ h2 {
   border-radius: 12px;
   transition: all 0.2s ease;
 }
+
+/* Links ohne Unterstreichung */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; /* Optional: beim Hover wieder anzeigen */
+}
