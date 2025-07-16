@@ -46,7 +46,6 @@
       cursor: pointer;
     }
 
-    /* Fortschrittsanzeige */
     .progress-bar {
       width: 250px;
       height: 20px;
@@ -91,8 +90,7 @@
       color: white;
     }
 
-    .input-group .readonly-text,
-    .frage-text {
+    .input-group .readonly-text {
       font-size: 1.5rem;
       margin-bottom: 2rem;
       background-color: transparent;
@@ -102,8 +100,7 @@
       width: 100%;
     }
 
-    .input-group input,
-    .antwort-input {
+    .input-group input {
       width: 100%;
       padding: 12px;
       font-size: 1rem;
@@ -113,8 +110,7 @@
       outline: none;
     }
 
-    .buton-weiter button,
-    .button-antwort {
+    .buton-weiter button {
       width: 50%;
       margin: 40px auto 0 auto;
       padding: 0.6rem 1rem;
@@ -128,17 +124,14 @@
       transition: background-color 0.2s ease;
     }
 
-    .buton-weiter button:hover,
-    .button-antwort:hover {
+    .buton-weiter button:hover {
       background-color: #ba591b;
     }
 
-    .buton-weiter button:active,
-    .button-antwort:active {
+    .buton-weiter button:active {
       transform: scale(0.97);
     }
 
-    /* Dropdown-Menü */
     .dropdown {
       position: absolute;
       top: 70px;
@@ -175,22 +168,33 @@
       display: block;
     }
 
+    .draggable-item {
+      padding: 8px 12px;
+      margin: 5px;
+      background-color: white;
+      color: #243d3d;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      cursor: grab;
+      display: inline-block;
+    }
+
+    #dropZone {
+      min-height: 50px;
+      border: 2px dashed #ccc;
+      padding: 10px;
+      background-color: #f1f1f1;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+
     @media (max-width: 768px) {
       .container {
         padding: 30px 20px;
       }
 
-      .frage-text {
+      .readonly-text {
         font-size: 1.3rem;
-      }
-
-      .antwort-input {
-        font-size: 1rem;
-      }
-
-      .button-antwort {
-        font-size: 1rem;
-        padding: 12px 24px;
       }
 
       .profil-icon {
@@ -207,16 +211,13 @@
         <img src="{{ url_for('static', filename='images/MathTalk_Logo.png') }}" alt="Logo" class="logo" />
       </a>
     </div>
-
     <div class="header-right">
-      <img id="medalImage" src="{{ url_for('static', filename='images/anfaenger_medaille.png') }}" alt="Rang-Medaille" class="medal" />
+      <img id="medalImage" src="{{ url_for('static', filename='images/anfaenger_medaille.png') }}" alt="Rang-Medaille" />
       <div class="progress-bar" id="scoreBar">
         <div class="progress-bar-inner" id="scoreFill"></div>
       </div>
-
-      <!-- Profil-Dropdown -->
-      <img src="{{ url_for('static', filename='images/Profil.png') }}" alt="Profil" class="profil-icon" id="profilIcon" />
-      <div class="dropdown" id="profilDropdown">
+      <img src="{{ url_for('static', filename='images/Profil.png') }}" alt="Profil" class="profil-icon" />
+      <div class="dropdown">
         <p><strong>E-Mail:</strong> <span id="profilEmail">...</span></p>
         <p><strong>Fortschritt:</strong> <span id="profilFortschritt">...</span></p>
         <button id="logoutBtn">Abmelden</button>
@@ -225,7 +226,6 @@
   </header>
 
   <div class="divider-bar"></div>
-
   <div id="scoreText">Punkte: 0</div>
   <div id="totalText">Konto: 0 Punkte</div>
 
@@ -233,9 +233,21 @@
     <div class="input-group">
       <div class="readonly-text" id="questionText">Frage wird geladen...</div>
     </div>
-    <div class="input-group">
+
+    <!-- Klassische Eingabe -->
+    <div class="input-group" id="textInputContainer">
       <input type="text" id="answerInput" placeholder="Lösung" />
     </div>
+
+    <!-- Multiple-Choice -->
+    <div class="input-group" id="mcOptions" style="display:none; text-align: left;"></div>
+
+    <!-- Drag-and-Drop -->
+    <div class="input-group" id="dragDropContainer" style="display:none; flex-direction: column;">
+      <div id="dragItems"></div>
+      <div id="dropZone">Antwort hier ablegen</div>
+    </div>
+
     <div class="buton-weiter">
       <button onclick="submitAnswer()">Weiter</button>
     </div>
