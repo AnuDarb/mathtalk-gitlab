@@ -230,14 +230,6 @@ def logout():
     session.clear()
     return jsonify({"status": "logged_out"})
 
-@app.route('/uebungsmodus')
-@app.route('/<path:path>')
-def vue_app(path=""):
-    if path.startswith("api/"):
-        return "Not Found", 404
-    return send_from_directory(app.template_folder, "index.html")
-
-
 # 🌐 Login-Seite
 @app.route("/login")
 def login():
