@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: flask-vue-app
+    env: python
+    buildCommand: |
+      cd Frontend/mathtalk-vue
+      npm install
+      npm run build
+      cd ../../
+      rm -rf static/vue-app
+      mkdir -p static/vue-app
+      cp -r Frontend/mathtalk-vue/dist/* static/vue-app/
+    startCommand: gunicorn app:app
+    buildFilter:
+      paths:
+        - Frontend/mathtalk-vue/**
+        - app.py
+        - templates/**
+        - static/**
+        - requirements.txt
