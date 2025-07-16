@@ -77,13 +77,16 @@ gradeImages.forEach(kachel => {
 
 // Prüfung ob alles gewählt wurde → Weiterleitung
 function checkReady() {
-  // ⬅️ Übungsmodus: direkt zur Vue-Komponente (sie hat eigenes Menü)
+  // #NEU: Übungsmodus → Vue-Komponente mit gespeicherter Klasse
   if (selectedMode === "uebung") {
+    if (selectedGrade) {
+      localStorage.setItem("klasse", selectedGrade); // #NEU
+    }
     window.location.href = "/uebungsmodus";
     return;
   }
 
-  // ⬅️ Prüfungsmodus: mit Kategorien & Klasse
+  // Prüfungsmodus → nur weiterleiten, wenn alles gewählt wurde
   if (selectedCategories.size > 0 && selectedGrade && selectedMode === "pruefung") {
     const params = new URLSearchParams();
     params.set("categories", Array.from(selectedCategories).join(","));
@@ -130,20 +133,17 @@ async function loadProfileData() {
       return;
     }
 
-    // Benutzername und E-Mail aus der Session holen
     const responseUser = await fetch("/api/userinfo");
     const userData = await responseUser.json();
     const email = userData.email || "Unbekannt";
 
-    // Fortschritt berechnen
     const progressPercent = result.total_questions > 0
       ? Math.round((result.answered / result.total_questions) * 100)
       : 0;
 
-    // In DOM anzeigen
     document.getElementById("profilEmail").textContent = email;
     if (fortschrittElement) {
-      fortschrittElement.textContent = `${progressPercent}%`; // #NEU
+      fortschrittElement.textContent = `${progressPercent}%`;
     }
   } catch (err) {
     console.error("❌ Fehler beim Laden des Profils:", err);
@@ -153,3 +153,6 @@ async function loadProfileData() {
     }
   }
 }
+
+// #NEU: Initialisiere Profildaten beim Laden
+loadProfileData(); // #NEU
