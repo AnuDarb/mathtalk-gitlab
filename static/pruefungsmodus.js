@@ -29,8 +29,8 @@ function updateScoreBar() {
   const progressPercent = Math.max(0, Math.min(100, (progressInRank / rankMax) * 100));
   fill.style.width = progressPercent + "%";
   fill.style.backgroundColor = progressInRank < 0 ? "#dc3545" : "#4caf50";
-  text.innerText = `Punkte: ${questionPoint}`;
-  konto.innerText = `Konto: ${progressInRank} / ${rankMax} (${ranks[currentRank].name})`;
+  text.innerText = Punkte: ${questionPoint};
+  konto.innerText = Konto: ${progressInRank} / ${rankMax} (${ranks[currentRank].name});
   medal.src = ranks[currentRank]?.icon || "";
 }
 
@@ -54,12 +54,13 @@ async function loadQuestion() {
   const selectedCategory = categoryMap[selectedLabel] || "zahlen_terme";
 
   try {
-    const res = await fetch(`/api/question?category=${encodeURIComponent(selectedCategory)}`);
+    const res = await fetch(/api/question?category=${encodeURIComponent(selectedCategory)});
     const data = await res.json();
     const questionText = document.getElementById("questionText");
     const mcOptions = document.getElementById("mcOptions");
     const answerInput = document.getElementById("answerInput");
     const dragItems = document.getElementById("dragItems");
+    const dropZone = document.getElementById("dropZone");
 
     document.getElementById("textInputContainer").style.display = "none";
     mcOptions.style.display = "none";
@@ -70,16 +71,14 @@ async function loadQuestion() {
       currentQuestionType = data.question_type || "classic";
       questionText.innerText = data.question;
 
-      const choices = data.choices || data.options || [];
-
-      if (currentQuestionType === "multiple_choice" && Array.isArray(choices)) {
-        mcOptions.innerHTML = choices.map(choice =>
-          `<label><input type="radio" name="mcOption" value="${choice}" /> ${choice}</label><br>`
+      if (currentQuestionType === "multiple_choice" && Array.isArray(data.choices)) {
+        mcOptions.innerHTML = data.choices.map(choice => 
+          <label><input type="radio" name="mcOption" value="${choice}" /> ${choice}</label><br>
         ).join("");
         mcOptions.style.display = "block";
-      } else if (currentQuestionType === "drag_drop" && Array.isArray(choices)) {
-        dragItems.innerHTML = choices.map(choice =>
-          `<div class="draggable-item" draggable="true">${choice}</div>`
+      } else if (currentQuestionType === "drag_drop" && Array.isArray(data.choices)) {
+        dragItems.innerHTML = data.choices.map(choice =>
+          <div class="draggable-item" draggable="true">${choice}</div>
         ).join("");
         document.getElementById("dragDropContainer").style.display = "flex";
         initDragDrop();
