@@ -7,6 +7,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: './',  // ← wichtig für Flask + Render Hosting!
   plugins: [
     vue(),
     vueJsx(),
@@ -18,3 +19,4 @@ export default defineConfig({
     },
   },
 })
+
