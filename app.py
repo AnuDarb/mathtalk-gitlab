@@ -250,11 +250,18 @@ def dashboard():
 def pruefungsmodus():
     return render_template("pruefungsmodus.html")
 
-# 🌐 Uebungsmodus
+# 🌐 Uebungsmodus (Vue SPA) – ersetzt einfache Route
 @app.route('/uebungsmodus')
-def uebungsmodus():
-    return send_from_directory('static/vue-app', 'index.html')
+@app.route('/uebungsmodus/')
+@app.route('/uebungsmodus/<path:path>')
+def vue_uebungsmodus(path=''):
+    vue_path = os.path.join(app.static_folder, 'vue-app')
 
+    if path and os.path.exists(os.path.join(vue_path, path)):
+        return send_from_directory(vue_path, path)
+    else:
+        # Index laden für SPA-Routing (z.B. /uebungsmodus/startseite)
+        return send_from_directory(vue_path, 'index.html')
 
 # 🚀 Startpunkt
 if __name__ == '__main__':
