@@ -1221,6 +1221,11 @@
       "static/images/graph2.png": "f(x) = -x + 3",
       "static/images/graph3.png": "f(x) = 0.5x - 2"
     },
+    "choices": [
+      "f(x) = 2x + 1",
+      "f(x) = -x + 3",
+      "f(x) = 0.5x - 2"
+    ],
     "hint_text": "Achte auf Steigung und y-Achsenabschnitt.",
     "category": "Funktionen & Algebra",
     "grade": "9",
@@ -1233,6 +1238,11 @@
       "static/images/graph5.png": "f(x) = - (x + 1)² + 3",
       "static/images/graph6.png": "f(x) = 2(x - 3)²"
     },
+    "choices": [
+      "f(x) = (x - 2)² + 1",
+      "f(x) = - (x + 1)² + 3",
+      "f(x) = 2(x - 3)²"
+    ],
     "hint_text": "Nutze den Scheitelpunkt zur Orientierung.",
     "category": "Funktionen & Algebra",
     "grade": "9",
@@ -1245,6 +1255,11 @@
       "static/images/graph8.png": "Quadratische Funktion",
       "static/images/graph9.png": "Exponentialfunktion"
     },
+    "choices": [
+      "Lineare Funktion",
+      "Quadratische Funktion",
+      "Exponentialfunktion"
+    ],
     "hint_text": "Woran erkennst du den Typ?",
     "category": "Funktionen & Algebra",
     "grade": "9",
@@ -1257,6 +1272,11 @@
       "static/images/graph11.png": "f(x) = x² - 9",
       "static/images/graph12.png": "f(x) = (x + 4)²"
     },
+    "choices": [
+      "f(x) = x - 2",
+      "f(x) = x² - 9",
+      "f(x) = (x + 4)²"
+    ],
     "hint_text": "Setze f(x) = 0 und lies die Nullstellen ab.",
     "category": "Funktionen & Algebra",
     "grade": "9",
@@ -1269,6 +1289,11 @@
       "static/images/graph14.png": "f(x) = -2x",
       "static/images/graph15.png": "f(x) = 0.5x - 4"
     },
+    "choices": [
+      "f(x) = 3x + 1",
+      "f(x) = -2x",
+      "f(x) = 0.5x - 4"
+    ],
     "hint_text": "Die Steigung findest du im Term vor dem x.",
     "category": "Funktionen & Algebra",
     "grade": "9",
@@ -1747,6 +1772,11 @@
       "static/images/graph14.png": "f(x) = -2(x + 1)² + 1",
       "static/images/graph15.png": "f(x) = 0.5(x - 4)² - 2"
     },
+    "choices": [
+      "f(x) = (x - 2)² + 3",
+      "f(x) = -2(x + 1)² + 1",
+      "f(x) = 0.5(x - 4)² - 2"
+    ],
     "hint_text": "Achte auf Scheitelpunkt und Öffnungsrichtung.",
     "category": "Funktionen & Algebra",
     "grade": "10",
@@ -1759,6 +1789,11 @@
       "static/images/graph17.png": "f(x) = 0.5^x",
       "static/images/graph18.png": "f(x) = 3·2^x"
     },
+    "choices": [
+      "f(x) = 2^x",
+      "f(x) = 0.5^x",
+      "f(x) = 3·2^x"
+    ],
     "hint_text": "Achte auf Wachstumsverhalten und y-Achsenabschnitt.",
     "category": "Funktionen & Algebra",
     "grade": "10",
@@ -1771,6 +1806,11 @@
       "static/images/graph20.png": "f(x) = 2·sin(x)",
       "static/images/graph21.png": "f(x) = sin(2x)"
     },
+    "choices": [
+      "f(x) = sin(x)",
+      "f(x) = 2·sin(x)",
+      "f(x) = sin(2x)"
+    ],
     "hint_text": "Schau dir Amplitude und Periodenlänge an.",
     "category": "Funktionen & Algebra",
     "grade": "10",
@@ -1783,6 +1823,11 @@
       "static/images/graph23.png": "f(x) = x - 1",
       "static/images/graph24.png": "f(x) = x"
     },
+    "choices": [
+      "f(x) = x + 2",
+      "f(x) = x - 1",
+      "f(x) = x"
+    ],
     "hint_text": "Wie verändert sich der y-Achsenabschnitt?",
     "category": "Funktionen & Algebra",
     "grade": "10",
@@ -1795,6 +1840,11 @@
       "static/images/graph26.png": "f(x) = x² - 3",
       "static/images/graph27.png": "f(x) = x² + 1"
     },
+    "choices": [
+      "f(x) = x²",
+      "f(x) = x² - 3",
+      "f(x) = x² + 1"
+    ],
     "hint_text": "Wie verschiebt sich der Graph nach oben oder unten?",
     "category": "Funktionen & Algebra",
     "grade": "10",
