@@ -4,7 +4,6 @@ import os
 import sys
 import json
 from flask_cors import CORS
-from flask import send_from_directory
 
 # Pfad zur Datenbanklogik hinzufügen
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'Database')))
@@ -14,20 +13,23 @@ from evaluate.evaluate import get_similarity_score
 from Database.database import (
     register_user, login_user, init_db, load_questions_from_file,
     save_user_progress, get_questions, get_user_progress,
-    get_correct_answer, reset_user_progress, get_next_question_for_user
+    get_correct_answer, reset_user_progress, get_next_question_for_user,
+    update_user_status, create_connection
 )
 
 # Flask-App initialisieren
-app = Flask(__name__, static_folder="static", template_folder="templates")
+app = Flask(
+    __name__,
+    static_folder="static",               # Für Jinja-Seiten (login, dashboard)
+    template_folder="templates"           # Für Jinja-Templates wie login.html
+)
 
 CORS(app, supports_credentials=True)
 app.secret_key = 'your_secret_key'  # ⚠️ In Produktion sicher absichern
 
-
 # ✅ Datenbanktabellen erstellen & Fragen einmalig laden
 init_db()
 load_questions_from_file("Database/fragen.json")
-
 
 # 🆔 Session-ID erzeugen, falls nicht vorhanden
 @app.before_request
@@ -35,26 +37,37 @@ def ensure_session_id():
     if 'session_id' not in session:
         session['session_id'] = str(uuid.uuid4())
 
-# 🚀 Status-Seite
+# 🔐 Vue-Frontend für Übungsmodus (separat behandelt)
+@app.route('/uebungsmodus')
+@app.route('/uebungsmodus/<path:path>')
+def vue_app(path=""):
+    vue_dist_path = os.path.join("Frontend", "mathtalk-vue", "dist")
+    if path and not path.endswith(".html") and os.path.exists(os.path.join(vue_dist_path, path)):
+        return send_from_directory(vue_dist_path, path)
+    return send_from_directory(vue_dist_path, "index.html")
+
+# 🌐 Jinja-Seiten
 @app.route("/")
 def home():
     return render_template("login.html")
 
-# 🔐 Manuelle Initialisierung mit Fragenimport
-@app.route("/init-db")
-def initialize():
-    secret = request.args.get("secret")
-    if secret != "y698ZhPs72904Bncd":
-        return "⛔ Nicht autorisiert", 403
-    try:
-        json_path = os.path.join(os.path.dirname(__file__), 'Database', 'fragen.json')
-        init_db()
-        load_questions_from_file(json_path)
-        return "✅ Datenbank erfolgreich initialisiert & Fragen geladen!"
-    except Exception as e:
-        return f"❌ Fehler bei der Initialisierung: {e}", 500
+@app.route("/login")
+def login():
+    return render_template("login.html")
 
-# 👤 Registrierung
+@app.route("/register")
+def register():
+    return render_template("register.html")
+
+@app.route("/dashboard")
+def dashboard():
+    return render_template("dashboard.html")
+
+@app.route("/pruefungsmodus")
+def pruefungsmodus():
+    return render_template("pruefungsmodus.html")
+
+# 🔐 Login, Registrierung, Fortschritt
 @app.route('/api/register', methods=['POST'])
 def api_register():
     data = request.json
@@ -68,7 +81,6 @@ def api_register():
     except Exception as e:
         return jsonify({'error': str(e)}), 400
 
-# 🔑 Login
 @app.route('/api/login', methods=['POST'])
 def api_login():
     data = request.json
@@ -82,13 +94,56 @@ def api_login():
     else:
         return jsonify({'error': 'Login fehlgeschlagen.'}), 401
 
-# 📋 Fragen laden
+@app.route('/api/logout', methods=['POST'])
+def logout():
+    session.clear()
+    return jsonify({"status": "logged_out"})
+
+@app.route('/api/userinfo')
+def user_info():
+    if 'user_email' in session:
+        return jsonify({"email": session["user_email"]})
+    else:
+        return jsonify({"error": "Nicht eingeloggt"}), 401
+
+@app.route("/api/save_status", methods=["POST"])
+def save_status():
+    if 'user_email' not in session:
+        return jsonify({'error': 'Nicht eingeloggt.'}), 401
+    data = request.get_json()
+    update_user_status(
+        session['user_email'],
+        data.get("total_points", 0),
+        data.get("current_rank", 0),
+        data.get("progress_in_rank", 0)
+    )
+    return jsonify({"success": True})
+
+@app.route("/api/user_status")
+def user_status():
+    if 'user_email' not in session:
+        return jsonify({'error': 'Nicht eingeloggt'}), 401
+    conn = create_connection()
+    cursor = conn.cursor()
+    row = cursor.execute("""
+        SELECT total_points, current_rank, progress_in_rank
+        FROM users WHERE email = ?
+    """, (session['user_email'],)).fetchone()
+    conn.close()
+    if row:
+        return jsonify({
+            "total_points": row["total_points"],
+            "current_rank": row["current_rank"],
+            "progress_in_rank": row["progress_in_rank"]
+        })
+    return jsonify({'error': 'Nutzer nicht gefunden'}), 404
+
+# 📋 Fragen & Fortschritt
 @app.route('/api/questions', methods=['GET'])
 def api_questions():
     category = request.args.get('category')
     return jsonify(get_questions(category))
 
-# 📋 Nächste Frage (angepasst an Nutzer)
 @app.route('/api/question', methods=['GET'])
 def api_question():
     if 'user_email' not in session:
@@ -101,7 +156,6 @@ def api_question():
     else:
         return jsonify({'error': 'Keine Frage gefunden.'}), 404
 
-# 📊 Fortschritt anzeigen
 @app.route('/api/progress', methods=['GET'])
 def api_progress():
     if 'user_email' not in session:
@@ -121,7 +175,6 @@ def api_progress():
         "wrong": len(wrong)
     })
 
-# ⏭ Frage überspringen
 @app.route('/api/skip', methods=['POST'])
 def api_skip():
     if 'user_email' not in session:
@@ -132,7 +185,6 @@ def api_skip():
     save_user_progress(email, q_id, False)
     return jsonify({"feedback": "Frage übersprungen!"})
 
-# ♻️ Fortschritt zurücksetzen
 @app.route('/api/reset', methods=['POST'])
 def api_reset():
     if 'user_email' in session:
@@ -141,25 +193,6 @@ def api_reset():
     session.clear()
     return jsonify({"status": "ok"})
 
-# ✅ Punktestand & Rang speichern
-@app.route("/api/save_status", methods=["POST"])
-def save_status():
-    if 'user_email' not in session:
-        return jsonify({'error': 'Nicht eingeloggt.'}), 401
-
-    data = request.get_json()
-    email = session['user_email']
-
-    total_points = data.get("total_points", 0)
-    current_rank = data.get("current_rank", 0)
-    progress_in_rank = data.get("progress_in_rank", 0)
-
-    from Database.database import update_user_status  # ⬅️ WICHTIG: Funktion muss existieren
-    update_user_status(email, total_points, current_rank, progress_in_rank)
-
-    return jsonify({"success": True})
-
-# ✅ Antwort prüfen
 @app.route('/api/evaluate', methods=['POST'])
 def api_evaluate():
     if 'user_email' not in session:
@@ -171,9 +204,7 @@ def api_evaluate():
     email = session['user_email']
     if correct_answer:
         try:
-            correct_obj = correct_answer
-            if isinstance(correct_obj, str):
-                correct_obj = json.loads(correct_obj)
+            correct_obj = json.loads(correct_answer) if isinstance(correct_answer, str) else correct_answer
         except Exception:
             correct_obj = None
         if isinstance(user_input, dict) and isinstance(correct_obj, dict):
@@ -189,74 +220,6 @@ def api_evaluate():
         })
     else:
         return jsonify({'error': 'Frage nicht gefunden.'}), 404
-        
-# ✅ Nutzerstatus abrufen (Punkte, Rang etc.)
-@app.route("/api/user_status")
-def user_status():
-    if 'user_email' not in session:
-        return jsonify({'error': 'Nicht eingeloggt'}), 401
-    email = session['user_email']
-
-    from Database.database import create_connection  # falls nicht schon importiert
-    conn = create_connection()
-    cursor = conn.cursor()
-    row = cursor.execute("""
-        SELECT total_points, current_rank, progress_in_rank
-        FROM users
-        WHERE email = ?
-    """, (email,)).fetchone()
-    conn.close()
-
-    if row:
-        return jsonify({
-            "total_points": row["total_points"],
-            "current_rank": row["current_rank"],
-            "progress_in_rank": row["progress_in_rank"]
-        })
-    else:
-        return jsonify({'error': 'Nutzer nicht gefunden'}), 404
-
-# 🔓 Login-Route
-@app.route('/api/userinfo')
-def user_info():
-    if 'user_email' in session:
-        return jsonify({"email": session["user_email"]})
-    else:
-        return jsonify({"error": "Nicht eingeloggt"}), 401
-
-# 🔓 Logout-Route
-@app.route('/api/logout', methods=['POST'])
-def logout():
-    session.clear()
-    return jsonify({"status": "logged_out"})
-
-@app.route('/uebungsmodus')
-@app.route('/<path:path>')
-def vue_app(path=""):
-    if path.startswith("api/"):
-        return "Not Found", 404
-    return send_from_directory(app.template_folder, "index.html")
-
-
-# 🌐 Login-Seite
-@app.route("/login")
-def login():
-    return render_template("login.html")
-
-# 🌐 Registrierung-Seite
-@app.route("/register")
-def register():
-    return render_template("register.html")
-
-# 🌐 Dashboard
-@app.route("/dashboard")
-def dashboard():
-    return render_template("dashboard.html")
-
-@app.route("/pruefungsmodus")
-def pruefungsmodus():
-    return render_template("pruefungsmodus.html")
-
 
 # 🚀 Startpunkt
 if __name__ == '__main__':
