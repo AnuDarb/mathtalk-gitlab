@@ -1,4 +1,3 @@
-
 const categoryMap = {
   "Zahlen & Terme": "zahlen_terme",
   "Funktionen & Algebra": "funktionen_algebra",
@@ -61,7 +60,6 @@ async function loadQuestion() {
     const mcOptions = document.getElementById("mcOptions");
     const answerInput = document.getElementById("answerInput");
     const dragItems = document.getElementById("dragItems");
-    const dropZone = document.getElementById("dropZone");
 
     document.getElementById("textInputContainer").style.display = "none";
     mcOptions.style.display = "none";
@@ -72,13 +70,15 @@ async function loadQuestion() {
       currentQuestionType = data.question_type || "classic";
       questionText.innerText = data.question;
 
-      if (currentQuestionType === "multiple_choice" && Array.isArray(data.choices)) {
-        mcOptions.innerHTML = data.choices.map(choice => 
+      const choices = data.choices || data.options || [];
+
+      if (currentQuestionType === "multiple_choice" && Array.isArray(choices)) {
+        mcOptions.innerHTML = choices.map(choice =>
           `<label><input type="radio" name="mcOption" value="${choice}" /> ${choice}</label><br>`
         ).join("");
         mcOptions.style.display = "block";
-      } else if (currentQuestionType === "drag_drop" && Array.isArray(data.choices)) {
-        dragItems.innerHTML = data.choices.map(choice =>
+      } else if (currentQuestionType === "drag_drop" && Array.isArray(choices)) {
+        dragItems.innerHTML = choices.map(choice =>
           `<div class="draggable-item" draggable="true">${choice}</div>`
         ).join("");
         document.getElementById("dragDropContainer").style.display = "flex";
