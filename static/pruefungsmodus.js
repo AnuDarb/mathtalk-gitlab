@@ -10,7 +10,6 @@ let questionId = 0;
 let currentRank = 0;
 let progressInRank = 0;
 let currentQuestionType = "classic";
-let dragAnswer = "";
 
 const rankMax = 100;
 const ranks = [
@@ -60,13 +59,10 @@ async function loadQuestion() {
     const questionText = document.getElementById("questionText");
     const mcOptions = document.getElementById("multipleChoiceContainer");
     const answerInput = document.getElementById("answerInput");
-    const dragItems = document.getElementById("dragItems");
-    const dropZone = document.getElementById("dropZone");
 
     document.getElementById("textInputContainer").style.display = "none";
     mcOptions.style.display = "none";
-    document.getElementById("dragDropContainer").style.display = "none";
-
+    // # HINWEIS: Drag & Drop Container wird komplett ignoriert
     if (data.question) {
       questionId = data.id;
       currentQuestionType = data.question_type || "classic";
@@ -78,12 +74,6 @@ async function loadQuestion() {
           `<label><input type="radio" name="mcOption" value="${choice}" /> ${choice}</label><br>`
         ).join("");
         mcOptions.style.display = "flex";
-      } else if (currentQuestionType === "drag_drop" && Array.isArray(choices)) {
-        dragItems.innerHTML = choices.map(choice =>
-          `<div class="drag-item" draggable="true">${choice}</div>`
-        ).join("");
-        document.getElementById("dragDropContainer").style.display = "flex";
-        initDragDrop();
       } else {
         document.getElementById("textInputContainer").style.display = "block";
         answerInput.value = "";
@@ -98,34 +88,13 @@ async function loadQuestion() {
   }
 }
 
-function initDragDrop() {
-  dragAnswer = "";
-  const items = document.querySelectorAll(".drag-item");
-  const dropZone = document.getElementById("dropZone");
-  dropZone.innerHTML = "Antwort hier ablegen";
-
-  items.forEach(el => {
-    el.addEventListener("dragstart", e => {
-      dragAnswer = e.target.textContent;
-    });
-  });
-
-  dropZone.addEventListener("dragover", e => e.preventDefault());
-  dropZone.addEventListener("drop", e => {
-    e.preventDefault();
-    dropZone.textContent = dragAnswer;
-  });
-}
-
 async function submitAnswer() {
   const answerInput = document.getElementById("answerInput");
   const mcSelected = document.querySelector("input[name='mcOption']:checked");
-  const dropText = document.getElementById("dropZone")?.textContent || "";
 
+  // # HINWEIS: Drag & Drop Auswahl entfernt
   const answer = currentQuestionType === "multiple_choice"
     ? (mcSelected ? mcSelected.value : "")
-    : currentQuestionType === "drag_drop"
-    ? dropText
     : answerInput.value;
 
   try {
