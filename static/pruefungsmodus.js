@@ -29,8 +29,8 @@ function updateScoreBar() {
   const progressPercent = Math.max(0, Math.min(100, (progressInRank / rankMax) * 100));
   fill.style.width = progressPercent + "%";
   fill.style.backgroundColor = progressInRank < 0 ? "#dc3545" : "#4caf50";
-  text.innerText = Punkte: ${questionPoint};
-  konto.innerText = Konto: ${progressInRank} / ${rankMax} (${ranks[currentRank].name});
+  text.innerText = `Punkte: ${questionPoint}`;
+  konto.innerText = `Konto: ${progressInRank} / ${rankMax} (${ranks[currentRank].name})`;
   medal.src = ranks[currentRank]?.icon || "";
 }
 
@@ -54,10 +54,11 @@ async function loadQuestion() {
   const selectedCategory = categoryMap[selectedLabel] || "zahlen_terme";
 
   try {
-    const res = await fetch(/api/question?category=${encodeURIComponent(selectedCategory)});
+    const res = await fetch(`/api/question?category=${encodeURIComponent(selectedCategory)}`);
     const data = await res.json();
+
     const questionText = document.getElementById("questionText");
-    const mcOptions = document.getElementById("mcOptions");
+    const mcOptions = document.getElementById("multipleChoiceContainer");
     const answerInput = document.getElementById("answerInput");
     const dragItems = document.getElementById("dragItems");
     const dropZone = document.getElementById("dropZone");
@@ -69,16 +70,17 @@ async function loadQuestion() {
     if (data.question) {
       questionId = data.id;
       currentQuestionType = data.question_type || "classic";
+      const choices = data.choices || data.options || [];
       questionText.innerText = data.question;
 
-      if (currentQuestionType === "multiple_choice" && Array.isArray(data.choices)) {
-        mcOptions.innerHTML = data.choices.map(choice => 
-          <label><input type="radio" name="mcOption" value="${choice}" /> ${choice}</label><br>
+      if (currentQuestionType === "multiple_choice" && Array.isArray(choices)) {
+        mcOptions.innerHTML = choices.map(choice =>
+          `<label><input type="radio" name="mcOption" value="${choice}" /> ${choice}</label><br>`
         ).join("");
-        mcOptions.style.display = "block";
-      } else if (currentQuestionType === "drag_drop" && Array.isArray(data.choices)) {
-        dragItems.innerHTML = data.choices.map(choice =>
-          <div class="draggable-item" draggable="true">${choice}</div>
+        mcOptions.style.display = "flex";
+      } else if (currentQuestionType === "drag_drop" && Array.isArray(choices)) {
+        dragItems.innerHTML = choices.map(choice =>
+          `<div class="drag-item" draggable="true">${choice}</div>`
         ).join("");
         document.getElementById("dragDropContainer").style.display = "flex";
         initDragDrop();
@@ -86,9 +88,11 @@ async function loadQuestion() {
         document.getElementById("textInputContainer").style.display = "block";
         answerInput.value = "";
       }
+
     } else {
       questionText.innerText = "🎉 Quiz beendet!";
     }
+
   } catch (err) {
     console.error("Fehler beim Laden der Frage:", err);
   }
@@ -96,7 +100,7 @@ async function loadQuestion() {
 
 function initDragDrop() {
   dragAnswer = "";
-  const items = document.querySelectorAll(".draggable-item");
+  const items = document.querySelectorAll(".drag-item");
   const dropZone = document.getElementById("dropZone");
   dropZone.innerHTML = "Antwort hier ablegen";
 
@@ -152,6 +156,7 @@ async function submitAnswer() {
       currentRank++;
       alert("🎉 Neuer Rang: " + ranks[currentRank].name);
     }
+
     while (progressInRank < 0 && currentRank > 0) {
       currentRank--;
       progressInRank += rankMax;
@@ -172,8 +177,10 @@ async function submitAnswer() {
     });
 
     loadQuestion();
+
   } catch (err) {
     alert("Fehler bei der Auswertung.");
+    console.error(err);
   }
 }
 
