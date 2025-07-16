@@ -50,37 +50,26 @@ async function loadUserStatus() {
 async function loadQuestion() {
   const params = new URLSearchParams(window.location.search);
   const selectedLabel = params.get("categories")?.split(",")[0] || "Zahlen & Terme";
-  const selectedCategory = categoryMap[selectedLabel] || "zahlen_terme";
+  const selectedCategory = selectedLabel || "Zahlen & Terme"; // # HINWEIS: zurück auf Original-Kategorie
 
   try {
     const res = await fetch(`/api/question?category=${encodeURIComponent(selectedCategory)}`);
     const data = await res.json();
 
     const questionText = document.getElementById("questionText");
-    const mcOptions = document.getElementById("multipleChoiceContainer");
     const answerInput = document.getElementById("answerInput");
 
     document.getElementById("textInputContainer").style.display = "none";
-    mcOptions.style.display = "none";
-    // # HINWEIS: Drag & Drop Container wird komplett ignoriert
-    if (data.question) {
+
+    if (data && data.question && (data.question_type === "classic" || !data.question_type)) {
       questionId = data.id;
-      currentQuestionType = data.question_type || "classic";
-      const choices = data.choices || data.options || [];
+      currentQuestionType = "classic";
       questionText.innerText = data.question;
-
-      if (currentQuestionType === "multiple_choice" && Array.isArray(choices)) {
-        mcOptions.innerHTML = choices.map(choice =>
-          `<label><input type="radio" name="mcOption" value="${choice}" /> ${choice}</label><br>`
-        ).join("");
-        mcOptions.style.display = "flex";
-      } else {
-        document.getElementById("textInputContainer").style.display = "block";
-        answerInput.value = "";
-      }
-
+      document.getElementById("textInputContainer").style.display = "block";
+      answerInput.value = "";
     } else {
-      questionText.innerText = "🎉 Quiz beendet!";
+      questionText.innerText = "🎉 Quiz beendet oder keine classic-Frage gefunden.";
+      console.log("⚠️ Keine classic-Frage geladen:", data);
     }
 
   } catch (err) {
@@ -90,12 +79,8 @@ async function loadQuestion() {
 
 async function submitAnswer() {
   const answerInput = document.getElementById("answerInput");
-  const mcSelected = document.querySelector("input[name='mcOption']:checked");
 
-  // # HINWEIS: Drag & Drop Auswahl entfernt
-  const answer = currentQuestionType === "multiple_choice"
-    ? (mcSelected ? mcSelected.value : "")
-    : answerInput.value;
+  const answer = answerInput.value;
 
   try {
     const res = await fetch("/api/evaluate", {
