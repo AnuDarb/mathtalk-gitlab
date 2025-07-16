@@ -1577,9 +1577,9 @@
   {
     "question": "Ordne den Graphen die richtige lineare Funktionsgleichung zu.",
     "answer": {
-      "images/graph1.png": "f(x) = 2x + 1",
-      "images/graph2.png": "f(x) = -x + 3",
-      "images/graph3.png": "f(x) = 0.5x - 2"
+      "static/images/graph1.png": "f(x) = 2x + 1",
+      "static/images/graph2.png": "f(x) = -x + 3",
+      "static/images/graph3.png": "f(x) = 0.5x - 2"
     },
     "hint_text": "Achte auf Steigung und y-Achsenabschnitt.",
     "category": "Funktionen & Algebra",
@@ -1589,9 +1589,9 @@
   {
     "question": "Ordne den Parabeln die passende Scheitelpunktform zu.",
     "answer": {
-      "images/graph4.png": "f(x) = (x - 2)² + 1",
-      "images/graph5.png": "f(x) = - (x + 1)² + 3",
-      "images/graph6.png": "f(x) = 2(x - 3)²"
+      "static/images/graph4.png": "f(x) = (x - 2)² + 1",
+      "static/images/graph5.png": "f(x) = - (x + 1)² + 3",
+      "static/images/graph6.png": "f(x) = 2(x - 3)²"
     },
     "hint_text": "Nutze den Scheitelpunkt zur Orientierung.",
     "category": "Funktionen & Algebra",
@@ -1601,9 +1601,9 @@
   {
     "question": "Ordne den Graphen die passende Funktionsart zu.",
     "answer": {
-      "images/graph7.png": "Lineare Funktion",
-      "images/graph8.png": "Quadratische Funktion",
-      "images/graph9.png": "Exponentialfunktion"
+      "static/images/graph7.png": "Lineare Funktion",
+      "static/images/graph8.png": "Quadratische Funktion",
+      "static/images/graph9.png": "Exponentialfunktion"
     },
     "hint_text": "Woran erkennst du den Typ?",
     "category": "Funktionen & Algebra",
@@ -1613,9 +1613,9 @@
   {
     "question": "Ordne die Funktionen ihren Nullstellen zu – jeder Graph stellt eine Funktion dar.",
     "answer": {
-      "images/graph10.png": "f(x) = x - 2",
-      "images/graph11.png": "f(x) = x² - 9",
-      "images/graph12.png": "f(x) = (x + 4)²"
+      "static/images/graph10.png": "f(x) = x - 2",
+      "static/images/graph11.png": "f(x) = x² - 9",
+      "static/images/graph12.png": "f(x) = (x + 4)²"
     },
     "hint_text": "Setze f(x) = 0 und lies die Nullstellen ab.",
     "category": "Funktionen & Algebra",
@@ -1625,9 +1625,9 @@
   {
     "question": "Ordne die Funktionen ihren Steigungen zu – jeder Graph stellt eine lineare Funktion dar.",
     "answer": {
-      "images/graph13.png": "f(x) = 3x + 1",
-      "images/graph14.png": "f(x) = -2x",
-      "images/graph15.png": "f(x) = 0.5x - 4"
+      "static/images/graph13.png": "f(x) = 3x + 1",
+      "static/images/graph14.png": "f(x) = -2x",
+      "static/images/graph15.png": "f(x) = 0.5x - 4"
     },
     "hint_text": "Die Steigung findest du im Term vor dem x.",
     "category": "Funktionen & Algebra",
@@ -2223,9 +2223,9 @@
   {
     "question": "Ordne den Graphen die passende quadratische Funktion in Scheitelpunktform zu.",
     "answer": {
-      "images/graph13.png": "f(x) = (x - 2)² + 3",
-      "images/graph14.png": "f(x) = -2(x + 1)² + 1",
-      "images/graph15.png": "f(x) = 0.5(x - 4)² - 2"
+      "static/images/graph13.png": "f(x) = (x - 2)² + 3",
+      "static/images/graph14.png": "f(x) = -2(x + 1)² + 1",
+      "static/images/graph15.png": "f(x) = 0.5(x - 4)² - 2"
     },
     "hint_text": "Achte auf Scheitelpunkt und Öffnungsrichtung.",
     "category": "Funktionen & Algebra",
@@ -2235,9 +2235,9 @@
   {
     "question": "Ordne den Graphen die passende Exponentialfunktion zu.",
     "answer": {
-      "images/graph16.png": "f(x) = 2^x",
-      "images/graph17.png": "f(x) = 0.5^x",
-      "images/graph18.png": "f(x) = 3·2^x"
+      "static/images/graph16.png": "f(x) = 2^x",
+      "static/images/graph17.png": "f(x) = 0.5^x",
+      "static/images/graph18.png": "f(x) = 3·2^x"
     },
     "hint_text": "Achte auf Wachstumsverhalten und y-Achsenabschnitt.",
     "category": "Funktionen & Algebra",
@@ -2247,9 +2247,9 @@
   {
     "question": "Ordne den Graphen die passende Sinusfunktion zu.",
     "answer": {
-      "images/graph19.png": "f(x) = sin(x)",
-      "images/graph20.png": "f(x) = 2·sin(x)",
-      "images/graph21.png": "f(x) = sin(2x)"
+      "static/images/graph19.png": "f(x) = sin(x)",
+      "static/images/graph20.png": "f(x) = 2·sin(x)",
+      "static/images/graph21.png": "f(x) = sin(2x)"
     },
     "hint_text": "Schau dir Amplitude und Periodenlänge an.",
     "category": "Funktionen & Algebra",
@@ -2259,9 +2259,9 @@
   {
     "question": "Ordne den Graphen der passenden linearen Funktion mit Parameterveränderung zu.",
     "answer": {
-      "images/graph22.png": "f(x) = x + 2",
-      "images/graph23.png": "f(x) = x - 1",
-      "images/graph24.png": "f(x) = x"
+      "static/images/graph22.png": "f(x) = x + 2",
+      "static/images/graph23.png": "f(x) = x - 1",
+      "static/images/graph24.png": "f(x) = x"
     },
     "hint_text": "Wie verändert sich der y-Achsenabschnitt?",
     "category": "Funktionen & Algebra",
@@ -2271,9 +2271,9 @@
   {
     "question": "Ordne den Graphen der passenden quadratischen Funktion mit Parameterveränderung zu.",
     "answer": {
-      "images/graph25.png": "f(x) = x²",
-      "images/graph26.png": "f(x) = x² - 3",
-      "images/graph27.png": "f(x) = x² + 1"
+      "static/images/graph25.png": "f(x) = x²",
+      "static/images/graph26.png": "f(x) = x² - 3",
+      "static/images/graph27.png": "f(x) = x² + 1"
     },
     "hint_text": "Wie verschiebt sich der Graph nach oben oder unten?",
     "category": "Funktionen & Algebra",
