@@ -21,7 +21,7 @@ from Database.database import (
 app = Flask(__name__, static_folder="static", template_folder="templates")
 
 CORS(app, supports_credentials=True)
-app.secret_key = 'your_secret_key'  # ⚠️ In Produktion sicher absichern
+app.secret_key = 'your_secret_key' 
 
 
 # ✅ Datenbanktabellen erstellen & Fragen einmalig laden
@@ -253,9 +253,15 @@ def register():
 def dashboard():
     return render_template("dashboard.html")
 
+# 🌐 Pruefungsmodus
 @app.route("/pruefungsmodus")
 def pruefungsmodus():
     return render_template("pruefungsmodus.html")
+
+# 🌐 Uebungsmodus
+@app.route('/uebungsmodus')
+def uebungsmodus():
+    return send_from_directory('static/vue-app', 'index.html')
 
 
 # 🚀 Startpunkt
