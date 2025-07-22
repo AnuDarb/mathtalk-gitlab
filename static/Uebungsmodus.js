@@ -10,7 +10,7 @@
   }
   // Gibt die URL für ein Bild zurück, falls es ein Bild ist, sonst leerer String
   function imageUrl(val) {
-    return isImage(val) ? '/static/' + val : '';
+    return isImage(val) ?  val : '';
   }
 
 
