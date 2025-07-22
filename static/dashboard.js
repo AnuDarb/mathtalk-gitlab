@@ -77,12 +77,11 @@ gradeImages.forEach(kachel => {
 
 // Prüfung ob alles gewählt wurde → Weiterleitung
 function checkReady() {
-  // #NEU: Übungsmodus → Vue-Komponente mit gespeicherter Klasse
   if (selectedMode === "uebung") {
-    if (selectedGrade) {
-      localStorage.setItem("klasse", selectedGrade); // #NEU
-    }
-    window.location.href = "/uebungsmodus";
+    const params = new URLSearchParams();
+    params.set("categories", Array.from(selectedCategories).join(","));
+    params.set("grade", selectedGrade);
+    window.location.href = `/uebungsmodus?${params.toString()}`;
     return;
   }
 

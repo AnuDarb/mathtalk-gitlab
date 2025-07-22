@@ -85,6 +85,9 @@ def api_login():
 # 📋 Fragen laden
 @app.route('/api/questions', methods=['GET'])
 def api_questions():
+    categories = request.args.getlist('categories')
+    if categories:
+        return jsonify(get_questions(categories))
     category = request.args.get('category')
     return jsonify(get_questions(category))
 
@@ -94,8 +97,12 @@ def api_question():
     if 'user_email' not in session:
         return jsonify({'error': 'Nicht eingeloggt.'}), 401
     email = session['user_email']
-    category = request.args.get('category')
-    question = get_next_question_for_user(email, category)
+    categories = request.args.getlist('categories')
+    if categories:
+        question = get_next_question_for_user(email, categories)
+    else:
+        category = request.args.get('category')
+        question = get_next_question_for_user(email, category)
     if question:
         return jsonify(question)
     else:
@@ -107,11 +114,16 @@ def api_progress():
     if 'user_email' not in session:
         return jsonify({'error': 'Nicht eingeloggt.'}), 401
     email = session['user_email']
-    category = request.args.get('category')
-    questions = get_questions(category)
+    categories = request.args.getlist('categories')
+    if categories:
+        questions = get_questions(categories)
+        correct, wrong = get_user_progress(email, categories)
+    else:
+        category = request.args.get('category')
+        questions = get_questions(category)
+        correct, wrong = get_user_progress(email, category)
     total_questions = len(questions)
     question_ids = [q['id'] for q in questions]
-    correct, wrong = get_user_progress(email, category)
     answered = len(set(correct) | set(wrong))
     remaining = [qid for qid in question_ids if qid not in correct and qid not in wrong]
     return jsonify({
@@ -137,7 +149,11 @@ def api_skip():
 def api_reset():
     if 'user_email' in session:
         email = session['user_email']
-        reset_user_progress(email)
+        categories = request.args.getlist('categories')
+        if categories:
+            reset_user_progress(email, categories)
+        else:
+            reset_user_progress(email)
     session.clear()
     return jsonify({"status": "ok"})
 
@@ -250,18 +266,10 @@ def dashboard():
 def pruefungsmodus():
     return render_template("pruefungsmodus.html")
 
-# 🌐 Uebungsmodus (Vue SPA) – ersetzt einfache Route
+# 🌐 Uebungsmodus (HTML/JS Version)
 @app.route('/uebungsmodus')
-@app.route('/uebungsmodus/')
-@app.route('/uebungsmodus/<path:path>')
-def vue_uebungsmodus(path=''):
-    vue_path = os.path.join(app.static_folder, 'vue-app')
-
-    if path and os.path.exists(os.path.join(vue_path, path)):
-        return send_from_directory(vue_path, path)
-    else:
-        # Index laden für SPA-Routing (z.B. /uebungsmodus/startseite)
-        return send_from_directory(vue_path, 'index.html')
+def uebungsmodus():
+    return render_template('Uebungsmodus.html')
 
 # 🚀 Startpunkt
 if __name__ == '__main__':
