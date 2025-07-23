@@ -1,6 +1,5 @@
 
 // Dieses Skript rendert das Quiz-UI und steuert die gesamte Logik für den Übungsmodus
-
 (function() {
 
   // Hilfsfunktionen
@@ -44,13 +43,84 @@
   // Referenzen auf DOM-Elemente
   const questionTitle = document.getElementById('question-title'); // Überschrift der Frage
   const quizContent = document.getElementById('quiz-content'); // Container für die Frage und Eingabe
+  const mainContainer = document.querySelector('.container'); // Hauptcontainer für Swipe/Animation
+  // Disable text selection on swipe container
+  if (mainContainer) {
+    mainContainer.style.userSelect = 'none';
+    mainContainer.style.webkitUserSelect = 'none';
+    mainContainer.style.msUserSelect = 'none';
+    mainContainer.style.mozUserSelect = 'none';
+  }
   const feedbackEl = document.getElementById('feedback'); // Feedback-Anzeige
   const hintBox = document.getElementById('hint-box'); // Hinweis-Anzeige
   const remainingEl = document.getElementById('remaining'); // Anzeige verbleibender Fragen
   const wrongEl = document.getElementById('wrong'); // Anzeige falscher Antworten
+  // Swipe-Gesten für Navigation
+  let touchStartX = null;
+  let touchStartY = null;
+  let mouseDownX = null;
+  let mouseDownY = null;
+  let mouseIsDown = false;
+
+  function handleTouchStart(e) {
+    // Ignore if started on input, textarea, button, or drag/drop
+    if (e.target.closest('input, textarea, button, .dragdrop-answer, .dropzone')) return;
+    const t = e.touches[0];
+    touchStartX = t.clientX;
+    touchStartY = t.clientY;
+  }
+  function handleTouchEnd(e) {
+    if (touchStartX === null || touchStartY === null) return;
+    const t = (e.changedTouches && e.changedTouches[0]) || e;
+    const dx = t.clientX - touchStartX;
+    const dy = t.clientY - touchStartY;
+    // Only horizontal swipe, ignore vertical
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+      if (dx > 0 && q_idx > 0) {
+        goToPrevious();
+      } else if (dx < 0) {
+        goToNext();
+      }
+    }
+    touchStartX = null;
+    touchStartY = null;
+  }
+  function handleMouseDown(e) {
+    if (e.button !== 0) return;
+    if (e.target.closest('input, textarea, button, .dragdrop-answer, .dropzone')) return;
+    mouseIsDown = true;
+    mouseDownX = e.clientX;
+    mouseDownY = e.clientY;
+  }
+  function handleMouseUp(e) {
+    if (!mouseIsDown || mouseDownX === null || mouseDownY === null) return;
+    const dx = e.clientX - mouseDownX;
+    const dy = e.clientY - mouseDownY;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+      if (dx > 0 && q_idx > 0) {
+        goToPrevious();
+      } else if (dx < 0) {
+        goToNext();
+      }
+    }
+    mouseIsDown = false;
+    mouseDownX = null;
+    mouseDownY = null;
+  }
+
+  // Animation für den Wechsel
+  function animateSwap(direction) {
+    if (!mainContainer) return;
+    mainContainer.classList.remove('swap-left', 'swap-right');
+    void mainContainer.offsetWidth; // Reflow
+    mainContainer.classList.add(direction === 'left' ? 'swap-left' : 'swap-right');
+    setTimeout(() => {
+      mainContainer.classList.remove('swap-left', 'swap-right');
+    }, 400);
+  }
 
   // Render-Funktion: Baut das UI für die aktuelle Frage und hängt Event-Listener an
-  function render() {
+  function render(swapDirection) {
     // Wenn keine Frage mehr vorhanden ist (Quiz beendet)
     if (!question) {
       questionTitle.textContent = '';
@@ -113,6 +183,18 @@
     }
     // Frage-HTML einfügen
     quizContent.innerHTML = questionHtml;
+    // Swipe-Event-Listener auf mainContainer
+    if (mainContainer) {
+      mainContainer.removeEventListener('touchstart', handleTouchStart);
+      mainContainer.removeEventListener('touchend', handleTouchEnd);
+      mainContainer.removeEventListener('mousedown', handleMouseDown);
+      mainContainer.removeEventListener('mouseup', handleMouseUp);
+      mainContainer.addEventListener('touchstart', handleTouchStart);
+      mainContainer.addEventListener('touchend', handleTouchEnd);
+      mainContainer.addEventListener('mousedown', handleMouseDown);
+      mainContainer.addEventListener('mouseup', handleMouseUp);
+    }
+    if (swapDirection) animateSwap(swapDirection);
     // Feedback und Hinweis anzeigen
     feedbackEl.textContent = feedback;
     feedbackEl.style.display = feedback ? 'block' : 'none';
@@ -173,7 +255,7 @@
   }
 
   // API calls
-  async function loadQuestion() {
+  async function loadQuestion(swapDirection) {
     let url = '/api/question';
     let params = [];
     if (categories && categories.length > 0) {
@@ -213,14 +295,14 @@
           userInput = '';
         }
         await loadProgress();
-        render();
+        render(swapDirection);
       } else {
         question = null;
-        render();
+        render(swapDirection);
       }
     } else {
       question = null;
-      render();
+      render(swapDirection);
     }
   }
 
@@ -282,7 +364,19 @@
 
   async function skip() {
     q_idx++;
-    await loadQuestion();
+    await loadQuestion('right');
+  }
+
+  async function goToPrevious() {
+    if (q_idx > 0) {
+      q_idx--;
+      await loadQuestion('left');
+    }
+  }
+
+  async function goToNext() {
+    q_idx++;
+    await loadQuestion('right');
   }
 
   async function loadProgress() {

@@ -239,3 +239,46 @@
   opacity: 0.6;
   pointer-events: none;
 }
+
+/* Swipe animation for .container */
+.container.swap-left {
+  animation: swapLeft 0.4s;
+}
+
+.container.swap-right {
+  animation: swapRight 0.4s;
+}
+
+@keyframes swapRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  40% {
+    transform: translateX(-60px);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes swapLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  40% {
+    transform: translateX(60px);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
