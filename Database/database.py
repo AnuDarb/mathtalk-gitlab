@@ -32,6 +32,12 @@ def create_connection():
 def add_question(question, answer, hint_text, category, grade, question_type="classic", choices=None):
     conn = create_connection()
     cursor = conn.cursor()
+    # Überprüfen, ob die Frage bereits existiert
+    cursor.execute("SELECT 1 FROM questions WHERE question = ? AND category = ? AND grade = ?", (question, category, grade))
+    if cursor.fetchone():
+      conn.close()
+      return
+    # Frage hinzufügen
     cursor.execute("""
         INSERT INTO questions (question, answer, hint_text, category, grade, question_type, choices)
         VALUES (?, ?, ?, ?, ?, ?, ?)
@@ -279,3 +285,13 @@ def init_db():
     conn.commit()
     conn.close()
     logger.info("✅ init_db(): Tabellen erfolgreich überprüft.")
+
+def reset_db():
+    conn = create_connection()
+    cursor = conn.cursor()
+    cursor.execute("DROP TABLE IF EXISTS questions")
+    cursor.execute("DROP TABLE IF EXISTS users")
+    cursor.execute("DROP TABLE IF EXISTS progress")
+    conn.commit()
+    conn.close()
+    logger.info("✅ reset_db(): Datenbank zurückgesetzt und neu initialisiert.")

@@ -3,8 +3,12 @@ import uuid
 import os
 import sys
 import json
+import logging
 from flask_cors import CORS
 from flask import send_from_directory
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # Pfad zur Datenbanklogik hinzufügen
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'Database')))
@@ -14,7 +18,7 @@ from evaluate.evaluate import get_similarity_score
 from Database.database import (
     register_user, login_user, init_db, load_questions_from_file,
     save_user_progress, get_questions, get_user_progress,
-    get_correct_answer, reset_user_progress, get_next_question_for_user
+    get_correct_answer, reset_user_progress, get_next_question_for_user, reset_db
 )
 
 # Flask-App initialisieren
@@ -53,6 +57,21 @@ def initialize():
         return "✅ Datenbank erfolgreich initialisiert & Fragen geladen!"
     except Exception as e:
         return f"❌ Fehler bei der Initialisierung: {e}", 500
+    
+# Reset der alten Datenbank und Frageinimport
+@app.route("/reset-db")
+def reset():
+    secret = request.args.get("secret")
+    if secret != "y698ZhPs72904Bncd":
+        return "⛔ Nicht autorisiert", 403
+    try:
+        reset_db()
+        init_db()
+        json_path = os.path.join(os.path.dirname(__file__), 'Database', 'fragen.json')
+        load_questions_from_file(json_path)
+        return "✅ Datenbank erfolgreich zurückgesetzt und Fragen neu importiert!"
+    except Exception as e:
+        return f"❌ Fehler beim Zurücksetzen der Datenbank: {e}", 500
 
 # 👤 Registrierung
 @app.route('/api/register', methods=['POST'])
