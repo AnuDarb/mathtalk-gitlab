@@ -59,7 +59,7 @@ def load_questions_from_file(filename):
                 q["category"],
                 q["grade"],
                 q.get("question_type", "classic"),
-                q.get("choices", None)
+                q.get("options", None)
             )
         logger.info(f"{len(questions)} Fragen aus '{filename}' wurden geladen.")
     except Exception as e:
