@@ -1,15 +1,15 @@
 import re
 import os
 from symspellpy import SymSpell, Verbosity
+from sentence_transformers import util, SentenceTransformer
+import logging
 
-# Modell wird nur bei Bedarf geladen (Lazy Loading)
-model = None
+# Lade das SentenceTransformer-Modell, Lazy Loading ist nicht nowendig, da es nur einmal im Backend geladen wird
+logging.getLogger(__name__).info("Lade SentenceTransformer-Modell ...")
+model = SentenceTransformer('all-MiniLM-L12-v2')
+logging.getLogger(__name__).info("Modell erfolgreich geladen.")
 
 def get_model():
-    global model
-    if model is None:
-        from sentence_transformers import SentenceTransformer
-        model = SentenceTransformer('all-MiniLM-L12-v2')
     return model
 
 # SymSpell vorbereiten für Rechtschreibkorrektur
@@ -57,9 +57,8 @@ def correct_spelling(text):
         corrected.append(suggestions[0].term if suggestions else word)
     return " ".join(corrected)
 
-# Bewertungsfunktion mit Korrektur + semantischem Vergleich (Lazy-Load-Modell)
+# Bewertungsfunktion mit Korrektur + semantischem Vergleich
 def get_similarity_score(user_answer, correct_answer):
-    from sentence_transformers import util
 
     user_answer = correct_spelling(user_answer)
     user_answer = extract_math_expression(user_answer)
