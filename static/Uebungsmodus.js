@@ -288,7 +288,11 @@
   }
 
   async function loadProgress() {
-    const res = await fetch('/api/progress');
+    let url = '/api/progress';
+    if (categories && categories.length > 0) {
+      url += '?categories=' + encodeURIComponent(categories.join(','));
+    }
+    const res = await fetch(url);
     progress = await res.json();
   }
 

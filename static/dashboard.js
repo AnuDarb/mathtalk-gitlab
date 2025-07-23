@@ -77,7 +77,7 @@ gradeImages.forEach(kachel => {
 
 // Prüfung ob alles gewählt wurde → Weiterleitung
 function checkReady() {
-  if (selectedMode === "uebung") {
+  if (selectedCategories.size > 0 && selectedGrade && selectedMode === "uebung") {
     const params = new URLSearchParams();
     params.set("categories", Array.from(selectedCategories).join(","));
     params.set("grade", selectedGrade);

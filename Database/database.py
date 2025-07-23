@@ -133,8 +133,7 @@ def save_user_progress(user_email, question_id, is_correct):
 def get_questions(category=None):
     conn = create_connection()
     if category:
-        # Support multiple categories
-        print(category)
+        category = parse_category_list(category)
         if isinstance(category, list):
             db_categories = [CATEGORY_MAP.get(c, c) for c in category]
             q_marks = ','.join(['?']*len(db_categories))
@@ -150,7 +149,7 @@ def get_questions(category=None):
 def get_user_progress(email, category=None):
     conn = create_connection()
     if category:
-        # Support multiple categories
+        category = parse_category_list(category)
         if isinstance(category, list):
             db_categories = [CATEGORY_MAP.get(c, c) for c in category]
             q_marks = ','.join(['?']*len(db_categories))
@@ -173,9 +172,11 @@ def get_user_progress(email, category=None):
 def get_next_question_for_user(email, category=None):
     conn = create_connection()
     if category:
-        # Support multiple categories
+        category = parse_category_list(category)
         if isinstance(category, list):
+            logger.info(f"Fetching questions for categories: {category}")
             db_categories = [CATEGORY_MAP.get(c, c) for c in category]
+            logger.info(f"Fetching questions for categories: {db_categories}")
             q_marks = ','.join(['?']*len(db_categories))
             query = f'''
                 SELECT q.*, p.correct, p.attempts, p.errors
@@ -295,3 +296,13 @@ def reset_db():
     conn.commit()
     conn.close()
     logger.info("✅ reset_db(): Datenbank zurückgesetzt und neu initialisiert.")
+
+# Hilfsfunktion: Kategorie-Parameter zu Liste konvertieren
+def parse_category_list(category):
+    if isinstance(category, list):
+        if len(category) == 1 and isinstance(category[0], str) and ',' in category[0]:
+            return category[0].split(',')
+        return category
+    elif isinstance(category, str) and ',' in category:
+        return category.split(',')
+    return category
