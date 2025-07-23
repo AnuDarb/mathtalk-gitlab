@@ -18,7 +18,7 @@ from evaluate.evaluate import get_similarity_score
 from Database.database import (
     register_user, login_user, init_db, load_questions_from_file,
     save_user_progress, get_questions, get_user_progress,
-    get_correct_answer, reset_user_progress, get_next_question_for_user, reset_db
+    get_correct_answer, get_next_question_for_user, reset_db
 )
 
 # Flask-App initialisieren
@@ -105,10 +105,11 @@ def api_login():
 @app.route('/api/questions', methods=['GET'])
 def api_questions():
     categories = request.args.getlist('categories')
+    grade = request.args.get('grade')
     if categories:
-        return jsonify(get_questions(categories))
+        return jsonify(get_questions(categories, grade=grade))
     category = request.args.get('category')
-    return jsonify(get_questions(category))
+    return jsonify(get_questions(category, grade=grade))
 
 # 📋 Nächste Frage (angepasst an Nutzer)
 @app.route('/api/question', methods=['GET'])
@@ -117,11 +118,12 @@ def api_question():
         return jsonify({'error': 'Nicht eingeloggt.'}), 401
     email = session['user_email']
     categories = request.args.getlist('categories')
+    grade = request.args.get('grade')
     if categories:
-        question = get_next_question_for_user(email, categories)
+        question = get_next_question_for_user(email, categories, grade=grade)
     else:
         category = request.args.get('category')
-        question = get_next_question_for_user(email, category)
+        question = get_next_question_for_user(email, category, grade=grade)
     if question:
         return jsonify(question)
     else:
@@ -134,13 +136,14 @@ def api_progress():
         return jsonify({'error': 'Nicht eingeloggt.'}), 401
     email = session['user_email']
     categories = request.args.getlist('categories')
+    grade = request.args.get('grade')
     if categories:
-        questions = get_questions(categories)
-        correct, wrong = get_user_progress(email, categories)
+        questions = get_questions(categories, grade=grade)
+        correct, wrong = get_user_progress(email, categories, grade=grade)
     else:
         category = request.args.get('category')
-        questions = get_questions(category)
-        correct, wrong = get_user_progress(email, category)
+        questions = get_questions(category, grade=grade)
+        correct, wrong = get_user_progress(email, category, grade=grade)
     total_questions = len(questions)
     question_ids = [q['id'] for q in questions]
     answered = len(set(correct) | set(wrong))
@@ -162,19 +165,6 @@ def api_skip():
     email = session['user_email']
     save_user_progress(email, q_id, False)
     return jsonify({"feedback": "Frage übersprungen!"})
-
-# ♻️ Fortschritt zurücksetzen
-@app.route('/api/reset', methods=['POST'])
-def api_reset():
-    if 'user_email' in session:
-        email = session['user_email']
-        categories = request.args.getlist('categories')
-        if categories:
-            reset_user_progress(email, categories)
-        else:
-            reset_user_progress(email)
-    session.clear()
-    return jsonify({"status": "ok"})
 
 # ✅ Punktestand & Rang speichern
 @app.route("/api/save_status", methods=["POST"])

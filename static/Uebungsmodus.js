@@ -24,11 +24,14 @@
 
   // Kategorien aus URL-Parametern holen (können mehrere sein)
   let categories = null;
+  let grade = null;
   try {
     const params = new URLSearchParams(window.location.search);
     if (params.has('categories')) {
-      // Kann mehrfach vorkommen: ?categories=foo&categories=bar
       categories = params.getAll('categories');
+    }
+    if (params.has('grade')) {
+      grade = params.get('grade');
     }
   } catch (e) {}
   let questionIds = []; // IDs der gestellten Fragen (optional)
@@ -60,7 +63,6 @@
       document.getElementById('hint-btn').disabled = true;
       document.getElementById('menu-btn').disabled = false;
       document.getElementById('menu-btn').onclick = goToMenu;
-      document.getElementById('submit-btn').onclick = reset;
       return;
     }
     // Frage anzeigen
@@ -173,8 +175,15 @@
   // API calls
   async function loadQuestion() {
     let url = '/api/question';
+    let params = [];
     if (categories && categories.length > 0) {
-      url += '?categories=' + encodeURIComponent(categories.join(','));
+      params.push('categories=' + encodeURIComponent(categories.join(',')));
+    }
+    if (grade) {
+      params.push('grade=' + encodeURIComponent(grade));
+    }
+    if (params.length > 0) {
+      url += '?' + params.join('&');
     }
     const res = await fetch(url);
     if (res.status === 401) {
@@ -276,21 +285,17 @@
     await loadQuestion();
   }
 
-  async function reset() {
-    let url = '/api/reset';
-    if (categories && categories.length > 0) {
-      url += '?categories=' + encodeURIComponent(categories.join(','));
-    }
-    await fetch(url, {method: 'POST'});
-    q_idx = 0;
-    questionIds = [];
-    await loadQuestion();
-  }
-
   async function loadProgress() {
     let url = '/api/progress';
+    let params = [];
     if (categories && categories.length > 0) {
-      url += '?categories=' + encodeURIComponent(categories.join(','));
+      params.push('categories=' + encodeURIComponent(categories.join(',')));
+    }
+    if (grade) {
+      params.push('grade=' + encodeURIComponent(grade));
+    }
+    if (params.length > 0) {
+      url += '?' + params.join('&');
     }
     const res = await fetch(url);
     progress = await res.json();

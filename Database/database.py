@@ -130,77 +130,90 @@ def save_user_progress(user_email, question_id, is_correct):
     conn.commit()
     conn.close()
 
-def get_questions(category=None):
+def get_questions(category=None, grade=None):
     conn = create_connection()
+    query = 'SELECT * FROM questions'
+    params = []
+    where_clauses = []
     if category:
         category = parse_category_list(category)
         if isinstance(category, list):
             db_categories = [CATEGORY_MAP.get(c, c) for c in category]
             q_marks = ','.join(['?']*len(db_categories))
-            questions = conn.execute(f'SELECT * FROM questions WHERE category IN ({q_marks})', db_categories).fetchall()
+            where_clauses.append(f'category IN ({q_marks})')
+            params.extend(db_categories)
         else:
             db_category = CATEGORY_MAP.get(category, category)
-            questions = conn.execute('SELECT * FROM questions WHERE category = ?', (db_category,)).fetchall()
-    else:
-        questions = conn.execute('SELECT * FROM questions').fetchall()
+            where_clauses.append('category = ?')
+            params.append(db_category)
+    if grade:
+        where_clauses.append('grade = ?')
+        params.append(grade)
+    if where_clauses:
+        query += ' WHERE ' + ' AND '.join(where_clauses)
+    questions = conn.execute(query, params).fetchall()
     conn.close()
     return [dict(q) for q in questions]
 
-def get_user_progress(email, category=None):
+def get_user_progress(email, category=None, grade=None):
     conn = create_connection()
+    query = 'SELECT id FROM questions'
+    params = []
+    where_clauses = []
     if category:
         category = parse_category_list(category)
         if isinstance(category, list):
             db_categories = [CATEGORY_MAP.get(c, c) for c in category]
             q_marks = ','.join(['?']*len(db_categories))
-            question_ids = [row['id'] for row in conn.execute(f'SELECT id FROM questions WHERE category IN ({q_marks})', db_categories)]
+            where_clauses.append(f'category IN ({q_marks})')
+            params.extend(db_categories)
         else:
             db_category = CATEGORY_MAP.get(category, category)
-            question_ids = [row['id'] for row in conn.execute('SELECT id FROM questions WHERE category = ?', (db_category,))]
-        q_marks = ','.join(['?']*len(question_ids))
-        if not question_ids:
-            return [], []
-        rows = conn.execute(f'SELECT question_id, correct, attempts, errors FROM progress WHERE user_email = ? AND question_id IN ({q_marks})', (email, *question_ids)).fetchall()
-    else:
-        rows = conn.execute('SELECT question_id, correct, attempts, errors FROM progress WHERE user_email = ?', (email,)).fetchall()
+            where_clauses.append('category = ?')
+            params.append(db_category)
+    if grade:
+        where_clauses.append('grade = ?')
+        params.append(grade)
+    if where_clauses:
+        query += ' WHERE ' + ' AND '.join(where_clauses)
+    question_ids = [row['id'] for row in conn.execute(query, params)]
+    if not question_ids:
+        conn.close()
+        return [], []
+    q_marks = ','.join(['?']*len(question_ids))
+    rows = conn.execute(f'SELECT question_id, correct, attempts, errors FROM progress WHERE user_email = ? AND question_id IN ({q_marks})', (email, *question_ids)).fetchall()
     correct = [row['question_id'] for row in rows if row['correct'] == 1]
     sorted_wrong = sorted([row for row in rows if row['correct'] == 0], key=lambda r: (-r['errors'], r['attempts']))
     wrong_sorted_ids = [row['question_id'] for row in sorted_wrong]
     conn.close()
     return correct, wrong_sorted_ids
 
-def get_next_question_for_user(email, category=None):
+def get_next_question_for_user(email, category=None, grade=None):
     conn = create_connection()
+    query = '''
+        SELECT q.*, p.correct, p.attempts, p.errors
+        FROM questions q
+        LEFT JOIN progress p ON q.id = p.question_id AND p.user_email = ?
+    '''
+    params = [email]
+    where_clauses = []
     if category:
         category = parse_category_list(category)
         if isinstance(category, list):
-            logger.info(f"Fetching questions for categories: {category}")
             db_categories = [CATEGORY_MAP.get(c, c) for c in category]
-            logger.info(f"Fetching questions for categories: {db_categories}")
             q_marks = ','.join(['?']*len(db_categories))
-            query = f'''
-                SELECT q.*, p.correct, p.attempts, p.errors
-                FROM questions q
-                LEFT JOIN progress p ON q.id = p.question_id AND p.user_email = ?
-                WHERE q.category IN ({q_marks})
-            '''
-            rows = conn.execute(query, (email, *db_categories)).fetchall()
+            where_clauses.append(f'q.category IN ({q_marks})')
+            params.extend(db_categories)
         else:
             db_category = CATEGORY_MAP.get(category, category)
-            query = '''
-                SELECT q.*, p.correct, p.attempts, p.errors
-                FROM questions q
-                LEFT JOIN progress p ON q.id = p.question_id AND p.user_email = ?
-                WHERE q.category = ?
-            '''
-            rows = conn.execute(query, (email, db_category)).fetchall()
-    else:
-        query = '''
-            SELECT q.*, p.correct, p.attempts, p.errors
-            FROM questions q
-            LEFT JOIN progress p ON q.id = p.question_id AND p.user_email = ?
-        '''
-        rows = conn.execute(query, (email,)).fetchall()
+            where_clauses.append('q.category = ?')
+            params.append(db_category)
+    if grade:
+        where_clauses.append('q.grade = ?')
+        params.append(grade)
+    if where_clauses:
+        query += ' WHERE ' + ' AND '.join(where_clauses)
+    rows = conn.execute(query, params).fetchall()
     conn.close()
     wrong_or_unanswered = [row for row in rows if row['correct'] == 0 or row['correct'] is None]
     if wrong_or_unanswered:
@@ -220,32 +233,6 @@ def get_correct_answer(question_id):
     result = cursor.fetchone()
     conn.close()
     return result[0] if result else None
-
-def reset_user_progress(email):
-    conn = create_connection()
-    cursor = conn.cursor()
-    def _reset_for_ids(ids):
-        q_marks = ','.join(['?']*len(ids))
-        cursor.execute(f"DELETE FROM progress WHERE user_email = ? AND question_id IN ({q_marks})", (email, *ids))
-    def _reset_for_categories(categories):
-        db_categories = [CATEGORY_MAP.get(c, c) for c in categories]
-        q_marks = ','.join(['?']*len(db_categories))
-        question_ids = [row['id'] for row in conn.execute(f'SELECT id FROM questions WHERE category IN ({q_marks})', db_categories)]
-        if question_ids:
-            _reset_for_ids(question_ids)
-    # Support multiple categories
-    if isinstance(email, tuple) and len(email) == 2:
-        email, categories = email
-        _reset_for_categories(categories)
-    else:
-        categories = None
-    if categories:
-        _reset_for_categories(categories)
-    else:
-        cursor.execute("DELETE FROM progress WHERE user_email = ?", (email,))
-    conn.commit()
-    conn.close()
-    logger.info(f"Fortschritt für {email} wurde zurückgesetzt.")
 
 def init_db():
     conn = create_connection()
