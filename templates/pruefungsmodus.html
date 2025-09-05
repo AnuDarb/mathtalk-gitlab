@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prüfungsmodus</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Andada Pro', serif;
+      background-color: #f8f6eb;
+      color: #243d3d;
+    }
+
+    .header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem 0.5rem 2rem;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo {
+      height: 80px;
+    }
+
+    #medalImage {
+      height: 60px;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 1rem;
+      position: relative;
+    }
+
+    .profil-icon {
+      height: 50px;
+      cursor: pointer;
+    }
+
+    .progress-bar {
+      width: 250px;
+      height: 20px;
+      background-color: #ddd;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .progress-bar-inner {
+      height: 100%;
+      width: 0%;
+      text-align: center;
+      line-height: 20px;
+      color: white;
+      background-color: #4caf50;
+      border-radius: 20px;
+      transition: width 0.3s ease;
+    }
+
+    #scoreText,
+    #totalText {
+      text-align: center;
+      margin-top: 0.5rem;
+      font-weight: bold;
+    }
+
+    .divider-bar {
+      height: 6px;
+      background-color: #659d8b;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 2rem auto;
+      background-color: #8db8a0;
+      padding: 2.5rem;
+      border-radius: 30px;
+      box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+      text-align: center;
+      color: white;
+    }
+
+    .input-group .readonly-text {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      background-color: transparent;
+      color: #ffffff;
+      font-family: 'Andada Pro', serif;
+      border: none;
+      width: 100%;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: none;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+      outline: none;
+    }
+
+    .buton-weiter button {
+      width: 50%;
+      margin: 40px auto 0 auto;
+      padding: 0.6rem 1rem;
+      border: none;
+      border-radius: 22px;
+      background-color: #d65f17;
+      color: white;
+      cursor: pointer;
+      font-size: 1rem;
+      font-family: 'Andada Pro', serif;
+      transition: background-color 0.2s ease;
+    }
+
+    .buton-weiter button:hover {
+      background-color: #ba591b;
+    }
+
+    .buton-weiter button:active {
+      transform: scale(0.97);
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: none;
+      z-index: 1000;
+      min-width: 160px;
+    }
+
+    .dropdown p {
+      margin: 0.5rem 0;
+      color: #2a4f47;
+    }
+
+    .dropdown button {
+      background-color: transparent;
+      border: none;
+      font-family: 'Andada Pro', serif;
+      font-size: 16px;
+      cursor: pointer;
+      color: #2a4f47;
+    }
+
+    .dropdown button:hover {
+      text-decoration: underline;
+    }
+
+    .header-right:hover .dropdown {
+      display: block;
+    }
+
+    .draggable-item {
+      padding: 8px 12px;
+      margin: 5px;
+      background-color: white;
+      color: #243d3d;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      cursor: grab;
+      display: inline-block;
+    }
+
+    #dropZone {
+      min-height: 50px;
+      border: 2px dashed #ccc;
+      padding: 10px;
+      background-color: #f1f1f1;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      .readonly-text {
+        font-size: 1.3rem;
+      }
+
+      .profil-icon {
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header-row">
+    <div class="header-left">
+      <a href="{{ url_for('dashboard') }}">
+        <img src="{{ url_for('static', filename='images/MathTalk_Logo.png') }}" alt="Logo" class="logo" />
+      </a>
+    </div>
+    <div class="header-right">
+      <img id="medalImage" src="{{ url_for('static', filename='images/anfaenger_medaille.png') }}" alt="Rang-Medaille" />
+      <div class="progress-bar" id="scoreBar">
+        <div class="progress-bar-inner" id="scoreFill"></div>
+      </div>
+      <img src="{{ url_for('static', filename='images/Profil.png') }}" alt="Profil" class="profil-icon" />
+      <div class="dropdown">
+        <p><strong>E-Mail:</strong> <span id="profilEmail">...</span></p>
+        <p><strong>Fortschritt:</strong> <span id="profilFortschritt">...</span></p>
+        <button id="logoutBtn">Abmelden</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="divider-bar"></div>
+  <div id="scoreText">Punkte: 0</div>
+  <div id="totalText">Konto: 0 Punkte</div>
+
+  <div class="container">
+    <div class="input-group">
+      <div class="readonly-text" id="questionText">Frage wird geladen...</div>
+    </div>
+
+    <!-- Klassische Eingabe -->
+    <div class="input-group" id="textInputContainer">
+      <input type="text" id="answerInput" placeholder="Lösung" />
+    </div>
+
+    <!-- Multiple-Choice -->
+    <div class="input-group" id="mcOptions" style="display:none; text-align: left;"></div>
+
+    <!-- Drag-and-Drop -->
+    <!-- Container bleibt leer; wird dynamisch durch pruefungsmodus.js befüllt -->
+    <div class="input-group" id="dragDropContainer" style="display:none; flex-direction: column;"></div>
+
+    <div class="buton-weiter">
+      <button onclick="submitAnswer()">Weiter</button>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='pruefungsmodus.js') }}"></script>
+</body>
+</html>
