@@ -5,10 +5,19 @@ document.getElementById("registerForm").addEventListener("submit", async functio
   const password = document.getElementById("password").value.trim();
   const passwordRepeat = document.getElementById("passwordRepeat").value.trim();
 
+  if (!email || !password) {
+    alert("Bitte E-Mail und Passwort eingeben.");
+    return;
+  }
+
   if (password !== passwordRepeat) {
     alert("Die Passwörter stimmen nicht überein.");
     return;
   }
+
+  // Optional: Button während Request deaktivieren
+  const submitBtn = this.querySelector("button[type='submit']");
+  if (submitBtn) submitBtn.disabled = true;
 
   try {
     const response = await fetch("/api/register", {
@@ -21,12 +30,14 @@ document.getElementById("registerForm").addEventListener("submit", async functio
 
     if (response.ok && result.status === "ok") {
       alert("Registrierung erfolgreich! Du kannst dich jetzt einloggen.");
-      window.location.href = "/login";  // ← Weiterleitung zur Flask-Route
+      window.location.href = "/login";
     } else {
       alert(result.error || "Registrierung fehlgeschlagen.");
     }
   } catch (err) {
     alert("Verbindungsfehler. Bitte versuche es erneut.");
     console.error(err);
+  } finally {
+    if (submitBtn) submitBtn.disabled = false;
   }
 });
