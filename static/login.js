@@ -4,32 +4,34 @@ document.getElementById("loginForm").addEventListener("submit", async function (
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value.trim();
 
-  // 🛑 Leere Eingaben abfangen
   if (!email || !password) {
-    alert("Bitte gib E-Mail und Passwort ein.");
+    alert("Bitte E-Mail und Passwort eingeben.");
     return;
   }
+
+  const submitBtn = this.querySelector("button[type='submit']");
+  if (submitBtn) submitBtn.disabled = true;
 
   try {
     const response = await fetch("/api/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
+      // Gleiche Origin -> Cookies/Session werden automatisch gesetzt
       body: JSON.stringify({ email, password })
     });
 
     const result = await response.json();
 
     if (response.ok && result.status === "ok") {
-      // ✅ Erfolgreich eingeloggt
-      sessionStorage.setItem("email", email);  // 📨 E-Mail speichern
-      window.location.href = "/dashboard";     // Weiterleitung zur Dashboard-Seite
+      // Session wird serverseitig gesetzt; danach weiter zum Dashboard
+      window.location.href = "/dashboard";
     } else {
-      // ❌ Login fehlgeschlagen
-      alert(result.error || "E-Mail und Passwort stimmen nicht überein.");
+      alert(result.error || "Login fehlgeschlagen.");
     }
-
   } catch (err) {
     alert("Verbindungsfehler. Bitte versuche es erneut.");
     console.error(err);
+  } finally {
+    if (submitBtn) submitBtn.disabled = false;
   }
 });
