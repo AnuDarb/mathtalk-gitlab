@@ -1,3 +1,4 @@
+# --- evaluate.py (nur classic) ---
 import json, re
 from typing import Any, Dict, List, Optional, Tuple
 from difflib import SequenceMatcher
@@ -9,7 +10,7 @@ try:
 except ImportError:
     _SYM_AVAILABLE = False
 
-_SYM: Optional[SymSpell] = None
+_SYM: Optional['SymSpell'] = None  # type: ignore[name-defined]
 
 # ---------- SymSpell Initialisierung ----------
 def init_symspell(dictionary_path: str):
@@ -73,6 +74,12 @@ def similarity(a: str, b: str) -> float:
 def typo_equal(a: str, b: str, threshold: float = 0.88) -> bool:
     return similarity(a, b) >= threshold
 
+def get_similarity_score(user_answer: str, correct_answer: str) -> float:
+    """Gibt eine robuste Ähnlichkeitszahl für classic-Antworten zurück."""
+    u = normalize_generic(user_answer)
+    c = normalize_generic(correct_answer)
+    return similarity(u, c)
+
 # ---------- Classic ----------
 def numbers_equal(a: float, b: float, tol: float = 1e-6) -> bool:
     return abs(a - b) <= tol
@@ -121,59 +128,19 @@ def evaluate_classic(user_answer: str, correct_answer: str) -> Dict[str, Any]:
     ok = u == c or typo_equal(u, c)
     return {"type": "classic", "is_correct": bool(ok)}
 
-# ---------- Multiple Choice ----------
-def _label_to_index(label: str) -> Optional[int]:
-    m = re.fullmatch(r"[A-Za-z]", label.strip())
-    return ord(m.group().upper()) - ord('A') if m else None
-
-def _strip_choice_prefix(option: str) -> str:
-    return re.sub(r"^[A-Za-z]\)\s*", "", str(option)).strip()
-
-def evaluate_multiple_choice(user_answer: str, correct_answer: str, options: List[str]) -> Dict[str, Any]:
-    norm_opts = [_strip_choice_prefix(o) for o in options]
-    uidx = _label_to_index(user_answer)
-    user_text = norm_opts[uidx] if uidx is not None and 0 <= uidx < len(norm_opts) else user_answer
-    cidx = _label_to_index(correct_answer)
-    correct_text = norm_opts[cidx] if cidx is not None and 0 <= cidx < len(norm_opts) else correct_answer
-    if typo_equal(normalize_generic(user_text), normalize_generic(correct_text)):
-        return {"type": "multiple_choice", "is_correct": True}
-    return {"type": "multiple_choice", "is_correct": False}
-
-# ---------- Drag & Drop ----------
-def evaluate_drag_drop(user_map: Dict[str, Any], correct_map: Dict[str, Any]) -> Dict[str, Any]:
-    details = {}
-    for key, correct_val in correct_map.items():
-        ua = user_map.get(key, "")
-        ok = typo_equal(normalize_generic(ua), normalize_generic(correct_val))
-        details[key] = ok
-    return {"type": "drag_drop", "is_correct": all(details.values()), "details": details}
-
 # ---------- Hauptfunktion ----------
 def evaluate(question: Dict[str, Any], user_input: Any) -> Dict[str, Any]:
-    """Haupt-Evaluator für alle Frage-Typen."""
-    qtype = question.get("question_type", "classic")
+    """Haupt-Evaluator – nur classic."""
     correct_answer = question.get("answer")
-
-    # JSON-Strings in Dicts umwandeln
+    # JSON-Strings ignorieren, classic erwartet einfache Strings/Zahlen
     if isinstance(correct_answer, str):
         try:
             correct_answer = json.loads(correct_answer)
         except (json.JSONDecodeError, TypeError):
             pass
-
-    if qtype == "classic":
-        return evaluate_classic(user_input, correct_answer)
-
-    if qtype == "multiple_choice":
-        options = question.get("options") or question.get("choices", [])
-        return evaluate_multiple_choice(user_input, correct_answer, options)
-
-    if qtype == "drag_drop":
-        return evaluate_drag_drop(user_input, correct_answer)
-
-    return {"type": qtype, "is_correct": False}
+    return evaluate_classic(user_input, correct_answer)
 
 # ---------- User-Eingabe-Evaluator ----------
 def evaluate_user_input(question_row: Dict[str, Any], user_input: Any) -> Dict[str, Any]:
-    """Nutzt DB-Row und wählt automatisch den richtigen Evaluator."""
+    """Nur classic-Fragen werden unterstützt."""
     return evaluate(question_row, user_input)
