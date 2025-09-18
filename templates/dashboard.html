@@ -11,11 +11,9 @@
   <header class="header">
     <img src="{{ url_for('static', filename='images/MathTalk_Logo.png') }}" alt="Logo" class="logo" />
     <div class="icons">
+      <img id="dashboardMedal" src="" alt="Medaille" style="height:40px; margin-right:10px; display:none;" />
       <img src="{{ url_for('static', filename='images/Profil.png') }}" alt="Profil" class="profil-icon" id="profilIcon" />
-      <!-- Medaille neben dem Profilicon (wird per JS befüllt) -->
-      <img id="dashboardMedal" src="" alt="Medaille" style="height:40px; margin-left:10px; display:none;" />
       <div class="dropdown" id="profilDropdown">
-        <!-- Nur Optionen: Profil, Abmelden -->
         <button id="profileBtn">Profil</button>
         <button id="logoutBtn">Abmelden</button>
       </div>
