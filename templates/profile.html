@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mathtalk – Profil</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Andada+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header wie im Dashboard -->
+  <header class="header">
+    <img src="{{ url_for('static', filename='images/MathTalk_Logo.png') }}" alt="Logo" class="logo" />
+    <div class="icons" style="display:flex; align-items:center; gap:18px;">
+      <img src="{{ url_for('static', filename='images/Profil.png') }}" alt="Profil" class="profil-icon" id="profilIcon" />
+      <div class="dropdown" id="profilDropdown">
+        <p><strong>E-Mail:</strong> <span id="profilEmail">–</span></p>
+        <p><strong>Fortschritt:</strong> <span id="profilFortschritt">–</span></p>
+        <button id="logoutBtn">Abmelden</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="linie"></div>
+
+  <main class="profile-layout">
+    <h1 class="andada page-title">Profil</h1>
+
+    <section class="profile-grid">
+      <!-- Linke Kachel: Status -->
+      <div class="status-card">
+        <h2 class="andada bold centered">Status</h2>
+
+        <div class="medal-wrap">
+          <!-- Wird per JS anhand des Rangs gesetzt -->
+          <img id="medalImage" src="{{ url_for('static', filename='images/anfaenger_medaille.png') }}"
+               alt="Medaille" class="medal" />
+        </div>
+        <div id="rankName" class="status-subtitle andada">Anfänger</div>
+
+        <!-- Fortschritts-Balken (Scorebar) -->
+        <div class="scorebar">
+          <div id="scoreFill" class="scorebar-fill" style="width:0%"></div>
+        </div>
+        <div class="score-texts">
+          <span id="scoreText">Punkte: 0</span>
+          <span id="totalText">Konto: 0 / 100 (Anfänger)</span>
+        </div>
+      </div>
+
+      <!-- Rechte Seite: Profildaten (ohne Name) -->
+      <div class="info-card">
+        <dl class="info-list">
+          <div class="row">
+            <dt class="label andada">E-Mail:</dt>
+            <dd class="value" id="emailValue">–</dd>
+          </div>
+          <div class="row">
+            <dt class="label andada">Lernfortschritt:</dt>
+            <dd class="value" id="progressValue">–</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='profile.js') }}"></script>
+</body>
+</html>
