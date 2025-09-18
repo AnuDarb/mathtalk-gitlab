@@ -1,17 +1,16 @@
-from flask import Flask, request, session, jsonify, send_from_directory, render_template
+from flask import Flask, request, session, jsonify, render_template
 import uuid
 import os
 import sys
 import json
 import logging
 from flask_cors import CORS
-from flask import send_from_directory
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Pfad zur Datenbanklogik hinzufügen
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'Database')))
+# Pfad zur Datenbanklogik hinzufügen (Projektwurzel), damit "Database.database" importierbar ist
+sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 
 # Eigene Module importieren
 from evaluate.evaluate import get_similarity_score
@@ -23,15 +22,12 @@ from Database.database import (
 
 # Flask-App initialisieren
 app = Flask(__name__, static_folder="static", template_folder="templates")
-
 CORS(app, supports_credentials=True)
-app.secret_key = 'your_secret_key' 
-
+app.secret_key = 'your_secret_key'
 
 # ✅ Datenbanktabellen erstellen & Fragen einmalig laden
 init_db()
 load_questions_from_file("Database/fragen.json")
-
 
 # 🆔 Session-ID erzeugen, falls nicht vorhanden
 @app.before_request
@@ -57,7 +53,7 @@ def initialize():
         return "✅ Datenbank erfolgreich initialisiert & Fragen geladen!"
     except Exception as e:
         return f"❌ Fehler bei der Initialisierung: {e}", 500
-    
+
 # Reset der alten Datenbank und Frageinimport
 @app.route("/reset-db")
 def reset():
@@ -137,6 +133,7 @@ def api_progress():
     email = session['user_email']
     categories = request.args.getlist('categories')
     grade = request.args.get('grade')
+
     if categories:
         questions = get_questions(categories, grade=grade)
         correct, wrong = get_user_progress(email, categories, grade=grade)
@@ -144,6 +141,7 @@ def api_progress():
         category = request.args.get('category')
         questions = get_questions(category, grade=grade)
         correct, wrong = get_user_progress(email, category, grade=grade)
+
     total_questions = len(questions)
     question_ids = [q['id'] for q in questions]
     answered = len(set(correct) | set(wrong))
@@ -179,8 +177,19 @@ def save_status():
     current_rank = data.get("current_rank", 0)
     progress_in_rank = data.get("progress_in_rank", 0)
 
-    from Database.database import update_user_status  # ⬅️ WICHTIG: Funktion muss existieren
-    update_user_status(email, total_points, current_rank, progress_in_rank)
+    # Direkt in DB schreiben (kein externes update_user_status nötig)
+    from Database.database import create_connection
+    conn = create_connection()
+    cur = conn.cursor()
+    cur.execute("""
+        UPDATE users
+        SET total_points = ?,
+            current_rank = ?,
+            progress_in_rank = ?
+        WHERE email = ?
+    """, (total_points, current_rank, progress_in_rank, email))
+    conn.commit()
+    conn.close()
 
     return jsonify({"success": True})
 
@@ -201,28 +210,27 @@ def api_evaluate():
                 correct_obj = json.loads(correct_obj)
         except Exception:
             correct_obj = None
+
         if isinstance(user_input, dict) and isinstance(correct_obj, dict):
             is_correct = all(str(user_input.get(k, '')) == str(v) for k, v in correct_obj.items())
             score = 1.0 if is_correct else 0.0
         else:
             score = get_similarity_score(user_input, correct_answer)
             is_correct = score > 0.65
+
         save_user_progress(email, question_id, is_correct)
-        return jsonify({
-            'score': score,
-            'is_correct': is_correct
-        })
+        return jsonify({'score': score, 'is_correct': is_correct})
     else:
         return jsonify({'error': 'Frage nicht gefunden.'}), 404
-        
-# ✅ Nutzerstatus abrufen (Punkte, Rang etc.)
+
+# ✅ Nutzerstatus abrufen (inkl. E-Mail)
 @app.route("/api/user_status")
 def user_status():
     if 'user_email' not in session:
         return jsonify({'error': 'Nicht eingeloggt'}), 401
     email = session['user_email']
 
-    from Database.database import create_connection  # falls nicht schon importiert
+    from Database.database import create_connection
     conn = create_connection()
     cursor = conn.cursor()
     row = cursor.execute("""
@@ -234,6 +242,7 @@ def user_status():
 
     if row:
         return jsonify({
+            "email": email,
             "total_points": row["total_points"],
             "current_rank": row["current_rank"],
             "progress_in_rank": row["progress_in_rank"]
@@ -241,7 +250,7 @@ def user_status():
     else:
         return jsonify({'error': 'Nutzer nicht gefunden'}), 404
 
-# 🔓 Login-Route
+# 🔓 Nur E-Mail (Fallback)
 @app.route('/api/userinfo')
 def user_info():
     if 'user_email' in session:
@@ -275,7 +284,7 @@ def dashboard():
 def pruefungsmodus():
     return render_template("pruefungsmodus.html")
 
-# 🌐 Uebungsmodus 
+# 🌐 Uebungsmodus
 @app.route('/uebungsmodus')
 def uebungsmodus():
     return render_template('Uebungsmodus.html')
@@ -285,6 +294,6 @@ def uebungsmodus():
 def profile():
     return render_template('profile.html')
 
-# 🚀 Startpunkt
+# Startpunkt
 if __name__ == '__main__':
     app.run(debug=True)
