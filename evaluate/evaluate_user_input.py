@@ -1,51 +1,57 @@
+# --- evaluate_user_input.py ---
 import sqlite3
-from evaluate import get_similarity_score
+from typing import Any, Dict
+from evaluate import evaluate_classic, get_similarity_score
 from database import save_user_progress  # Lernstand speichern
 
-def get_question_by_id(question_id):
+def get_question_by_id(question_id: int) -> Dict[str, Any] | None:
     conn = sqlite3.connect("mathtalk.db")
     cursor = conn.cursor()
-    cursor.execute("SELECT question, answer, question_type FROM questions WHERE id = ?", (question_id,))
-    result = cursor.fetchone()
+    cursor.execute(
+        "SELECT id, question, answer, question_type FROM questions WHERE id = ?",
+        (question_id,),
+    )
+    row = cursor.fetchone()
     conn.close()
-    return result if result else None
+    if not row:
+        return None
+    qid, question_text, answer, qtype = row
+    return {"id": qid, "question": question_text, "answer": answer, "question_type": qtype}
 
-# Beispiel: Eingeloggter Benutzer (in einer Webanwendung später durch session["email"] ersetzt)
+# Beispiel: Eingeloggter Benutzer (später durch session["email"])
 current_user_email = "anna@example.com"
 
-# Eingabe
-question_id = 1
-user_input = input("Deine Antwort: ")
+def main():
+    # Eingabe
+    question_id = 1
+    row = get_question_by_id(question_id)
 
-# Frage abrufen
-data = get_question_by_id(question_id)
+    if not row:
+        print("❌ Frage nicht gefunden.")
+        return
 
-if data:
-    question_text, correct_answer, question_type = data
+    if row["question_type"] != "classic":
+        print("⚠️ Diese Routine prüft nur classic-Fragen.")
+        return
 
-    if question_type == "classic":
-        score = get_similarity_score(user_input, correct_answer)
-        print(f"Ähnlichkeit: {score:.2f}")
+    print(row["question"])
+    user_input = input("Deine Antwort: ")
 
-        if score >= 0.85:
-            print("✅ Richtig!")
-            save_user_progress(current_user_email, question_id, True)
-        elif score >= 0.65:
-            print("🔁 Fast richtig – überprüfe deine Schreibweise.")
-            save_user_progress(current_user_email, question_id, False)
-        else:
-            print("❌ Falsch.")
-            save_user_progress(current_user_email, question_id, False)
+    # Bewertung
+    result = evaluate_classic(user_input, row["answer"])
+    score = get_similarity_score(user_input, row["answer"])
+    print(f"Ähnlichkeit: {score:.2f}")
 
-    elif question_type == "multiple_choice":
-        print("➡️ Bitte wähle die richtige Antwortmöglichkeit im Interface aus.")
-        save_user_progress(current_user_email, question_id, False)
-
-    elif question_type == "drag_drop":
-        print("➡️ Diese Aufgabe wird per Drag & Drop im Interface gelöst.")
-        save_user_progress(current_user_email, question_id, False)
-
+    # Rückmeldung + Lernstand speichern
+    if result.get("is_correct"):
+        print("✅ Richtig!")
+        save_user_progress(current_user_email, row["id"], True)
+    elif score >= 0.65:
+        print("🔁 Fast richtig – überprüfe deine Schreibweise.")
+        save_user_progress(current_user_email, row["id"], False)
     else:
-        print("❌ Unbekannter Fragetyp in der Datenbank.")
-else:
-    print("❌ Frage nicht gefunden.")
+        print("❌ Falsch.")
+        save_user_progress(current_user_email, row["id"], False)
+
+if __name__ == "__main__":
+    main()
