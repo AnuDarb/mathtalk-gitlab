@@ -4,7 +4,7 @@ body {
   background-color: #f4f3e8;
 }
 
-/* Header (übernommen) */
+/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -13,19 +13,36 @@ body {
   position: relative;
 }
 .logo { height: 100px; }
-.profil-icon { height: 60px; cursor: pointer; }
 
+/* Icons im Header */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.profil-icon { height: 60px; cursor: pointer; }
+.header-medal {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
+}
+
+/* Dropdown-Menü */
 .dropdown {
   position: absolute;
   right: 30px;
   top: 100px;
-  background-color: white;
+  background-color: #f4f3e8;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 8px 12px;
+  padding: 10px 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   display: none;
   z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 .dropdown button {
   background-color: transparent;
@@ -34,6 +51,8 @@ body {
   font-size: 16px;
   cursor: pointer;
   color: #2a4f47;
+  text-align: left;
+  padding: 4px 6px;
 }
 .dropdown button:hover { text-decoration: underline; }
 
@@ -61,14 +80,13 @@ body {
 .bold { font-weight: 700; }
 .centered { text-align: center; }
 
-/* ===== Status-Kachel ===== */
+/* Status-Kachel */
 .status-card {
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.08);
   padding: 28px 24px 32px;
   border: 1px solid #dfdfd0;
-  position: relative;
 }
 .status-card h2 {
   font-size: 30px;
@@ -91,7 +109,7 @@ body {
 .scorebar-fill {
   height: 100%;
   width: 0%;
-  background: #4caf50; /* grün, per JS bei -Fortschritt rot */
+  background: #4caf50;
   transition: width 0.25s ease;
 }
 .score-texts {
@@ -103,7 +121,7 @@ body {
   font-size: 16px;
 }
 
-/* ===== Info-Karte rechts ===== */
+/* Info-Karte rechts */
 .info-card { padding: 8px 0; }
 .info-list { margin: 0; }
 
@@ -117,11 +135,7 @@ body {
 .label { color: #2a4f47; font-size: 20px; font-weight: 700; }
 .value { color: #21433b; font-size: 20px; }
 
-/* Links ohne Unterstreichung (wie Dashboard) */
-a { text-decoration: none; }
-a:hover { text-decoration: none; }
-
-/* ===== Responsive ===== */
+/* Responsive */
 @media (max-width: 980px) {
   .profile-grid { grid-template-columns: 1fr; gap: 28px; }
   .page-title { margin: 24px 20px 0; text-align: center; font-size: 32px; }
