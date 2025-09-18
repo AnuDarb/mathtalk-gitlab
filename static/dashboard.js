@@ -102,8 +102,7 @@ function checkReady() {
 const profilIcon = document.getElementById("profilIcon");
 const dropdown = document.getElementById("profilDropdown");
 
-// Optional: Falls das Dropdown im HTML noch alte Inhalte (Mail, Fortschritt) hat,
-// überschreiben wir es hier auf die 2 gewünschten Einträge.
+// Inhalt auf 2 Buttons reduzieren (Profil zuerst)
 if (dropdown) {
   dropdown.innerHTML = `
     <button id="profileBtn" class="profil-item" type="button">Profil</button>
@@ -112,11 +111,14 @@ if (dropdown) {
 }
 
 // Öffnen/Schließen
-profilIcon?.addEventListener("click", (e) => {
-  e.stopPropagation();
-  const isOpen = dropdown?.style.display === "block";
-  if (dropdown) dropdown.style.display = isOpen ? "none" : "block";
-});
+if (profilIcon) {
+  profilIcon.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (!dropdown) return;
+    const isOpen = dropdown.style.display === "block";
+    dropdown.style.display = isOpen ? "none" : "block";
+  });
+}
 
 // Schließen bei Klick außerhalb
 document.addEventListener("click", (e) => {
@@ -128,28 +130,58 @@ document.addEventListener("click", (e) => {
 
 // Schließen mit ESC
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && dropdown?.style.display === "block") {
+  if (e.key === "Escape" && dropdown && dropdown.style.display === "block") {
     dropdown.style.display = "none";
   }
 });
 
 // Profil
-document.addEventListener("click", (e) => {
-  const target = e.target as HTMLElement;
-  if (target?.id === "profileBtn") {
+const profileBtn = document.getElementById("profileBtn");
+if (profileBtn) {
+  profileBtn.addEventListener("click", () => {
     window.location.href = "/profile";
-  }
-});
+  });
+}
 
 // Abmelden
-document.addEventListener("click", async (e) => {
-  const target = e.target as HTMLElement;
-  if (target?.id === "logoutBtn") {
+const logoutBtn = document.getElementById("logoutBtn");
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", async () => {
     try {
       await fetch("/api/logout", { method: "POST" });
     } catch (err) {
       console.error("Logout-Fehler:", err);
     }
     window.location.href = "/login";
+  });
+}
+
+// Medaille
+const dashboardRanks = [
+  { name: "Anfänger",    icon: "/static/images/anfaenger_medaille.png" },
+  { name: "Schüler",     icon: "/static/images/Schüler_Medaille.png" },
+  { name: "Mathelehrer", icon: "/static/images/Mathelehrer_Medaille.png" },
+  { name: "Professor",   icon: "/static/images/Professor_Mathematik_Medaille.png" }
+];
+
+async function loadDashboardMedal() {
+  try {
+    const res = await fetch("/api/user_status", { credentials: "include" });
+    const data = await res.json();
+
+    const currentRank = data.current_rank ?? 0;
+    const medalImg = document.getElementById("dashboardMedal");
+
+    if (medalImg && dashboardRanks[currentRank]) {
+      medalImg.src = dashboardRanks[currentRank].icon;
+      medalImg.alt = `${dashboardRanks[currentRank].name}-Medaille`;
+      medalImg.title = dashboardRanks[currentRank].name;
+      medalImg.style.display = "inline-block";
+    }
+  } catch (err) {
+    console.error("Fehler beim Laden der Medaille:", err);
   }
-});
+}
+
+// direkt beim Laden aufrufen
+loadDashboardMedal();
