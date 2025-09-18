@@ -11,16 +11,14 @@
   <header class="header">
     <img src="{{ url_for('static', filename='images/MathTalk_Logo.png') }}" alt="Logo" class="logo" />
     <div class="icons">
-      <img id="headerMedal" class="header-medal" src="" alt="Rang-Medaille" style="display:none;" />
-      <img src="{{ url_for('static', filename='images/Profil.png') }}" 
-           alt="Profil" class="profil-icon" id="profilIcon" />
+      <img id="dashboardMedal" src="" alt="Medaille" style="height:40px; margin-right:10px; display:none;" />
+      <img src="{{ url_for('static', filename='images/Profil.png') }}" alt="Profil" class="profil-icon" id="profilIcon" />
       <div class="dropdown" id="profilDropdown">
-        <button id="profileBtn" type="button">Profil</button>
-        <button id="logoutBtn" type="button">Abmelden</button>
+        <button id="profileBtn">Profil</button>
+        <button id="logoutBtn">Abmelden</button>
       </div>
     </div>
   </header>
-
 
   <div class="linie"></div>
 
