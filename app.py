@@ -275,10 +275,15 @@ def dashboard():
 def pruefungsmodus():
     return render_template("pruefungsmodus.html")
 
-# 🌐 Uebungsmodus (HTML/JS Version)
+# 🌐 Uebungsmodus 
 @app.route('/uebungsmodus')
 def uebungsmodus():
     return render_template('Uebungsmodus.html')
+
+# 🌐 Profil
+@app.route('/profile')
+def profile():
+    return render_template('profile.html')
 
 # 🚀 Startpunkt
 if __name__ == '__main__':
