@@ -84,7 +84,10 @@ def register_user(email, password):
     cursor = conn.cursor()
     hashed_pw = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
     try:
-        cursor.execute("INSERT INTO users (email, password) VALUES (?, ?)", (email, hashed_pw))
+        cursor.execute("""
+            INSERT INTO users (email, password, current_rank, progress_in_rank)
+            VALUES (?, ?, ?, ?)
+        """, (email, hashed_pw, 0, 0))  # Rang=0 (Anfänger), Fortschritt=0
         conn.commit()
         logger.info("Benutzer erfolgreich registriert.")
     except sqlite3.IntegrityError:
