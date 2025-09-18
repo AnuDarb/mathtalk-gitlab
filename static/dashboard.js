@@ -108,6 +108,7 @@ if (dropdown) {
     <button id="profileBtn" class="profil-item" type="button">Profil</button>
     <button id="logoutBtn" class="profil-item" type="button">Abmelden</button>
   `;
+  dropdown.style.display = "none";
 }
 
 // Öffnen/Schließen
