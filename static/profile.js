@@ -1,13 +1,15 @@
+console.log("👤 Profile JS geladen");
+
 /* ========= Medaillen & Ränge ========= */
 const rankMax = 100;
 const ranks = [
   { name: "Anfänger",    icon: "/static/images/anfaenger_medaille.png" },
-  { name: "Schüler",     icon: "/static/images/schueler_medaille.png" },
-  { name: "Mathelehrer", icon: "/static/images/mathelehrer_medaille.png" },
-  { name: "Professor",   icon: "/static/images/professor_medaille.png" }
+  { name: "Schüler",     icon: "/static/images/Schüler_Medaille.png" },
+  { name: "Mathelehrer", icon: "/static/images/Mathelehrer_Medaille.png" },
+  { name: "Professor",   icon: "/static/images/Professor_Mathematik_Medaille.png" }
 ];
 
-/* ========= Zustände (aus Prüfungsmodus übernommen) ========= */
+/* ========= Zustände ========= */
 let questionPoint   = 0;
 let currentRank     = 0;
 let progressInRank  = 0;
@@ -26,9 +28,14 @@ const profilDropdown= document.getElementById("profilDropdown");
 const profilEmail   = document.getElementById("profilEmail");
 const profilFortsch = document.getElementById("profilFortschritt");
 
-/* ========= Dropdown (kleines Fallback wie im Dashboard) ========= */
+const headerMedal   = document.getElementById("headerMedal");
+const profileBtn    = document.getElementById("profileBtn");
+const logoutBtn     = document.getElementById("logoutBtn");
+
+/* ========= Dropdown ========= */
 if (profilIcon && profilDropdown) {
-  profilIcon.addEventListener("click", () => {
+  profilIcon.addEventListener("click", (e) => {
+    e.stopPropagation();
     profilDropdown.style.display = profilDropdown.style.display === "block" ? "none" : "block";
   });
   document.addEventListener("click", (e) => {
@@ -37,12 +44,26 @@ if (profilIcon && profilDropdown) {
     }
   });
 }
+if (profileBtn) {
+  profileBtn.addEventListener("click", () => {
+    window.location.href = "/profile";
+  });
+}
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", async () => {
+    try { await fetch("/api/logout", { method: "POST" }); } catch {}
+    window.location.href = "/login";
+  });
+}
 
 /* ========= Anzeige aktualisieren ========= */
 function updateScoreBar() {
   const progressPercent = Math.max(0, Math.min(100, (progressInRank / rankMax) * 100));
-  scoreFillEl.style.width = progressPercent + "%";
-  scoreFillEl.style.backgroundColor = progressInRank < 0 ? "#dc3545" : "#4caf50";
+
+  if (scoreFillEl) {
+    scoreFillEl.style.width = progressPercent + "%";
+    scoreFillEl.style.backgroundColor = progressInRank < 0 ? "#dc3545" : "#4caf50";
+  }
 
   const rankName = ranks[currentRank]?.name || "";
   if (medalImgEl) medalImgEl.src = ranks[currentRank]?.icon || "";
@@ -51,29 +72,30 @@ function updateScoreBar() {
   if (scoreTextEl) scoreTextEl.innerText = `Punkte: ${questionPoint}`;
   if (kontoTextEl) kontoTextEl.innerText = `Konto: ${progressInRank} / ${rankMax} (${rankName})`;
 
-  // rechte Infospalte + Dropdown
   const fortschrittText = `${Math.max(0, Math.min(100, Math.round(progressPercent)))}%`;
   if (progressValEl)  progressValEl.textContent = fortschrittText;
   if (profilFortsch)  profilFortsch.textContent = fortschrittText;
+
+  if (headerMedal && ranks[currentRank]) {
+    headerMedal.src = ranks[currentRank].icon;
+    headerMedal.style.display = "inline-block";
+    headerMedal.alt = `${rankName}-Medaille`;
+    headerMedal.title = rankName;
+  }
 }
 
-/* ========= E-Mail ermitteln =========
-   1) Versuche /api/user_status (falls Backend Mail mitsendet)
-   2) optional /api/me
-   3) Fallback: localStorage ("mt_email")
-=============================================================== */
-async function resolveEmail() {
+/* ========= E-Mail + Status laden ========= */
+async function resolveEmailAndStatus() {
   let email = null;
 
   try {
     const r1 = await fetch("/api/user_status", { credentials: "include" });
     if (r1.ok) {
       const d1 = await r1.json();
-      if (d1 && typeof d1.email === "string") email = d1.email;
-      // zugleich Statuswerte übernehmen falls vorhanden
-      if (typeof d1.total_points === "number") questionPoint = d1.total_points;
-      if (typeof d1.current_rank === "number") currentRank = d1.current_rank;
+      if (typeof d1.total_points === "number") questionPoint  = d1.total_points;
+      if (typeof d1.current_rank === "number") currentRank    = d1.current_rank;
       if (typeof d1.progress_in_rank === "number") progressInRank = d1.progress_in_rank;
+      if (d1 && typeof d1.email === "string") email = d1.email;
     }
   } catch {}
 
@@ -98,13 +120,6 @@ async function resolveEmail() {
     if (emailValueEl) emailValueEl.textContent = "—";
   }
 
-  // Fallback: wenn Status nicht aus /api/user_status kam, setze Standard
   currentRank    = Math.max(0, Math.min(ranks.length - 1, currentRank || 0));
   progressInRank = typeof progressInRank === "number" ? progressInRank : 0;
-  questionPoint  = typeof questionPoint === "number" ? questionPoint : 0;
-
-  updateScoreBar();
-}
-
-/* ========= Init ========= */
-resolveEmail();
+  questionPoint  = typeof questionPoi
