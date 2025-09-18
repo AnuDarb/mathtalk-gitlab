@@ -33,6 +33,11 @@ const profileBtn    = document.getElementById("profileBtn");
 const logoutBtn     = document.getElementById("logoutBtn");
 
 /* ========= Dropdown ========= */
+/* 👇 NEU: Dropdown beim Laden sicher verstecken */
+if (profilDropdown) {
+  profilDropdown.style.display = "none";
+}
+
 if (profilIcon && profilDropdown) {
   profilIcon.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -101,7 +106,8 @@ async function resolveEmailAndStatus() {
 
   if (!email) {
     try {
-      const r2 = await fetch("/api/me", { credentials: "include" });
+      // Falls du /api/userinfo verwendest, passe den Endpoint hier an
+      const r2 = await fetch("/api/userinfo", { credentials: "include" });
       if (r2.ok) {
         const d2 = await r2.json();
         if (d2 && typeof d2.email === "string") email = d2.email;
@@ -122,4 +128,10 @@ async function resolveEmailAndStatus() {
 
   currentRank    = Math.max(0, Math.min(ranks.length - 1, currentRank || 0));
   progressInRank = typeof progressInRank === "number" ? progressInRank : 0;
-  questionPoint  = typeof questionPoi
+  questionPoint  = typeof questionPoint === "number" ? questionPoint : 0;
+
+  updateScoreBar();
+}
+
+/* ========= Init ========= */
+resolveEmailAndStatus();
