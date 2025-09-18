@@ -94,64 +94,62 @@ function checkReady() {
   }
 }
 
-// Dropdown Profil/Abmelden
+/* ===========================
+   🔽 Profil-Dropdown (nur: Profil, Abmelden)
+   =========================== */
+
+// Elemente
 const profilIcon = document.getElementById("profilIcon");
 const dropdown = document.getElementById("profilDropdown");
 
-profilIcon?.addEventListener("click", () => {
-  dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+// Optional: Falls das Dropdown im HTML noch alte Inhalte (Mail, Fortschritt) hat,
+// überschreiben wir es hier auf die 2 gewünschten Einträge.
+if (dropdown) {
+  dropdown.innerHTML = `
+    <button id="profileBtn" class="profil-item" type="button">Profil</button>
+    <button id="logoutBtn" class="profil-item" type="button">Abmelden</button>
+  `;
+}
+
+// Öffnen/Schließen
+profilIcon?.addEventListener("click", (e) => {
+  e.stopPropagation();
+  const isOpen = dropdown?.style.display === "block";
+  if (dropdown) dropdown.style.display = isOpen ? "none" : "block";
+});
+
+// Schließen bei Klick außerhalb
+document.addEventListener("click", (e) => {
+  if (!dropdown || !profilIcon) return;
+  if (!dropdown.contains(e.target) && !profilIcon.contains(e.target)) {
+    dropdown.style.display = "none";
+  }
+});
+
+// Schließen mit ESC
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && dropdown?.style.display === "block") {
+    dropdown.style.display = "none";
+  }
+});
+
+// Profil
+document.addEventListener("click", (e) => {
+  const target = e.target as HTMLElement;
+  if (target?.id === "profileBtn") {
+    window.location.href = "/profile";
+  }
 });
 
 // Abmelden
-document.getElementById("logoutBtn")?.addEventListener("click", async () => {
-  try {
-    await fetch("/api/logout", { method: "POST" });
-  } catch (err) {
-    console.error("Logout-Fehler:", err);
+document.addEventListener("click", async (e) => {
+  const target = e.target as HTMLElement;
+  if (target?.id === "logoutBtn") {
+    try {
+      await fetch("/api/logout", { method: "POST" });
+    } catch (err) {
+      console.error("Logout-Fehler:", err);
+    }
+    window.location.href = "/login";
   }
-  window.location.href = "/login";
 });
-
-// 🔄 Benutzerprofil-Daten abrufen & anzeigen
-async function loadProfileData() {
-  try {
-    // #NEU: Fortschrittsfeld vorbereiten (optional)
-    const fortschrittElement = document.getElementById("profilFortschritt");
-    if (fortschrittElement) {
-      fortschrittElement.textContent = "⏳ Lädt...";
-    }
-
-    const response = await fetch("/api/progress");
-    const result = await response.json();
-
-    if (!response.ok || result.error) {
-      console.error("Fehler beim Abrufen des Fortschritts");
-      if (fortschrittElement) {
-        fortschrittElement.textContent = "0%";
-      }
-      return;
-    }
-
-    const responseUser = await fetch("/api/userinfo");
-    const userData = await responseUser.json();
-    const email = userData.email || "Unbekannt";
-
-    const progressPercent = result.total_questions > 0
-      ? Math.round((result.answered / result.total_questions) * 100)
-      : 0;
-
-    document.getElementById("profilEmail").textContent = email;
-    if (fortschrittElement) {
-      fortschrittElement.textContent = `${progressPercent}%`;
-    }
-  } catch (err) {
-    console.error("❌ Fehler beim Laden des Profils:", err);
-    const fortschrittElement = document.getElementById("profilFortschritt");
-    if (fortschrittElement) {
-      fortschrittElement.textContent = "0%";
-    }
-  }
-}
-
-// #NEU: Initialisiere Profildaten beim Laden
-loadProfileData(); // #NEU
