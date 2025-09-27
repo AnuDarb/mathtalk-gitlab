@@ -4,7 +4,7 @@ console.log("👤 Profile JS geladen");
 const rankMax = 100;
 const ranks = [
   { name: "Anfänger",    icon: "/static/images/anfaenger_medaille.png" },
-  { name: "Schüler",     icon: "/static/images/Schüler_Medaille.png" },
+  { name: "Schüler",     icon: "/static/images/schueler_medaille.png" },
   { name: "Mathelehrer", icon: "/static/images/Mathelehrer_Medaille.png" },
   { name: "Professor",   icon: "/static/images/Professor_Mathematik_Medaille.png" }
 ];
