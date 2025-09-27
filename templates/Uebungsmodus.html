@@ -10,16 +10,16 @@
 <body>
   <header class="header">
     <img src="{{ url_for('static', filename='images/MathTalk_Logo.png') }}" alt="Logo" class="logo" />
-    <div class="icons">
-      <img src="{{ url_for('static', filename='images/Profil.png') }}" alt="Profil" class="profil-icon"
-        id="profilIcon" />
-      <div class="dropdown" id="profilDropdown">
-        <p><strong>E-Mail:</strong> <span id="profilEmail">...</span></p>
-        <p><strong>Fortschritt:</strong> <span id="profilFortschritt">...</span></p>
-        <button id="logoutBtn">Abmelden</button>
+      <div class="icons">
+        <img id="dashboardMedal" src="" alt="Medaille" style="height:40px; margin-right:10px; display:none;" />
+        <img src="{{ url_for('static', filename='images/Profil.png') }}" alt="Profil" class="profil-icon" id="profilIcon" />
+        <div class="dropdown" id="profilDropdown">
+          <button id="profileBtn">Profil</button>
+          <button id="logoutBtn">Abmelden</button>
+        </div>
       </div>
-    </div>
   </header>
+
 
   <div class="linie"></div>
 
