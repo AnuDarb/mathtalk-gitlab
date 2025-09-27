@@ -249,7 +249,8 @@ def init_db():
             category TEXT NOT NULL,
             grade TEXT NOT NULL,
             question_type TEXT DEFAULT 'classic',
-            choices TEXT
+            choices TEXT,
+            video_url TEXT       
         )
     """)
     cursor.execute("""

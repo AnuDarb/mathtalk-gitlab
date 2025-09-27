@@ -55,6 +55,7 @@
   const hintBox = document.getElementById('hint-box'); // Hinweis-Anzeige
   const remainingEl = document.getElementById('remaining'); // Anzeige verbleibender Fragen
   const wrongEl = document.getElementById('wrong'); // Anzeige falscher Antworten
+  const videoLink = document.getElementById('video-link'); // Link zum Erklärvideo
   // Swipe-Gesten für Navigation
   let touchStartX = null;
   let touchStartY = null;
@@ -252,6 +253,9 @@
     document.getElementById('skip-btn').onclick = skip;
     document.getElementById('hint-btn').onclick = showHintToggle;
     document.getElementById('menu-btn').onclick = goToMenu;
+
+    videoLink.style.display = question.video_url ? 'inline-block' : 'none';
+    videoLink.href = question.video_url || '#';
   }
 
   // API calls
