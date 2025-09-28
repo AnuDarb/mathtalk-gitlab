@@ -1,4 +1,4 @@
-console.log("📊 Dashboard JS geladen");
+console.log("Dashboard JS geladen");
 
 // Seite neu laden bei Zurück-Button (mit Fallback)
 const navEntry = performance.getEntriesByType("navigation")[0];
