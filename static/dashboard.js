@@ -1,14 +1,36 @@
 console.log("Dashboard JS geladen");
 
-// Seite neu laden bei Zurück-Button (mit Fallback)
-const navEntry = performance.getEntriesByType("navigation")[0];
-if (navEntry && navEntry.type === "back_forward") {
-  location.reload();
-}
-
 let selectedCategories = new Set();
 let selectedGrade = null;
 let selectedMode = null;
+
+// Auswahl-Reset bei Back/Forward (bfcache)
+function resetSelections() {
+  // JS-State leeren
+  selectedCategories = new Set();
+  selectedGrade = null;
+  selectedMode = null;
+
+  // visuelle Auswahl entfernen
+  document
+    .querySelectorAll(".image-card.selected, .moduskachel.selected")
+    .forEach((el) => el.classList.remove("selected"));
+}
+
+// Wenn Seite aus bfcache kommt, zurücksetzen
+window.addEventListener("pageshow", (e) => {
+  if (e.persisted) {
+    resetSelections();
+  }
+});
+
+// Fallback: Navigation Timing erkennt back_forward
+{
+  const navEntry = performance.getEntriesByType("navigation")[0];
+  if (navEntry && navEntry.type === "back_forward") {
+    resetSelections();
+  }
+}
 
 // Kategorie-Zuordnung
 const categoryMap = {
@@ -95,7 +117,7 @@ function checkReady() {
 }
 
 /* ===========================
-   🔽 Profil-Dropdown (nur: Profil, Abmelden)
+   Profil-Dropdown 
    =========================== */
 
 // Elemente
@@ -186,3 +208,4 @@ async function loadDashboardMedal() {
 
 // direkt beim Laden aufrufen
 loadDashboardMedal();
+
