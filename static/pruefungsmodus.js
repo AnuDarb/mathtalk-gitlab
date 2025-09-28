@@ -70,7 +70,7 @@ async function loadUserStatus() {
   }
 }
 
-// --- Frage laden (erweitert auf classic | multiple_choice | drag_drop) ---
+// --- Frage laden (classic | multiple_choice | drag_drop) ---
 async function loadQuestion() {
   // Kategorie wie bisher aus URL lesen:
   const params = new URLSearchParams(window.location.search);
@@ -107,7 +107,7 @@ async function loadQuestion() {
     currentQuestionType = data.question_type || "classic";
     questionText.textContent = data.question;
 
-    // String → JSON für Felder, falls nötig (Übungsmodus macht das genauso)
+    // String → JSON für Felder, falls nötig (aus Übungsmodus)
     if (currentQuestionType === "drag_drop" && typeof data.answer === "string") {
       try { data.answer = JSON.parse(data.answer); } catch { data.answer = {}; }
     }
@@ -122,7 +122,7 @@ async function loadQuestion() {
     } else if (currentQuestionType === "multiple_choice") {
       mcOptionsEl.style.display = "block";
       mcOptionsEl.innerHTML = `
-        <div style="display:flex;flex-direction:column;gap:10px;">
+        <div class="multiple-choice-row" style="display:flex;flex-direction:column;gap:10px;">
           ${(data.choices || []).map(opt => `
             <label style="display:flex;align-items:center;gap:10px;cursor:pointer;">
               <input type="radio" name="mc" value="${opt}">
@@ -133,8 +133,8 @@ async function loadQuestion() {
       `;
       // Auswahl-Listener – MC auto-submit wie im Übungsmodus
       mcOptionsEl.querySelectorAll('input[type=radio][name=mc]').forEach(el => {
-        el.addEventListener('change', () => {
-          userInput = el.value;
+        el.addEventListener('change', (e) => {
+          userInput = e.target.value;
           submitAnswer();  // sofort werten
         });
       });
@@ -243,30 +243,31 @@ async function submitAnswer() {
       else if (result.score > 0.65) almost = true;
     }
 
-    if (correct) {
-      alert("✅ Richtig!");
-      questionPoint++;
-      progressInRank++;
-    } else if (almost) {
-      alert("🔁 Fast richtig – Tippfehler?");
-      questionPoint++;
-      progressInRank++;
-    } else {
-      alert("❌ Leider falsch.");
-      questionPoint--;
-      progressInRank--;
-    }
+    const feedbackEl = document.getElementById("feedback");
+
+if (correct) {
+  feedbackEl.textContent = "✅ Richtig!";
+  feedbackEl.style.display = "block";
+  feedbackEl.style.color = "green";
+  questionPoint++;
+  progressInRank++;
+} else if (almost) {
+  feedbackEl.textContent = "🔁 Fast richtig – Tippfehler?";
+  feedbackEl.style.display = "block";
+  feedbackEl.style.color = "orange";
+  questionPoint++;
+  progressInRank++;
+} else {
+  feedbackEl.textContent = "❌ Leider falsch.";
+  feedbackEl.style.display = "block";
+  feedbackEl.style.color = "red";
+}
 
     // Rang-Auf/Abstieg (bestehend)
     while (progressInRank >= rankMax && currentRank < ranks.length - 1) {
       progressInRank -= rankMax;
       currentRank++;
       alert("🎉 Neuer Rang: " + ranks[currentRank].name);
-    }
-    while (progressInRank < 0 && currentRank > 0) {
-      currentRank--;
-      progressInRank += rankMax;
-      alert("⬇️ Abgestiegen auf: " + ranks[currentRank].name);
     }
 
     updateScoreBar();
