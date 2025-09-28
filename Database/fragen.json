@@ -5,7 +5,8 @@
     "hint_text": "Nutze die binomische Formel: (a - b)² = a² - 2ab + b²",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=3iyqHdr0xZI"
   },
   {
     "question": "Fasse zusammen: 2x + 3x - 5",
@@ -13,7 +14,8 @@
     "hint_text": "Gleichartige Terme zusammenfassen",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=Wx32P1OEKyU"
   },
   {
     "question": "Berechne: √49",
@@ -21,7 +23,8 @@
     "hint_text": "Quadratwurzel von 49",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=MkcArrEhUQI"
   },
   {
     "question": "Wandle 0,00056 in wissenschaftliche Schreibweise um.",
@@ -29,7 +32,8 @@
     "hint_text": "Kommas verschieben, Zehnerpotenz bestimmen",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=puAWfbEPpvg"
   },
   {
     "question": "Löse die Gleichung: 3x - 5 = 10",
@@ -37,7 +41,8 @@
     "hint_text": "Zuerst +5, dann durch 3 teilen",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=CqCspy52DMM"
   },
   {
     "question": "Multipliziere: (x + 2)(x - 2)",
@@ -45,7 +50,8 @@
     "hint_text": "Differenz zweier Quadrate",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=3iyqHdr0xZI"
   },
   {
     "question": "Fasse zusammen: 2a² + 3ab - a² + ab",
@@ -53,7 +59,8 @@
     "hint_text": "Gleichartige Terme erkennen",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=Wx32P1OEKyU"
   },
   {
     "question": "Fasse zusammen: -3(x - 2) + 4x",
@@ -61,7 +68,8 @@
     "hint_text": "Erst ausmultiplizieren, dann zusammenfassen",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=X5E2bqby8f0"
   },
   {
     "question": "Berechne: (0,4 · 10³) + (2,3 · 10²)",
@@ -69,7 +77,8 @@
     "hint_text": "Wissenschaftliche Schreibweise umrechnen",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=puAWfbEPpvg"
   },
   {
     "question": "Was ist das Ergebnis von (2a)²?",
@@ -77,7 +86,8 @@
     "hint_text": "Ganze Klammer quadrieren!",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=4rlb99q-8CA"
   },
   {
     "question": "Fasse zusammen: 4x - (2x - 3)",
@@ -85,7 +95,8 @@
     "hint_text": "Klammern auflösen, Vorzeichen beachten",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=X5E2bqby8f0"
   },
   {
     "question": "Berechne: 2⁵",
@@ -93,7 +104,8 @@
     "hint_text": "Zweierpotenzen kennen",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=4rlb99q-8CA"
   },
   {
     "question": "Wandle 3,4 Millionen in wissenschaftliche Schreibweise.",
@@ -101,7 +113,8 @@
     "hint_text": "Million = 10⁶",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=puAWfbEPpvg"
   },
   {
     "question": "Berechne: (-3)²",
@@ -109,7 +122,8 @@
     "hint_text": "Vorzeichen beachten – ganze Klammer wird quadriert",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=at4S6xLfU5o"
   },
   {
     "question": "Fasse zusammen: x² + 3x² - 2x",
@@ -117,7 +131,8 @@
     "hint_text": "x²-Terme addieren",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=Wx32P1OEKyU"
   },
   {
     "question": "Löse die Gleichung: 4x + 2 = 18",
@@ -125,7 +140,8 @@
     "hint_text": "Erst -2, dann durch 4",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=CqCspy52DMM"
   },
   {
     "question": "Kürze den Term: (3x² - 6x)/3x",
@@ -133,7 +149,8 @@
     "hint_text": "Zähler vollständig faktorisieren",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=X5E2bqby8f0"
   },
   {
     "question": "Was ergibt: -5 - (-2)?",
@@ -141,7 +158,8 @@
     "hint_text": "Minus Minus ergibt Plus",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=yZGfccNtwbI"
   },
   {
     "question": "Berechne den Term: 2(3x + 4) - x",
@@ -149,7 +167,8 @@
     "hint_text": "Ausmultiplizieren und zusammenfassen",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=X5E2bqby8f0"
   },
   {
     "question": "Fasse zusammen: -2a + 3b - 4a + b",
@@ -157,7 +176,8 @@
     "hint_text": "Sortiere nach Variablen",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=Wx32P1OEKyU"
   },
   {
     "question": "Multipliziere aus: (x + 5)(x + 2)",
@@ -165,7 +185,8 @@
     "hint_text": "Erste binomische Formel anwenden oder ausmultiplizieren",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=3iyqHdr0xZI"
   },
   {
     "question": "Wandle 0,02 in eine Potenz mit Basis 10 um.",
@@ -173,7 +194,8 @@
     "hint_text": "Komma zwei Stellen nach rechts",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=puAWfbEPpvg"
   },
   {
     "question": "Löse die Gleichung: x/3 = 6",
@@ -181,7 +203,8 @@
     "hint_text": "Beide Seiten mit 3 multiplizieren",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=CqCspy52DMM"
   },
   {
     "question": "Wandle -0,00034 in wissenschaftliche Schreibweise.",
@@ -189,7 +212,8 @@
     "hint_text": "Negative Kommazahl → negative Zehnerpotenz",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=puAWfbEPpvg"
   },
   {
     "question": "Berechne: √81 + √16",
@@ -197,7 +221,8 @@
     "hint_text": "Wurzel aus 81 und 16 einzeln berechnen",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=MkcArrEhUQI"
   },
   {
     "question": "Was ist das Ergebnis von (−3) · 4?",
@@ -205,7 +230,8 @@
     "options": ["12", "-12", "-7", "0"],
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=yZGfccNtwbI"
   },
   {
     "question": "Welche Zahl ist irrational?",
@@ -213,7 +239,8 @@
     "options": ["0,5", "√2", "1/3", "0,25"],
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=mYf8ECLaPt8"
   },
   {
     "question": "Was ergibt 2³?",
@@ -221,7 +248,8 @@
     "options": ["6", "8", "9", "12"],
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=4rlb99q-8CA"
   },
   {
     "question": "Wie lautet 0,00045 in wissenschaftlicher Schreibweise?",
@@ -229,7 +257,8 @@
     "options": ["4,5 · 10⁻³", "4,5 · 10⁻⁴", "4,5 · 10⁻⁵", "45 · 10⁻³"],
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=puAWfbEPpvg"
   },
   {
     "question": "Was ergibt √49?",
@@ -237,7 +266,8 @@
     "options": ["6", "7", "8", "14"],
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=MkcArrEhUQI"
   },
   {
     "question": "Was besagt das Kommutativgesetz?",
@@ -245,7 +275,8 @@
     "options": ["a · (b + c) = ab + ac", "a + b = b + a", "(a + b) + c = a + (b + c)", "a · b = a + b"],
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=EPTOMisUr48"
   },
   {
     "question": "Fasse zusammen: 3x + 4x – 2x",
@@ -253,7 +284,8 @@
     "options": ["9x", "7x", "5x", "1x"],
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=Wx32P1OEKyU"
   },
   {
     "question": "Wie lautet die 3. binomische Formel?",
@@ -266,7 +298,8 @@
     ],
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=3iyqHdr0xZI"
   },
   {
     "question": "Löse die Gleichung: x − 5 = 12",
@@ -274,7 +307,8 @@
     "options": ["x = 7", "x = 17", "x = −7", "x = −17"],
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=CqCspy52DMM"
   },
   {
     "question": "Was ergibt (x + 3)(x − 3)?",
@@ -282,7 +316,8 @@
     "options": ["x² + 6x + 9", "x² − 6x + 9", "x² − 9", "x² + 9"],
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=3iyqHdr0xZI"
   },
   {
     "question": "Wie viel ist 3/4 + 1/8?",
@@ -290,7 +325,8 @@
     "options": ["4/8", "5/8", "7/8", "1"],
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=pJzNUeRxLhg"
   },
   {
     "question": "Was ergibt 2,5 · 10³?",
@@ -298,7 +334,8 @@
     "options": ["25", "250", "2500", "25000"],
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=puAWfbEPpvg"
   },
   {
     "question": "Wie lautet das Distributivgesetz?",
@@ -311,7 +348,8 @@
     ],
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=Mu3WdWgXJpg"
   },
   {
     "question": "Was ergibt 5 − (−3)?",
@@ -319,7 +357,8 @@
     "options": ["2", "−2", "8", "−8"],
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=yZGfccNtwbI"
   },
   {
     "question": "Welche Zahl ist das Ergebnis von 1,5²?",
@@ -327,7 +366,8 @@
     "options": ["3", "2,25", "2,5", "1,75"],
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=4rlb99q-8CA"
   },
   {
     "question": "Wie löst man 3(x − 2) = 6?",
@@ -335,7 +375,8 @@
     "options": ["x = 6", "x = 2", "x = 4", "x = 0"],
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=CqCspy52DMM"
   },
   {
     "question": "Was ergibt 1/2 · 3/4?",
@@ -343,7 +384,8 @@
     "options": ["1/6", "3/8", "5/8", "2/6"],
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=pJzNUeRxLhg"
   },
   {
     "question": "Was ist die Lösung der Gleichung 5x = 20?",
@@ -351,7 +393,8 @@
     "options": ["x = 25", "x = 15", "x = 4", "x = 5"],
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=CqCspy52DMM"
   },
   {
     "question": "Was ergibt −4²?",
@@ -359,7 +402,8 @@
     "options": ["−8", "16", "−16", "−2"],
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=at4S6xLfU5o"
   },
   {
     "question": "Was ist das Ergebnis von (a + b)²?",
@@ -372,7 +416,8 @@
     ],
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=3iyqHdr0xZI"
   },
   {
     "question": "Ordne jedem Term seine vereinfachte Form zu.",
@@ -384,7 +429,8 @@
     "hint_text": "Fasse gleichartige Terme zusammen.",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=Wx32P1OEKyU"
   },
   {
     "question": "Ordne die Rechengesetze den Beispielen zu.",
@@ -396,7 +442,8 @@
     "hint_text": "Denk an Kommutativ-, Assoziativ- und Distributivgesetz.",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=Mu3WdWgXJpg"
   },
   {
     "question": "Ordne den binomischen Formeln die passenden Ergebnisse zu.",
@@ -408,7 +455,8 @@
     "hint_text": "Nutze die binomischen Formeln.",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=3iyqHdr0xZI"
   },
   {
     "question": "Ordne die Terme ihren Werten bei x = 2 zu.",
@@ -420,7 +468,8 @@
     "hint_text": "Setze x = 2 ein und berechne.",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=CqCspy52DMM"
   },
   {
     "question": "Ordne den Brüchen ihre gekürzte Form zu.",
@@ -432,7 +481,8 @@
     "hint_text": "Kürze Zähler und Nenner mit dem größten gemeinsamen Teiler.",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=TfFZ6bU4fl4"
   },
   {
     "question": "Ordne die Potenzen ihrer ausgeschriebenen Form zu.",
@@ -444,7 +494,8 @@
     "hint_text": "Zehnerpotenzen: positive = große Zahlen, negative = kleine Zahlen.",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=4rlb99q-8CA"
   },
   {
     "question": "Ordne jedem Term seine faktorisierte Form zu.",
@@ -456,7 +507,8 @@
     "hint_text": "Nutze die binomischen Formeln oder das Ausklammern.",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=wpZnOiKAA6E"
   },
   {
     "question": "Ordne den Wurzeln ihren Wert zu.",
@@ -468,7 +520,8 @@
     "hint_text": "Welche Zahl zum Quadrat ergibt den Wert unter der Wurzel?",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=MkcArrEhUQI"
   },
   {
     "question": "Ordne die Brüche ihren Dezimalwerten zu.",
@@ -480,7 +533,8 @@
     "hint_text": "Dividiere Zähler durch Nenner.",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=pJzNUeRxLhg"
   },
   {
     "question": "Ordne die Terme ihren vereinfachten Ergebnissen zu.",
@@ -492,7 +546,8 @@
     "hint_text": "Multipliziere aus mit dem Distributivgesetz.",
     "category": "Zahlen & Terme",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=X5E2bqby8f0"
   },
   {
     "question": "Faktorisieren: x² - 4x + 4",
@@ -500,7 +555,8 @@
     "hint_text": "Quadrat einer binomischen Formel erkennen",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=3iyqHdr0xZI"
   },
   {
     "question": "Löse: (x - 3)(x + 5) = 0",
@@ -508,7 +564,8 @@
     "hint_text": "Nullproduktregel anwenden",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=3iyqHdr0xZI"
   },
   {
     "question": "Berechne: (2x - 3)²",
@@ -516,7 +573,8 @@
     "hint_text": "Zweite binomische Formel anwenden",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=3iyqHdr0xZI"
   },
   {
     "question": "Vereinfache: (x² - 9)/(x + 3)",
@@ -524,7 +582,8 @@
     "hint_text": "Zähler faktorisieren (Differenz von Quadraten)",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=wpZnOiKAA6E"
   },
   {
     "question": "Berechne den Term: (x - 2)(x + 2)",
@@ -532,7 +591,8 @@
     "hint_text": "Differenz zweier Quadrate",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=3iyqHdr0xZI"
   },
   {
     "question": "Kürze vollständig: (x² - 16)/(x - 4)",
@@ -540,7 +600,8 @@
     "hint_text": "Zähler als binomische Formel erkennen",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=wpZnOiKAA6E"
   },
   {
     "question": "Berechne: √(25a²)",
@@ -548,7 +609,8 @@
     "hint_text": "Wurzel aus Produkt ziehen",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=MkcArrEhUQI"
   },
   {
     "question": "Multipliziere aus: (x + 1)(x² - x + 1)",
@@ -556,7 +618,8 @@
     "hint_text": "Erkenne die dritte binomische Formel rückwärts",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=3iyqHdr0xZI"
   },
   {
     "question": "Wandle 3 · 10⁴ in eine Dezimalzahl um.",
@@ -564,7 +627,8 @@
     "hint_text": "Vier Stellen nach rechts verschieben",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=puAWfbEPpvg"
   },
   {
     "question": "Berechne: 10⁻² × 10⁴",
@@ -572,7 +636,8 @@
     "hint_text": "Potenzgesetze anwenden",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=4rlb99q-8CA"
   },
   {
     "question": "Berechne: (a + b)² - (a - b)²",
@@ -580,7 +645,8 @@
     "hint_text": "Beide binomische Formeln ausrechnen und dann subtrahieren",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=3iyqHdr0xZI"
   },
   {
     "question": "Berechne: √(100 · x²)",
@@ -588,7 +654,8 @@
     "hint_text": "Produktregel der Wurzel verwenden",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=MkcArrEhUQI"
   },
   {
     "question": "Vereinfache: (x² - y²)/(x - y)",
@@ -596,7 +663,8 @@
     "hint_text": "Faktorisiere den Zähler (Differenz von Quadraten)",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=wpZnOiKAA6E"
   },
   {
     "question": "Berechne: (2x + 1)(2x - 1)",
@@ -604,7 +672,8 @@
     "hint_text": "Formel für (a + b)(a - b)",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=3iyqHdr0xZI"
   },
   {
     "question": "Multipliziere: (x + 2)²",
@@ -612,7 +681,8 @@
     "hint_text": "1. binomische Formel",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=3iyqHdr0xZI"
   },
   {
     "question": "Wandle 0,00012 in wissenschaftliche Schreibweise um.",
@@ -620,7 +690,8 @@
     "hint_text": "Komma um vier Stellen nach rechts",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=puAWfbEPpvg"
   },
   {
     "question": "Löse: 2x² - 18 = 0",
@@ -628,7 +699,8 @@
     "hint_text": "Umstellen und Wurzelziehen",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=lV1-GzAjzwg"
   },
   {
     "question": "Berechne: √0,01",
@@ -636,7 +708,8 @@
     "hint_text": "Zehnerpotenz erkennen",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=MkcArrEhUQI"
   },
   {
     "question": "Berechne: 3√(8)",
@@ -644,7 +717,8 @@
     "hint_text": "Dritte Wurzel von 8 ist die Zahl, deren dritte Potenz 8 ergibt",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=LO0j7RfEJpQ"
   },
   {
     "question": "Berechne: (x² - 2x + 1) / (x - 1)",
@@ -652,7 +726,8 @@
     "hint_text": "Zähler ist eine binomische Formel",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=wpZnOiKAA6E"
   },
   {
     "question": "Fasse zusammen: x³ + 2x² - x³ + x²",
@@ -660,7 +735,8 @@
     "hint_text": "x³-Terme heben sich auf",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=Wx32P1OEKyU"
   },
   {
     "question": "Kürze: (x² - 9x)/(x)",
@@ -668,7 +744,8 @@
     "hint_text": "x ausklammern",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=X5E2bqby8f0"
   },
   {
     "question": "Faktorisieren: a² - 25",
@@ -676,7 +753,8 @@
     "hint_text": "Differenz von Quadraten",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=wpZnOiKAA6E"
   },
   {
     "question": "Löse die Gleichung: (x - 1)² = 0",
@@ -684,7 +762,8 @@
     "hint_text": "Wurzel aus beiden Seiten",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=lV1-GzAjzwg"
   },
   {
     "question": "Berechne: (x² - 4x + 3)/(x - 1)",
@@ -692,7 +771,8 @@
     "hint_text": "Zähler faktorisieren zu (x - 3)(x - 1)",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=wpZnOiKAA6E"
   },
   {
     "question": "Was ergibt (x - 3)²?",
@@ -700,7 +780,8 @@
     "options": ["x² + 9", "x² - 9x + 6", "x² - 6x + 9", "x² - 3x + 9"],
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=3iyqHdr0xZI"
   },
   {
     "question": "Wie lautet die wissenschaftliche Schreibweise von 0,00075?",
@@ -708,7 +789,8 @@
     "options": ["7,5 · 10⁻⁴", "7,5 · 10⁻³", "75 · 10⁻⁵", "0,75 · 10⁻³"],
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=puAWfbEPpvg"
   },
   {
     "question": "Was ist das Ergebnis von (2a + b)²?",
@@ -716,7 +798,8 @@
     "options": ["2a² + b²", "4a² + 4ab + b²", "4a² + 2ab + b²", "2a² + 2ab + b²"],
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=3iyqHdr0xZI"
   },
   {
     "question": "Welche Aussage zu Potenzen stimmt?",
@@ -724,7 +807,8 @@
     "options": ["10⁻³ = 0,0001", "10⁻³ = 0,01", "10⁻³ = 0,1", "10⁻³ = 0,001"],
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=4rlb99q-8CA"
   },
   {
     "question": "Fasse zusammen: 3x² - 5x + 2x² + x",
@@ -732,7 +816,8 @@
     "options": ["5x² - 4x", "6x² - 4x", "5x² + 6x", "3x² - 6x"],
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=Wx32P1OEKyU"
   },
   {
     "question": "Was ergibt die Wurzel aus 0,04?",
@@ -740,7 +825,8 @@
     "options": ["2", "0,4", "0,2", "0,04"],
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=MkcArrEhUQI"
   },
   {
     "question": "Was ergibt (a + b)(a - b)?",
@@ -748,7 +834,8 @@
     "options": ["a² + b²", "a² - b²", "a² - 2ab + b²", "a² + 2ab + b²"],
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=3iyqHdr0xZI"
   },
   {
     "question": "Wie lautet die Nullstellenform von x² - 4?",
@@ -756,7 +843,8 @@
     "options": ["(x - 2)²", "(x - 4)(x + 1)", "(x - 2)(x + 2)", "(x - 1)(x + 4)"],
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=wpZnOiKAA6E"
   },
   {
     "question": "Wandle 560000 in wissenschaftliche Schreibweise um.",
@@ -764,7 +852,8 @@
     "options": ["5,6 · 10⁴", "56 · 10⁴", "5,6 · 10⁵", "0,56 · 10⁶"],
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=puAWfbEPpvg"
   },
   {
     "question": "Welche Aussage ist korrekt: (x - 1)² = ?",
@@ -772,7 +861,8 @@
     "options": ["x² + 2x + 1", "x² - 1", "x² - 2x + 1", "x² + 1"],
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=3iyqHdr0xZI"
   },
   {
     "question": "Wie lautet √(49x²)?",
@@ -780,7 +870,8 @@
     "options": ["7x", "14x", "x + 7", "x² + 49"],
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=MkcArrEhUQI"
   },
   {
     "question": "Wie lautet die 3. binomische Formel?",
@@ -788,7 +879,8 @@
     "options": ["(a + b)² = a² + 2ab + b²", "(a - b)² = a² - 2ab + b²", "(a + b)(a - b) = a² - b²", "(a + b)(a² - ab + b²) = a³ + b³"],
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=3iyqHdr0xZI"
   },
   {
     "question": "Wie kann man x² + 6x + 9 faktorisieren?",
@@ -796,7 +888,8 @@
     "options": ["(x + 3)(x - 3)", "(x + 3)²", "(x + 2)(x + 4)", "(x + 1)(x + 9)"],
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=wpZnOiKAA6E"
   },
   {
     "question": "Was ergibt 10⁻² · 10⁴?",
@@ -804,7 +897,8 @@
     "options": ["10²", "10⁶", "10⁻⁶", "10³"],
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=4rlb99q-8CA"
   },
   {
     "question": "Wie kürzt man (x² - 9)/(x - 3)?",
@@ -812,7 +906,8 @@
     "options": ["x + 3", "x - 3", "x² - 3", "x + 9"],
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=wpZnOiKAA6E"
   },
   {
     "question": "Berechne: (x + 1)(x - 1)",
@@ -820,7 +915,8 @@
     "options": ["x² + 1", "x² - 1", "x² - 2x", "x² + 2x + 1"],
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=3iyqHdr0xZI"
   },
   {
     "question": "Wandle 1,25 Millionen in wissenschaftliche Schreibweise um.",
@@ -828,7 +924,8 @@
     "options": ["1,25 · 10⁵", "1,25 · 10⁶", "125 · 10⁴", "0,125 · 10⁷"],
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=puAWfbEPpvg"
   },
   {
     "question": "Was ist das Ergebnis von 3√27?",
@@ -836,7 +933,8 @@
     "options": ["9", "27", "3", "1,5"],
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=LO0j7RfEJpQ"
   },
   {
     "question": "Was ergibt (2x)²?",
@@ -844,7 +942,8 @@
     "options": ["2x²", "4x", "4x²", "2x"],
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=4rlb99q-8CA"
   },
   {
     "question": "Was ergibt -5²?",
@@ -852,7 +951,8 @@
     "options": ["25", "-25", "-10", "0"],
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=at4S6xLfU5o"
   },
   {
     "question": "Ordne die Terme ihrer vollständig ausmultiplizierten Form zu.",
@@ -864,7 +964,8 @@
     "hint_text": "Nutze die erste binomische Formel bzw. Ausmultiplizieren.",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=X5E2bqby8f0"
   },
   {
     "question": "Ordne den Potenzausdrücken ihre vereinfachte Form zu.",
@@ -876,7 +977,8 @@
     "hint_text": "Nutze Potenzgesetze: multiplizieren = Exponenten addieren.",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=4rlb99q-8CA"
   },
   {
     "question": "Ordne den Gleichungen ihre Lösungen zu.",
@@ -888,7 +990,8 @@
     "hint_text": "Ziehe die Wurzel – beachte ±!",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=lV1-GzAjzwg"
   },
   {
     "question": "Ordne jedem Ausdruck seine wissenschaftliche Schreibweise zu.",
@@ -900,7 +1003,8 @@
     "hint_text": "Beweg das Komma auf die erste Ziffer.",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=puAWfbEPpvg"
   },
   {
     "question": "Ordne die Gleichungssysteme ihren Lösungen zu.",
@@ -912,7 +1016,8 @@
     "hint_text": "Verwende Additions- oder Einsetzungsverfahren.",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=i361KL1OumQ"
   },
   {
     "question": "Ordne den Termen ihre vereinfachte Form zu.",
@@ -924,7 +1029,8 @@
     "hint_text": "Fasse gleichartige Terme zusammen.",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=Wx32P1OEKyU"
   },
   {
     "question": "Ordne den faktoriellen Ausdrücken ihre vereinfachte Form zu.",
@@ -936,7 +1042,8 @@
     "hint_text": "Nutze binomische Formeln bzw. ‚dritte binomische Formel‘.",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=3iyqHdr0xZI"
   },
   {
     "question": "Ordne den Termen die passende Umformung zu.",
@@ -948,7 +1055,8 @@
     "hint_text": "Distributivgesetz anwenden und dann zusammenfassen.",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=X5E2bqby8f0"
   },
   {
     "question": "Ordne den Aussagen die passenden Rechengesetze zu.",
@@ -960,7 +1068,8 @@
     "hint_text": "Welches Gesetz ist jeweils angewendet?",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=Mu3WdWgXJpg"
   },
   {
     "question": "Ordne den Wurzelausdrücken ihre Werte zu.",
@@ -972,15 +1081,18 @@
     "hint_text": "Quadratwurzeln berechnen.",
     "category": "Zahlen & Terme",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=MkcArrEhUQI"
   },
+[
   {
     "question": "Wie lautet die allgemeine Funktionsgleichung einer linearen Funktion?",
     "answer": "f(x) = mx + b",
     "hint_text": "Denk an Steigung (m) und y-Achsenabschnitt (b).",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=TKK-25nz-cE"
   },
   {
     "question": "Welche Steigung hat die Funktion f(x) = -3x + 5?",
@@ -988,7 +1100,8 @@
     "hint_text": "Die Steigung steht vor dem x.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=aKvL__VeHS4"
   },
   {
     "question": "Berechne den y-Achsenabschnitt der Funktion f(x) = 2x - 4.",
@@ -996,7 +1109,8 @@
     "hint_text": "Der y-Achsenabschnitt ist der konstante Term.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=TD5OxSLRnm4"
   },
   {
     "question": "Gib den Schnittpunkt mit der y-Achse von f(x) = -x + 2 an.",
@@ -1004,7 +1118,8 @@
     "hint_text": "Setze x = 0 in die Funktion ein.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=TD5OxSLRnm4"
   },
   {
     "question": "Finde die Nullstelle von f(x) = 4x - 8.",
@@ -1012,7 +1127,8 @@
     "hint_text": "Setze f(x) = 0 und löse nach x.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=3Ifbc736yfY"
   },
   {
     "question": "Was ist der Scheitelpunkt der Parabel f(x) = (x - 3)² + 1?",
@@ -1020,7 +1136,8 @@
     "hint_text": "Scheitelpunktform zeigt ihn direkt: (x - d)² + e → S(d|e).",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=ZS3ktdMePpQ"
   },
   {
     "question": "Wie lautet die Scheitelpunktform von f(x) = x² - 6x + 9?",
@@ -1028,7 +1145,8 @@
     "hint_text": "Nutze die quadratische Ergänzung.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=0DXjdwpJ3S0"
   },
   {
     "question": "Bestimme die Nullstellen von f(x) = x² - 4.",
@@ -1036,7 +1154,8 @@
     "hint_text": "Faktorisiere zu (x - 2)(x + 2).",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=ukEXR0DKMQg"
   },
   {
     "question": "Wie verändert sich der Graph von f(x) = x², wenn du f(x) = (x - 2)² zeichnest?",
@@ -1044,7 +1163,8 @@
     "hint_text": "Die Zahl in der Klammer zeigt die horizontale Verschiebung.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=a7wlE6D2Pf4"
   },
   {
     "question": "Welchen Einfluss hat das Minuszeichen bei f(x) = -x²?",
@@ -1052,7 +1172,8 @@
     "hint_text": "Ein negatives Vorzeichen kehrt die Öffnungsrichtung um.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=83IbesrxleM"
   },
   {
     "question": "Wie erkennst du an f(x) = 2x² + 3x - 5, dass es eine Parabel ist?",
@@ -1060,7 +1181,8 @@
     "hint_text": "Quadratische Terme (x²) gehören zu Parabeln.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=ZS3ktdMePpQ"
   },
   {
     "question": "Was beschreibt die Exponentialfunktion f(x) = 2ˣ?",
@@ -1068,7 +1190,8 @@
     "hint_text": "Wenn x im Exponenten steht, wächst es sehr schnell.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=juzL4f0Af4k"
   },
   {
     "question": "Was ist der Anfangswert bei f(x) = 3 · 2ˣ?",
@@ -1076,7 +1199,8 @@
     "hint_text": "Der Vorfaktor ist der Anfangswert.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=juzL4f0Af4k"
   },
   {
     "question": "Berechne f(3) für f(x) = 2³.",
@@ -1084,7 +1208,8 @@
     "hint_text": "2 hoch 3 = 8",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=l2CfbIEbDYA"
   },
   {
     "question": "Was passiert mit dem Graphen von f(x) = 2ˣ, wenn er zu f(x) = 2^(x-1) wird?",
@@ -1092,7 +1217,8 @@
     "hint_text": "x - 1 verschiebt den Graphen nach rechts.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=l2CfbIEbDYA"
   },
   {
     "question": "Wie sieht der Graph von f(x) = sin(x) grob aus?",
@@ -1100,7 +1226,8 @@
     "hint_text": "Sinus ist eine periodische Funktion.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=Sdj2RHPW_ao"
   },
   {
     "question": "Was bedeutet Periode bei einer Sinusfunktion?",
@@ -1108,7 +1235,8 @@
     "hint_text": "Denk an eine Welle, die sich wiederholt.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=zI73nJP-AUE"
   },
   {
     "question": "Was ist die Amplitude von f(x) = 3 · sin(x)?",
@@ -1116,7 +1244,8 @@
     "hint_text": "Amplitude = maximale Auslenkung.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=Sdj2RHPW_ao"
   },
   {
     "question": "Zeichne die Punkte (1|2), (2|4), (3|6). Welche Funktion beschreibt diese?",
@@ -1124,7 +1253,8 @@
     "hint_text": "Überlege, wie y sich zu x verhält.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=4aUyOgoYJpc"
   },
   {
     "question": "Wenn ein Graph steiler wird, was passiert mit der Steigung m?",
@@ -1132,7 +1262,8 @@
     "hint_text": "Steile Linien haben größere m-Werte.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=aKvL__VeHS4"
   },
   {
     "question": "Wie sieht eine konstante Funktion im Koordinatensystem aus?",
@@ -1140,7 +1271,8 @@
     "hint_text": "Sie hat die Form f(x) = c.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=TD5OxSLRnm4"
   },
   {
     "question": "Was passiert, wenn du bei f(x) = x² den Wert verdoppelst: f(x) = 2x²?",
@@ -1148,7 +1280,8 @@
     "hint_text": "Ein größerer Vorfaktor macht die Parabel steiler.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=83IbesrxleM"
   },
   {
     "question": "Was beschreibt der Funktionswert f(0)?",
@@ -1156,7 +1289,8 @@
     "hint_text": "Setze x = 0 in die Funktion ein.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=TD5OxSLRnm4"
   },
   {
     "question": "Woran erkennst du an einem Graphen, dass es eine Exponentialfunktion ist?",
@@ -1164,7 +1298,8 @@
     "hint_text": "Typische Kurve: flach → steil.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=juzL4f0Af4k"
   },
   {
     "question": "Wie liest man Werte aus einem Koordinatensystem ab?",
@@ -1172,7 +1307,8 @@
     "hint_text": "x-Achse ist horizontal, y-Achse vertikal.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=4aUyOgoYJpc"
   },
   {
     "question": "Woran erkennst du an einem Graphen, dass es eine Exponentialfunktion ist?",
@@ -1186,7 +1322,8 @@
     "hint_text": "Typische Kurve: flach → steil.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=juzL4f0Af4k"
   },
   {
     "question": "Wie lautet die allgemeine Funktionsgleichung einer linearen Funktion?",
@@ -1200,7 +1337,8 @@
     "hint_text": "Denk an Steigung (m) und y-Achsenabschnitt (b).",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=TKK-25nz-cE"
   },
   {
     "question": "Was ist der Scheitelpunkt der Parabel f(x) = (x − 2)² + 3?",
@@ -1214,7 +1352,8 @@
     "hint_text": "Scheitelpunktform ablesen: (x − a)² + b → (a|b).",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=ZS3ktdMePpQ"
   },
   {
     "question": "Welche Steigung hat die Funktion f(x) = -3x + 5?",
@@ -1228,7 +1367,8 @@
     "hint_text": "Die Steigung steht vor dem x.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=aKvL__VeHS4"
   },
   {
     "question": "Was passiert mit dem Graphen der Funktion f(x) = x², wenn man +4 addiert?",
@@ -1242,7 +1382,8 @@
     "hint_text": "Eine + Zahl außerhalb der Klammer verschiebt in y-Richtung.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=xBZe1j91JEE"
   },
   {
     "question": "Wie sieht der Graph der Sinusfunktion aus?",
@@ -1256,7 +1397,8 @@
     "hint_text": "Sinus: periodisch, geht auf und ab.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=Sdj2RHPW_ao"
   },
   {
     "question": "Welche Nullstellen hat die Funktion f(x) = x² − 9?",
@@ -1270,7 +1412,8 @@
     "hint_text": "Löse x² = 9.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=ukEXR0DKMQg"
   },
   {
     "question": "Was beschreibt die Funktion f(x) = 2 · 3^x?",
@@ -1284,7 +1427,8 @@
     "hint_text": "Wenn x im Exponenten steht: exponentiell.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=juzL4f0Af4k"
   },
   {
     "question": "Wie erkennst du an einer Wertetabelle, dass es sich um eine lineare Funktion handelt?",
@@ -1298,7 +1442,8 @@
     "hint_text": "Gleiche Differenz = lineare Funktion.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=TD5OxSLRnm4"
   },
   {
     "question": "Welche Aussage trifft auf eine quadratische Funktion zu?",
@@ -1312,7 +1457,8 @@
     "hint_text": "x² ergibt eine Parabel.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=ZS3ktdMePpQ"
   },
   {
     "question": "Was passiert mit dem Graphen von f(x) = x², wenn man ihn zu f(x) = 2x² ändert?",
@@ -1326,7 +1472,8 @@
     "hint_text": "Faktor > 1 → steiler.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=83IbesrxleM"
   },
   {
     "question": "Was ist der y-Achsenabschnitt von f(x) = 4x − 2?",
@@ -1340,7 +1487,8 @@
     "hint_text": "y-Achsenabschnitt = Zahl ohne x.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=TD5OxSLRnm4"
   },
   {
     "question": "Was beschreibt die Funktion f(x) = 100 · (1.05)^x?",
@@ -1354,7 +1502,8 @@
     "hint_text": "Prozentuale Steigerung = exponentielles Wachstum.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=juzL4f0Af4k"
   },
   {
     "question": "Wann berührt der Graph einer quadratischen Funktion die x-Achse?",
@@ -1368,7 +1517,8 @@
     "hint_text": "Nur ein Schnittpunkt = doppelte Nullstelle.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=ukEXR0DKMQg"
   },
   {
     "question": "Welche Funktion hat die Gleichung f(x) = sin(x)?",
@@ -1382,7 +1532,8 @@
     "hint_text": "Sinus ist regelmäßig wiederholend.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=Sdj2RHPW_ao"
   },
   {
     "question": "Wie verändert sich der Graph von f(x) = sin(x), wenn man ihn zu f(x) = sin(2x) macht?",
@@ -1396,7 +1547,8 @@
     "hint_text": "Häufigkeit der Wellen steigt.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=zI73nJP-AUE"
   },
   {
     "question": "Was zeigt ein Graph mit konstanter Steigung?",
@@ -1410,7 +1562,8 @@
     "hint_text": "Gleiche Steigung = Gerade.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=TKK-25nz-cE"
   },
   {
     "question": "Wie kannst du die Steigung einer Geraden berechnen?",
@@ -1424,7 +1577,8 @@
     "hint_text": "Unterschied der y-Werte durch x-Werte.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=aKvL__VeHS4"
   },
   {
     "question": "Welche Funktion ist keine lineare Funktion?",
@@ -1438,7 +1592,8 @@
     "hint_text": "x² → quadratisch, nicht linear.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=TKK-25nz-cE"
   },
   {
     "question": "Was passiert mit dem Graphen von f(x) = x², wenn man ihn zu f(x) = (x − 3)² verschiebt?",
@@ -1452,7 +1607,8 @@
     "hint_text": "Achtung: (x − a) → nach rechts.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=a7wlE6D2Pf4"
   },
   {
     "question": "Ordne den Funktionsgleichungen die richtige Steigung zu.",
@@ -1464,7 +1620,8 @@
     "hint_text": "Die Steigung ist der Koeffizient vor dem x.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=aKvL__VeHS4"
   },
   {
     "question": "Ordne den linearen Funktionen die passenden y-Achsenabschnitte zu.",
@@ -1476,7 +1633,8 @@
     "hint_text": "Der y-Achsenabschnitt ist der konstante Term.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=TD5OxSLRnm4"
   },
   {
     "question": "Ordne den Begriffen die passende Beschreibung zu.",
@@ -1488,7 +1646,8 @@
     "hint_text": "Grundbegriffe linearer Funktionen.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=TKK-25nz-cE"
   },
   {
     "question": "Ordne den Punkten ihre Lage im Koordinatensystem zu.",
@@ -1500,7 +1659,8 @@
     "hint_text": "Achte auf die Vorzeichen von x und y.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=4aUyOgoYJpc"
   },
   {
     "question": "Ordne den Beschreibungen den passenden Graphentyp zu.",
@@ -1509,10 +1669,11 @@
       "Verläuft als Kurve, hat ein Minimum": "Quadratische Funktion",
       "Wächst erst langsam, dann sehr schnell": "Exponentialfunktion"
     },
-    "hint_text": "Überlege, wie die jeweiligen Graphen aussehen.",
+    "hint_text": "Woran erkennst du den Typ?",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=juzL4f0Af4k"
   },
   {
     "question": "Ordne den Situationen die richtige Funktionsart zu.",
@@ -1524,7 +1685,8 @@
     "hint_text": "Erkenne typische Anwendungsbeispiele.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=juzL4f0Af4k"
   },
   {
     "question": "Ordne den Termen die passenden Funktionswerte bei x = 1 zu.",
@@ -1536,7 +1698,8 @@
     "hint_text": "Setze x = 1 in die Terme ein.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=4aUyOgoYJpc"
   },
   {
     "question": "Ordne den Begriffen die richtige Formel zu.",
@@ -1548,7 +1711,8 @@
     "hint_text": "Struktur der Funktionsarten merken.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=TKK-25nz-cE"
   },
   {
     "question": "Ordne den x-Werten die richtigen Punkte auf dem Graphen f(x) = 2x + 1 zu.",
@@ -1560,7 +1724,8 @@
     "hint_text": "Berechne f(x) für jeden x-Wert.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=4aUyOgoYJpc"
   },
   {
     "question": "Ordne den Aussagen die korrekte Veränderung zu.",
@@ -1572,7 +1737,8 @@
     "hint_text": "Veränderungen am Funktionsterm erkennen.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=xBZe1j91JEE"
   },
   {
     "question": "Ordne den Graphen die richtige lineare Funktionsgleichung zu.",
@@ -1584,7 +1750,8 @@
     "hint_text": "Achte auf Steigung und y-Achsenabschnitt.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=TD5OxSLRnm4"
   },
   {
     "question": "Ordne den Parabeln die passende Scheitelpunktform zu.",
@@ -1596,7 +1763,8 @@
     "hint_text": "Nutze den Scheitelpunkt zur Orientierung.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=ZS3ktdMePpQ"
   },
   {
     "question": "Ordne den Graphen die passende Funktionsart zu.",
@@ -1608,7 +1776,8 @@
     "hint_text": "Woran erkennst du den Typ?",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=juzL4f0Af4k"
   },
   {
     "question": "Ordne die Funktionen ihren Nullstellen zu – jeder Graph stellt eine Funktion dar.",
@@ -1620,7 +1789,8 @@
     "hint_text": "Setze f(x) = 0 und lies die Nullstellen ab.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=ukEXR0DKMQg"
   },
   {
     "question": "Ordne die Funktionen ihren Steigungen zu – jeder Graph stellt eine lineare Funktion dar.",
@@ -1632,7 +1802,8 @@
     "hint_text": "Die Steigung findest du im Term vor dem x.",
     "category": "Funktionen & Algebra",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=aKvL__VeHS4"
   },
   {
     "question": "Gib die allgemeine Form einer quadratischen Funktion an.",
@@ -1640,7 +1811,8 @@
     "hint_text": "Das x² kennzeichnet die Parabel.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=ZS3ktdMePpQ"
   },
   {
     "question": "Berechne den Scheitelpunkt von f(x) = x² - 4x + 3.",
@@ -1648,7 +1820,8 @@
     "hint_text": "Scheitelpunktform oder -b/2a anwenden.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=0DXjdwpJ3S0"
   },
   {
     "question": "Bestimme die Nullstellen von f(x) = x² - 9.",
@@ -1656,7 +1829,8 @@
     "hint_text": "Setze f(x) = 0 und löse mit der Mitternachtsformel oder faktorisieren.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=ukEXR0DKMQg"
   },
   {
     "question": "Wie verändert sich f(x) = x² zu f(x) = (x + 2)²?",
@@ -1664,7 +1838,8 @@
     "hint_text": "Achte auf das Vorzeichen in der Klammer.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=a7wlE6D2Pf4"
   },
   {
     "question": "Was ist die Bedeutung des Faktors a in f(x) = a · x²?",
@@ -1672,7 +1847,8 @@
     "hint_text": "a > 1: schmaler, 0 < a < 1: breiter.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=83IbesrxleM"
   },
   {
     "question": "Wie lautet die Funktionsgleichung einer Parabel mit Scheitelpunkt S(1|2) und a = 3?",
@@ -1680,7 +1856,8 @@
     "hint_text": "Verwende die Scheitelpunktform: f(x) = a(x - d)² + e.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=ZS3ktdMePpQ"
   },
   {
     "question": "Was ist die Ableitung von f(x) = 3x²?",
@@ -1688,7 +1865,8 @@
     "hint_text": "Potenzregel anwenden: n·xⁿ⁻¹.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=XLipzL1o1FQ"
   },
   {
     "question": "Wie lautet die Wachstumsfunktion für einen Anfangswert 100 und Wachstumsrate 5%?",
@@ -1696,7 +1874,8 @@
     "hint_text": "Exponentialform: f(x) = Startwert · (1 + p)^x.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=juzL4f0Af4k"
   },
   {
     "question": "Nach wie vielen Jahren verdoppelt sich ein Betrag bei 10% Zinsen pro Jahr?",
@@ -1704,7 +1883,8 @@
     "hint_text": "Regel: 70 durch Zinssatz = Verdopplungszeit.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=juzL4f0Af4k"
   },
   {
     "question": "Was bedeutet eine negative Steigung in einem Funktionsgraphen?",
@@ -1712,7 +1892,8 @@
     "hint_text": "Je größer der negative Wert, desto steiler fällt er.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=aKvL__VeHS4"
   },
   {
     "question": "Welche Bedeutung hat f(0) in einer quadratischen Funktion?",
@@ -1720,7 +1901,8 @@
     "hint_text": "Einsetzen von x = 0 gibt f(0).",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=xBZe1j91JEE"
   },
   {
     "question": "Wie lautet die Formel zur Berechnung der Nullstellen bei f(x) = ax² + bx + c?",
@@ -1728,7 +1910,8 @@
     "hint_text": "Das ist die Mitternachtsformel.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=ukEXR0DKMQg"
   },
   {
     "question": "Wie verändert sich der Graph bei f(x) = x² im Vergleich zu f(x) = -x²?",
@@ -1736,7 +1919,8 @@
     "hint_text": "Negatives Vorzeichen = nach unten geöffnet.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=83IbesrxleM"
   },
   {
     "question": "Wie viele Nullstellen kann eine quadratische Funktion haben?",
@@ -1744,7 +1928,8 @@
     "hint_text": "Kommt auf die Diskriminante an.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=ukEXR0DKMQg"
   },
   {
     "question": "Was ist die Bedeutung der Diskriminante (b² - 4ac)?",
@@ -1752,7 +1937,8 @@
     "hint_text": ">0: 2, =0: 1, <0: keine Nullstelle.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=ukEXR0DKMQg"
   },
   {
     "question": "Was ist eine lineare Gleichung in zwei Variablen?",
@@ -1760,7 +1946,8 @@
     "hint_text": "Sie beschreibt eine Gerade im Koordinatensystem.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=TKK-25nz-cE"
   },
   {
     "question": "Welche Funktion beschreibt exponentiellen Zerfall?",
@@ -1768,7 +1955,8 @@
     "hint_text": "Wenn b kleiner als 1 ist, sinkt der Wert.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=juzL4f0Af4k"
   },
   {
     "question": "Wie viele Lösungen hat f(x) = (x - 1)²?",
@@ -1776,7 +1964,8 @@
     "hint_text": "Quadratische Ausdrücke mit (x - a)².",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=ZS3ktdMePpQ"
   },
   {
     "question": "Was beschreibt die Funktion f(x) = sin(x)?",
@@ -1784,7 +1973,8 @@
     "hint_text": "Typisch für Schwingungen und Wellen.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=Sdj2RHPW_ao"
   },
   {
     "question": "Was passiert bei f(x) = sin(2x)?",
@@ -1792,7 +1982,8 @@
     "hint_text": "Faktor vor x beeinflusst Frequenz.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=zI73nJP-AUE"
   },
   {
     "question": "Welche Transformation liegt vor bei f(x) = sin(x) → f(x) = 2 · sin(x)?",
@@ -1800,7 +1991,8 @@
     "hint_text": "Faktor vor sin(x) = Amplitude.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=Sdj2RHPW_ao"
   },
   {
     "question": "Wie lautet die allgemeine Form einer Exponentialfunktion?",
@@ -1808,7 +2000,8 @@
     "hint_text": "a = Anfangswert, b = Wachstumsfaktor.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=juzL4f0Af4k"
   },
   {
     "question": "Welche Funktion passt zu einer gleichmäßig beschleunigten Bewegung?",
@@ -1816,7 +2009,8 @@
     "hint_text": "s = ½ · a · t² ist der klassische Zusammenhang.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=ZS3ktdMePpQ"
   },
   {
     "question": "Wann ist eine Funktion achsensymmetrisch zur y-Achse?",
@@ -1824,7 +2018,8 @@
     "hint_text": "Typisch für Parabeln mit x².",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=ZS3ktdMePpQ"
   },
   {
     "question": "Was beschreibt der y-Wert in einem Funktionsgraphen?",
@@ -1832,7 +2027,8 @@
     "hint_text": "f(x) gibt den y-Wert für x an.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=4aUyOgoYJpc"
   },
   {
     "question": "Welche Aussage beschreibt den Einfluss des Faktors b in f(x) = a·b^x?",
@@ -1846,7 +2042,8 @@
     "hint_text": "b > 1 = Wachstum, 0 < b < 1 = Zerfall.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=juzL4f0Af4k"
   },
   {
     "question": "Was ist die erste Ableitung von f(x) = x² + 4x?",
@@ -1860,7 +2057,8 @@
     "hint_text": "Ableitung von x² ist 2x, von 4x ist 4.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=XLipzL1o1FQ"
   },
   {
     "question": "Wie viele Lösungen hat die Gleichung f(x) = x² + 1 = 0?",
@@ -1874,7 +2072,8 @@
     "hint_text": "x² + 1 = 0 hat keine Lösung in ℝ.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=ukEXR0DKMQg"
   },
   {
     "question": "Was zeigt die Nullstelle einer Funktion?",
@@ -1888,7 +2087,8 @@
     "hint_text": "Nullstelle → f(x) = 0.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=ukEXR0DKMQg"
   },
   {
     "question": "Wie lautet die Umkehrfunktion von f(x) = 2x + 5?",
@@ -1902,7 +2102,8 @@
     "hint_text": "Nach x auflösen und vertauschen.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=X8QDtWIWu6Q"
   },
   {
     "question": "Wann hat eine Parabel keinen Schnittpunkt mit der x-Achse?",
@@ -1916,7 +2117,8 @@
     "hint_text": "Diskriminante < 0 → keine Nullstellen.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=ukEXR0DKMQg"
   },
   {
     "question": "Welche der folgenden Funktionen ist exponentiell?",
@@ -1930,7 +2132,8 @@
     "hint_text": "Exponentiell → x im Exponenten.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=juzL4f0Af4k"
   },
   {
     "question": "Welche Eigenschaft hat die Funktion f(x) = x² bezüglich Symmetrie?",
@@ -1944,7 +2147,8 @@
     "hint_text": "f(x) = f(–x)",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=ZS3ktdMePpQ"
   },
   {
     "question": "Was passiert bei der Funktion f(x) = x², wenn man den Term zu f(x) = x² − 5 ändert?",
@@ -1958,7 +2162,8 @@
     "hint_text": "−5 hinter dem x² = y-Verschiebung.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=xBZe1j91JEE"
   },
   {
     "question": "Welcher Ausdruck ist identisch mit (x + 3)(x − 3)?",
@@ -1972,7 +2177,8 @@
     "hint_text": "Binomischer Unterschied: a² − b²",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=ukEXR0DKMQg"
   },
   {
     "question": "Was passiert mit f(x) = sin(x), wenn man zu f(x) = sin(x) + 2 übergeht?",
@@ -1986,7 +2192,8 @@
     "hint_text": "+2 bedeutet Verschiebung in y-Richtung.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=zI73nJP-AUE"
   },
   {
     "question": "Wie lautet die Ableitung von f(x) = e^x?",
@@ -2000,7 +2207,8 @@
     "hint_text": "e^x bleibt bei der Ableitung gleich.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=9Dj8deA2XLw"
   },
   {
     "question": "Welche Form hat der Graph der Funktion f(x) = 1/x?",
@@ -2014,7 +2222,8 @@
     "hint_text": "f(x) = 1/x bildet eine typische Hyperbel.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=-VXN6TPATA0"
   },
   {
     "question": "Wie lautet die Lösung der Gleichung x² = 0?",
@@ -2028,7 +2237,8 @@
     "hint_text": "Nur eine Lösung: x = 0",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=ukEXR0DKMQg"
   },
   {
     "question": "Was beschreibt die Amplitude in einer Sinusfunktion?",
@@ -2042,7 +2252,8 @@
     "hint_text": "Amplitude = Höhe der Wellenberge.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=Sdj2RHPW_ao"
   },
   {
     "question": "Welche der folgenden Funktionen ist achsensymmetrisch?",
@@ -2056,7 +2267,8 @@
     "hint_text": "f(x) = f(−x) bei x²-Term.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=ZS3ktdMePpQ"
   },
   {
     "question": "Wie viele Nullstellen hat die Funktion f(x) = (x − 4)(x + 1)?",
@@ -2070,7 +2282,8 @@
     "hint_text": "Setze jeden Faktor gleich 0.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=ukEXR0DKMQg"
   },
   {
     "question": "Was passiert bei einer linearen Funktion f(x) = mx + b, wenn m negativ ist?",
@@ -2084,7 +2297,8 @@
     "hint_text": "m < 0 → fallende Gerade.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=aKvL__VeHS4"
   },
   {
     "question": "Welche Einheit hat die Ableitung einer Weg-Zeit-Funktion s(t)?",
@@ -2098,7 +2312,8 @@
     "hint_text": "Ableitung von Weg nach Zeit = Geschwindigkeit.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=XLipzL1o1FQ"
   },
   {
     "question": "Ordne den Funktionsgleichungen die passende Art der Funktion zu.",
@@ -2110,7 +2325,8 @@
     "hint_text": "Achte auf die Potenzen bzw. die Struktur.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=juzL4f0Af4k"
   },
   {
     "question": "Ordne den Funktionsgleichungen die richtige Steigung zu.",
@@ -2122,7 +2338,8 @@
     "hint_text": "Die Steigung steht vor dem x.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=aKvL__VeHS4"
   },
   {
     "question": "Ordne den Funktionen die richtige Scheitelpunktform zu.",
@@ -2134,7 +2351,8 @@
     "hint_text": "Quadratische Ergänzung oder bekannte Binome nutzen.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=0DXjdwpJ3S0"
   },
   {
     "question": "Ordne den Funktionsgraphen ihre Schnittpunkte mit der y-Achse zu.",
@@ -2146,7 +2364,8 @@
     "hint_text": "Der y-Achsenabschnitt ist der Wert ohne x.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=TD5OxSLRnm4"
   },
   {
     "question": "Ordne den Parabeln ihren Öffnungsverlauf zu.",
@@ -2158,7 +2377,8 @@
     "hint_text": "Der Faktor vor x² beeinflusst Öffnungsrichtung und Form.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=sYfZbyrGXMY"
   },
   {
     "question": "Ordne den Funktionen ihre Anzahl an Nullstellen zu.",
@@ -2170,7 +2390,8 @@
     "hint_text": "Setze f(x) = 0 und prüfe Lösbarkeit.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=MA3Gma66Jvw"
   },
   {
     "question": "Ordne den Funktionen ihre grafische Darstellung zu.",
@@ -2182,7 +2403,8 @@
     "hint_text": "Überlege dir das typische Aussehen des Graphen.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=w4uGBMebiTg"
   },
   {
     "question": "Ordne den Begriffen die passenden Beschreibungen zu.",
@@ -2194,7 +2416,8 @@
     "hint_text": "Begriffe aus der Funktionsanalyse.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=J6pEEA7B9-g"
   },
   {
     "question": "Ordne den Funktionsgleichungen die passende Veränderung zu.",
@@ -2206,7 +2429,8 @@
     "hint_text": "Achte auf Vorzeichen in Klammern und am Ende.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=IBDJxFxgPOk"
   },
   {
     "question": "Ordne den Exponentialfunktionen ihre Interpretation zu.",
@@ -2218,7 +2442,8 @@
     "hint_text": "b > 1: Wachstum, 0 < b < 1: Zerfall.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=JCmUQpLD_n8"
   },
   {
     "question": "Ordne den Graphen die passende quadratische Funktion in Scheitelpunktform zu.",
@@ -2230,7 +2455,8 @@
     "hint_text": "Achte auf Scheitelpunkt und Öffnungsrichtung.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=J6pEEA7B9-g"
   },
   {
     "question": "Ordne den Graphen die passende Exponentialfunktion zu.",
@@ -2242,7 +2468,8 @@
     "hint_text": "Achte auf Wachstumsverhalten und y-Achsenabschnitt.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=JCmUQpLD_n8"
   },
   {
     "question": "Ordne den Graphen die passende Sinusfunktion zu.",
@@ -2254,7 +2481,8 @@
     "hint_text": "Schau dir Amplitude und Periodenlänge an.",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=p5kSdUmwkkM"
   },
   {
     "question": "Ordne den Graphen der passenden linearen Funktion mit Parameterveränderung zu.",
@@ -2266,7 +2494,8 @@
     "hint_text": "Wie verändert sich der y-Achsenabschnitt?",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=TKK-25nz-cE"
   },
   {
     "question": "Ordne den Graphen der passenden quadratischen Funktion mit Parameterveränderung zu.",
@@ -2278,15 +2507,18 @@
     "hint_text": "Wie verschiebt sich der Graph nach oben oder unten?",
     "category": "Funktionen & Algebra",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=w4uGBMebiTg"
   },
+[
   {
     "question": "Was bedeutet es, wenn zwei Figuren ähnlich sind?",
     "answer": "Sie haben gleiche Winkel und ihre Seitenverhältnisse sind gleich.",
     "hint_text": "Ähnliche Figuren sind vergrößerte oder verkleinerte Versionen.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=ohH0V444ugI"
   },
   {
     "question": "Was versteht man unter zentrischer Streckung?",
@@ -2294,7 +2526,8 @@
     "hint_text": "Der Mittelpunkt bleibt fix, alle Punkte bewegen sich radial.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=Yxl8HMlcN4w"
   },
   {
     "question": "Wie berechnet man die Strecke c im rechtwinkligen Dreieck?",
@@ -2302,7 +2535,8 @@
     "hint_text": "Der Satz gilt nur bei rechtwinkligen Dreiecken.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=CbFf8g_Luw0"
   },
   {
     "question": "Welche Seite ist die Hypotenuse in einem rechtwinkligen Dreieck?",
@@ -2310,7 +2544,8 @@
     "hint_text": "Die längste Seite im rechtwinkligen Dreieck.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=CbFf8g_Luw0"
   },
   {
     "question": "Wie lautet die Umkehrung des Satzes des Pythagoras?",
@@ -2318,7 +2553,8 @@
     "hint_text": "Nur so lässt sich ein rechter Winkel beweisen.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=CbFf8g_Luw0"
   },
   {
     "question": "Was bedeutet sin(α) im rechtwinkligen Dreieck?",
@@ -2326,7 +2562,8 @@
     "hint_text": "Denk an die Definition der trigonometrischen Funktionen.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=7yFDI9b-g4Q"
   },
   {
     "question": "Wie lautet der Umfang eines Rechtecks mit a = 5 cm und b = 3 cm?",
@@ -2334,7 +2571,8 @@
     "hint_text": "U = 2·(a + b)",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=hQvfGDks9nM"
   },
   {
     "question": "Wie berechnet man die Fläche eines Dreiecks?",
@@ -2342,7 +2580,8 @@
     "hint_text": "Die Grundseite steht senkrecht zur Höhe.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=p0e1Suf9vwA"
   },
   {
     "question": "Was ist ein Schrägbild?",
@@ -2350,7 +2589,8 @@
     "hint_text": "Wird oft in Technischem Zeichnen verwendet.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=Wv6oWJ-5WvA"
   },
   {
     "question": "Was ist ein Körpernetz?",
@@ -2358,7 +2598,8 @@
     "hint_text": "Stell dir vor, du faltest den Körper auseinander.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=8_F1I7xZXpM"
   },
   {
     "question": "Was beschreibt die Maßstabszahl 1:100?",
@@ -2366,7 +2607,8 @@
     "hint_text": "Denke an Karten oder Architekturzeichnungen.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=Hpd3204qUPk"
   },
   {
     "question": "Berechne das Volumen eines Quaders mit a = 3 cm, b = 4 cm, c = 5 cm.",
@@ -2374,7 +2616,8 @@
     "hint_text": "V = a · b · c",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=J8bE9h2yRc8"
   },
   {
     "question": "Wie lautet die Oberfläche eines Würfels mit Kantenlänge 2 cm?",
@@ -2382,7 +2625,8 @@
     "hint_text": "Ein Würfel hat 6 gleich große Quadrate.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=E4J9qkN2V4E"
   },
   {
     "question": "Wie viele Flächen hat ein Zylinder?",
@@ -2390,7 +2634,8 @@
     "hint_text": "Zwei Kreise und eine Mantelfläche.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=Fq2v3RNfh1U"
   },
   {
     "question": "Was ist ein rechtwinkliges Dreieck?",
@@ -2398,7 +2643,8 @@
     "hint_text": "Nur ein Winkel darf 90° sein.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=CbFf8g_Luw0"
   },
   {
     "question": "Wie erkennt man zentrische Streckung im Koordinatensystem?",
@@ -2406,7 +2652,8 @@
     "hint_text": "Verbindungslinien treffen sich im Streckzentrum.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=Yxl8HMlcN4w"
   },
   {
     "question": "Wie bestimmt man die Höhe eines gleichschenkligen Dreiecks?",
@@ -2414,7 +2661,8 @@
     "hint_text": "Sie halbiert die Basis.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=p0e1Suf9vwA"
   },
   {
     "question": "Wie lautet die Flächenformel eines Parallelogramms?",
@@ -2422,7 +2670,8 @@
     "hint_text": "Ähnlich wie beim Rechteck, aber mit schrägen Seiten.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=E3u4w6H7xJw"
   },
   {
     "question": "Was ist ein regelmäßiges Vieleck?",
@@ -2430,7 +2679,8 @@
     "hint_text": "Zum Beispiel ein Quadrat oder regelmäßiges Sechseck.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=hQvfGDks9nM"
   },
   {
     "question": "Wie groß ist der Innenwinkel in einem gleichseitigen Dreieck?",
@@ -2438,7 +2688,8 @@
     "hint_text": "Alle drei Winkel sind gleich groß.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=p0e1Suf9vwA"
   },
   {
     "question": "Wie wird der Satz des Pythagoras grafisch dargestellt?",
@@ -2446,7 +2697,8 @@
     "hint_text": "Meist mit farbigen Quadraten veranschaulicht.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=CbFf8g_Luw0"
   },
   {
     "question": "Was ist ein Prisma?",
@@ -2454,7 +2706,8 @@
     "hint_text": "Die Seitenflächen sind Parallelogramme.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=I0dFA1djv2E"
   },
   {
     "question": "Wie berechnet man das Volumen eines Zylinders?",
@@ -2462,7 +2715,8 @@
     "hint_text": "Grundfläche mal Höhe.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=Fq2v3RNfh1U"
   },
   {
     "question": "Was ist die Diagonale eines Rechtecks mit a = 3 cm, b = 4 cm?",
@@ -2470,7 +2724,8 @@
     "hint_text": "Nutze den Satz des Pythagoras: √(3² + 4²) = √25 = 5",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=CbFf8g_Luw0"
   },
   {
     "question": "Wie berechnet man den Umfang eines Dreiecks?",
@@ -2478,7 +2733,8 @@
     "hint_text": "Alle Seitenlängen werden addiert.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=hQvfGDks9nM"
   },
   {
     "question": "Wann sind zwei Dreiecke ähnlich?",
@@ -2492,7 +2748,8 @@
     "hint_text": "Winkel gleich, Seiten im gleichen Verhältnis.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=ohH0V444ugI"
   },
   {
     "question": "Wie erkennt man eine zentrische Streckung im Koordinatensystem?",
@@ -2506,7 +2763,8 @@
     "hint_text": "Verbindungslinien schneiden sich im Zentrum.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=Yxl8HMlcN4w"
   },
   {
     "question": "Welche Aussage beschreibt den Satz des Pythagoras?",
@@ -2520,7 +2778,8 @@
     "hint_text": "Nur in rechtwinkligen Dreiecken gültig.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=CbFf8g_Luw0"
   },
   {
     "question": "Wie berechnet man sin(α) im rechtwinkligen Dreieck?",
@@ -2534,21 +2793,23 @@
     "hint_text": "SOH – Sinus = Opposite / Hypotenuse.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=7yFDI9b-g4Q"
   },
   {
     "question": "Was benötigt man zur Konstruktion eines Dreiecks?",
-    "answer": "Drei Längen oder Winkel, z. B. SSS, SWS oder WSW.",
+    "answer": "Drei Längen oder Winkel, z. B. SSS, SWS oder WSW.",
     "options": [
       "Nur eine Seite",
       "Zwei Winkel",
-      "Drei Längen oder Winkel, z. B. SSS, SWS oder WSW.",
+      "Drei Längen oder Winkel, z. B. SSS, SWS oder WSW.",
       "Eine Fläche"
     ],
     "hint_text": "Mindestens 3 Angaben notwendig.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=Hpd3204qUPk"
   },
   {
     "question": "Wie berechnet man das Volumen eines Zylinders?",
@@ -2562,7 +2823,8 @@
     "hint_text": "Grundfläche mal Höhe.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=Fq2v3RNfh1U"
   },
   {
     "question": "Was ist ein Maßstab von 1:50?",
@@ -2576,7 +2838,8 @@
     "hint_text": "Zeichnung : Realität",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=Hpd3204qUPk"
   },
   {
     "question": "Wie lautet die Oberfläche eines Kegels mit Radius r und Höhe h?",
@@ -2590,7 +2853,8 @@
     "hint_text": "Grundfläche + Mantelfläche (s = Seitenlänge).",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=FjZl7l3B9cQ"
   },
   {
     "question": "Wie groß ist der Flächeninhalt eines Kreises mit r = 3 cm?",
@@ -2604,7 +2868,8 @@
     "hint_text": "A = π · r²",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=88lJtqIAhUQ"
   },
   {
     "question": "Wie viele Kanten hat ein Quader?",
@@ -2618,7 +2883,8 @@
     "hint_text": "4 pro Fläche × 3 Richtungen.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=J8bE9h2yRc8"
   },
   {
     "question": "Wie konstruiert man ein gleichseitiges Dreieck?",
@@ -2632,7 +2898,8 @@
     "hint_text": "Alle Seiten gleich lang – Kreisbogen hilft.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=L2nH9F1h2x0"
   },
   {
     "question": "Was ist ein Körpernetz eines Kegels?",
@@ -2646,7 +2913,8 @@
     "hint_text": "Grundfläche + Mantelfläche = Kreisausschnitt.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=Ih9iYQvR0N8"
   },
   {
     "question": "Welche Trigonometrische Funktion passt zu tan(α)?",
@@ -2660,7 +2928,8 @@
     "hint_text": "TOA – Tangens = Opposite / Adjacent",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=7yFDI9b-g4Q"
   },
   {
     "question": "Welche Eigenschaft hat ein Schrägbild?",
@@ -2674,7 +2943,8 @@
     "hint_text": "Vorderfläche: exakt, Tiefe: verkürzt.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=Wv6oWJ-5WvA"
   },
   {
     "question": "Wie konstruiert man einen Kreis um ein Dreieck?",
@@ -2688,7 +2958,8 @@
     "hint_text": "Schnittpunkt = Mittelpunkt des Umkreises.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=7tC5_5CynGg"
   },
   {
     "question": "Wie lautet die Volumenformel einer Kugel?",
@@ -2702,7 +2973,8 @@
     "hint_text": "Dreidimensionale Ausdehnung – r³.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=u3SgQ2n1xv8"
   },
   {
     "question": "Was passiert bei einer zentrischen Streckung mit Streckungsfaktor k = 0,5?",
@@ -2716,7 +2988,8 @@
     "hint_text": "k < 1 → Verkleinerung.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=Yxl8HMlcN4w"
   },
   {
     "question": "Wie berechnet man die Oberfläche eines zusammengesetzten Körpers?",
@@ -2730,7 +3003,8 @@
     "hint_text": "Jede Fläche zählt – auch Boden und Deckel!",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=E4J9qkN2V4E"
   },
   {
     "question": "Woran erkennt man ein Körpernetz eines Quaders?",
@@ -2744,7 +3018,8 @@
     "hint_text": "Ein Quader = 6 Flächen → Rechtecke.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=8_F1I7xZXpM"
   },
   {
     "question": "Ordne die Begriffe den Definitionen zu.",
@@ -2756,7 +3031,8 @@
     "hint_text": "Nutze dein Wissen über das rechtwinklige Dreieck.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=7yFDI9b-g4Q"
   },
   {
     "question": "Ordne die Formeln den Flächeninhalten zu.",
@@ -2768,7 +3044,8 @@
     "hint_text": "Denk an die typische Schreibweise mit Höhe und Radius.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=88lJtqIAhUQ"
   },
   {
     "question": "Ordne die Körper ihren Netzen zu.",
@@ -2780,7 +3057,8 @@
     "hint_text": "Stell dir vor, du klappst den Körper auseinander.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=8_F1I7xZXpM"
   },
   {
     "question": "Ordne die Volumenformeln den Körpern zu.",
@@ -2792,7 +3070,8 @@
     "hint_text": "Grundfläche mal Höhe – bei manchen geteilt durch 3.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=J8bE9h2yRc8"
   },
   {
     "question": "Ordne die Eigenschaften den Figuren zu.",
@@ -2804,7 +3083,8 @@
     "hint_text": "Welche Eigenschaften definieren die Figur eindeutig?",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=E3u4w6H7xJw"
   },
   {
     "question": "Ordne die Konstruktionselemente der passenden Figur zu.",
@@ -2816,7 +3096,8 @@
     "hint_text": "Denk an typische Konstruktionsschritte.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=L2nH9F1h2x0"
   },
   {
     "question": "Ordne die Maßstabszahlen den richtigen Bedeutungen zu.",
@@ -2828,7 +3109,8 @@
     "hint_text": "Maßstab: Zeichnung : Wirklichkeit",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=Hpd3204qUPk"
   },
   {
     "question": "Ordne die Dreieckarten ihren Eigenschaften zu.",
@@ -2840,7 +3122,8 @@
     "hint_text": "Geometrische Merkmale helfen beim Zuordnen.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=p0e1Suf9vwA"
   },
   {
     "question": "Ordne die Winkelbezeichnungen ihrer Lage im Dreieck zu.",
@@ -2852,7 +3135,8 @@
     "hint_text": "Stell dir ein gezeichnetes Dreieck vor.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=Hpd3204qUPk"
   },
   {
     "question": "Ordne die Einheiten den passenden Größen zu.",
@@ -2864,7 +3148,8 @@
     "hint_text": "Achte auf das Hochstellen der Zahlen bei den Einheiten.",
     "category": "Geometrie & Raum",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=hQvfGDks9nM"
   },
   {
     "question": "Wann sind zwei Dreiecke ähnlich?",
@@ -2872,7 +3157,8 @@
     "hint_text": "Ähnliche Dreiecke haben gleiche Winkel und das Seitenverhältnis ist konstant.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=ohH0V444ugI"
   },
   {
     "question": "Was bewirkt eine zentrische Streckung mit dem Streckungsfaktor k > 1?",
@@ -2880,7 +3166,8 @@
     "hint_text": "Ein Faktor größer als 1 bedeutet Vergrößerung.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=Yxl8HMlcN4w"
   },
   {
     "question": "Formuliere den Satz des Pythagoras.",
@@ -2888,7 +3175,8 @@
     "hint_text": "Er gilt nur bei rechtwinkligen Dreiecken.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=CbFf8g_Luw0"
   },
   {
     "question": "Wie berechnest du sin(α) in einem rechtwinkligen Dreieck?",
@@ -2896,7 +3184,8 @@
     "hint_text": "Merke dir: Soh-Cah-Toa.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=7yFDI9b-g4Q"
   },
   {
     "question": "Wie konstruiert man ein gleichseitiges Dreieck?",
@@ -2904,7 +3193,8 @@
     "hint_text": "Alle Seiten gleich lang.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=L2nH9F1h2x0"
   },
   {
     "question": "Wie berechnest du das Volumen eines Zylinders?",
@@ -2912,7 +3202,8 @@
     "hint_text": "Grundfläche mal Höhe.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=Fq2v3RNfh1U"
   },
   {
     "question": "Wie berechnest du die Oberfläche eines Kegels?",
@@ -2920,7 +3211,8 @@
     "hint_text": "s ist die Mantellinie.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=FjZl7l3B9cQ"
   },
   {
     "question": "Wie lautet die Volumenformel einer Kugel?",
@@ -2928,7 +3220,8 @@
     "hint_text": "Nur der Radius wird gebraucht.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=u3SgQ2n1xv8"
   },
   {
     "question": "Was ist ein Körpernetz?",
@@ -2936,7 +3229,8 @@
     "hint_text": "Man kann den Körper aus dem Netz basteln.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=8_F1I7xZXpM"
   },
   {
     "question": "Was ist ein Schrägbild?",
@@ -2944,7 +3238,8 @@
     "hint_text": "Länge und Breite stimmen, Tiefe wird verkürzt dargestellt.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=Wv6oWJ-5WvA"
   },
   {
     "question": "Wie berechnet man cos(α)?",
@@ -2952,7 +3247,8 @@
     "hint_text": "Cah im Merksatz.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=7yFDI9b-g4Q"
   },
   {
     "question": "Was beschreibt tan(α)?",
@@ -2960,7 +3256,8 @@
     "hint_text": "Toa im Merksatz.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=7yFDI9b-g4Q"
   },
   {
     "question": "Wie verändert sich das Volumen bei einer zentrischen Streckung mit k = 2?",
@@ -2968,7 +3265,8 @@
     "hint_text": "Bei Volumen gilt: Streckungsfaktor hoch 3.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=0eTX3C4k-Yo"
   },
   {
     "question": "Was ist bei einem Maßstab 1:100 gegeben?",
@@ -2976,7 +3274,8 @@
     "hint_text": "Der Maßstab zeigt das Verhältnis Zeichnung zu Realität.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=Hpd3204qUPk"
   },
   {
     "question": "Welche Eigenschaften hat ein Rhombus?",
@@ -2984,7 +3283,8 @@
     "hint_text": "Rhombus ist ein Spezialfall des Parallelogramms.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=E3u4w6H7xJw"
   },
   {
     "question": "Wie erkennt man eine zentrische Streckung im Koordinatensystem?",
@@ -2992,7 +3292,8 @@
     "hint_text": "Punkte auf einer Linie mit dem Streckungszentrum.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=Yxl8HMlcN4w"
   },
   {
     "question": "Welche Fläche hat ein Kreis mit r = 5 cm?",
@@ -3000,7 +3301,8 @@
     "hint_text": "A = π · r², mit π ≈ 3,14",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=88lJtqIAhUQ"
   },
   {
     "question": "Was beschreibt eine Mittelsenkrechte in einem Dreieck?",
@@ -3008,7 +3310,8 @@
     "hint_text": "Geometrische Konstruktion zum Finden des Umkreismittelpunkts.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=7tC5_5CynGg"
   },
   {
     "question": "Wie berechnet man die Mantelfläche eines Zylinders?",
@@ -3016,7 +3319,8 @@
     "hint_text": "Kreisumfang mal Höhe.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=Fq2v3RNfh1U"
   },
   {
     "question": "Wie konstruiert man ein rechtwinkliges Dreieck mit Hypotenuse 6 cm?",
@@ -3024,7 +3328,8 @@
     "hint_text": "Nutze den Thaleskreis.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=p0e1Suf9vwA"
   },
   {
     "question": "Wie verändert sich die Oberfläche bei einer zentrischen Streckung mit k = 3?",
@@ -3032,7 +3337,8 @@
     "hint_text": "Für Flächen gilt der Streckungsfaktor zum Quadrat.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=0eTX3C4k-Yo"
   },
   {
     "question": "Wie kann man ein Schrägbild zeichnerisch darstellen?",
@@ -3040,7 +3346,8 @@
     "hint_text": "Tiefe verkürzen für realistischen Eindruck.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=Wv6oWJ-5WvA"
   },
   {
     "question": "Was ist ein Dodekaeder?",
@@ -3048,7 +3355,8 @@
     "hint_text": "Ein regulärer platonischer Körper.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=F2fO3Y2l3gA"
   },
   {
     "question": "Wie berechnest du das Volumen eines zusammengesetzten Körpers?",
@@ -3056,7 +3364,8 @@
     "hint_text": "Körper in bekannte Formen zerlegen.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=J8bE9h2yRc8"
   },
   {
     "question": "Was ist die Höhe in einem Dreieck?",
@@ -3064,7 +3373,8 @@
     "hint_text": "Sie steht immer im rechten Winkel zur Grundlinie.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=p0e1Suf9vwA"
   },
   {
     "question": "Was passiert bei einer zentrischen Streckung mit k = 0,5?",
@@ -3078,7 +3388,8 @@
     "hint_text": "k < 1 bedeutet Verkleinerung.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=Yxl8HMlcN4w"
   },
   {
     "question": "Wie berechnet man das Volumen einer Kugel mit Radius r?",
@@ -3092,7 +3403,8 @@
     "hint_text": "Nur der Radius wird benötigt.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=u3SgQ2n1xv8"
   },
   {
     "question": "Wie lautet die Mantelfläche eines Zylinders?",
@@ -3106,7 +3418,8 @@
     "hint_text": "Kreisumfang mal Höhe.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=Fq2v3RNfh1U"
   },
   {
     "question": "Wie verändert sich die Fläche bei einer zentrischen Streckung mit k = 2?",
@@ -3120,7 +3433,8 @@
     "hint_text": "Fläche verändert sich mit k².",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=0eTX3C4k-Yo"
   },
   {
     "question": "Was beschreibt tan(α) in einem rechtwinkligen Dreieck?",
@@ -3134,7 +3448,8 @@
     "hint_text": "TOA – Tangens = Gegenkathete durch Ankathete.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=7yFDI9b-g4Q"
   },
   {
     "question": "Was ist ein Dodekaeder?",
@@ -3148,7 +3463,8 @@
     "hint_text": "Dodeka = 12.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=F2fO3Y2l3gA"
   },
   {
     "question": "Wie viele Flächen hat ein Zylinder?",
@@ -3162,7 +3478,8 @@
     "hint_text": "2 Kreise + 1 Mantelfläche.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=Fq2v3RNfh1U"
   },
   {
     "question": "Welche Funktion hat eine Mittelsenkrechte in einem Dreieck?",
@@ -3176,7 +3493,8 @@
     "hint_text": "Wird zur Konstruktion des Umkreises genutzt.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=7tC5_5CynGg"
   },
   {
     "question": "Welche Aussage ist richtig bei ähnlichen Figuren?",
@@ -3190,7 +3508,8 @@
     "hint_text": "Ähnliche Figuren = gleiche Winkel, proportionales Seitenverhältnis.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=ohH0V444ugI"
   },
   {
     "question": "Wie berechnet man den Flächeninhalt eines Kreises mit r = 3 cm?",
@@ -3204,7 +3523,8 @@
     "hint_text": "A = π · r²",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=88lJtqIAhUQ"
   },
   {
     "question": "Was ist ein Schrägbild?",
@@ -3218,7 +3538,8 @@
     "hint_text": "Tiefe wird verkürzt dargestellt.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=Wv6oWJ-5WvA"
   },
   {
     "question": "Was ist ein Maßstab von 1:25?",
@@ -3232,7 +3553,8 @@
     "hint_text": "Zeichnung : Realität",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=Hpd3204qUPk"
   },
   {
     "question": "Was passiert mit dem Volumen bei Streckungsfaktor k = 3?",
@@ -3246,7 +3568,8 @@
     "hint_text": "Volumen skaliert mit k³.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=0eTX3C4k-Yo"
   },
   {
     "question": "Wie viele Ecken hat ein Würfel?",
@@ -3260,7 +3583,8 @@
     "hint_text": "Ein Würfel hat 8 Ecken, 12 Kanten, 6 Flächen.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=E4J9qkN2V4E"
   },
   {
     "question": "Welche Formel passt zur Oberfläche eines Kegels?",
@@ -3274,7 +3598,8 @@
     "hint_text": "Grundfläche + Mantelfläche",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=FjZl7l3B9cQ"
   },
   {
     "question": "Was beschreibt sin(α) im rechtwinkligen Dreieck?",
@@ -3288,7 +3613,8 @@
     "hint_text": "SOH – Sinus = Opposite / Hypotenuse.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=7yFDI9b-g4Q"
   },
   {
     "question": "Was ist ein Körpernetz?",
@@ -3302,7 +3628,8 @@
     "hint_text": "Vorlage zum Basteln des Körpers.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=8_F1I7xZXpM"
   },
   {
     "question": "Wie erkennt man eine zentrische Streckung im Koordinatensystem?",
@@ -3316,7 +3643,8 @@
     "hint_text": "Alle Punkte bleiben auf der Linie zum Zentrum.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=Yxl8HMlcN4w"
   },
   {
     "question": "Ordne die Volumenformeln den Körpern zu.",
@@ -3328,8 +3656,10 @@
     "hint_text": "Alle Körper mit Kreis als Grundfläche – beachte den Unterschied.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=u3SgQ2n1xv8"
   },
+  [
   {
     "question": "Ordne die Trigonometrieformeln den passenden Definitionen zu.",
     "answer": {
@@ -3340,7 +3670,8 @@
     "hint_text": "Soh-Cah-Toa kann helfen.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=C23rDmj0ulk"
   },
   {
     "question": "Ordne die Eigenschaften den Vierecken zu.",
@@ -3352,7 +3683,8 @@
     "hint_text": "Beachte Winkel und Seitenverhältnisse.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=g4BiYRUxaqs"
   },
   {
     "question": "Ordne die Körper der passenden Mantelfläche zu.",
@@ -3364,7 +3696,8 @@
     "hint_text": "Mantelfläche ≠ Oberfläche!",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=shRLOiRaaxA"
   },
   {
     "question": "Ordne die Maßzahlen ihrer Bedeutung zu.",
@@ -3376,7 +3709,8 @@
     "hint_text": "Stichwort: Lage und Streuung.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=wgS6HfaWWxQ"
   },
   {
     "question": "Ordne die Formeln den passenden Flächen zu.",
@@ -3388,7 +3722,8 @@
     "hint_text": "Nutze bekannte Standardformeln.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=Jf-E6rYvSsg"
   },
   {
     "question": "Ordne die Begriffe der Beschreibung zu.",
@@ -3400,7 +3735,8 @@
     "hint_text": "Alle Begriffe stammen aus der Kreisgeometrie.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=jI6zVYaqJIs"
   },
   {
     "question": "Ordne die zentrischen Streckungen dem richtigen k-Faktor zu.",
@@ -3412,7 +3748,8 @@
     "hint_text": "k > 1 = Vergrößerung, k < 1 = Verkleinerung.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=6UPJzIdAhS8"
   },
   {
     "question": "Ordne die Schrägbild-Eigenschaften den Darstellungen zu.",
@@ -3424,7 +3761,8 @@
     "hint_text": "Unterscheide zwischen Ansichtsarten.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=xlB2Qe3wenA"
   },
   {
     "question": "Ordne die Volumenveränderungen den passenden Streckungsfaktoren zu.",
@@ -3436,15 +3774,18 @@
     "hint_text": "Bei Volumen: Streckungsfaktor hoch 3.",
     "category": "Geometrie & Raum",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=8qAFRC1TfPc"
   },
+  [
   {
     "question": "Wie berechnest du den Mittelwert aus den Zahlen 4, 6, 8 und 12?",
     "answer": "Mittelwert = (4 + 6 + 8 + 12) / 4 = 7,5",
     "hint_text": "Alle Werte addieren und durch die Anzahl der Werte teilen.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=QNp3mxRkuW0"
   },
   {
     "question": "Was versteht man unter der Spannweite einer Datenreihe?",
@@ -3452,7 +3793,8 @@
     "hint_text": "Spannweite = Maximalwert − Minimalwert.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=9iHgm97OiEU"
   },
   {
     "question": "Wie erkennst du einen Ausreißer in einem Boxplot?",
@@ -3460,7 +3802,8 @@
     "hint_text": "Ausreißer liegen meist weiter als das 1,5-Fache der Boxlänge vom Quartil entfernt.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=mclAY5gY8cM"
   },
   {
     "question": "Wie liest man den Median aus einem Boxplot ab?",
@@ -3468,7 +3811,8 @@
     "hint_text": "Der Median teilt die Daten in zwei gleich große Hälften.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=4ege069TYqo"
   },
   {
     "question": "Was sagt die Höhe eines Sektors im Kreisdiagramm aus?",
@@ -3476,7 +3820,8 @@
     "hint_text": "Je größer der Winkel, desto höher der Anteil.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=uhIhG8uHS00"
   },
   {
     "question": "Wie berechnet man die Wahrscheinlichkeit bei einem Laplace-Experiment?",
@@ -3484,15 +3829,17 @@
     "hint_text": "Jedes Ergebnis ist gleich wahrscheinlich.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=8xwWfw832Vg"
   },
   {
     "question": "Wie erstellt man ein Baumdiagramm für zwei Münzwürfe?",
     "answer": "Zwei Stufen: Erste Stufe H oder Z, zweite Stufe wieder H oder Z.",
-    "hint_text": "Zweige zeigen alle möglichen Ergebnisse (z. B. HH, HZ, ZH, ZZ).",
+    "hint_text": "Zweige zeigen alle möglichen Ergebnisse (z. B. HH, HZ, ZH, ZZ).",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=7B0rKLTUPZ0"
   },
   {
     "question": "Was ist die Summenregel bei Wahrscheinlichkeiten?",
@@ -3500,7 +3847,8 @@
     "hint_text": "Die Ereignisse dürfen sich nicht überschneiden.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=ez_Sj3ChFEY"
   },
   {
     "question": "Was ist die Produktregel bei Wahrscheinlichkeiten?",
@@ -3508,7 +3856,8 @@
     "hint_text": "Verwende sie bei mehrstufigen Experimenten.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=ez_Sj3ChFEY"
   },
   {
     "question": "Warum ist die Aussage „Rot kommt bald dran“ bei Roulette falsch?",
@@ -3516,15 +3865,17 @@
     "hint_text": "Vorherige Ereignisse beeinflussen nicht die Wahrscheinlichkeit.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=UNonvnUmhcU"
   },
   {
     "question": "Wie kann ein Diagramm durch die Achsenskalierung verzerrt werden?",
     "answer": "Durch ungewöhnliche Maßstäbe, die Unterschiede größer oder kleiner erscheinen lassen.",
-    "hint_text": "Vergleiche z. B. gestauchte oder gestreckte y-Achsen.",
+    "hint_text": "Vergleiche z. B. gestauchte oder gestreckte y-Achsen.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=97FOucOpzIo"
   },
   {
     "question": "Was bedeutet es, wenn eine Stichprobe nicht repräsentativ ist?",
@@ -3532,7 +3883,8 @@
     "hint_text": "Beispiel: Nur eine bestimmte Gruppe wurde befragt.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=q9i2m9vUHAg"
   },
   {
     "question": "Wie berechnest du die absolute Häufigkeit eines Merkmals?",
@@ -3540,7 +3892,8 @@
     "hint_text": "Einfaches Auszählen in der Rohdatenliste.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=PBRoDcPymec"
   },
   {
     "question": "Wie berechnest du die relative Häufigkeit?",
@@ -3548,15 +3901,17 @@
     "hint_text": "Ergebnis meist als Dezimalzahl oder Prozent.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=PBRoDcPymec"
   },
   {
     "question": "Was ist der Unterschied zwischen absoluter und relativer Häufigkeit?",
     "answer": "Absolut = Anzahl; relativ = Anteil an der Gesamtzahl.",
-    "hint_text": "Beispiel: 5-mal gewählt (absolut) = 25 % von 20 (relativ).",
+    "hint_text": "Beispiel: 5-mal gewählt (absolut) = 25 % von 20 (relativ).",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=PBRoDcPymec"
   },
   {
     "question": "Wie berechnest du die Wahrscheinlichkeit, bei zwei Münzwürfen genau einmal Kopf zu erhalten?",
@@ -3564,7 +3919,8 @@
     "hint_text": "Betrachte die Pfade im Baumdiagramm.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=7B0rKLTUPZ0"
   },
   {
     "question": "Was sagt eine Häufigkeitstabelle aus?",
@@ -3572,15 +3928,17 @@
     "hint_text": "Datenübersicht mit Werten und ihren Häufigkeiten.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=9gA83Cv7T9g"
   },
   {
     "question": "Was bedeutet ein Median von 6?",
-    "answer": "50 % der Werte liegen unter und 50 % über 6.",
+    "answer": "50 % der Werte liegen unter und 50 % über 6.",
     "hint_text": "Der Median ist der mittlere Wert bei sortierten Daten.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=4ege069TYqo"
   },
   {
     "question": "Wie viele Möglichkeiten gibt es, zweimal einen Würfel zu werfen?",
@@ -3588,7 +3946,8 @@
     "hint_text": "6 Ergebnisse beim ersten × 6 beim zweiten Wurf.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=-z3BBJjJPOE"
   },
   {
     "question": "Wie hoch ist die Wahrscheinlichkeit, beim Würfeln eine 6 zu bekommen?",
@@ -3596,7 +3955,8 @@
     "hint_text": "Laplace-Experiment mit 6 gleich wahrscheinlichen Ausgängen.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=8xwWfw832Vg"
   },
   {
     "question": "Was versteht man unter einem einstufigen Zufallsexperiment?",
@@ -3604,15 +3964,17 @@
     "hint_text": "Beispiel: ein Würfelwurf.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=rkLmLaFHodo"
   },
   {
     "question": "Wie kann man aus einem Kreisdiagramm Prozentwerte ablesen?",
-    "answer": "Entweder direkt beschriftet oder über den Winkel (360° entsprechen 100 %).",
+    "answer": "Entweder direkt beschriftet oder über den Winkel (360° entsprechen 100 %).",
     "hint_text": "Proportionale Zuordnung.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=uhIhG8uHS00"
   },
   {
     "question": "Warum reicht ein Beispiel nicht aus, um eine stochastische Aussage zu belegen?",
@@ -3620,7 +3982,8 @@
     "hint_text": "Mehrere Beobachtungen notwendig – Stichprobenumfang beachten.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=oDCeoVIcsbo"
   },
   {
     "question": "Wie nennt man ein Ereignis, das sicher eintritt?",
@@ -3628,7 +3991,8 @@
     "hint_text": "Beispiel: Beim Würfeln kommt eine Zahl von 1 bis 6.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/playlist?list=PLLTAHuUj-zHhB8UnwPOJzUVHV6_AJ9tz3"
   },
   {
     "question": "Wie nennt man ein Ereignis, das nicht eintreten kann?",
@@ -3636,7 +4000,8 @@
     "hint_text": "Beispiel: Eine 7 beim Würfeln mit einem normalen Würfel.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/playlist?list=PLLTAHuUj-zHhB8UnwPOJzUVHV6_AJ9tz3"
   },
   {
     "question": "Was ist der Mittelwert der Zahlen 2, 4, 6, 8?",
@@ -3645,7 +4010,8 @@
     "hint_text": "(2 + 4 + 6 + 8) / 4 = 5",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=QNp3mxRkuW0"
   },
   {
     "question": "Was beschreibt die Spannweite einer Datenreihe?",
@@ -3659,7 +4025,8 @@
     "hint_text": "Spannweite = Maximalwert – Minimalwert",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=9iHgm97OiEU"
   },
   {
     "question": "Was zeigt der Median in einer Datenreihe an?",
@@ -3673,7 +4040,8 @@
     "hint_text": "Sortiere die Daten – nimm den mittleren Wert.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=4ege069TYqo"
   },
   {
     "question": "Welche Aussage ist typisch für einen Ausreißer?",
@@ -3687,7 +4055,8 @@
     "hint_text": "Stark abweichende Werte nennt man Ausreißer.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=mclAY5gY8cM"
   },
   {
     "question": "Wie berechnet man die relative Häufigkeit?",
@@ -3701,7 +4070,8 @@
     "hint_text": "Häufigkeit im Verhältnis zur Gesamtanzahl.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=PBRoDcPymec"
   },
   {
     "question": "Wie viele Grad hat ein vollständiges Kreisdiagramm?",
@@ -3710,7 +4080,8 @@
     "hint_text": "Ein Kreis hat 360°.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=uhIhG8uHS00"
   },
   {
     "question": "Was zeigt ein Boxplot NICHT an?",
@@ -3724,7 +4095,8 @@
     "hint_text": "Der Mittelwert gehört nicht zum Boxplot.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=mclAY5gY8cM"
   },
   {
     "question": "Was bedeutet P(A ∪ B) bei disjunkten Ereignissen?",
@@ -3733,7 +4105,8 @@
     "hint_text": "Summenregel bei disjunkten (sich ausschließenden) Ereignissen.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=ez_Sj3ChFEY"
   },
   {
     "question": "Was bedeutet P(A ∩ B) bei unabhängigen Ereignissen?",
@@ -3742,7 +4115,8 @@
     "hint_text": "Produktregel bei unabhängigen Ereignissen.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=ez_Sj3ChFEY"
   },
   {
     "question": "Wie viele Pfade hat ein Baumdiagramm mit 3 Stufen und 2 Ausgängen pro Stufe?",
@@ -3751,7 +4125,8 @@
     "hint_text": "2 × 2 × 2 = 8 Pfade.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=7B0rKLTUPZ0"
   },
   {
     "question": "Was ist die Wahrscheinlichkeit, beim Würfeln eine gerade Zahl zu würfeln?",
@@ -3760,7 +4135,8 @@
     "hint_text": "Gerade Zahlen: 2, 4, 6 → 3 günstige Ergebnisse.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=8xwWfw832Vg"
   },
   {
     "question": "Was ist ein Laplace-Experiment?",
@@ -3774,7 +4150,8 @@
     "hint_text": "Beispiel: Würfeln mit fairem Würfel.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=8xwWfw832Vg"
   },
   {
     "question": "Was passiert bei einer Stichprobe ohne Repräsentativität?",
@@ -3788,7 +4165,8 @@
     "hint_text": "Die Stichprobe sollte die Grundgesamtheit widerspiegeln.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=q9i2m9vUHAg"
   },
   {
     "question": "Welche der folgenden Aussagen zeigt ein sicheres Ereignis?",
@@ -3802,7 +4180,8 @@
     "hint_text": "Ein sicheres Ereignis hat Wahrscheinlichkeit 1.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/playlist?list=PLLTAHuUj-zHhB8UnwPOJzUVHV6_AJ9tz3"
   },
   {
     "question": "Was zeigt ein Kreisdiagramm?",
@@ -3813,10 +4192,11 @@
       "Die Anteile einzelner Gruppen an einer Gesamtheit.",
       "Die Zeitverteilung auf Gruppen."
     ],
-    "hint_text": "Ein Kreis = 100 %, unterteilt in Anteile.",
+    "hint_text": "Ein Kreis = 100 %, unterteilt in Anteile.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=uhIhG8uHS00"
   },
   {
     "question": "Wie berechnet man die Wahrscheinlichkeit von zwei aufeinanderfolgenden Würfen mit je einer 6?",
@@ -3825,7 +4205,8 @@
     "hint_text": "Produktregel bei unabhängigen Ereignissen.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=ez_Sj3ChFEY"
   },
   {
     "question": "Was kann an einem Diagramm manipulativ wirken?",
@@ -3839,7 +4220,8 @@
     "hint_text": "Diagramme können durch Gestaltung manipulieren.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=97FOucOpzIo"
   },
   {
     "question": "Was bedeutet eine Wahrscheinlichkeit von 0?",
@@ -3853,7 +4235,8 @@
     "hint_text": "Wahrscheinlichkeit 0 = unmögliches Ereignis.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/playlist?list=PLLTAHuUj-zHhB8UnwPOJzUVHV6_AJ9tz3"
   },
   {
     "question": "Was bedeutet eine Wahrscheinlichkeit von 1?",
@@ -3867,7 +4250,8 @@
     "hint_text": "Wahrscheinlichkeit 1 = sicheres Ereignis.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/playlist?list=PLLTAHuUj-zHhB8UnwPOJzUVHV6_AJ9tz3"
   },
   {
     "question": "Ordne die Begriffe den passenden Erklärungen zu.",
@@ -3879,7 +4263,8 @@
     "hint_text": "Achte auf die Begriffe 'Anzahl', 'Anteil' und 'Erwartung'.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=PBRoDcPymec"
   },
   {
     "question": "Ordne die Darstellungsformen den passenden Beispielen zu.",
@@ -3891,7 +4276,8 @@
     "hint_text": "Welches Diagramm stellt welche Datenart gut dar?",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=uhIhG8uHS00"
   },
   {
     "question": "Ordne die Begriffe den passenden Symbolen zu.",
@@ -3903,7 +4289,8 @@
     "hint_text": "Mathematische Zeichen helfen bei der Kurzschreibweise.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=QNp3mxRkuW0"
   },
   {
     "question": "Ordne die Begriffe den passenden Maßzahlen zu.",
@@ -3915,7 +4302,8 @@
     "hint_text": "Unterscheide Lage- und Streuungsmaße.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=SgigRdHjevM"
   },
   {
     "question": "Ordne die Zufallsexperimente den passenden Baumdiagrammen zu.",
@@ -3927,7 +4315,8 @@
     "hint_text": "Zweifach-Experimente brauchen zwei Stufen.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=7B0rKLTUPZ0"
   },
   {
     "question": "Ordne die Wahrscheinlichkeiten den passenden Aussagen zu.",
@@ -3939,7 +4328,8 @@
     "hint_text": "Die Wahrscheinlichkeit liegt immer zwischen 0 und 1.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/playlist?list=PLLTAHuUj-zHhB8UnwPOJzUVHV6_AJ9tz3"
   },
   {
     "question": "Ordne die Begriffe den passenden Diagrammmerkmalen zu.",
@@ -3951,7 +4341,8 @@
     "hint_text": "Stichwort: Boxplot!",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=mclAY5gY8cM"
   },
   {
     "question": "Ordne die Anzahlen den passenden Wahrscheinlichkeiten zu (Laplace).",
@@ -3963,7 +4354,8 @@
     "hint_text": "Wahrscheinlichkeit = günstige / mögliche Ergebnisse.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=8xwWfw832Vg"
   },
   {
     "question": "Ordne die Aussagen den passenden Grafikaussagen zu.",
@@ -3975,7 +4367,8 @@
     "hint_text": "Achte auf typische Manipulationen bei Grafiken.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=97FOucOpzIo"
   },
   {
     "question": "Ordne die Begriffe den richtigen Zufallsexperimenten zu.",
@@ -3987,7 +4380,8 @@
     "hint_text": "Denk an Münzwurf oder Würfeln.",
     "category": "Stochastik",
     "grade": "9",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=rkLmLaFHodo"
   },
   {
     "question": "Erkläre den Unterschied zwischen relativer und absoluter Häufigkeit.",
@@ -3995,7 +4389,8 @@
     "hint_text": "Relativ = Anteil in %, absolut = Anzahl.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=PBRoDcPymec"
   },
   {
     "question": "Berechne den Mittelwert der Zahlen: 8, 9, 5, 7, 11.",
@@ -4003,7 +4398,8 @@
     "hint_text": "Summe durch Anzahl der Werte.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=QNp3mxRkuW0"
   },
   {
     "question": "Was versteht man unter dem Median?",
@@ -4011,15 +4407,17 @@
     "hint_text": "Sortieren, dann mittlerer Wert.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=4ege069TYqo"
   },
   {
     "question": "Nenne ein Beispiel für einen Ausreißer in einer Datenreihe.",
-    "answer": "z. B. In 1, 2, 2, 3, 50 ist die 50 ein Ausreißer.",
+    "answer": "z. B. In 1, 2, 2, 3, 50 ist die 50 ein Ausreißer.",
     "hint_text": "Ein Wert, der stark vom Rest abweicht.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=mclAY5gY8cM"
   },
   {
     "question": "Wie berechnet man die Spannweite einer Datenreihe?",
@@ -4027,7 +4425,8 @@
     "hint_text": "Max – Min.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=9iHgm97OiEU"
   },
   {
     "question": "Was zeigt ein Boxplot an?",
@@ -4035,23 +4434,26 @@
     "hint_text": "Fünf Kennwerte auf einen Blick.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=mclAY5gY8cM"
   },
   {
     "question": "Was versteht man unter dem 1. Quartil?",
-    "answer": "Den Wert, unter dem 25 % der Daten liegen.",
-    "hint_text": "25 % aller Werte sind kleiner oder gleich.",
+    "answer": "Den Wert, unter dem 25 % der Daten liegen.",
+    "hint_text": "25 % aller Werte sind kleiner oder gleich.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=mclAY5gY8cM"
   },
   {
     "question": "Was versteht man unter einem mehrstufigen Zufallsexperiment?",
     "answer": "Ein Experiment mit mehreren aufeinanderfolgenden Zufallsschritten.",
-    "hint_text": "z. B. zwei Würfe oder Ziehen mit Zurücklegen.",
+    "hint_text": "z. B. zwei Würfe oder Ziehen mit Zurücklegen.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=-z3BBJjJPOE"
   },
   {
     "question": "Wie zeichnet man ein Baumdiagramm mit zwei Stufen und je drei Ausgängen?",
@@ -4059,7 +4461,8 @@
     "hint_text": "Stufe 1 × Stufe 2 ergibt die Gesamtpfade.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=7B0rKLTUPZ0"
   },
   {
     "question": "Was besagt die Summenregel in der Wahrscheinlichkeitsrechnung?",
@@ -4067,7 +4470,8 @@
     "hint_text": "Nur für sich ausschließende Ereignisse.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=ez_Sj3ChFEY"
   },
   {
     "question": "Was besagt die Produktregel?",
@@ -4075,7 +4479,8 @@
     "hint_text": "Wahrscheinlichkeit des ersten Ereignisses mal bedingte Wahrscheinlichkeit des zweiten.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=ez_Sj3ChFEY"
   },
   {
     "question": "Wie groß ist die Wahrscheinlichkeit, beim zweifachen Würfeln zweimal eine 6 zu werfen?",
@@ -4083,23 +4488,26 @@
     "hint_text": "1/6 · 1/6",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=ez_Sj3ChFEY"
   },
   {
     "question": "Was versteht man unter einem sicheren Ereignis?",
     "answer": "Ein Ereignis, das immer eintritt, Wahrscheinlichkeit = 1.",
-    "hint_text": "100 % Eintrittswahrscheinlichkeit.",
+    "hint_text": "100 % Eintrittswahrscheinlichkeit.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/playlist?list=PLLTAHuUj-zHhB8UnwPOJzUVHV6_AJ9tz3"
   },
   {
     "question": "Was ist ein unmögliches Ereignis?",
     "answer": "Ein Ereignis mit Wahrscheinlichkeit 0.",
-    "hint_text": "z. B. beim Würfeln eine 7.",
+    "hint_text": "z. B. beim Würfeln eine 7.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/playlist?list=PLLTAHuUj-zHhB8UnwPOJzUVHV6_AJ9tz3"
   },
   {
     "question": "Wann sind zwei Ereignisse unabhängig?",
@@ -4107,7 +4515,8 @@
     "hint_text": "P(A ∩ B) = P(A) · P(B)",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/playlist?list=PLLTAHuUj-zHhB8UnwPOJzUVHV6_AJ9tz3"
   },
   {
     "question": "Was ist ein Laplace-Experiment?",
@@ -4115,7 +4524,8 @@
     "hint_text": "Beispiel: Münzwurf, Würfeln.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=8xwWfw832Vg"
   },
   {
     "question": "Was ist der Unterschied zwischen relativer Häufigkeit und Wahrscheinlichkeit?",
@@ -4123,7 +4533,8 @@
     "hint_text": "Eine misst Realität, die andere ist Modellannahme.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=PBRoDcPymec"
   },
   {
     "question": "Wie kann man die Repräsentativität einer Umfrage prüfen?",
@@ -4131,15 +4542,17 @@
     "hint_text": "Nicht jede Gruppe ist automatisch repräsentativ.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=q9i2m9vUHAg"
   },
   {
     "question": "Wie erkennt man eine grafische Verzerrung in einem Diagramm?",
-    "answer": "z. B. bei abgeschnittenen Achsen, übertriebenen Balken oder fehlender Beschriftung.",
+    "answer": "z. B. bei abgeschnittenen Achsen, übertriebenen Balken oder fehlender Beschriftung.",
     "hint_text": "Skalierung und Darstellung hinterfragen!",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=97FOucOpzIo"
   },
   {
     "question": "Ein Glücksrad ist in drei gleich große Sektoren unterteilt. Wie groß ist die Wahrscheinlichkeit für jeden Sektor?",
@@ -4147,7 +4560,8 @@
     "hint_text": "Alle gleich wahrscheinlich.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=8xwWfw832Vg"
   },
   {
     "question": "Wie viele Pfade hat ein Baumdiagramm mit drei Stufen und je 2 Möglichkeiten?",
@@ -4155,7 +4569,8 @@
     "hint_text": "2 × 2 × 2 = 8",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=7B0rKLTUPZ0"
   },
   {
     "question": "In einem Würfelspiel zählt jede 6 doppelt. Wie verändert sich der Erwartungswert?",
@@ -4163,15 +4578,17 @@
     "hint_text": "Wahrscheinlichkeit · Wert summieren.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/playlist?list=PLLTAHuUj-zHhB8UnwPOJzUVHV6_AJ9tz3"
   },
   {
     "question": "Nenne ein Beispiel für ein zweistufiges Zufallsexperiment.",
-    "answer": "z. B. zweimaliges Ziehen einer Kugel mit Zurücklegen.",
+    "answer": "z. B. zweimaliges Ziehen einer Kugel mit Zurücklegen.",
     "hint_text": "Zwei Zufallsschritte hintereinander.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=-z3BBJjJPOE"
   },
   {
     "question": "Warum sollte man bei Umfragen auf die Größe der Stichprobe achten?",
@@ -4179,7 +4596,8 @@
     "hint_text": "Je größer, desto zuverlässiger.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=q9i2m9vUHAg"
   },
   {
     "question": "Wie lässt sich mit einem Baumdiagramm eine Wahrscheinlichkeit berechnen?",
@@ -4187,7 +4605,8 @@
     "hint_text": "Produktregel auf Pfade anwenden, Summenregel für mehrere Pfade.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "classic"
+    "question_type": "classic",
+    "video_url": "https://www.youtube.com/watch?v=7B0rKLTUPZ0"
   },
   {
     "question": "Was ist ein Boxplot?",
@@ -4201,7 +4620,8 @@
     "hint_text": "Er zeigt fünf wichtige Kennwerte.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=mclAY5gY8cM"
   },
   {
     "question": "Was versteht man unter dem Median?",
@@ -4215,7 +4635,8 @@
     "hint_text": "Sortiere die Daten zuerst.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=4ege069TYqo"
   },
   {
     "question": "Welche Aussage zur relativen Häufigkeit ist korrekt?",
@@ -4229,7 +4650,8 @@
     "hint_text": "Sie wird meist in Prozent angegeben.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=PBRoDcPymec"
   },
   {
     "question": "Welche Maßzahl ist besonders empfindlich gegenüber Ausreißern?",
@@ -4243,7 +4665,8 @@
     "hint_text": "Ein einzelner großer Wert verändert ihn stark.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=QNp3mxRkuW0"
   },
   {
     "question": "Was ist ein Ausreißer?",
@@ -4257,7 +4680,8 @@
     "hint_text": "Er liegt weit entfernt vom Rest der Werte.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=mclAY5gY8cM"
   },
   {
     "question": "Was bedeutet 'P(A ∪ B)' bei disjunkten Ereignissen?",
@@ -4271,7 +4695,8 @@
     "hint_text": "Nutze die Summenregel.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=ez_Sj3ChFEY"
   },
   {
     "question": "Was bedeutet 'P(A ∩ B)' bei unabhängigen Ereignissen?",
@@ -4285,7 +4710,8 @@
     "hint_text": "Nutze die Produktregel.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=ez_Sj3ChFEY"
   },
   {
     "question": "Was ist ein sicheres Ereignis?",
@@ -4299,7 +4725,8 @@
     "hint_text": "Es tritt immer ein.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/playlist?list=PLLTAHuUj-zHhB8UnwPOJzUVHV6_AJ9tz3"
   },
   {
     "question": "Wann spricht man von unabhängigen Ereignissen?",
@@ -4313,21 +4740,18 @@
     "hint_text": "Die Wahrscheinlichkeiten bleiben gleich.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/playlist?list=PLLTAHuUj-zHhB8UnwPOJzUVHV6_AJ9tz3"
   },
   {
     "question": "Wie viele mögliche Ergebnisse gibt es beim dreifachen Münzwurf?",
     "answer": "8",
-    "options": [
-      "3",
-      "6",
-      "8",
-      "9"
-    ],
+    "options": ["3", "6", "8", "9"],
     "hint_text": "2 · 2 · 2 = 8",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=-z3BBJjJPOE"
   },
   {
     "question": "Was zeigt ein Kreisdiagramm?",
@@ -4341,7 +4765,8 @@
     "hint_text": "Jedes Segment stellt einen Anteil dar.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=uhIhG8uHS00"
   },
   {
     "question": "Was versteht man unter Repräsentativität einer Stichprobe?",
@@ -4355,7 +4780,8 @@
     "hint_text": "Alle Gruppen müssen angemessen vertreten sein.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=q9i2m9vUHAg"
   },
   {
     "question": "Was ist ein mehrstufiges Zufallsexperiment?",
@@ -4366,10 +4792,11 @@
       "Ein Experiment mit mehreren aufeinanderfolgenden Zufallsaktionen.",
       "Ein Experiment mit festen Ergebnissen."
     ],
-    "hint_text": "z. B. zweimaliges Ziehen mit Zurücklegen.",
+    "hint_text": "z. B. zweimaliges Ziehen mit Zurücklegen.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=-z3BBJjJPOE"
   },
   {
     "question": "Was zeigt ein Baumdiagramm?",
@@ -4383,7 +4810,8 @@
     "hint_text": "Jeder Pfad stellt eine Möglichkeit dar.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=7B0rKLTUPZ0"
   },
   {
     "question": "Wie berechnet man eine Pfadwahrscheinlichkeit im Baumdiagramm?",
@@ -4397,7 +4825,8 @@
     "hint_text": "Produktregel anwenden.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=ez_Sj3ChFEY"
   },
   {
     "question": "Welche Aussage über den Median ist korrekt?",
@@ -4411,7 +4840,8 @@
     "hint_text": "Er hängt nur von der Mitte ab, nicht von Ausreißern.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=4ege069TYqo"
   },
   {
     "question": "Was versteht man unter der Spannweite?",
@@ -4425,7 +4855,8 @@
     "hint_text": "max – min",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=9iHgm97OiEU"
   },
   {
     "question": "Wie kann man einen Ausreißer im Boxplot erkennen?",
@@ -4439,7 +4870,8 @@
     "hint_text": "Meist als Punkt markiert.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=mclAY5gY8cM"
   },
   {
     "question": "Welche Aussage zur Wahrscheinlichkeit ist korrekt?",
@@ -4453,7 +4885,8 @@
     "hint_text": "0 ≤ P ≤ 1",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/playlist?list=PLLTAHuUj-zHhB8UnwPOJzUVHV6_AJ9tz3"
   },
   {
     "question": "Was ist eine absolute Häufigkeit?",
@@ -4467,7 +4900,8 @@
     "hint_text": "Zählwert.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "multiple_choice"
+    "question_type": "multiple_choice",
+    "video_url": "https://www.youtube.com/watch?v=PBRoDcPymec"
   },
   {
     "question": "Ordne die Wahrscheinlichkeitsregeln den passenden Beschreibungen zu.",
@@ -4479,7 +4913,8 @@
     "hint_text": "Grundregeln für kombinierte Ereignisse.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=ez_Sj3ChFEY"
   },
   {
     "question": "Ordne die Aussagen zur Repräsentativität den passenden Fehlern zu.",
@@ -4491,7 +4926,8 @@
     "hint_text": "Wichtig für Statistik: Wer wurde befragt?",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=q9i2m9vUHAg"
   },
   {
     "question": "Ordne die Diagrammtypen den passenden Zwecken zu.",
@@ -4503,7 +4939,8 @@
     "hint_text": "Jede Darstellungsform hat ihren Zweck.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=mclAY5gY8cM"
   },
   {
     "question": "Ordne die Begriffe den Wahrscheinlichkeitsverteilungen zu.",
@@ -4515,7 +4952,8 @@
     "hint_text": "Beachte Art und Form der Verteilung.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=Han33kIlnnE"
   },
   {
     "question": "Ordne den Werten die passenden Aussagen zu.",
@@ -4527,19 +4965,21 @@
     "hint_text": "P(E) liegt immer zwischen 0 und 1.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/playlist?list=PLLTAHuUj-zHhB8UnwPOJzUVHV6_AJ9tz3"
   },
   {
     "question": "Ordne die Begriffe den statistischen Begriffen zu.",
     "answer": {
       "Stichprobe": "Ausgewählte Teilmenge aus der Grundgesamtheit",
-      "Merkmal": "Untersuchter Aspekt (z. B. Größe)",
-      "Merkmalsausprägung": "Konkret gemessener Wert (z. B. 1,75 m)"
+      "Merkmal": "Untersuchter Aspekt (z. B. Größe)",
+      "Merkmalsausprägung": "Konkret gemessener Wert (z. B. 1,75 m)"
     },
     "hint_text": "Grundlagen der Statistik.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=n3x52C3qxH8"
   },
   {
     "question": "Ordne die Ereignisbäume den passenden Beschreibungen zu.",
@@ -4551,7 +4991,8 @@
     "hint_text": "Verzweigungen zeigen Wahrscheinlichkeiten.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=7B0rKLTUPZ0"
   },
   {
     "question": "Ordne die Mittelwerte den passenden Aussagen zu.",
@@ -4563,7 +5004,8 @@
     "hint_text": "Drei typische Lageparameter.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=QNp3mxRkuW0"
   },
   {
     "question": "Ordne die Formeln den Begriffen zu.",
@@ -4575,7 +5017,8 @@
     "hint_text": "Typische Rechenregeln für Wahrscheinlichkeiten.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=ez_Sj3ChFEY"
   },
   {
     "question": "Ordne die Fragestellungen den passenden Erhebungsarten zu.",
@@ -4587,6 +5030,7 @@
     "hint_text": "Art der Daten bestimmt den Umgang damit.",
     "category": "Stochastik",
     "grade": "10",
-    "question_type": "drag_drop"
+    "question_type": "drag_drop",
+    "video_url": "https://www.youtube.com/watch?v=n3x52C3qxH8"
   }
 ]
