@@ -1,4 +1,4 @@
-console.log("👤 Profile JS geladen");
+console.log("Profile JS geladen");
 
 /* ========= Medaillen & Ränge ========= */
 const rankMax = 100;
@@ -28,12 +28,11 @@ const profilDropdown= document.getElementById("profilDropdown");
 const profilEmail   = document.getElementById("profilEmail");
 const profilFortsch = document.getElementById("profilFortschritt");
 
-const headerMedal   = document.getElementById("headerMedal");
+const headerMedal   = document.getElementById("dashboardMedal");
 const profileBtn    = document.getElementById("profileBtn");
 const logoutBtn     = document.getElementById("logoutBtn");
 
 /* ========= Dropdown ========= */
-/* 👇 NEU: Dropdown beim Laden sicher verstecken */
 if (profilDropdown) {
   profilDropdown.style.display = "none";
 }
@@ -135,3 +134,18 @@ async function resolveEmailAndStatus() {
 
 /* ========= Init ========= */
 resolveEmailAndStatus();
+
+// Logo klickbar machen -> Dashboard
+const logoEl = document.querySelector(".logo");
+if (logoEl) {
+  logoEl.style.cursor = "pointer";
+  logoEl.setAttribute("role", "link");
+  logoEl.setAttribute("tabindex", "0");
+  logoEl.addEventListener("click", () => { window.location.href = "/dashboard"; });
+  logoEl.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      window.location.href = "/dashboard";
+    }
+  });
+}
