@@ -29,7 +29,7 @@ def create_connection():
     conn.row_factory = sqlite3.Row  # Damit dict-ähnliche Ergebnisse zurückgegeben werden
     return conn
 
-def add_question(question, answer, hint_text, category, grade, question_type="classic", choices=None):
+def add_question(question, answer, hint_text, category, grade, question_type="classic", choices=None, video_url=None):
     conn = create_connection()
     cursor = conn.cursor()
     # Überprüfen, ob die Frage bereits existiert
@@ -39,8 +39,8 @@ def add_question(question, answer, hint_text, category, grade, question_type="cl
       return
     # Frage hinzufügen
     cursor.execute("""
-        INSERT INTO questions (question, answer, hint_text, category, grade, question_type, choices)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO questions (question, answer, hint_text, category, grade, question_type, choices, video_url)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     """, (
         question,
         json.dumps(answer) if isinstance(answer, dict) else answer,
@@ -48,7 +48,8 @@ def add_question(question, answer, hint_text, category, grade, question_type="cl
         category,
         grade,
         question_type,
-        json.dumps(choices) if choices else None
+        json.dumps(choices) if choices else None,
+        video_url
     ))
     conn.commit()
     conn.close()
@@ -65,7 +66,8 @@ def load_questions_from_file(filename):
                 q["category"],
                 q["grade"],
                 q.get("question_type", "classic"),
-                q.get("options", None)
+                q.get("options", None),
+                q.get("video_url", None)
             )
         logger.info(f"{len(questions)} Fragen aus '{filename}' wurden geladen.")
     except Exception as e:
