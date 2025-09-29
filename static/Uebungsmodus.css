@@ -117,6 +117,23 @@
   background: #fbbf24 !important;
   color: #22223b !important;
 }
+.dark-green-btn {
+  background: #2a4f47 !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 28px;
+  font-size: 1.08rem;
+  cursor: pointer;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 200px;
+  transition: background 0.2s;
+  border-radius: 20px;
+}
+.dark-green-btn:hover {
+  background: #3b725f !important;
+}
 .message {
   font-size: 2em;
   font-weight: 500;

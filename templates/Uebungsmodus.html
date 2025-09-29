@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,22 @@
   <link rel="stylesheet" href="/static/dashboard.css">
   <link rel="stylesheet" href="/static/Uebungsmodus.css">
 </head>
+
 <body>
   <header class="header">
-    <img src="{{ url_for('static', filename='images/MathTalk_Logo.png') }}" alt="Logo" class="logo" />
-      <div class="icons">
-        <img id="dashboardMedal" src="" alt="Medaille" style="height:40px; margin-right:10px; display:none;" />
-        <img src="{{ url_for('static', filename='images/Profil.png') }}" alt="Profil" class="profil-icon" id="profilIcon" />
-        <div class="dropdown" id="profilDropdown">
-          <button id="profileBtn">Profil</button>
-          <button id="logoutBtn">Abmelden</button>
-        </div>
+    <a href="{{ url_for('dashboard') }}">
+      <img src="{{ url_for('static', filename='images/MathTalk_Logo.png') }}" alt="Logo" class="logo" />
+    </a>
+
+    <div class="icons">
+      <img id="dashboardMedal" src="" alt="Medaille" style="height:40px; margin-right:10px; display:none;" />
+      <img src="{{ url_for('static', filename='images/Profil.png') }}" alt="Profil" class="profil-icon"
+        id="profilIcon" />
+      <div class="dropdown" id="profilDropdown">
+        <button id="profileBtn">Profil</button>
+        <button id="logoutBtn">Abmelden</button>
       </div>
+    </div>
   </header>
 
 
@@ -33,9 +39,8 @@
         <button class="orange-btn" id="submit-btn" style="width:160px;">Antworten</button>
         <button class="orange-btn" id="skip-btn">Überspringen</button>
         <button class="orange-btn" id="hint-btn">Hinweis</button>
-        <button class="orange-btn" id="menu-btn">Zurück zum Menü</button>
       </div>
-      <a class="orange-btn" id="video-link" href="#" target="_blank" style="display:none;">Erklärvideo ansehen</a>
+      <a class="dark-green-btn" id="video-link" href="#" target="_blank" style="display:none;">Erklärvideo ansehen</a>
       <p class="hint-box" id="hint-box" style="display:none"></p>
       <div class="info">
         <p>Verbleibende Fragen: <span id="remaining"></span></p>
@@ -45,4 +50,5 @@
   </main>
   <script src="/static/Uebungsmodus.js"></script>
 </body>
+
 </html>

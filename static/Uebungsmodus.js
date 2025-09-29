@@ -248,11 +248,9 @@
     document.getElementById('submit-btn').disabled = false;
     document.getElementById('skip-btn').disabled = false;
     document.getElementById('hint-btn').disabled = false;
-    document.getElementById('menu-btn').disabled = false;
     document.getElementById('submit-btn').onclick = submitAnswer;
     document.getElementById('skip-btn').onclick = skip;
     document.getElementById('hint-btn').onclick = showHintToggle;
-    document.getElementById('menu-btn').onclick = goToMenu;
 
     videoLink.style.display = question.video_url ? 'inline-block' : 'none';
     videoLink.href = question.video_url || '#';
@@ -397,10 +395,6 @@
     }
     const res = await fetch(url);
     progress = await res.json();
-  }
-
-  function goToMenu() {
-    window.location.href = '/dashboard';
   }
 
   function showHintToggle() {
