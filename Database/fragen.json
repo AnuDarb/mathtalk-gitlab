@@ -1084,7 +1084,6 @@
     "question_type": "drag_drop",
     "video_url": "https://www.youtube.com/watch?v=MkcArrEhUQI"
   },
-[
   {
     "question": "Wie lautet die allgemeine Funktionsgleichung einer linearen Funktion?",
     "answer": "f(x) = mx + b",
@@ -2510,7 +2509,6 @@
     "question_type": "drag_drop",
     "video_url": "https://www.youtube.com/watch?v=w4uGBMebiTg"
   },
-[
   {
     "question": "Was bedeutet es, wenn zwei Figuren ähnlich sind?",
     "answer": "Sie haben gleiche Winkel und ihre Seitenverhältnisse sind gleich.",
@@ -3659,7 +3657,6 @@
     "question_type": "drag_drop",
     "video_url": "https://www.youtube.com/watch?v=u3SgQ2n1xv8"
   },
-  [
   {
     "question": "Ordne die Trigonometrieformeln den passenden Definitionen zu.",
     "answer": {
@@ -3777,7 +3774,6 @@
     "question_type": "drag_drop",
     "video_url": "https://www.youtube.com/watch?v=8qAFRC1TfPc"
   },
-  [
   {
     "question": "Wie berechnest du den Mittelwert aus den Zahlen 4, 6, 8 und 12?",
     "answer": "Mittelwert = (4 + 6 + 8 + 12) / 4 = 7,5",
