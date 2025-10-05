@@ -7,9 +7,6 @@ services:
       npm install
       npm run build
       cd ../../
-      rm -rf static/vue-app
-      mkdir -p static/vue-app
-      cp -r Frontend/mathtalk-vue/dist/* static/vue-app/
     startCommand: gunicorn app:app
     buildFilter:
       paths:
