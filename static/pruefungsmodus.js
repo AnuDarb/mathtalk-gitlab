@@ -1,11 +1,11 @@
 // --- Hilfsfunktionen (aus Übungsmodus übernommen/angepasst) ---
+// Prüft, ob der Wert ein Bildpfad ist (nur bestimmte Bildformate erlaubt)
 function isImage(val) {
-  return typeof val === 'string'
-    && val.startsWith('static/images/')
-    && (val.endsWith('.png') || val.endsWith('.jpg') || val.endsWith('.jpeg') || val.endsWith('.svg'));
+  return typeof val === 'string' && val.startsWith('images/') && (val.endsWith('.png') || val.endsWith('.jpg') || val.endsWith('.jpeg') || val.endsWith('.svg'));
 }
+// Gibt die URL für ein Bild zurück, falls es ein Bild ist, sonst leerer String
 function imageUrl(val) {
-  return isImage(val) ? val : '';
+  return isImage(val) ? "static/" + val : '';
 }
 
 // --- Prüfungsmodus: bestehende Punktelogik & Ränge ---

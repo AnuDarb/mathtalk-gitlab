@@ -1,15 +1,15 @@
 
 // Dieses Skript rendert das Quiz-UI und steuert die gesamte Logik für den Übungsmodus
-(function() {
+(function () {
 
   // Hilfsfunktionen
   // Prüft, ob der Wert ein Bildpfad ist (nur bestimmte Bildformate erlaubt)
   function isImage(val) {
-    return typeof val === 'string' && val.startsWith('static/images/') && (val.endsWith('.png') || val.endsWith('.jpg') || val.endsWith('.jpeg') || val.endsWith('.svg'));
+    return typeof val === 'string' && val.startsWith('images/') && (val.endsWith('.png') || val.endsWith('.jpg') || val.endsWith('.jpeg') || val.endsWith('.svg'));
   }
   // Gibt die URL für ein Bild zurück, falls es ein Bild ist, sonst leerer String
   function imageUrl(val) {
-    return isImage(val) ?  val : '';
+    return isImage(val) ? "static/" + val : '';
   }
 
 
@@ -19,7 +19,7 @@
   let answered = false; // Wurde die aktuelle Frage schon beantwortet?
   let feedback = ''; // Feedback-Text (richtig/falsch)
   let q_idx = 0; // Index der aktuellen Frage (für Skip)
-  let progress = {remaining: 0, wrong: 0}; // Fortschritt: verbleibende und falsche Antworten
+  let progress = { remaining: 0, wrong: 0 }; // Fortschritt: verbleibende und falsche Antworten
 
   // Kategorien aus URL-Parametern holen (können mehrere sein)
   let categories = null;
@@ -32,8 +32,7 @@
     if (params.has('grade')) {
       grade = params.get('grade');
     }
-  } catch (e) {}
-  let questionIds = []; // IDs der gestellten Fragen (optional)
+  } catch (e) { }
   let showingHint = false; // Wird der Hinweis angezeigt?
   let dragDropUserAnswers = {}; // User-Antworten für Drag&Drop-Fragen
   let dragDropOptions = []; // Antwortmöglichkeiten für Drag&Drop
@@ -63,8 +62,8 @@
   let mouseDownY = null;
   let mouseIsDown = false;
 
+  // Swipe Logik for mobile Geräte (Touch)
   function handleTouchStart(e) {
-    // Ignore if started on input, textarea, button, or drag/drop
     if (e.target.closest('input, textarea, button, .dragdrop-answer, .dropzone')) return;
     const t = e.touches[0];
     touchStartX = t.clientX;
@@ -75,7 +74,7 @@
     const t = (e.changedTouches && e.changedTouches[0]) || e;
     const dx = t.clientX - touchStartX;
     const dy = t.clientY - touchStartY;
-    // Only horizontal swipe, ignore vertical
+    // Nur horizontale Swipes mit ausreichender Distanz berücksichtigen (50px)
     if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
       if (dx > 0 && q_idx > 0) {
         goToPrevious();
@@ -86,6 +85,8 @@
     touchStartX = null;
     touchStartY = null;
   }
+
+  // Swipe Logik für Desktop (Maus)
   function handleMouseDown(e) {
     if (e.button !== 0) return;
     if (e.target.closest('input, textarea, button, .dragdrop-answer, .dropzone')) return;
@@ -145,9 +146,10 @@
         <div class="dragdrop-row">
           ${Object.keys(question.answer).map(ex => `
             <div class="dragdrop-example">
-              <div>${isImage(ex) ? `<img src="${imageUrl(ex)}" alt="Beispiel" class="drag-img" />` : ex}</div>
+              <div>${isImage(ex) ? `<img src="${imageUrl(ex)}" alt="${ex}" class="drag-img" />` : ex}</div>
               <div class="dropzone${dragDropUserAnswers[ex] ? ' filled' : ''}" data-ex="${ex}">
-                ${dragDropUserAnswers[ex] ? (isImage(dragDropUserAnswers[ex]) ? `<img src="${imageUrl(dragDropUserAnswers[ex])}" alt="Antwort" class="drag-img" />` : `<span>${dragDropUserAnswers[ex]}</span>`) : '<span style="color:#aaa;">Antwort hierher ziehen</span>'}
+                ${dragDropUserAnswers[ex] ? (
+                  (dragDropUserAnswers[ex]) ? `<img src="${imageUrl(dragDropUserAnswers[ex])}" alt="Antwort" class="drag-img" />` : `<span>${dragDropUserAnswers[ex]}</span>`) : '<span style="color:#aaa;">Antwort hierher ziehen</span>'}
               </div>
             </div>
           `).join('')}
@@ -323,14 +325,14 @@
       }
       const res = await fetch('/api/evaluate', {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question_id: question.id, user_input: userAns })
       });
       const data = await res.json();
       feedback = data.error ? data.error : (data.is_correct ? 'Richtig!' : 'Leider falsch.');
       answered = true;
       document.getElementById('submit-btn').textContent = 'Weiter';
-      
+
       await loadProgress();
       render();
       return;
@@ -339,7 +341,7 @@
       if (!userInput) return;
       const res = await fetch('/api/evaluate', {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question_id: question.id, user_input: userInput })
       });
       const data = await res.json();
@@ -353,7 +355,7 @@
     if (!userInput) return;
     const res = await fetch('/api/evaluate', {
       method: 'POST',
-      headers: {'Content-Type': 'application/json'},
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ question_id: question.id, user_input: userInput })
     });
     const data = await res.json();
@@ -407,7 +409,7 @@
   const dropdown = document.getElementById("profilDropdown");
   // Inhalt auf 2 Buttons reduzieren (Profil zuerst)
   if (dropdown) {
-    dropdown.innerHTML = 
+    dropdown.innerHTML =
       `
         <button id="profileBtn" class="profil-item" type="button">Profil</button>
         <button id="logoutBtn" class="profil-item" type="button">Abmelden</button>
