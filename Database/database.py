@@ -202,6 +202,7 @@ def get_next_question_for_user(email, category=None, grade=None):
     '''
     params = [email]
     where_clauses = []
+    # Filtern nach Kategorie und Klasse
     if category:
         category = parse_category_list(category)
         if isinstance(category, list):
@@ -218,12 +219,14 @@ def get_next_question_for_user(email, category=None, grade=None):
         params.append(grade)
     if where_clauses:
         query += ' WHERE ' + ' AND '.join(where_clauses)
+
     rows = conn.execute(query, params).fetchall()
     conn.close()
     wrong_or_unanswered = [row for row in rows if row['correct'] == 0 or row['correct'] is None]
     if wrong_or_unanswered:
+        # Sortiere die Einträge so, dass die mit den meisten Fehlern und den wenigsten Versuchen zuerst kommen.
         sorted_wrong = sorted(wrong_or_unanswered, key=lambda r: (-r['errors'] if r['errors'] is not None else 0, r['attempts'] if r['attempts'] is not None else 0))
-        if random.random() < 0.2:  # 20% Chance, eine zufällige falsche oder unbeantwortete Frage zu wählen
+        if random.random() < 0.2:  # 20% Chance als nächstes eine falsch beantwortete Frage zu wählen
             return dict(sorted_wrong[0])
         else:
             return dict(random.choice(wrong_or_unanswered))

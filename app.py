@@ -107,7 +107,8 @@ def api_questions():
     category = request.args.get('category')
     return jsonify(get_questions(category, grade=grade))
 
-# 📋 Nächste Frage (angepasst an Nutzer)
+# 📋 Laden der nächsten Frage basierend auf dem Fortschritt des Benutzers
+# Dabei werden falsch beantwortete Fragen bevorzugt
 @app.route('/api/question', methods=['GET'])
 def api_question():
     if 'user_email' not in session:
@@ -211,10 +212,13 @@ def api_evaluate():
         except Exception:
             correct_obj = None
 
+        # Vergleichslogik: Benutzeringabe mit korrekter Antwort vergleichen
         if isinstance(user_input, dict) and isinstance(correct_obj, dict):
+            # Bei Objekten: Alle Schlüssel-Werte-Paare müssen übereinstimmen (Typumwandlung zu String)
             is_correct = all(str(user_input.get(k, '')) == str(v) for k, v in correct_obj.items())
             score = 1.0 if is_correct else 0.0
         else:
+            # Bei Strings: Ähnlichkeitsbewertung
             score = get_similarity_score(user_input, correct_answer)
             is_correct = score > 0.65
 
