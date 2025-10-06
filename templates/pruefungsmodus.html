@@ -112,9 +112,7 @@
       text-decoration: underline;
     }
 
-    .header-right:hover .dropdown {
-      display: block;
-    }
+    
 
     /* --- Aufgabenbereich (wie im Übungsmodus) --- */
     .quiz-title {
@@ -287,7 +285,40 @@
       border-color: #3b82f6;
       background: #e0f2fe;
     }
-  </style>
+  
+/* Dropdown styles (replaced) */
+.dropdown {
+  position: absolute;
+  right: 30px;
+  top: 100px;
+  background-color: #f4f3e8; 
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: none;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;   
+  gap: 6px;                 
+}
+
+.dropdown button {
+  background-color: transparent;
+  border: none;
+  font-family: 'Andada Pro', serif;
+  font-size: 16px;
+  cursor: pointer;
+  color: #2a4f47;
+  text-align: left;         
+  padding: 6px 10px;
+}
+
+.dropdown button:hover {
+  text-decoration: underline;
+}
+</style>
 </head>
 <body>
   <header class="header-row">
@@ -301,12 +332,14 @@
       <div class="progress-bar" id="scoreBar">
         <div class="progress-bar-inner" id="scoreFill"></div>
       </div>
-      <img src="{{ url_for('static', filename='images/Profil.png') }}" alt="Profil" class="profil-icon" />
-      <div class="dropdown">
-        <p><strong>E-Mail:</strong> <span id="profilEmail">...</span></p>
-        <p><strong>Fortschritt:</strong> <span id="profilFortschritt">...</span></p>
-        <button id="logoutBtn">Abmelden</button>
-      </div>
+      <div class="icons">
+  <img id="dashboardMedal" src="" alt="Medaille" style="height:40px; margin-right:10px; display:none;" />
+  <img src="{{ url_for('static', filename='images/Profil.png') }}" alt="Profil" class="profil-icon" id="profilIcon" />
+  <div class="dropdown" id="profilDropdown">
+    <button id="profileBtn">Profil</button>
+    <button id="logoutBtn">Abmelden</button>
+  </div>
+</div>
     </div>
   </header>
 
