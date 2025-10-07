@@ -17,21 +17,27 @@ body {
 /* Icons im Header */
 .icons {
   display: flex;
-  align-items: center;
+  align-items: center;     /* vertikal zentriert */
   gap: 12px;
+  position: relative;      /* Dropdown daran ausrichten */
+}
+.icons img {
+  display: block;          /* verhindert Baseline-Versatz */
 }
 .profil-icon { height: 60px; cursor: pointer; }
-.header-medal {
-  height: 32px;
-  width: 32px;
+.header-medal,
+#dashboardMedal {
+  height: 40px;            /* gleiche Größe wie im Dashboard */
+  width: auto;
+  margin-right: 10px;
   object-fit: contain;
 }
 
 /* Dropdown-Menü */
 .dropdown {
   position: absolute;
-  right: 30px;
-  top: 100px;
+  right: 0;                       /* bündig an rechten Rand der .icons */
+  top: calc(100% + 8px);          /* direkt unterhalb der Icons */
   background-color: #f4f3e8;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -144,7 +150,8 @@ body {
   .header { padding: 10px 20px; }
   .logo { height: 70px; }
   .profil-icon { height: 50px; }
-  .dropdown { top: 85px; right: 20px; }
+  .header-medal, #dashboardMedal { height: 32px; margin-right: 8px; }
+  .dropdown { top: calc(100% + 6px); right: 0; }
   .row { grid-template-columns: 1fr; gap: 6px; }
   .label, .value { font-size: 18px; }
 }
