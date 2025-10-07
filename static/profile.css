@@ -4,7 +4,6 @@ body {
   background-color: #f4f3e8;
 }
 
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -13,7 +12,6 @@ body {
   position: relative;
 }
 .logo { height: 100px; }
-
 
 .icons {
   display: flex;
@@ -103,7 +101,7 @@ body {
 .medal { width: min(220px, 60%); height: auto; display: block; }
 .status-subtitle { margin-top: 8px; font-size: 18px; color: #2a4f47; text-align: center; }
 
-/* Fortschrittsbalken */
+
 .scorebar {
   height: 14px;
   background: #e6e6d9;
