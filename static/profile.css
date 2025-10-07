@@ -4,7 +4,7 @@ body {
   background-color: #f4f3e8;
 }
 
-/* Header */
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -14,20 +14,20 @@ body {
 }
 .logo { height: 100px; }
 
-/* Icons im Header */
+
 .icons {
   display: flex;
-  align-items: center;     /* vertikal zentriert */
+  align-items: center;     
   gap: 12px;
-  position: relative;      /* Dropdown daran ausrichten */
+  position: relative;     
 }
 .icons img {
-  display: block;          /* verhindert Baseline-Versatz */
+  display: block;         
 }
 .profil-icon { height: 60px; cursor: pointer; }
 .header-medal,
 #dashboardMedal {
-  height: 40px;            /* gleiche Größe wie im Dashboard */
+  height: 40px;            
   width: auto;
   margin-right: 10px;
   object-fit: contain;
@@ -36,8 +36,8 @@ body {
 /* Dropdown-Menü */
 .dropdown {
   position: absolute;
-  right: 0;                       /* bündig an rechten Rand der .icons */
-  top: calc(100% + 8px);          /* direkt unterhalb der Icons */
+  right: 0;                       
+  top: calc(100% + 8px);         
   background-color: #f4f3e8;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -86,7 +86,7 @@ body {
 .bold { font-weight: 700; }
 .centered { text-align: center; }
 
-/* Status-Kachel */
+
 .status-card {
   background: #ffffff;
   border-radius: 12px;
@@ -127,7 +127,7 @@ body {
   font-size: 16px;
 }
 
-/* Info-Karte rechts */
+
 .info-card { padding: 8px 0; }
 .info-list { margin: 0; }
 
@@ -141,7 +141,7 @@ body {
 .label { color: #2a4f47; font-size: 20px; font-weight: 700; }
 .value { color: #21433b; font-size: 20px; }
 
-/* Responsive */
+
 @media (max-width: 980px) {
   .profile-grid { grid-template-columns: 1fr; gap: 28px; }
   .page-title { margin: 24px 20px 0; text-align: center; font-size: 32px; }
