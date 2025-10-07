@@ -17,7 +17,6 @@ function resetSelections() {
     .forEach((el) => el.classList.remove("selected"));
 }
 
-// Wenn Seite aus bfcache kommt, zurücksetzen
 window.addEventListener("pageshow", (e) => {
   if (e.persisted) {
     resetSelections();
@@ -116,9 +115,7 @@ function checkReady() {
   }
 }
 
-/* ===========================
-   Profil-Dropdown 
-   =========================== */
+// Profil-Dropdown 
 
 // Elemente
 const profilIcon = document.getElementById("profilIcon");
