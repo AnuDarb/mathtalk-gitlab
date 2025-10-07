@@ -11,7 +11,13 @@
   <header class="header">
     <img src="{{ url_for('static', filename='images/MathTalk_Logo.png') }}" alt="Logo" class="logo" />
     <div class="icons">
-      <img id="dashboardMedal" src="" alt="Medaille" style="height:40px; margin-right:10px; display:none;" />
+      <!-- Medaille wie im Dashboard: keine Inline-Styles, Klasse header-medal -->
+      <img
+        id="dashboardMedal"
+        class="header-medal"
+        src="{{ url_for('static', filename='images/medals/gold.png') }}"  <!-- ggf. Pfad anpassen -->
+        alt="Medaille"
+      />
       <img src="{{ url_for('static', filename='images/Profil.png') }}" alt="Profil" class="profil-icon" id="profilIcon" />
       <div class="dropdown" id="profilDropdown">
         <button id="profileBtn">Profil</button>
@@ -26,18 +32,15 @@
     <h1 class="andada page-title">Profil</h1>
 
     <section class="profile-grid">
-      <!-- Linke Kachel: Status -->
       <div class="status-card">
         <h2 class="andada bold centered">Status</h2>
 
         <div class="medal-wrap">
-          <!-- Wird per JS anhand des Rangs gesetzt -->
           <img id="medalImage" src="{{ url_for('static', filename='images/anfaenger_medaille.png') }}"
                alt="Medaille" class="medal" />
         </div>
         <div id="rankName" class="status-subtitle andada">Anfänger</div>
 
-        <!-- Fortschritts-Balken (Scorebar) -->
         <div class="scorebar">
           <div id="scoreFill" class="scorebar-fill" style="width:0%"></div>
         </div>
@@ -47,7 +50,6 @@
         </div>
       </div>
 
-      <!-- Rechte Seite: Profildaten (ohne Name) -->
       <div class="info-card">
         <dl class="info-list">
           <div class="row">
