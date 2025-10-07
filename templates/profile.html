@@ -11,13 +11,7 @@
   <header class="header">
     <img src="{{ url_for('static', filename='images/MathTalk_Logo.png') }}" alt="Logo" class="logo" />
     <div class="icons">
-      <!-- Medaille wie im Dashboard: keine Inline-Styles, Klasse header-medal -->
-      <img
-        id="dashboardMedal"
-        class="header-medal"
-        src="{{ url_for('static', filename='images/medals/gold.png') }}"  <!-- ggf. Pfad anpassen -->
-        alt="Medaille"
-      />
+      <img id="dashboardMedal" src="" alt="Medaille" style="height:40px; margin-right:10px; display:none;" />
       <img src="{{ url_for('static', filename='images/Profil.png') }}" alt="Profil" class="profil-icon" id="profilIcon" />
       <div class="dropdown" id="profilDropdown">
         <button id="profileBtn">Profil</button>
