@@ -1,11 +1,9 @@
-/* Grundlayout */
 body {
   margin: 0;
   font-family: 'Georgia', serif;
   background-color: #f4f3e8;
 }
 
-/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -60,7 +58,6 @@ body {
   background-color: #7fb89b;
 }
 
-/* Layout: 2 Spalten */
 .grid-layout {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -68,7 +65,6 @@ body {
   gap: 60px;
 }
 
-/* Überschriften */
 h2 {
   font-size: 30px;
   color: #2a4f47;
@@ -117,7 +113,6 @@ h2 {
   gap: 20px;
 }
 
-/* Kacheln rechte Seite */
 .kachel {
   max-width: 137px;
   width: 100%;
@@ -131,7 +126,6 @@ h2 {
   transform: scale(1.03);
 }
 
-/* ✨ Themenauswahl-Karten links */
 .image-card {
   width: 100%;
   max-width: 280px;
@@ -164,7 +158,6 @@ h2 {
   border-top: 1px solid #eee;
 }
 
-/* Modus-Beschriftung unter den Kreisen */
 .moduskachel {
   display: flex;
   flex-direction: column;
@@ -178,7 +171,6 @@ h2 {
   color: #2a4f47;
 }
 
-/* Smartphone-Ansicht */
 @media (max-width: 768px) {
   .grid-layout {
     display: flex;
@@ -242,11 +234,10 @@ h2 {
   transition: all 0.2s ease;
 }
 
-/* Links ohne Unterstreichung */
 a {
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: none; /* Optional: beim Hover wieder anzeigen */
+  text-decoration: none; 
 }
