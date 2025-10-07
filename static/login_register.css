@@ -95,7 +95,7 @@ body {
 @media screen and (max-width: 480px) {
   .login-box {
     padding: 1.5rem 1rem;
-    max-width: 80%;         /* 🔽 statt fixer Breite → fast volle Breite */
+    max-width: 80%;       
     border-radius: 12px;
   }
 
