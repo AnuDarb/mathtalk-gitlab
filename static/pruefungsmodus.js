@@ -1,11 +1,34 @@
-// --- Hilfsfunktionen (aus Übungsmodus übernommen/angepasst) ---
-// Prüft, ob der Wert ein Bildpfad ist (nur bestimmte Bildformate erlaubt)
+// --- Hilfsfunktionen (robuster Bild-Resolver wie im Übungsmodus) ---
+// Prüft, ob der Wert ein Bildpfad ist (erlaubte Formate) und ob er in einem images/-Pfad liegt oder eine http-URL ist
 function isImage(val) {
-  return typeof val === 'string' && val.startsWith('images/') && (val.endsWith('.png') || val.endsWith('.jpg') || val.endsWith('.jpeg') || val.endsWith('.svg'));
+  if (typeof val !== 'string') return false;
+  const hasExt = /\.(png|jpg|jpeg|svg)$/i.test(val);
+  if (!hasExt) return false;
+  // akzeptiere http(s)-Bilder direkt
+  if (/^https?:\/\//i.test(val)) return true;
+  // normalize: führende / entfernen
+  const clean = val.replace(/^\/+/, '');
+  // akzeptiere images/... oder static/images/... oder /images/...
+  return clean.includes('images/');
 }
-// Gibt die URL für ein Bild zurück, falls es ein Bild ist, sonst leerer String
+
+// Gibt eine funktionierende URL für ein Bild zurück.
+// Vereinheitlicht alle Varianten auf /static/images/...
 function imageUrl(val) {
-  return isImage(val) ? "static/" + val : '';
+  if (!isImage(val)) return '';
+  // http(s) unverändert zurückgeben
+  if (/^https?:\/\//i.test(val)) return val;
+  let p = val.trim();
+  // führende / entfernen
+  p = p.replace(/^\/+/, '');
+  // "static/" entfernen, wenn schon vorhanden
+  p = p.replace(/^static\//, '');
+  // alles hinter dem ersten "images/"
+  const idx = p.indexOf('images/');
+  if (idx >= 0) p = p.slice(idx);
+  // sicherstellen, dass mit images/ beginnt
+  if (!p.startsWith('images/')) p = 'images/' + p;
+  return '/static/' + p;
 }
 
 // --- Prüfungsmodus: bestehende Punktelogik & Ränge ---
@@ -19,8 +42,8 @@ const rankMax = 100;
 const ranks = [
   { name: "Anfänger", icon: "/static/images/anfaenger_medaille.png" },
   { name: "Schüler", icon: "/static/images/schueler_medaille.png" },
-  { name: "Mathelehrer", icon: "/static/images/mathelehrer_medaille.png" },
-  { name: "Professor", icon: "/static/images/professor_medaille.png" }
+  { name: "Mathelehrer", icon: "/static/images/Mathelehrer_Medaille.png" },
+  { name: "Professor", icon: "/static/images/Professor_Mathematik_Medaille.png" }
 ];
 
 function updateScoreBar() {
