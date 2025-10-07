@@ -148,8 +148,8 @@
             <div class="dragdrop-example">
               <div>${isImage(ex) ? `<img src="${imageUrl(ex)}" alt="${ex}" class="drag-img" />` : ex}</div>
               <div class="dropzone${dragDropUserAnswers[ex] ? ' filled' : ''}" data-ex="${ex}">
-                ${dragDropUserAnswers[ex] ? (
-                  (dragDropUserAnswers[ex]) ? `<img src="${imageUrl(dragDropUserAnswers[ex])}" alt="Antwort" class="drag-img" />` : `<span>${dragDropUserAnswers[ex]}</span>`) : '<span style="color:#aaa;">Antwort hierher ziehen</span>'}
+                ${dragDropUserAnswers[ex] ? (isImage(dragDropUserAnswers[ex]) ? `<img src="${imageUrl(dragDropUserAnswers[ex])}" alt="Antwort" class="drag-img" />` : `<span>${dragDropUserAnswers[ex]}</span>`) : '<span style="color:#aaa;">Antwort hierher ziehen</span>'}
+
               </div>
             </div>
           `).join('')}
@@ -278,7 +278,7 @@
     }
     if (res.ok) {
       let q = await res.json();
-      // Accept any object with a question_type and question as a valid question, even if answer/choices are null (classic)
+      // Frage validieren und initialisieren
       if (q && typeof q === 'object' && q.question_type && q.question) {
         if (q.question_type === 'drag_drop' && typeof q.answer === 'string') {
           try { q.answer = JSON.parse(q.answer); } catch { q.answer = {}; }
