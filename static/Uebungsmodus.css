@@ -217,11 +217,14 @@
   vertical-align: middle;
   background: #f8fafc;
   transition: border 0.2s;
+
+  color: #243d3d;
 }
 .dropzone.filled {
   border-style: solid;
   border-color: #3b82f6;
   background: #e0f2fe;
+  color: #243d3d; 
 }
 .drag-img {
   max-width: 240px;
@@ -261,7 +264,6 @@
 .container.swap-left {
   animation: swapLeft 0.4s;
 }
-
 .container.swap-right {
   animation: swapRight 0.4s;
 }
@@ -271,12 +273,10 @@
     transform: translateX(0);
     opacity: 1;
   }
-
   40% {
     transform: translateX(-60px);
     opacity: 0.5;
   }
-
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -288,12 +288,10 @@
     transform: translateX(0);
     opacity: 1;
   }
-
   40% {
     transform: translateX(60px);
     opacity: 0.5;
   }
-
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -315,7 +313,6 @@
   flex-direction: column;
   gap: 6px;
 }
-
 .dropdown button {
   background-color: transparent;
   border: none;
@@ -326,7 +323,6 @@
   text-align: left;
   padding: 6px 10px;
 }
-
 .dropdown button:hover {
   text-decoration: underline;
 }
