@@ -1,37 +1,35 @@
-// --- Hilfsfunktionen (robuster Bild-Resolver wie im Übungsmodus) ---
-// Prüft, ob der Wert ein Bildpfad ist (erlaubte Formate) und ob er in einem images/-Pfad liegt oder eine http-URL ist
+
 function isImage(val) {
   if (typeof val !== 'string') return false;
   const hasExt = /\.(png|jpg|jpeg|svg)$/i.test(val);
   if (!hasExt) return false;
-  // akzeptiere http(s)-Bilder direkt
+
   if (/^https?:\/\//i.test(val)) return true;
-  // normalize: führende / entfernen
+
   const clean = val.replace(/^\/+/, '');
-  // akzeptiere images/... oder static/images/... oder /images/...
+
   return clean.includes('images/');
 }
 
-// Gibt eine funktionierende URL für ein Bild zurück.
-// Vereinheitlicht alle Varianten auf /static/images/...
+
 function imageUrl(val) {
   if (!isImage(val)) return '';
-  // http(s) unverändert zurückgeben
+
   if (/^https?:\/\//i.test(val)) return val;
   let p = val.trim();
-  // führende / entfernen
+
   p = p.replace(/^\/+/, '');
-  // "static/" entfernen, wenn schon vorhanden
+
   p = p.replace(/^static\//, '');
-  // alles hinter dem ersten "images/"
+ 
   const idx = p.indexOf('images/');
   if (idx >= 0) p = p.slice(idx);
-  // sicherstellen, dass mit images/ beginnt
+
   if (!p.startsWith('images/')) p = 'images/' + p;
   return '/static/' + p;
 }
 
-// --- Prüfungsmodus: bestehende Punktelogik & Ränge ---
+
 let questionPoint = 0;
 let questionId = 0;
 let currentRank = 0;
@@ -60,13 +58,13 @@ function updateScoreBar() {
   medal.src = ranks[currentRank]?.icon || "";
 }
 
-// --- Neue Zustände für MC & DragDrop ---
-let userInput = "";                   // Freitext oder ausgewählte MC-Option
-let answered = false;                 // Ist aktuelle Frage bereits ausgewertet?
-let dragDropUserAnswers = {};         // Mapping Beispiel -> Antwort (DragDrop)
-let dragDropOptions = [];             // Pool der Antwortkärtchen (DragDrop)
 
-// --- DOM-Referenzen ---
+let userInput = "";                   
+let answered = false;                 
+let dragDropUserAnswers = {};        
+let dragDropOptions = [];
+
+
 const questionText = document.getElementById("questionText");
 const textInputContainer = document.getElementById("textInputContainer");
 const answerInputEl = document.getElementById("answerInput");
@@ -78,7 +76,7 @@ function setMainButtonLabel(lbl) {
   if (btn) btn.textContent = lbl;
 }
 
-// --- Nutzerstatus laden (bestehend) ---
+
 async function loadUserStatus() {
   try {
     const res = await fetch("/api/user_status", { credentials: "include" });
@@ -93,9 +91,9 @@ async function loadUserStatus() {
   }
 }
 
-// --- Frage laden (classic | multiple_choice | drag_drop) ---
+
 async function loadQuestion() {
-  // Kategorie wie bisher aus URL lesen:
+
   const params = new URLSearchParams(window.location.search);
   const selectedLabel = params.get("categories")?.split(",")[0] || "Zahlen & Terme";
 
@@ -103,14 +101,14 @@ async function loadQuestion() {
     const res = await fetch(`/api/question?category=${encodeURIComponent(selectedLabel)}`, { credentials: "include" });
     const data = await res.json();
 
-    // Reset State pro Frage
+   
     answered = false;
     userInput = "";
     dragDropUserAnswers = {};
     dragDropOptions = [];
     setMainButtonLabel("Antworten");
 
-    // Basis: alles ausblenden
+
     textInputContainer.style.display = "none";
     mcOptionsEl.style.display = "none";
     dragDropContainer.style.display = "none";
@@ -125,12 +123,12 @@ async function loadQuestion() {
       return;
     }
 
-    // Frage übernehmen
+
     questionId = data.id;
     currentQuestionType = data.question_type || "classic";
     questionText.textContent = data.question;
 
-    // String → JSON für Felder, falls nötig (aus Übungsmodus)
+
     if (currentQuestionType === "drag_drop" && typeof data.answer === "string") {
       try { data.answer = JSON.parse(data.answer); } catch { data.answer = {}; }
     }
@@ -138,7 +136,7 @@ async function loadQuestion() {
       try { data.choices = JSON.parse(data.choices); } catch { data.choices = []; }
     }
 
-    // Render pro Typ
+
     if (currentQuestionType === "classic") {
       textInputContainer.style.display = "block";
       answerInputEl.value = "";
@@ -154,11 +152,11 @@ async function loadQuestion() {
           `).join('')}
         </div>
       `;
-      // Auswahl-Listener – MC auto-submit wie im Übungsmodus
+
       mcOptionsEl.querySelectorAll('input[type=radio][name=mc]').forEach(el => {
         el.addEventListener('change', (e) => {
           userInput = e.target.value;
-          submitAnswer();  // sofort werten
+          submitAnswer();  
         });
       });
     } else if (currentQuestionType === "drag_drop") {
@@ -168,7 +166,7 @@ async function loadQuestion() {
       const exWrap = dragDropContainer.querySelector("#dragdrop-examples");
       const ansWrap = dragDropContainer.querySelector("#dragdrop-answers");
 
-      // Beispiele + Dropzonen erzeugen (eine Zone je Beispiel wie im Übungsmodus)
+
       const keys = Object.keys(data.answer || {});
       dragDropOptions = Object.values(data.answer || {});
       exWrap.innerHTML = keys.map(ex => `
@@ -180,7 +178,7 @@ async function loadQuestion() {
         </div>
       `).join('');
 
-      // Antwortkärtchen
+
       ansWrap.innerHTML = dragDropOptions.map(ans => `
         <div class="dragdrop-answer" draggable="true" data-ans="${ans}" style="display:inline-block;background:#e0e7ef;border:1px solid #cbd5e1;border-radius:8px;padding:8px 14px;margin:6px;cursor:grab;">
           ${isImage(ans) ? `<img src="${imageUrl(ans)}" alt="Antwort" style="max-width:200px;max-height:200px">` : `<span>${ans}</span>`}
@@ -195,7 +193,7 @@ async function loadQuestion() {
         zone.addEventListener('dragover', e => e.preventDefault());
         zone.addEventListener('drop', () => {
           const ex = zone.getAttribute('data-ex');
-          // Verhindere Doppelnutzung einer Antwort
+
           if (answered || !dragData) return;
           if (Object.values(dragDropUserAnswers).includes(dragData)) return;
 
@@ -203,14 +201,14 @@ async function loadQuestion() {
           zone.innerHTML = isImage(dragData)
             ? `<img src="${imageUrl(dragData)}" alt="Antwort" style="max-width:200px;max-height:200px">`
             : `<span>${dragData}</span>`;
-          // Markiere benutzte Karte
+
           const usedEl = ansWrap.querySelector(`[data-ans="${CSS.escape(dragData)}"]`);
           if (usedEl) { usedEl.style.opacity = "0.5"; usedEl.style.pointerEvents = "none"; }
           dragData = null;
         });
       });
     } else {
-      // Fallback
+
       currentQuestionType = "classic";
       textInputContainer.style.display = "block";
       answerInputEl.value = "";
@@ -221,9 +219,9 @@ async function loadQuestion() {
   }
 }
 
-// --- Auswertung (alle Typen), Punkte & Rang-Logik wie gehabt ---
+
 async function submitAnswer() {
-  // Wenn bereits ausgewertet: Nächste Frage laden
+
   if (answered) {
     await loadQuestion();
     return;
@@ -236,10 +234,9 @@ async function submitAnswer() {
     if (!val) return;
     payload.user_input = val;
   } else if (currentQuestionType === "multiple_choice") {
-    if (!userInput) return; // sollte durch Auto-Submit selten passieren
+    if (!userInput) return; 
     payload.user_input = userInput;
   } else if (currentQuestionType === "drag_drop") {
-    // Alle Beispiele müssen zugeordnet sein
     if (!dragDropUserAnswers || Object.keys(dragDropUserAnswers).length === 0) {
       alert("Bitte ordne allen Beispielen eine Antwort zu.");
       return;
@@ -256,7 +253,7 @@ async function submitAnswer() {
     });
     const result = await res.json();
 
-    // Kompatibel: entweder boolean is_correct (wie Übungsmodus) oder numerischer score (bisheriger Prüfungsmodus)
+
     let correct = false;
     let almost = false;
     if (typeof result?.is_correct === "boolean") {
@@ -286,7 +283,7 @@ if (correct) {
   feedbackEl.style.color = "red";
 }
 
-    // Rang-Auf/Abstieg (bestehend)
+
     while (progressInRank >= rankMax && currentRank < ranks.length - 1) {
       progressInRank -= rankMax;
       currentRank++;
@@ -295,7 +292,7 @@ if (correct) {
 
     updateScoreBar();
 
-    // Status speichern (bestehend)
+
     await fetch("/api/save_status", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -307,7 +304,7 @@ if (correct) {
       })
     });
 
-    // Button auf "Weiter" stellen, erneuter Klick lädt nächste Frage
+
     answered = true;
     setMainButtonLabel("Weiter");
   } catch (err) {
@@ -316,19 +313,19 @@ if (correct) {
   }
 }
 
-// --- Init ---
+
 (async () => {
-  await loadUserStatus();   // bestehend
-  updateScoreBar();         // bestehend
-  await loadQuestion();     // neu: lädt alle Typen
-  window.submitAnswer = submitAnswer; // Button-Handler
+  await loadUserStatus();   
+  updateScoreBar();        
+  await loadQuestion();    
+  window.submitAnswer = submitAnswer; 
 })();
 
-// Elemente
+
 const profilIcon = document.getElementById("profilIcon");
 const dropdown = document.getElementById("profilDropdown");
 
-// Inhalt auf 2 Buttons reduzieren (Profil zuerst)
+
 if (dropdown) {
   dropdown.innerHTML = `
     <button id="profileBtn" class="profil-item" type="button">Profil</button>
@@ -337,7 +334,7 @@ if (dropdown) {
   dropdown.style.display = "none";
 }
 
-// Öffnen/Schließen
+
 if (profilIcon) {
   profilIcon.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -347,7 +344,7 @@ if (profilIcon) {
   });
 }
 
-// Schließen bei Klick außerhalb
+
 document.addEventListener("click", (e) => {
   if (!dropdown || !profilIcon) return;
   if (!dropdown.contains(e.target) && !profilIcon.contains(e.target)) {
@@ -355,14 +352,14 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// Schließen mit ESC
+
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && dropdown && dropdown.style.display === "block") {
     dropdown.style.display = "none";
   }
 });
 
-// Profil
+
 const profileBtn = document.getElementById("profileBtn");
 if (profileBtn) {
   profileBtn.addEventListener("click", () => {
@@ -370,7 +367,7 @@ if (profileBtn) {
   });
 }
 
-// Abmelden
+
 const logoutBtn = document.getElementById("logoutBtn");
 if (logoutBtn) {
   logoutBtn.addEventListener("click", async () => {
@@ -383,7 +380,7 @@ if (logoutBtn) {
   });
 }
 
-// Medaille
+
 const dashboardRanks = [
   { name: "Anfänger",    icon: "/static/images/anfaenger_medaille.png" },
   { name: "Schüler",     icon: "/static/images/Schüler_Medaille.png" },
@@ -410,5 +407,5 @@ async function loadDashboardMedal() {
   }
 }
 
-// direkt beim Laden aufrufen
+
 loadDashboardMedal();
