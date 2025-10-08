@@ -50,7 +50,7 @@ function updateScoreBar() {
   const fill = document.getElementById("scoreFill");
   const text = document.getElementById("scoreText");
   const konto = document.getElementById("totalText");
-  const medal = document.getElementById("medalImage");
+  const medal = document.getElementById("dashboardMedal");
 
   const progressPercent = Math.max(0, Math.min(100, (progressInRank / rankMax) * 100));
   fill.style.width = progressPercent + "%";
