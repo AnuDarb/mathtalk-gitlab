@@ -115,30 +115,30 @@
     }
 
     .container {
-  max-width: 720px;
-  margin: 24px auto;
-  background: #7fb89b;
-  border-radius: 20px;
-  box-shadow: 0 6px 32px rgba(0,0,0,0.10);
-  padding: 48px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;   /* horizontal */
-  justify-content: center; /* vertical if needed */
-  gap: 24px;
-  color: white;
-  text-align: center;    /* center text */
-}
+      max-width: 720px;
+      margin: 24px auto;
+      background: #7fb89b;
+      border-radius: 20px;
+      box-shadow: 0 6px 32px rgba(0,0,0,0.10);
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      color: white;          /* Basis-Text in der Karte bleibt weiß */
+      text-align: center;
+    }
 
-#mcOptions,
-#dragDropContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;   /* center children horizontally */
-  justify-content: center;
-  gap: 12px;
-}
+    #mcOptions,
+    #dragDropContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
 
     .question-title {
       font-size: 1.8rem;
@@ -280,47 +280,52 @@
       padding: 6px 12px;
       margin-left: 12px;
       background: #f8fafc;
+
+      /* 🔧 NEU: Text in Dropzonen immer dunkel, überschreibt die weiße Schrift der Container-Karte */
+      color: #243d3d;
     }
 
     .dropzone.filled {
       border-style: solid;
       border-color: #3b82f6;
       background: #e0f2fe;
+      /* optional, aber klar: Text weiterhin dunkel */
+      color: #243d3d;
     }
-  
-/* Dropdown styles (replaced) */
-.dropdown {
-  position: absolute;
-  right: 30px;
-  top: 100px;
-  background-color: #f4f3e8; 
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  display: none;
-  z-index: 1000;
 
-  display: flex;
-  flex-direction: column;   
-  gap: 6px;                 
-}
+    /* Dropdown styles (replaced) */
+    .dropdown {
+      position: absolute;
+      right: 30px;
+      top: 100px;
+      background-color: #f4f3e8; 
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: none;
+      z-index: 1000;
 
-.dropdown button {
-  background-color: transparent;
-  border: none;
-  font-family: 'Andada Pro', serif;
-  font-size: 16px;
-  cursor: pointer;
-  color: #2a4f47;
-  text-align: left;         
-  padding: 6px 10px;
-}
+      display: flex;
+      flex-direction: column;   
+      gap: 6px;                 
+    }
 
-.dropdown button:hover {
-  text-decoration: underline;
-}
-</style>
+    .dropdown button {
+      background-color: transparent;
+      border: none;
+      font-family: 'Andada Pro', serif;
+      font-size: 16px;
+      cursor: pointer;
+      color: #2a4f47;
+      text-align: left;         
+      padding: 6px 10px;
+    }
+
+    .dropdown button:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <header class="header-row">
@@ -334,13 +339,13 @@
         <div class="progress-bar-inner" id="scoreFill"></div>
       </div>
       <div class="icons">
-  <img id="dashboardMedal" src="" alt="Medaille" style="height:40px; margin-right:10px; display:none;" />
-  <img src="{{ url_for('static', filename='images/Profil.png') }}" alt="Profil" class="profil-icon" id="profilIcon" />
-  <div class="dropdown" id="profilDropdown">
-    <button id="profileBtn">Profil</button>
-    <button id="logoutBtn">Abmelden</button>
-  </div>
-</div>
+        <img id="dashboardMedal" src="" alt="Medaille" style="height:40px; margin-right:10px; display:none;" />
+        <img src="{{ url_for('static', filename='images/Profil.png') }}" alt="Profil" class="profil-icon" id="profilIcon" />
+        <div class="dropdown" id="profilDropdown">
+          <button id="profileBtn">Profil</button>
+          <button id="logoutBtn">Abmelden</button>
+        </div>
+      </div>
     </div>
   </header>
 
