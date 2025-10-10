@@ -5,18 +5,14 @@ import logging
 import os
 import random
 
-# Logging konfigurieren
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Pfad zur SQLite-Datei
 DB_DIR = "data"
 DB_PATH = os.path.join(DB_DIR, "mathtalk.db")
 
-# 🔧 Stelle sicher, dass der Ordner existiert
 os.makedirs(DB_DIR, exist_ok=True)
 
-# 📚 Mapping der Kategorien
 CATEGORY_MAP = {
     'zahlen_terme': 'Zahlen & Terme',
     'funktionen_algebra': 'Funktionen & Algebra',
@@ -293,7 +289,6 @@ def reset_db():
     conn.close()
     logger.info("✅ reset_db(): Datenbank zurückgesetzt und neu initialisiert.")
 
-# Hilfsfunktion: Kategorie-Parameter zu Liste konvertieren
 def parse_category_list(category):
     if isinstance(category, list):
         if len(category) == 1 and isinstance(category[0], str) and ',' in category[0]:
