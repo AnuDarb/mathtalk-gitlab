@@ -1,6 +1,5 @@
 console.log("Profile JS geladen");
 
-/* ========= Medaillen & Ränge ========= */
 const rankMax = 100;
 const ranks = [
   { name: "Anfänger",    icon: "/static/images/anfaenger_medaille.png" },
@@ -9,12 +8,10 @@ const ranks = [
   { name: "Professor",   icon: "/static/images/Professor_Mathematik_Medaille.png" }
 ];
 
-/* ========= Zustände ========= */
 let questionPoint   = 0;
 let currentRank     = 0;
 let progressInRank  = 0;
 
-/* ========= DOM-Refs ========= */
 const scoreFillEl   = document.getElementById("scoreFill");
 const scoreTextEl   = document.getElementById("scoreText");
 const kontoTextEl   = document.getElementById("totalText");
@@ -32,7 +29,6 @@ const headerMedal   = document.getElementById("dashboardMedal");
 const profileBtn    = document.getElementById("profileBtn");
 const logoutBtn     = document.getElementById("logoutBtn");
 
-/* ========= Dropdown ========= */
 if (profilDropdown) {
   profilDropdown.style.display = "none";
 }
@@ -60,7 +56,6 @@ if (logoutBtn) {
   });
 }
 
-/* ========= Anzeige aktualisieren ========= */
 function updateScoreBar() {
   const progressPercent = Math.max(0, Math.min(100, (progressInRank / rankMax) * 100));
 
@@ -88,7 +83,6 @@ function updateScoreBar() {
   }
 }
 
-/* ========= E-Mail + Status laden ========= */
 async function resolveEmailAndStatus() {
   let email = null;
 
@@ -132,7 +126,6 @@ async function resolveEmailAndStatus() {
   updateScoreBar();
 }
 
-/* ========= Init ========= */
 resolveEmailAndStatus();
 
 // Logo klickbar machen -> Dashboard
