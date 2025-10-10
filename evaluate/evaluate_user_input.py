@@ -1,4 +1,3 @@
-# --- evaluate_user_input.py ---
 import sqlite3
 from typing import Any, Dict
 from evaluate import evaluate_classic, get_similarity_score
@@ -18,7 +17,6 @@ def get_question_by_id(question_id: int) -> Dict[str, Any] | None:
     qid, question_text, answer, qtype = row
     return {"id": qid, "question": question_text, "answer": answer, "question_type": qtype}
 
-# Beispiel: Eingeloggter Benutzer (später durch session["email"])
 current_user_email = "anna@example.com"
 
 def main():
