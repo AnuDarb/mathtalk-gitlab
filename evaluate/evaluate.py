@@ -1,4 +1,3 @@
-# --- evaluate.py (nur classic) ---
 import json, re
 from typing import Any, Dict, List, Optional, Tuple
 from difflib import SequenceMatcher
@@ -12,7 +11,6 @@ except ImportError:
 
 _SYM: Optional['SymSpell'] = None  # type: ignore[name-defined]
 
-# ---------- SymSpell Initialisierung ----------
 def init_symspell(dictionary_path: str):
     """Initialisiert SymSpell mit max. 2 Edit-Distanz."""
     global _SYM
@@ -33,7 +31,6 @@ def sym_correct(text: str) -> str:
         out.append(sug[0].term if sug else w)
     return " ".join(out)
 
-# ---------- Normalisierung ----------
 SUPERSCRIPT_TO_DIGIT = str.maketrans("⁰¹²³⁴⁵⁶⁷⁸⁹", "0123456789")
 
 def normalize_math(s: str) -> str:
@@ -67,7 +64,6 @@ def normalize_generic(s: str) -> str:
     m = normalize_math(s)
     return m if re.search(r"[+\-*/=^()|]", m) else normalize_text(s)
 
-# ---------- Vergleich & Similarity ----------
 def similarity(a: str, b: str) -> float:
     return SequenceMatcher(None, a, b).ratio()
 
@@ -80,7 +76,6 @@ def get_similarity_score(user_answer: str, correct_answer: str) -> float:
     c = normalize_generic(correct_answer)
     return similarity(u, c)
 
-# ---------- Classic ----------
 def numbers_equal(a: float, b: float, tol: float = 1e-6) -> bool:
     return abs(a - b) <= tol
 
@@ -128,7 +123,6 @@ def evaluate_classic(user_answer: str, correct_answer: str) -> Dict[str, Any]:
     ok = u == c or typo_equal(u, c)
     return {"type": "classic", "is_correct": bool(ok)}
 
-# ---------- Hauptfunktion ----------
 def evaluate(question: Dict[str, Any], user_input: Any) -> Dict[str, Any]:
     """Haupt-Evaluator – nur classic."""
     correct_answer = question.get("answer")
@@ -140,7 +134,6 @@ def evaluate(question: Dict[str, Any], user_input: Any) -> Dict[str, Any]:
             pass
     return evaluate_classic(user_input, correct_answer)
 
-# ---------- User-Eingabe-Evaluator ----------
 def evaluate_user_input(question_row: Dict[str, Any], user_input: Any) -> Dict[str, Any]:
     """Nur classic-Fragen werden unterstützt."""
     return evaluate(question_row, user_input)
