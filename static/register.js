@@ -15,7 +15,6 @@ document.getElementById("registerForm").addEventListener("submit", async functio
     return;
   }
 
-  // Optional: Button während Request deaktivieren
   const submitBtn = this.querySelector("button[type='submit']");
   if (submitBtn) submitBtn.disabled = true;
 
